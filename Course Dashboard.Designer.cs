@@ -54,6 +54,7 @@
             this.rbtnSection.TabIndex = 1;
             this.rbtnSection.Text = "Add Section";
             this.rbtnSection.UseVisualStyleBackColor = false;
+            this.rbtnSection.Click += new System.EventHandler(this.rbtnSection_Click);
             // 
             // Course_Dashboard
             // 

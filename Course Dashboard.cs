@@ -24,7 +24,7 @@ namespace gradesBookApp
             string subjectName = "";
             string subjectCode = Teacher_s_Dashboard.subjectTile.Trim(); // Trim any extra spaces
 
-            // Get the clicked subject name from the database
+            // Get the clicked subject name from the database. Display above
             try
             {
                 db.Connect();
@@ -134,6 +134,14 @@ namespace gradesBookApp
         private void lblSection_Click(object sender, EventArgs e)
         {
             //Open the Gradebook of specific section
+        }
+
+        private void rbtnSection_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_Section addSection = new Add_Section();
+            addSection.ShowDialog();
+            this.Close();
         }
     }
 }

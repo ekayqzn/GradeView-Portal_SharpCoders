@@ -35,9 +35,6 @@ namespace gradesBookApp
             userID = txtTeacherID.Text;
             userPass = txtTeacherPass.Text;
 
-            //Validation of TextBox !!!!
-
-
             //Check if the user is a Teacher
             try
             {
@@ -58,8 +55,10 @@ namespace gradesBookApp
 
                 if (loggedIn)
                 {
+                    //When both ID and Password exist in database
                     if(MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                     {
+                        //show dashboard of specific teacher
                         this.Hide();
                         Teacher_s_Dashboard dashboard = new Teacher_s_Dashboard();
                         dashboard.ShowDialog();
@@ -68,6 +67,7 @@ namespace gradesBookApp
                 }
                 else
                 {
+                    //Inform user and encourage to re-enter
                     MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtTeacherID.Focus();
                 }

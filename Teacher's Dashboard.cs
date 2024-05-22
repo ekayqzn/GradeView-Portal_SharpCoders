@@ -26,6 +26,7 @@ namespace gradesBookApp
 
         private void rbtnAddSubject_Click(object sender, EventArgs e)
         {
+            //Form to add subject will show
             this.Hide();
             Add_Subject addSubject = new Add_Subject();
             addSubject.ShowDialog();
@@ -34,11 +35,11 @@ namespace gradesBookApp
 
         private void Teacher_s_Dashboard_Load(object sender, EventArgs e)
         {
-            //Debugging Tool to show the userID from login details
-            //MessageBox.Show(Faculty_LogIn.userID);
+            //This form will load when the user correctly input the login details
 
             try
             {
+                //get class_id and subject code that the teacher teaches
                 db.Connect();
                 db.cmd.Connection = db.conn;
                 db.cmd.CommandText = "SELECT class_id, subject_code FROM modern_gradesbook.class WHERE teacher_id = @teacherId";
@@ -56,12 +57,14 @@ namespace gradesBookApp
                 string[] classId = new string[dataTable.Rows.Count];
                 string[] subjectCode = new string[dataTable.Rows.Count];
 
+
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
                     classId[i] = dataTable.Rows[i]["class_id"].ToString();
                     subjectCode[i] = dataTable.Rows[i]["subject_code"].ToString();
                 }
 
+                //if the database return the subject_code and class_id, will dynamically create a tile/button for that specific subject
                 if(dataTable.Rows.Count > 0)
                 {
                     int labelSizeX = 241;
@@ -73,7 +76,7 @@ namespace gradesBookApp
                     int red = random.Next(200, 256); 
                     int green = random.Next(150, 200);
                     int blue = random.Next(150, 200);
-                    for (int i = 0; i < dataTable.Rows.Count;i++)
+                    for (int i = 0; i < dataTable.Rows.Count;i++) //will iterate as to the number of subject the teacher holds
                     {
                         Label label = new Label();
                         label.Name = "lblSub" + (i+1).ToString();
@@ -110,7 +113,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -121,12 +124,14 @@ namespace gradesBookApp
 
         private void lblSubject_Click (object sender, EventArgs e)
         {
+            //When a tile is click
             Label label = (Label)sender;
             subjectTile = label.Text.Trim();
             string teacherId = Faculty_LogIn.userID.Trim();
 
             try
             {
+                //get class_id of the subject clicked. Value will be used by Course_Dashboard form
                 db.Connect();
                 db.cmd.Connection = db.conn;
                 db.cmd.CommandText = "SELECT class_id FROM modern_gradesbook.class WHERE subject_code = @subjectCode AND teacher_id = @teacherId";
@@ -144,8 +149,7 @@ namespace gradesBookApp
                 {
                     classID = Convert.ToInt32(dataTable.Rows[0]["class_id"]);
                 }
-                //Debug Tool
-                //MessageBox.Show(classID.ToString());
+
             }
             catch (Exception ex)
             {

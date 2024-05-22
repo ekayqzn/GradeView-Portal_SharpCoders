@@ -63,6 +63,7 @@ namespace gradesBookApp
 
             //!Validation -- must be total of 70
 
+            //Midterm Attendance
             if(chkMAttendance.Checked)
             {
                 mAttendancePercent = validate.isNumber(txtMAttendance.Text);
@@ -82,16 +83,82 @@ namespace gradesBookApp
                     {
                         db.Connect();
                         db.cmd.Connection = db.conn;
-                        if(mAttendanceCount == 2)
-                        {
-                            db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage class_id) VALUES (-1, -1, 0, 0, 0, 0, 0, 0, 0, @percentage, @class_id)";
 
-                            db.cmd.Parameters.Clear();
-                            db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
-                            db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
-                            db.cmd.ExecuteNonQuery();
+                        switch(mAttendanceCount)
+                        {
+                            case 1:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, 0, 0, 0, 0, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 2:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, -1, 0, 0, 0, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 3:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, -1, -1, 0, 0, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 4:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, -1, -1, -1, 0, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 5:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, -1, -1, -1, -1, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 6:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, -1, -1, -1, -1, -1, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 7:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, -1, -1, -1, -1, -1, -1, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 8:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, -1, -1, -1, -1, -1, -1, -1, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 9:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage, class_id) VALUES (-1, -1, -1, -1, -1, -1, -1, -1, -1, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
                         }
-                        
                     }
                     catch (Exception ex)
                     {
@@ -103,8 +170,8 @@ namespace gradesBookApp
                     }
                 }
             }
-            //////////////
-
+            
+            //Midterm Activity
             if (chkMActivity.Checked)
             {
                 mActivityPercent = validate.isNumber(txtMActivity.Text);
@@ -118,6 +185,97 @@ namespace gradesBookApp
                 else
                 {
                     isValid = true;
+                    mActivityCount = Convert.ToInt32(numMActivity.Value);
+                    mActivityPercent = Convert.ToInt32(txtMActivity.Text.Trim());
+                    try
+                    {
+                        db.Connect();
+                        db.cmd.Connection = db.conn;
+
+                        switch (mActivityCount)
+                        {
+                            case 1:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_activity (m_activity1, m_activity2, m_activity3, m_activity4, m_activity5, m_activity6, m_activity7, m_activity8, m_activity9, m_activity_percentage, class_id) VALUES (-1, 0, 0, 0, 0, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mActivityPercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 2:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_activity (m_activity1, m_activity2, m_activity3, m_activity4, m_activity5, m_activity6, m_activity7, m_activity8, m_activity9, m_activity_percentage, class_id) VALUES (-1, -1, 0, 0, 0, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mActivityPercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 3:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage class_id) VALUES (-1, -1, -1, 0, 0, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 4:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage class_id) VALUES (-1, -1, -1, -1, 0, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 5:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage class_id) VALUES (-1, -1, -1, -1, -1, 0, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 6:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage class_id) VALUES (-1, -1, -1, -1, -1, -1, 0, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 7:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage class_id) VALUES (-1, -1, -1, -1, -1, -1, -1, 0, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 8:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage class_id) VALUES (-1, -1, -1, -1, -1, -1, -1, -1, 0, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                            case 9:
+                                db.cmd.CommandText = "INSERT INTO modern_gradesbook.m_attendance (m_attendance1, m_attendance2, m_attendance3, m_attendance4, m_attendance5, m_attendance6, m_attendance7, m_attendance8, m_attendance9, m_attendance_percentage class_id) VALUES (-1, -1, -1, -1, -1, -1, -1, -1, -1, @percentage, @class_id)";
+
+                                db.cmd.Parameters.Clear();
+                                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                                db.cmd.Parameters.AddWithValue("@percentage", mAttendancePercent);
+                                db.cmd.ExecuteNonQuery();
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        db.Disconnect();
+                    }
                 }
             }
             if (chkMAssignment.Checked)

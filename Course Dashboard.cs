@@ -59,7 +59,7 @@ namespace gradesBookApp
                 db.Disconnect();
             }
 
-            //Get Section Information(program name, year level, section)
+            //Get Section Information(program name, year level, section) will also be displayed as tile
             try
             {
                 db.Connect();
@@ -67,7 +67,7 @@ namespace gradesBookApp
                 db.cmd.CommandText = "SELECT program.program_name, program.year_level, program.section FROM program WHERE program.program_id IN(SELECT program_id FROM modern_gradesbook.course WHERE class_id = @classID)";
 
                 db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID);
+                db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID); //use classID from Teacher's Dashboard when the tile is click
 
                 db.dta.SelectCommand = db.cmd;
 
@@ -133,7 +133,7 @@ namespace gradesBookApp
 
         private void lblSection_Click(object sender, EventArgs e)
         {
-
+            //Open the Gradebook of specific section
         }
     }
 }

@@ -106,7 +106,7 @@ namespace gradesBookApp
                             }
 
                             //Debug Tool Confirming the classID value
-                            MessageBox.Show(classID.ToString());
+                            //MessageBox.Show(classID.ToString());
                         }
                         catch (Exception ex)
                         {
@@ -160,7 +160,7 @@ namespace gradesBookApp
                             }
 
                             //Debug Tool
-                            MessageBox.Show(classID.ToString());
+                            //MessageBox.Show(classID.ToString());
                         }
                         catch (Exception ex)
                         {

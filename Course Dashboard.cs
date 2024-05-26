@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,9 @@ namespace gradesBookApp
     public partial class Course_Dashboard : Form
     {
         databaseConnection db = new databaseConnection();
+        public static string programName;
+        public static int yearLevel;
+        public static int section;
         public Course_Dashboard()
         {
             InitializeComponent();
@@ -112,6 +116,9 @@ namespace gradesBookApp
                         label.Text = programName[i] + Environment.NewLine + yearLevel[i].ToString() + " - " + section[i].ToString();
                         labelLocationY += 86;
 
+                        // Store related data in the Tag property
+                        //Tag - user defined data associated with the object
+                        label.Tag = new { ProgramName = programName[i], YearLevel = yearLevel[i], Section = section[i] };
 
                         //Add Event Handler
                         label.Click += lblSection_Click;
@@ -133,7 +140,25 @@ namespace gradesBookApp
 
         private void lblSection_Click(object sender, EventArgs e)
         {
+
+            Label label = sender as Label;
+            if (label != null && label.Tag != null)
+            {
+                // Retrieve the data from the Tag property
+                var data = (dynamic)label.Tag;
+                programName = data.ProgramName.Trim();
+                yearLevel = data.YearLevel;
+                section = data.Section;
+
+                // Debug Tool
+                //MessageBox.Show($"Program Name: {programName}\nYear Level: {yearLevel}\nSection: {section}");
+            }
+
             //Open the Gradebook of specific section
+            this.Hide();
+            GradeBook gradeBook = new GradeBook();
+            gradeBook.ShowDialog();
+            this.Close();
         }
 
         private void rbtnSection_Click(object sender, EventArgs e)

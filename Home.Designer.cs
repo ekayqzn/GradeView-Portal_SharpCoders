@@ -30,6 +30,7 @@
         {
             this.rbtnFaculty = new gradesBookApp.RoundedButton();
             this.rbtnStudent = new gradesBookApp.RoundedButton();
+            this.btnAdminstrator = new gradesBookApp.RoundedButton();
             this.SuspendLayout();
             // 
             // rbtnFaculty
@@ -59,11 +60,26 @@
             this.rbtnStudent.Text = "Student";
             this.rbtnStudent.UseVisualStyleBackColor = false;
             // 
+            // btnAdminstrator
+            // 
+            this.btnAdminstrator.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAdminstrator.FlatAppearance.BorderSize = 0;
+            this.btnAdminstrator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminstrator.ForeColor = System.Drawing.Color.White;
+            this.btnAdminstrator.Location = new System.Drawing.Point(232, 471);
+            this.btnAdminstrator.Name = "btnAdminstrator";
+            this.btnAdminstrator.Size = new System.Drawing.Size(288, 61);
+            this.btnAdminstrator.TabIndex = 2;
+            this.btnAdminstrator.Text = "Adminstrator";
+            this.btnAdminstrator.UseVisualStyleBackColor = false;
+            this.btnAdminstrator.Click += new System.EventHandler(this.btnAdminstrator_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 587);
+            this.Controls.Add(this.btnAdminstrator);
             this.Controls.Add(this.rbtnStudent);
             this.Controls.Add(this.rbtnFaculty);
             this.Name = "Home";
@@ -77,6 +93,7 @@
 
         private RoundedButton rbtnFaculty;
         private RoundedButton rbtnStudent;
+        private RoundedButton btnAdminstrator;
     }
 }
 

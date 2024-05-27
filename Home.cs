@@ -25,5 +25,13 @@ namespace gradesBookApp
             faculty.ShowDialog();
             this.Close(); 
         }
+
+        private void btnAdminstrator_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_Student addStudent = new Add_Student();
+            addStudent.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -14,8 +14,8 @@ namespace gradesBookApp
     public partial class Add_Subject : Form
     {
         databaseConnection db = new databaseConnection();
-        string subCode = "";
-        string subName = "";
+        public string subCode = "";
+        public string subName = "";
         public static int classID;
         public Add_Subject()
         {

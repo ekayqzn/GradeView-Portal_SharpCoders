@@ -33,5 +33,13 @@ namespace gradesBookApp
             addStudent.ShowDialog();
             this.Close();
         }
+
+        private void rbtnStudent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Student_Login student = new Student_Login();
+            student.ShowDialog();
+            this.Close();
+        }
     }
 }

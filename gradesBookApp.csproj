@@ -153,6 +153,18 @@
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Student%27s Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student%27s Dashboard.Designer.cs">
+      <DependentUpon>Student%27s Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student-Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student-Login.Designer.cs">
+      <DependentUpon>Student-Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher%27s Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +205,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Student%27s Dashboard.resx">
+      <DependentUpon>Student%27s Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student-Login.resx">
+      <DependentUpon>Student-Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher%27s Dashboard.resx">
       <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </EmbeddedResource>

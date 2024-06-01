@@ -19,7 +19,6 @@ namespace gradesBookApp
         public static int classID;
         Randomize r = new Randomize();
         public string code = "";
-
         public static string classCode;
         public Add_Subject()
         {
@@ -82,19 +81,18 @@ namespace gradesBookApp
                         db.cmd.ExecuteNonQuery();
 
                         db.cmd.Connection = db.conn;
-                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.class (subject_code, teacher_id, class_code) VALUES(@subCode, @teacherId, @code)"; //add the teacher, subject, code to the class table
+                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.class (subject_code, teacher_id) VALUES(@subCode, @teacherId)"; //add the teacher, subject to the class table
 
                         db.cmd.Parameters.Clear();
                         db.cmd.Parameters.AddWithValue("@subCode", subCode);
                         db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID.Trim());
-                        db.cmd.Parameters.AddWithValue("@code", code);
                         db.cmd.ExecuteNonQuery();
 
                         try
                         { //get the class_id of newly added pair of subject and teacher
                             db.Connect();
                             db.cmd.Connection = db.conn;
-                            db.cmd.CommandText = "SELECT class_id, class_code FROM modern_gradesbook.class WHERE subject_code = @subCode AND teacher_id = @teacherId";
+                            db.cmd.CommandText = "SELECT class_id FROM modern_gradesbook.class WHERE subject_code = @subCode AND teacher_id = @teacherId";
 
                             db.cmd.Parameters.Clear();
                             db.cmd.Parameters.AddWithValue("@subCode", subCode);
@@ -109,7 +107,6 @@ namespace gradesBookApp
                             {
                                 //store class_id and code to a public static variable
                                 classID = Convert.ToInt32(dataTable2.Rows[0]["class_id"]);
-                                classCode = dataTable2.Rows[0]["class_code"].ToString();
                             }
 
                             //Debug Tool Confirming the classID value
@@ -137,12 +134,11 @@ namespace gradesBookApp
                     {
 
                         db.cmd.Connection = db.conn;
-                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.class (subject_code, teacher_id, class_code) VALUES(@subCode, @teacherId, @code)"; //add the teacher, subject, code to the class table
+                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.class (subject_code, teacher_id) VALUES(@subCode, @teacherId)"; //add the teacher, subject, code to the class table
 
                         db.cmd.Parameters.Clear();
                         db.cmd.Parameters.AddWithValue("@subCode", subCode);
                         db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID.Trim());
-                        db.cmd.Parameters.AddWithValue("@code", code);
                         db.cmd.ExecuteNonQuery();
                         
                         try
@@ -150,7 +146,7 @@ namespace gradesBookApp
                             //get newly added class_id
                             db.Connect();
                             db.cmd.Connection = db.conn;
-                            db.cmd.CommandText = "SELECT class_id, class_code FROM modern_gradesbook.class WHERE subject_code = @subCode AND teacher_id = @teacherId";
+                            db.cmd.CommandText = "SELECT class_id FROM modern_gradesbook.class WHERE subject_code = @subCode AND teacher_id = @teacherId";
 
                             db.cmd.Parameters.Clear();
                             db.cmd.Parameters.AddWithValue("@subCode", subCode);
@@ -165,11 +161,10 @@ namespace gradesBookApp
                             {
                                 //store class_id and code to a public static variable
                                 classID = Convert.ToInt32(dataTable2.Rows[0]["class_id"]);
-                                classCode = dataTable2.Rows[0]["class_code"].ToString();
                             }
 
                             //Debug Tool
-                            MessageBox.Show(classCode);
+                            //MessageBox.Show(classCode);
                         }
                         catch (Exception ex)
                         {

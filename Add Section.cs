@@ -17,8 +17,10 @@ namespace gradesBookApp
         public static int section;
         public static int year;
         public static int programID;
+        public static string courseCode;
 
         databaseConnection db = new databaseConnection();
+        Randomize r = new Randomize();
         public Add_Section()
         {
             InitializeComponent();
@@ -48,10 +50,11 @@ namespace gradesBookApp
             programName = cboProgram.SelectedItem.ToString().Trim();
             year = Convert.ToInt32(numYear.Value);
             section = Convert.ToInt32(numSection.Value);
+            courseCode = r.GenerateRandomCode();
 
             //! Check for duplicates in database and course dashboard
 
-            //Add program_id, class_id to course table
+            //Add program_id, class_id, and code to course table
             try
             {
                 //Get program_id
@@ -73,13 +76,14 @@ namespace gradesBookApp
 
                 programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
 
-
+                //RANDOMLY GENERATED CODE
                 db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "INSERT INTO course (class_id, program_id) VALUES(@class_id, @program_id)";
+                db.cmd.CommandText = "INSERT INTO course (class_id, program_id, course_code) VALUES(@class_id, @program_id, @code)";
 
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@class_id", Teacher_s_Dashboard.classID);
                 db.cmd.Parameters.AddWithValue("@program_id", programID);
+                db.cmd.Parameters.AddWithValue("@code", courseCode);
 
                 db.cmd.ExecuteNonQuery();
 

@@ -17,6 +17,9 @@ namespace gradesBookApp
         public string subCode = "";
         public string subName = "";
         public static int classID;
+        Randomize r = new Randomize();
+        public string code = "";
+        public static string classCode;
         public Add_Subject()
         {
             InitializeComponent();
@@ -38,6 +41,8 @@ namespace gradesBookApp
             subCode = txtSubCode.Text.Trim();
             subName = txtSubName.Text.Trim();
 
+            //Generate Random code for this class
+            code = r.GenerateRandomCode().Trim();
             try
             {
                 //Check if the subject and the teacher already saved in the database
@@ -75,9 +80,8 @@ namespace gradesBookApp
                         db.cmd.Parameters.AddWithValue("@subName", subName);
                         db.cmd.ExecuteNonQuery();
 
-
                         db.cmd.Connection = db.conn;
-                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.class (subject_code, teacher_id) VALUES(@subCode, @teacherId)"; //add the teacher and subject to the class table
+                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.class (subject_code, teacher_id) VALUES(@subCode, @teacherId)"; //add the teacher, subject to the class table
 
                         db.cmd.Parameters.Clear();
                         db.cmd.Parameters.AddWithValue("@subCode", subCode);
@@ -101,7 +105,7 @@ namespace gradesBookApp
 
                             if (dataTable2.Rows.Count > 0)
                             {
-                                //store class_id to a public static variable
+                                //store class_id and code to a public static variable
                                 classID = Convert.ToInt32(dataTable2.Rows[0]["class_id"]);
                             }
 
@@ -128,15 +132,15 @@ namespace gradesBookApp
                     }
                     else if (dataTable1.Rows.Count > 0) //subject already exist in subject_info table
                     {
-                        //add the teacher-subject pair to class
+
                         db.cmd.Connection = db.conn;
-                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.class (subject_code, teacher_id) VALUES(@subCode, @teacherId)";
+                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.class (subject_code, teacher_id) VALUES(@subCode, @teacherId)"; //add the teacher, subject, code to the class table
 
                         db.cmd.Parameters.Clear();
                         db.cmd.Parameters.AddWithValue("@subCode", subCode);
                         db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID.Trim());
                         db.cmd.ExecuteNonQuery();
-
+                        
                         try
                         {
                             //get newly added class_id
@@ -155,12 +159,12 @@ namespace gradesBookApp
 
                             if (dataTable2.Rows.Count > 0)
                             {
-                                //store class_id to a public static variable
+                                //store class_id and code to a public static variable
                                 classID = Convert.ToInt32(dataTable2.Rows[0]["class_id"]);
                             }
 
                             //Debug Tool
-                            //MessageBox.Show(classID.ToString());
+                            //MessageBox.Show(classCode);
                         }
                         catch (Exception ex)
                         {
@@ -173,6 +177,8 @@ namespace gradesBookApp
 
                         if (MessageBox.Show("Successfully Added the Subject", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                         {
+                            //!ADD TO MESSAGE BOX THE CODE
+
                             //Once performed all operation, Message Box will show to notify the user. When clicked the OK button, this form will close and appears the CustomizeGrade form
                             this.Hide();
                             CustomizeGrade customizeGrade = new CustomizeGrade();

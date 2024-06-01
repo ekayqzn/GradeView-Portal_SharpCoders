@@ -49,7 +49,7 @@ namespace gradesBookApp
                 {
                     subjectName = dataTable.Rows[0]["subject_name"].ToString();
                     Label label = new Label();
-                    label.Text = Teacher_s_Dashboard.subjectTile + Environment.NewLine + subjectName + Environment.NewLine + Course_Dashboard.programName + Environment.NewLine + Course_Dashboard.yearLevel + " - " + Course_Dashboard.section;
+                    label.Text = Teacher_s_Dashboard.subjectTile + Environment.NewLine + subjectName + Environment.NewLine + Course_Dashboard.programName + Environment.NewLine + Course_Dashboard.yearLevel + " - " + Course_Dashboard.section + Environment.NewLine + "Code: " + Course_Dashboard.courseCode;
                     label.Location = new Point(35, 35);
                     label.AutoSize = true;
                     this.Controls.Add(label);

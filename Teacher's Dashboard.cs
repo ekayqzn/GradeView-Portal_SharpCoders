@@ -81,7 +81,7 @@ namespace gradesBookApp
                         Label label = new Label();
                         label.Name = "lblSub" + (i+1).ToString();
                         label.TextAlign = ContentAlignment.BottomLeft;
-                        label.Text = subjectCode[i] + Environment.NewLine; //!! Add Subject Name
+                        label.Text = subjectCode[i] + Environment.NewLine; 
                         label.AutoSize = false;
                         label.Size = new Size(labelSizeX, labelSizeY);
                         label.BackColor = Color.FromArgb(red, green, blue);

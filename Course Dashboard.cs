@@ -18,6 +18,7 @@ namespace gradesBookApp
         public static string programName;
         public static int yearLevel;
         public static int section;
+        public static string courseCode;
         public Course_Dashboard()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace gradesBookApp
                 {
                     subjectName = dataTable.Rows[0]["subject_name"].ToString();
                     Label label = new Label();
-                    label.Text = Teacher_s_Dashboard.subjectTile + Environment.NewLine + subjectName;
+                    label.Text = subjectCode + Environment.NewLine + subjectName;
                     label.Location = new Point(35, 35);
                     label.AutoSize = true;
                     panel1.Controls.Add(label);
@@ -68,7 +69,7 @@ namespace gradesBookApp
             {
                 db.Connect();
                 db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "SELECT program.program_name, program.year_level, program.section FROM program WHERE program.program_id IN(SELECT program_id FROM modern_gradesbook.course WHERE class_id = @classID)";
+                db.cmd.CommandText = "SELECT course.course_code, program.program_name, program.year_level, program.section FROM program JOIN course WHERE program.program_id IN(SELECT program_id FROM modern_gradesbook.course WHERE class_id = @classID)";
 
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID); //use classID from Teacher's Dashboard when the tile is click
@@ -82,12 +83,14 @@ namespace gradesBookApp
                 string[] programName = new string[dataTable.Rows.Count];
                 int[] yearLevel = new int[dataTable.Rows.Count];
                 int[] section = new int[dataTable.Rows.Count];
+                string[] courseCode = new string[dataTable.Rows.Count];
 
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
                     programName[i] = dataTable.Rows[i]["program_name"].ToString();
                     yearLevel[i] = Convert.ToInt32(dataTable.Rows[i]["year_level"]);
                     section[i] = Convert.ToInt32(dataTable.Rows[i]["section"]);
+                    courseCode[i] = dataTable.Rows[i]["course_code"].ToString();
                 }
 
                 if (dataTable.Rows.Count >= 0)
@@ -113,12 +116,12 @@ namespace gradesBookApp
                         green = random.Next(150, 200);
                         blue = random.Next(150, 200);
                         label.Location = new Point(labelLocationX, labelLocationY);
-                        label.Text = programName[i] + Environment.NewLine + yearLevel[i].ToString() + " - " + section[i].ToString();
+                        label.Text = programName[i] + Environment.NewLine + yearLevel[i].ToString() + " - " + section[i].ToString() + Environment.NewLine + "Code: " + courseCode[i];
                         labelLocationY += 86;
 
                         // Store related data in the Tag property
                         //Tag - user defined data associated with the object
-                        label.Tag = new { ProgramName = programName[i], YearLevel = yearLevel[i], Section = section[i] };
+                        label.Tag = new { ProgramName = programName[i], YearLevel = yearLevel[i], Section = section[i], CourseCode = courseCode[i] };
 
                         //Add Event Handler
                         label.Click += lblSection_Click;
@@ -149,6 +152,7 @@ namespace gradesBookApp
                 programName = data.ProgramName.Trim();
                 yearLevel = data.YearLevel;
                 section = data.Section;
+                courseCode = data.CourseCode;
 
                 // Debug Tool
                 //MessageBox.Show($"Program Name: {programName}\nYear Level: {yearLevel}\nSection: {section}");

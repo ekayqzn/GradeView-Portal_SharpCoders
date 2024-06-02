@@ -128,6 +128,9 @@
     <Compile Include="CustomizeGrade.Designer.cs">
       <DependentUpon>CustomizeGrade.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="databaseConnection.cs" />
     <Compile Include="Faculty-LogIn.cs">
       <SubType>Form</SubType>
@@ -148,6 +151,12 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="GradebookQuery.cs" />
+    <Compile Include="LandingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LandingPage.Designer.cs">
+      <DependentUpon>LandingPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Randomize.cs" />
@@ -197,6 +206,12 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LandingPage.resx">
+      <DependentUpon>LandingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Program.resx">
+      <DependentUpon>Program.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -205,6 +220,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Student%27s Dashboard.resx">
       <DependentUpon>Student%27s Dashboard.cs</DependentUpon>
@@ -228,6 +244,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images&amp;Icons\school_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images&amp;Icons\Home_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images&amp;Icons\SignIn_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images&amp;Icons\4-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images&amp;Icons\BG Color #545454 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

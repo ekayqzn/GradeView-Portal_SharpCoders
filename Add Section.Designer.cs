@@ -167,7 +167,7 @@
             this.Name = "Add_Section";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Section";
-            this.Load += new System.EventHandler(this.Add_Section_Load);
+            //this.Load += new System.EventHandler(this.Add_Section_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSection)).EndInit();
             this.ResumeLayout(false);

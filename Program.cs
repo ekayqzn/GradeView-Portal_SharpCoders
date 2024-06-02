@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace gradesBookApp
 {
+
+     
+
     internal static class Program
     {
         /// <summary>
@@ -16,7 +19,9 @@ namespace gradesBookApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new LandingPage());//this will make this form on top of all the form when run.
         }
     }
+
+    
 }

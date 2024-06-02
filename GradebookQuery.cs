@@ -28,7 +28,6 @@ namespace gradesBookApp
             }
             string columns = string.Join(", ", attendanceColumns);
 
-
             try
             {
                 db.Connect();
@@ -68,7 +67,6 @@ namespace gradesBookApp
                 }
             }
             string columns = string.Join(", ", column);
-
 
             try
             {
@@ -171,7 +169,6 @@ namespace gradesBookApp
                 }
             }
             string columns = string.Join(", ", column);
-
 
             try
             {

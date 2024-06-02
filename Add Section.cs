@@ -28,6 +28,7 @@ namespace gradesBookApp
 
         private void cboProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //!Retrieve programs in database
             if (cboProgram.SelectedItem.ToString() == "Bachelor of Science in Information Technology" || cboProgram.SelectedItem.ToString() == "Bachelor of Science in Hospitality Management" || cboProgram.SelectedItem.ToString() == "Bachelor of Secondary Education major in English" || cboProgram.SelectedItem.ToString() == "Bachelor of Secondary Education major in Mathematics") 
             {
                 numSection.Maximum = 2;

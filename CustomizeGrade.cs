@@ -64,7 +64,6 @@ namespace gradesBookApp
             databaseConnection db = new databaseConnection();
 
             //!Validation -- must be total of 70
-            //! Implement in Class-method
 
             //Midterm
 

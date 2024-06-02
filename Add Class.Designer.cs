@@ -1,6 +1,6 @@
 ﻿namespace gradesBookApp
 {
-    partial class Student_s_Dashboard
+    partial class Add_Class
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,25 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.txtClassCode = new System.Windows.Forms.TextBox();
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 31);
+            this.label1.Location = new System.Drawing.Point(163, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 33);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Dashboard";
+            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Class Code";
+            // 
+            // txtClassCode
+            // 
+            this.txtClassCode.Location = new System.Drawing.Point(246, 158);
+            this.txtClassCode.Name = "txtClassCode";
+            this.txtClassCode.Size = new System.Drawing.Size(183, 22);
+            this.txtClassCode.TabIndex = 1;
             // 
             // rbtnAddClass
             // 
@@ -48,26 +55,24 @@
             this.rbtnAddClass.FlatAppearance.BorderSize = 0;
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(732, 74);
-            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnAddClass.Location = new System.Drawing.Point(279, 225);
             this.rbtnAddClass.Name = "rbtnAddClass";
-            this.rbtnAddClass.Size = new System.Drawing.Size(204, 39);
-            this.rbtnAddClass.TabIndex = 5;
-            this.rbtnAddClass.Text = "Add a class with code";
+            this.rbtnAddClass.Size = new System.Drawing.Size(150, 40);
+            this.rbtnAddClass.TabIndex = 2;
+            this.rbtnAddClass.Text = "Add";
             this.rbtnAddClass.UseVisualStyleBackColor = false;
             this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click);
             // 
-            // Student_s_Dashboard
+            // Add_Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 566);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rbtnAddClass);
+            this.Controls.Add(this.txtClassCode);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Student_s_Dashboard";
-            this.Text = "Students_Dashboard";
-            this.Load += new System.EventHandler(this.Student_s_Dashboard_Load);
+            this.Name = "Add_Class";
+            this.Text = "Add_Class";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,7 +80,8 @@
 
         #endregion
 
-        private RoundedButton rbtnAddClass;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtClassCode;
+        private RoundedButton rbtnAddClass;
     }
 }

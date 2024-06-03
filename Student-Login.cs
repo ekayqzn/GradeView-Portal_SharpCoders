@@ -80,5 +80,18 @@ namespace gradesBookApp
             }
 
         }
+
+        private void txtStudentID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            LandingPage l = new LandingPage();
+            l.ShowDialog();
+            this.Close();
+        }
     }
 }

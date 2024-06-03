@@ -156,8 +156,8 @@ namespace gradesBookApp
         private void rbtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Home home = new Home();
-            home.ShowDialog();
+            LandingPage l = new LandingPage();
+            l.ShowDialog();
             this.Close();
         }
     }

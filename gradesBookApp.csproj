@@ -269,5 +269,50 @@
   <ItemGroup>
     <None Include="Images&amp;Icons\BG Color #545454 %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG 1 - LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHARP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHARP %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHARP %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN TECHNOLOGICAL UNIVERSITY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN TECHNOLOGICAL UNIVERSITY %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN TECHNOLOGICAL UNIVERSITY %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FACADE 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FACADE3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FACADE 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FACADE 5.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

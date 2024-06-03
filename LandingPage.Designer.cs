@@ -45,7 +45,6 @@
             this.roundedButton1 = new gradesBookApp.RoundedButton();
             this.roundedButton2 = new gradesBookApp.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,18 +67,18 @@
             // 
             // lblSchoolName
             // 
-            this.lblSchoolName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSchoolName.AutoSize = true;
-            this.lblSchoolName.BackColor = System.Drawing.Color.Navy;
-            this.lblSchoolName.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSchoolName.ForeColor = System.Drawing.Color.White;
-            this.lblSchoolName.Location = new System.Drawing.Point(443, 23);
-            this.lblSchoolName.Name = "lblSchoolName";
-            this.lblSchoolName.Size = new System.Drawing.Size(394, 23);
-            this.lblSchoolName.TabIndex = 1;
-            this.lblSchoolName.Tag = "";
-            this.lblSchoolName.Text = "Bulacan Polytechnic University";
+            //this.lblSchoolName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //| System.Windows.Forms.AnchorStyles.Right)));
+            //this.lblSchoolName.AutoSize = true;
+            //this.lblSchoolName.BackColor = System.Drawing.Color.Navy;
+            //this.lblSchoolName.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.lblSchoolName.ForeColor = System.Drawing.Color.White;
+            //this.lblSchoolName.Location = new System.Drawing.Point(443, 23);
+            //this.lblSchoolName.Name = "lblSchoolName";
+            //this.lblSchoolName.Size = new System.Drawing.Size(394, 23);
+            //this.lblSchoolName.TabIndex = 1;
+            //this.lblSchoolName.Tag = "";
+            //this.lblSchoolName.Text = "Bulacan Polytechnic University";
             // 
             // llblHome
             // 
@@ -133,14 +132,14 @@
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Blue;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(392, 308);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(973, 854);
-            this.textBox2.TabIndex = 8;
+            //this.textBox2.BackColor = System.Drawing.Color.Blue;
+            //this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.textBox2.Location = new System.Drawing.Point(392, 308);
+            //this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            //this.textBox2.Multiline = true;
+            //this.textBox2.Name = "textBox2";
+            //this.textBox2.Size = new System.Drawing.Size(973, 854);
+            //this.textBox2.TabIndex = 8;
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::gradesBookApp.Properties.Resources.SignIn_Icon;
@@ -258,13 +257,13 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Blue;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(294, 250);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(730, 694);
-            this.textBox2.TabIndex = 8;
+            //this.textBox2.BackColor = System.Drawing.Color.Blue;
+            //this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.textBox2.Location = new System.Drawing.Point(294, 250);
+            //this.textBox2.Multiline = true;
+            //this.textBox2.Name = "textBox2";
+            //this.textBox2.Size = new System.Drawing.Size(730, 694);
+            //this.textBox2.TabIndex = 8;
             // 
             // textBox3
             // 

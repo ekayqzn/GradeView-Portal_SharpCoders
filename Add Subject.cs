@@ -17,7 +17,6 @@ namespace gradesBookApp
         public string subCode = "";
         public string subName = "";
         public static int classID;
-        Randomize r = new Randomize();
         public string code = "";
         public static string classCode;
         public Add_Subject()
@@ -41,8 +40,6 @@ namespace gradesBookApp
             subCode = txtSubCode.Text.Trim();
             subName = txtSubName.Text.Trim();
 
-            //Generate Random code for this class
-            code = r.GenerateRandomCode().Trim();
             try
             {
                 //Check if the subject and the teacher already saved in the database

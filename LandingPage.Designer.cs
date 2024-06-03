@@ -32,17 +32,22 @@
             this.llblHome = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+
             this.rbtnStudent = new gradesBookApp.RoundedButton();
             this.rbtnFaculty = new gradesBookApp.RoundedButton();
             this.btnAdminstrator = new gradesBookApp.RoundedButton();
             this.roundedButton1 = new gradesBookApp.RoundedButton();
             this.roundedButton2 = new gradesBookApp.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -50,6 +55,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.Navy;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Location = new System.Drawing.Point(-3, -2);
@@ -61,6 +68,8 @@
             // 
             // lblSchoolName
             // 
+            this.lblSchoolName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSchoolName.AutoSize = true;
             this.lblSchoolName.BackColor = System.Drawing.Color.Navy;
             this.lblSchoolName.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,7 +132,6 @@
             this.linkLabel1.Text = "Sign In";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // textBox3
             // 
             this.textBox2.BackColor = System.Drawing.Color.Blue;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -133,8 +141,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(973, 854);
             this.textBox2.TabIndex = 8;
-            // 
-            // pictureBox5
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::gradesBookApp.Properties.Resources.SignIn_Icon;
@@ -250,7 +256,17 @@
             this.roundedButton1.TabIndex = 32;
             this.roundedButton1.UseVisualStyleBackColor = false;
             // 
-            // roundedButton2
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Blue;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(294, 250);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(730, 694);
+            this.textBox2.TabIndex = 8;
+            // 
+            // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.Navy;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -265,6 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1712, 1158);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.pictureBox5);

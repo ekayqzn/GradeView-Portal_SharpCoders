@@ -41,10 +41,5 @@ namespace gradesBookApp
             student.ShowDialog();
             this.Close();
         }
-
-        private void Home_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

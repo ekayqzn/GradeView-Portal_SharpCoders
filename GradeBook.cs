@@ -63,68 +63,68 @@ namespace gradesBookApp
                 db.Disconnect();
             }
 
-            //Get program ID of the clicked section tile
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "SELECT program_id FROM modern_gradesbook.program WHERE program_name = @programName AND year_level = @yearLevel AND section = @section";
+            ////Get program ID of the clicked section tile
+            //try
+            //{
+            //    db.Connect();
+            //    db.cmd.Connection = db.conn;
+            //    db.cmd.CommandText = "SELECT program_id FROM modern_gradesbook.program WHERE program_name = @programName AND year_level = @yearLevel AND section = @section";
 
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@programName", Course_Dashboard.programName);
-                db.cmd.Parameters.AddWithValue("@yearLevel", Course_Dashboard.yearLevel);
-                db.cmd.Parameters.AddWithValue("@section", Course_Dashboard.section);
+            //    db.cmd.Parameters.Clear();
+            //    db.cmd.Parameters.AddWithValue("@programName", Course_Dashboard.programName);
+            //    db.cmd.Parameters.AddWithValue("@yearLevel", Course_Dashboard.yearLevel);
+            //    db.cmd.Parameters.AddWithValue("@section", Course_Dashboard.section);
 
-                db.dta.SelectCommand = db.cmd;
+            //    db.dta.SelectCommand = db.cmd;
 
-                DataTable dataTable = new DataTable();
-                db.dta.Fill(dataTable);
+            //    DataTable dataTable = new DataTable();
+            //    db.dta.Fill(dataTable);
 
-                if(dataTable.Rows.Count > 0)
-                {
-                    programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
+            //    if(dataTable.Rows.Count > 0)
+            //    {
+            //        programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //finally
+            //{
+            //    db.Disconnect();
+            //}
 
-            //Get course_id
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "SELECT course_id FROM modern_gradesbook.course WHERE program_id = @programID AND class_id = @classID";
+            ////Get course_id
+            //try
+            //{
+            //    db.Connect();
+            //    db.cmd.Connection = db.conn;
+            //    db.cmd.CommandText = "SELECT course_id FROM modern_gradesbook.course WHERE program_id = @programID AND class_id = @classID";
 
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@programID", programID);
-                db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID);
+            //    db.cmd.Parameters.Clear();
+            //    db.cmd.Parameters.AddWithValue("@programID", programID);
+            //    db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID);
 
-                db.dta.SelectCommand = db.cmd;
+            //    db.dta.SelectCommand = db.cmd;
 
-                DataTable dataTable = new DataTable();
-                db.dta.Fill(dataTable);
+            //    DataTable dataTable = new DataTable();
+            //    db.dta.Fill(dataTable);
 
-                if (dataTable.Rows.Count > 0)
-                {
-                    courseID = Convert.ToInt32(dataTable.Rows[0]["course_id"]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
+            //    if (dataTable.Rows.Count > 0)
+            //    {
+            //        courseID = Convert.ToInt32(dataTable.Rows[0]["course_id"]);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //finally
+            //{
+            //    db.Disconnect();
+            //}
 
-            //Insert to Enroll Table info
+            //Insert to Enroll Table info . THE FF CODE SHOULD BE WHEN THE STUDENT ADDED THE CODE TO HER DASHBOARD
             try
             {
                 db.Connect();

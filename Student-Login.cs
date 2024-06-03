@@ -33,19 +33,19 @@ namespace gradesBookApp
             userID = txtStudentID.Text;
             userPass = txtStudentPass.Text;
 
-            //Check if the user is a Teacher
+            //Check if the user is a Student
             try
             {
                 db.Connect();
 
                 db.cmd.Connection = db.conn;
                 //Since MySql is case insensitive, using BINARY will ensure that it will be case-sensitive esp. in this type of query
-                db.cmd.CommandText = "SELECT * FROM modern_gradesbook.teacher_info WHERE BINARY teacher_id = @teacherId AND BINARY teacher_password = @teacherPassword";
+                db.cmd.CommandText = "SELECT * FROM modern_gradesbook.student_info WHERE BINARY student_id = @studentID AND BINARY password = @studentPassword";
 
                 //Clear existing parameter, so that when there's an error, User can still re-enter login details
                 db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@teacherId", userID);
-                db.cmd.Parameters.AddWithValue("@teacherPassword", userPass);
+                db.cmd.Parameters.AddWithValue("@studentID", userID);
+                db.cmd.Parameters.AddWithValue("@studentPassword", userPass);
 
                 db.dtr = db.cmd.ExecuteReader();
                 loggedIn = db.dtr.Read();
@@ -58,7 +58,7 @@ namespace gradesBookApp
                     {
                         //show dashboard of specific teacher
                         this.Hide();
-                        Teacher_s_Dashboard dashboard = new Teacher_s_Dashboard();
+                        Student_s_Dashboard dashboard = new Student_s_Dashboard();
                         dashboard.ShowDialog();
                         this.Close();
                     }

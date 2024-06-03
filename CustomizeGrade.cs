@@ -51,6 +51,22 @@ namespace gradesBookApp
         public static int fRecitationCount;
         public static int fRecitationPercent;
 
+        bool mAttendance = false;
+        bool mQuiz = false;
+        bool mRecitation = false;
+        bool mActivity = false;
+        bool mAssignment = false;
+        bool mLongQuiz = false;
+        bool isMChecked = false;
+
+        bool fAttendance = false;
+        bool fQuiz = false;
+        bool fRecitation = false;
+        bool fActivity = false;
+        bool fAssignment = false;
+        bool fLongQuiz = false;
+        bool isFChecked = false;
+
         GradebookQuery g = new GradebookQuery();
         public CustomizeGrade()
         {
@@ -63,28 +79,29 @@ namespace gradesBookApp
             bool isValid = false;
             databaseConnection db = new databaseConnection();
 
-            //!Validation -- must be total of 70
+            int midtermTotalPercent = 0;
+            int finalTotalPercent = 0;
+
 
             //Midterm
 
             //Midterm Attendance
-            if(chkMAttendance.Checked)
+            if (chkMAttendance.Checked)
             {
                 mAttendancePercent = validate.isNumber(txtMAttendance.Text);
                 if(mAttendancePercent == 0)
                 {
                     txtMAttendance.Focus();
                     txtMAttendance.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     mAttendanceCount = Convert.ToInt32(numMAttendance.Value);
                     mAttendancePercent = Convert.ToInt32(txtMAttendance.Text.Trim());
+                    midtermTotalPercent += mAttendancePercent;                 
 
-                    g.mAttendance("attendance", mAttendanceCount, mAttendancePercent);
+                    mAttendance = true;
                 }
             }
             
@@ -96,16 +113,15 @@ namespace gradesBookApp
                 {
                     txtMActivity.Focus();
                     txtMActivity.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     mActivityCount = Convert.ToInt32(numMActivity.Value);
                     mActivityPercent = Convert.ToInt32(txtMActivity.Text.Trim());
+                    midtermTotalPercent += mActivityPercent;
 
-                    g.mOthers("activity", mActivityCount, mActivityPercent);
+                    mActivity = true;
                 }
             }
 
@@ -117,16 +133,16 @@ namespace gradesBookApp
                 {
                     txtMAssignment.Focus();
                     txtMAssignment.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     mAssignmentCount = Convert.ToInt32(numMAssignment.Value);
                     mAssignmentPercent = Convert.ToInt32(txtMAssignment.Text.Trim());
-                    
-                    g.mOthers("assignment", mAssignmentCount, mAssignmentPercent);
+                    midtermTotalPercent += mAssignmentPercent;
+
+                    mAssignment = true;
+                   
                 }
             }
 
@@ -138,16 +154,15 @@ namespace gradesBookApp
                 {
                     txtMLongQuiz.Focus();
                     txtMLongQuiz.SelectAll(); //Select invalid input
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     mLongQuizCount = Convert.ToInt32(numMLongQuiz.Value);
                     mLongQuizPercent = Convert.ToInt32(txtMLongQuiz.Text.Trim());
+                    midtermTotalPercent += mLongQuizPercent;
 
-                    g.mOthers("longquiz", mLongQuizCount, mLongQuizPercent);
+                    mLongQuiz = true;
                 }
             }
 
@@ -159,16 +174,15 @@ namespace gradesBookApp
                 {
                     txtMQuiz.Focus();
                     txtMQuiz.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     mQuizCount = Convert.ToInt32(numMQuiz.Value);
                     mQuizPercent = Convert.ToInt32(txtMQuiz.Text.Trim());
-                    
-                    g.mOthers("quiz", mQuizCount, mQuizPercent);
+                    midtermTotalPercent += mQuizPercent;
+
+                    mQuiz = true;
                 }
             }
 
@@ -180,34 +194,32 @@ namespace gradesBookApp
                 {
                     txtMRecitation.Focus();
                     txtMRecitation.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     mRecitationCount = Convert.ToInt32(numMRecitation.Value);
                     mRecitationPercent = Convert.ToInt32(txtMRecitation.Text.Trim());
-                    
-                    g.mOthers("recitation", mRecitationCount, mRecitationPercent);
+                    midtermTotalPercent += mRecitationPercent;
+
+                    mRecitation = true;
                 }
             }
 
             //Midterm Exam
             if(rdoMExam.Checked)
             {
-                isValid = true;
-                g.mRdo("exam");
+                isMChecked = true;
             }
 
             //Midterm Project
             if(rdoMProject.Checked)
             {
-                isValid = true;
-                g.mRdo("project");
+                isMChecked = true;
             }
 
             //Final
+
             //Final Attendance
             if (chkFAttendance.Checked)
             {
@@ -216,16 +228,15 @@ namespace gradesBookApp
                 {
                     txtFAttendance.Focus();
                     txtFAttendance.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     fAttendanceCount = Convert.ToInt32(numFAttendance.Value);
                     fAttendancePercent = Convert.ToInt32(txtFAttendance.Text.Trim());
+                    finalTotalPercent += fAttendancePercent;
 
-                    g.fAttendance("attendance", fAttendanceCount, fAttendancePercent);
+                    fAttendance = true;
                 }
             }
 
@@ -237,16 +248,15 @@ namespace gradesBookApp
                 {
                     txtFActivity.Focus();
                     txtFActivity.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     fActivityCount = Convert.ToInt32(numFActivity.Value);
                     fActivityPercent = Convert.ToInt32(txtFActivity.Text.Trim());
-                    
-                    g.fOthers("activity", fActivityCount, fActivityPercent);
+                    finalTotalPercent += fActivityPercent;
+
+                    fActivity = true;
                 }
             }
 
@@ -258,16 +268,15 @@ namespace gradesBookApp
                 {
                     txtFAssignment.Focus();
                     txtFAssignment.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     fAssignmentCount = Convert.ToInt32(numFAssignment.Value);
                     fAssignmentPercent = Convert.ToInt32(txtFAssignment.Text.Trim());
-                    
-                    g.fOthers("assignment", fAssignmentCount, fAssignmentPercent);
+                    finalTotalPercent += fAssignmentPercent;
+
+                    fAssignment = true;
                 }
             }
 
@@ -279,16 +288,14 @@ namespace gradesBookApp
                 {
                     txtFLongQuiz.Focus();
                     txtFLongQuiz.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     fLongQuizCount = Convert.ToInt32(numFLongQuiz.Value);
                     fLongQuizPercent = Convert.ToInt32(txtFLongQuiz.Text.Trim());
-                    
-                    g.fOthers("longquiz", fLongQuizCount, fLongQuizPercent);
+                    finalTotalPercent += fLongQuizPercent;
+                    fLongQuiz = true;
                 }
             }
 
@@ -300,16 +307,14 @@ namespace gradesBookApp
                 {
                     txtFQuiz.Focus();
                     txtFQuiz.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     fQuizCount = Convert.ToInt32(numFQuiz.Value);
                     fQuizPercent = Convert.ToInt32(txtFQuiz.Text.Trim());
-                    
-                    g.fOthers("quiz", fQuizCount, fQuizPercent);
+                    finalTotalPercent += fQuizPercent;
+                    fQuiz = true;
                 }
             }
 
@@ -321,43 +326,144 @@ namespace gradesBookApp
                 {
                     txtFRecitation.Focus();
                     txtFRecitation.SelectAll();
-                    isValid = false;
                     return;
                 }
                 else
                 {
-                    isValid = true;
                     fRecitationCount = Convert.ToInt32(numFRecitation.Value);
                     fRecitationPercent = Convert.ToInt32(txtFRecitation.Text.Trim());
-                    
-                    g.fOthers("recitation", fRecitationCount, fRecitationPercent);
+                    finalTotalPercent += fRecitationPercent;
+
+                    fRecitation = true;
                 }
             }
             
             //Final exam
             if(rdoFExam.Checked)
             {
-                isValid = true;
-                g.fRdo("exam");
+                isFChecked = true;
             }
 
             //Final Project
             if (rdoFProject.Checked)
-            {
-                isValid = true;
-                g.fRdo("project");
+            {           
+                isFChecked = true;
             }
 
-            //!Validate 30% must have check
+            // Validation to ensure the total percentage is 70%
+            if (midtermTotalPercent != 70 || finalTotalPercent != 70)
+            {
+                MessageBox.Show("The total percentage for both midterm and final must be exactly 70%.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isValid = false;
+            }
+            else
+            {
+                if(mAttendance)
+                {
+                    g.mAttendance("attendance", mAttendanceCount, mAttendancePercent);
+                    isValid = true;
+                }       
+                if (mActivity)
+                {
+                    g.mOthers("activity", mActivityCount, mActivityPercent);
+                    isValid = true;
+                }
+                if (mAssignment)
+                {
+                    g.mOthers("assignment", mAssignmentCount, mAssignmentPercent);
+                    isValid = true;
+                }
+                if (mLongQuiz)
+                {
+                    g.mOthers("longquiz", mLongQuizCount, mLongQuizPercent);
+                    isValid = true;
+                }
+                if (mQuiz)
+                {
+                    g.mOthers("quiz", mQuizCount, mQuizPercent);
+                    isValid = true;
+                }
+                if (mRecitation)
+                {
+                    g.mAttendance("recitation", mRecitationCount, mRecitationPercent);
+                    isValid = true;
+                }                     
+                if (fAttendance)
+                {
+                    g.fAttendance("attendance", fAttendanceCount, fAttendancePercent);
+                    isValid = true;
+                }
+                if (fActivity)
+                {
+                    g.fOthers("activity", fActivityCount, fActivityPercent);
+                    isValid = true;
+                }
+                if (fAssignment)
+                {
+                    g.fOthers("assignment", fAssignmentCount, fAssignmentPercent);
+                    isValid = true;
+                }
+                if (fLongQuiz)
+                {
+                    g.fOthers("longquiz", fLongQuizCount, fLongQuizPercent);
+                    isValid = true;
+                }
+                if (fQuiz)
+                {
+                    g.fOthers("quiz", fQuizCount, fQuizPercent);
+                    isValid = true;
+                }
+                if (fRecitation)
+                {
+                    g.fAttendance("recitation", fRecitationCount, fRecitationPercent);
+                    isValid = true;
+                }
+            }
 
+            if (isMChecked == false)
+            {
+                MessageBox.Show("Please select for the 30% for Midterm", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isValid = false;
+            }
+            else
+            {
+                if (rdoMExam.Checked)
+                {
+                    g.mRdo("exam");
+                    isValid = true;
+                }
+                else
+                {
+                    g.mRdo("project");
+                    isValid = true;
+                }
+            }
+            if (isFChecked == false)
+            {
+                MessageBox.Show("Please select for the 30% for Final", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isValid = false;
+            }
+            else
+            {
+                if (rdoFExam.Checked)
+                {
+                    g.fRdo("exam");
+                }
+                else
+                {
+                    g.fRdo("project");
+                }
+            }
+            
+            // Proceed if valid
             if (isValid)
             {
+                MessageBox.Show("SUCCESS");
                 this.Hide();
                 Teacher_s_Dashboard teachersDashboard = new Teacher_s_Dashboard();
                 teachersDashboard.ShowDialog();
                 this.Close();
-            }
-
+            }      
         }
 
         private void chkMActivity_CheckedChanged(object sender, EventArgs e)

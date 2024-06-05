@@ -117,4 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>The Bulacan Technological University (BTU) as being the  province's first Technological University is an institution that aims to provide the latest and most in demand courses and programs to students around Bulacan. 
+
+As the province of Bulacan is paving its way to technological advancement, the BTU retains its societal relevance as a University providing quality and world class education that is inclined to technology.</value>
+  </data>
 </root>

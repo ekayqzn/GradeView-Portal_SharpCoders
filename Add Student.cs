@@ -1,4 +1,5 @@
-﻿using Mysqlx.Crud;
+﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,22 +32,47 @@ namespace gradesBookApp
 
         private void cboProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboProgram.SelectedItem.ToString() == "Bachelor of Science in Information Technology" || cboProgram.SelectedItem.ToString() == "Bachelor of Science in Hospitality Management" || cboProgram.SelectedItem.ToString() == "Bachelor of Secondary Education major in English" || cboProgram.SelectedItem.ToString() == "Bachelor of Secondary Education major in Mathematics")
+            string selectedProgram = cboProgram.SelectedItem.ToString();
+
+            try
             {
-                numSection.Maximum = 2;
-                numSection.Minimum = 1;
+                // Open the database connection
+                db.Connect();
+
+                // Query to get the year and section limits for the selected program
+                string query = "SELECT MAX(year_level) AS max_year, MAX(section) AS max_section FROM modern_gradesbook.program WHERE program_name = @programName";
+
+                MySqlCommand command = new MySqlCommand(query, db.conn);
+                command.Parameters.AddWithValue("@programName", selectedProgram);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        int maxYear = reader.GetInt32("max_year");
+                        int maxSection = reader.GetInt32("max_section");
+
+                        // Set the year numeric up-down control
+                        numYear.Maximum = maxYear;
+                        numYear.Minimum = 1;
+
+                        // Set the section numeric up-down control
+                        numSection.Maximum = maxSection;
+                        numSection.Minimum = 1;
+                    }
+                }
             }
-            else if (cboProgram.SelectedItem.ToString() == "Bachelor of Science in Accountancy" || cboProgram.SelectedItem.ToString() == "Bachelor of Science in Computer Engineering")
+            catch (Exception ex)
             {
-                numSection.Maximum = 1;
-                numSection.Minimum = 1;
+                MessageBox.Show("Error: " + ex.Message);
             }
-            else if (cboProgram.SelectedItem.ToString() == "Bachelor of Science in Entrepreneurship")
+            finally
             {
-                numSection.Maximum = 3;
-                numSection.Minimum = 1;
+                // Close the database connection
+                db.Disconnect();
             }
         }
+
 
         private void rbtnAdd_Click(object sender, EventArgs e)
         {
@@ -153,6 +179,48 @@ namespace gradesBookApp
             }
         }
 
+
+        private void LoadDataIntoDropdown()
+        {
+            try
+            {
+                // Open the database connection
+                db.Connect();
+
+                // Query to retrieve distinct program names
+                string query = "SELECT DISTINCT program_name FROM modern_gradesbook.program";
+
+                // Command to execute the query
+                MySqlCommand command = new MySqlCommand(query, db.conn);
+
+                // Execute the query and get the data reader
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    // Clear existing items in dropdown
+                    cboProgram.Items.Clear();
+
+                    // Iterate through the data reader
+                    while (reader.Read())
+                    {
+                        // Assuming the program name is in the first column (index 0)
+                        string program = reader.GetString(0);
+
+                        // Add program to dropdown
+                        cboProgram.Items.Add(program);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                // Close the database connection
+                db.Disconnect();
+            }
+        }
+
         private void rbtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -160,5 +228,11 @@ namespace gradesBookApp
             l.ShowDialog();
             this.Close();
         }
+
+        private void Add_Student_Load(object sender, EventArgs e)
+        {
+            LoadDataIntoDropdown();
+        }
+
     }
 }

@@ -98,5 +98,10 @@ namespace gradesBookApp
             l.ShowDialog();
             this.Close();
         }
+
+        private void Faculty_LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

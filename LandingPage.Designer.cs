@@ -122,7 +122,7 @@
             this.rbtnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnStudent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnStudent.Location = new System.Drawing.Point(1292, 646);
+            this.rbtnStudent.Location = new System.Drawing.Point(1288, 605);
             this.rbtnStudent.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnStudent.Name = "rbtnStudent";
             this.rbtnStudent.Size = new System.Drawing.Size(451, 71);
@@ -139,7 +139,7 @@
             this.rbtnFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnFaculty.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFaculty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnFaculty.Location = new System.Drawing.Point(1292, 546);
+            this.rbtnFaculty.Location = new System.Drawing.Point(1288, 505);
             this.rbtnFaculty.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnFaculty.Name = "rbtnFaculty";
             this.rbtnFaculty.Size = new System.Drawing.Size(451, 71);
@@ -156,7 +156,7 @@
             this.btnAdminstrator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdminstrator.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdminstrator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.btnAdminstrator.Location = new System.Drawing.Point(1292, 840);
+            this.btnAdminstrator.Location = new System.Drawing.Point(1288, 799);
             this.btnAdminstrator.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdminstrator.Name = "btnAdminstrator";
             this.btnAdminstrator.Size = new System.Drawing.Size(451, 71);
@@ -289,7 +289,7 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.pictureBox5.Image = global::gradesBookApp.Properties.Resources.SHARP;
-            this.pictureBox5.Location = new System.Drawing.Point(1384, 227);
+            this.pictureBox5.Location = new System.Drawing.Point(1388, 169);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(257, 238);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

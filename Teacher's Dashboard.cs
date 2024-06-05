@@ -81,7 +81,7 @@ namespace gradesBookApp
                         Label label = new Label();
                         label.Name = "lblSub" + (i+1).ToString();
                         label.TextAlign = ContentAlignment.BottomLeft;
-                        label.Text = subjectCode[i] + Environment.NewLine; 
+                        label.Text = subjectCode[i] + Environment.NewLine;
                         label.AutoSize = false;
                         label.Size = new Size(labelSizeX, labelSizeY);
                         label.BackColor = Color.FromArgb(red, green, blue);
@@ -107,7 +107,7 @@ namespace gradesBookApp
                         label.Click += lblSubject_Click;
 
                         //Add to panel
-                        panel1.Controls.Add(label);
+                        TDB_Bg.Controls.Add(label);
                     }
                 }
             }
@@ -163,6 +163,29 @@ namespace gradesBookApp
             this.Hide();
             Course_Dashboard courseDB = new Course_Dashboard();
             courseDB.ShowDialog();
+            this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            LandingPage l = new LandingPage();
+            l.ShowDialog();
             this.Close();
         }
     }

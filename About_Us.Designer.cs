@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About_Us));
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.LinkLBLHome = new System.Windows.Forms.LinkLabel();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.roundedButton2 = new gradesBookApp.RoundedButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.roundedButton2 = new gradesBookApp.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -84,20 +86,7 @@
             this.textBox2.TabIndex = 49;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // roundedButton2
-            // 
-            this.roundedButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.roundedButton2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.roundedButton2.Enabled = false;
-            this.roundedButton2.FlatAppearance.BorderSize = 0;
-            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton2.ForeColor = System.Drawing.Color.White;
-            this.roundedButton2.Location = new System.Drawing.Point(222, 121);
-            this.roundedButton2.Name = "roundedButton2";
-            this.roundedButton2.Size = new System.Drawing.Size(1323, 1007);
-            this.roundedButton2.TabIndex = 52;
-            this.roundedButton2.UseVisualStyleBackColor = false;
-            // 
+
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -126,12 +115,42 @@
             this.pictureBox3.TabIndex = 54;
             this.pictureBox3.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.label1.Location = new System.Drawing.Point(494, 489);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(781, 494);
+            this.label1.TabIndex = 55;
+            this.label1.Text = resources.GetString("label1.Text");
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // roundedButton2
+            // 
+            this.roundedButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.roundedButton2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.roundedButton2.Enabled = false;
+            this.roundedButton2.FlatAppearance.BorderSize = 0;
+            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton2.ForeColor = System.Drawing.Color.White;
+            this.roundedButton2.Location = new System.Drawing.Point(222, 121);
+            this.roundedButton2.Name = "roundedButton2";
+            this.roundedButton2.Size = new System.Drawing.Size(1323, 1007);
+            this.roundedButton2.TabIndex = 52;
+            this.roundedButton2.UseVisualStyleBackColor = false;
+            // 
             // About_Us
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1794, 1055);
+
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.roundedButton2);
             this.Controls.Add(this.pictureBox6);
@@ -157,5 +176,6 @@
         private RoundedButton roundedButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
     }
 }

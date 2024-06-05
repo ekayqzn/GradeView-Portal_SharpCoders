@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace gradesBookApp
 {
@@ -21,6 +15,7 @@ namespace gradesBookApp
 
         databaseConnection db = new databaseConnection();
         Randomize r = new Randomize();
+
         public Add_Section()
         {
             InitializeComponent();
@@ -28,21 +23,44 @@ namespace gradesBookApp
 
         private void cboProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //!Retrieve programs in database
-            if (cboProgram.SelectedItem.ToString() == "Bachelor of Science in Information Technology" || cboProgram.SelectedItem.ToString() == "Bachelor of Science in Hospitality Management" || cboProgram.SelectedItem.ToString() == "Bachelor of Secondary Education major in English" || cboProgram.SelectedItem.ToString() == "Bachelor of Secondary Education major in Mathematics") 
+            string selectedProgram = cboProgram.SelectedItem.ToString();
+
+            try
             {
-                numSection.Maximum = 2;
-                numSection.Minimum = 1;
+                // Open the database connection
+                db.Connect();
+
+                // Query to get the year and section limits for the selected program
+                string query = "SELECT MAX(year_level) AS max_year, MAX(section) AS max_section FROM program WHERE program_name = @programName";
+
+                MySqlCommand command = new MySqlCommand(query, db.conn);
+                command.Parameters.AddWithValue("@programName", selectedProgram);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        int maxYear = reader.GetInt32("max_year");
+                        int maxSection = reader.GetInt32("max_section");
+
+                        // Set the year numeric up-down control
+                        numYear.Maximum = maxYear;
+                        numYear.Minimum = 1;
+
+                        // Set the section numeric up-down control
+                        numSection.Maximum = maxSection;
+                        numSection.Minimum = 1;
+                    }
+                }
             }
-            else if (cboProgram.SelectedItem.ToString() == "Bachelor of Science in Accountancy" || cboProgram.SelectedItem.ToString() == "Bachelor of Science in Computer Engineering")
+            catch (Exception ex)
             {
-                numSection.Maximum = 1;
-                numSection.Minimum = 1;
+                MessageBox.Show("Error: " + ex.Message);
             }
-            else if (cboProgram.SelectedItem.ToString() == "Bachelor of Science in Entrepreneurship")
+            finally
             {
-                numSection.Maximum = 3;
-                numSection.Minimum = 1;
+                // Close the database connection
+                db.Disconnect();
             }
         }
 
@@ -55,10 +73,10 @@ namespace gradesBookApp
 
             //! Check for duplicates in database and course dashboard
 
-            //Add program_id, class_id, and code to course table
+            // Add program_id, class_id, and code to course table
             try
             {
-                //Get program_id
+                // Get program_id
                 db.Connect();
                 db.cmd.Connection = db.conn;
                 db.cmd.CommandText = "SELECT program_id FROM modern_gradesbook.program WHERE program_name = @programName AND year_level = @year AND section = @section";
@@ -68,16 +86,16 @@ namespace gradesBookApp
                 db.cmd.Parameters.AddWithValue("@year", year);
                 db.cmd.Parameters.AddWithValue("@section", section);
 
-                //SelectCommand property select the sql command
+                // SelectCommand property select the sql command
                 db.dta.SelectCommand = db.cmd;
 
-                //DataTable
+                // DataTable
                 DataTable dataTable = new DataTable();
-                db.dta.Fill(dataTable); //populate dataTable
+                db.dta.Fill(dataTable); // populate dataTable
 
                 programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
 
-                //RANDOMLY GENERATED CODE
+                // RANDOMLY GENERATED CODE
                 db.cmd.Connection = db.conn;
                 db.cmd.CommandText = "INSERT INTO course (class_id, program_id, course_code) VALUES(@class_id, @program_id, @code)";
 
@@ -89,7 +107,7 @@ namespace gradesBookApp
                 db.cmd.ExecuteNonQuery();
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -101,6 +119,52 @@ namespace gradesBookApp
                 courseDB.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void LoadDataIntoDropdown()
+        {
+            try
+            {
+                // Open the database connection
+                db.Connect();
+
+                // Query to retrieve distinct program names
+                string query = "SELECT DISTINCT program_name FROM program";
+
+                // Command to execute the query
+                MySqlCommand command = new MySqlCommand(query, db.conn);
+
+                // Execute the query and get the data reader
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    // Clear existing items in dropdown
+                    cboProgram.Items.Clear();
+
+                    // Iterate through the data reader
+                    while (reader.Read())
+                    {
+                        // Assuming the program name is in the first column (index 0)
+                        string program = reader.GetString(0);
+
+                        // Add program to dropdown
+                        cboProgram.Items.Add(program);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                // Close the database connection
+                db.Disconnect();
+            }
+        }
+
+        private void Add_Section_Load(object sender, EventArgs e)
+        {
+            LoadDataIntoDropdown();
         }
     }
 }

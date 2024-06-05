@@ -167,10 +167,13 @@ namespace gradesBookApp
 
         private void rbtnSection_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Add_Section addSection = new Add_Section();
             addSection.ShowDialog();
-            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

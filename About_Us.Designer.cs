@@ -94,7 +94,7 @@
             this.roundedButton2.ForeColor = System.Drawing.Color.White;
             this.roundedButton2.Location = new System.Drawing.Point(222, 121);
             this.roundedButton2.Name = "roundedButton2";
-            this.roundedButton2.Size = new System.Drawing.Size(1323, 1110);
+            this.roundedButton2.Size = new System.Drawing.Size(1323, 1007);
             this.roundedButton2.TabIndex = 52;
             this.roundedButton2.UseVisualStyleBackColor = false;
             // 
@@ -121,7 +121,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(-63, -80);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1920, 1318);
+            this.pictureBox3.Size = new System.Drawing.Size(1920, 1215);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 54;
             this.pictureBox3.TabStop = false;
@@ -131,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1794, 1158);
+            this.ClientSize = new System.Drawing.Size(1794, 1055);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.roundedButton2);
             this.Controls.Add(this.pictureBox6);

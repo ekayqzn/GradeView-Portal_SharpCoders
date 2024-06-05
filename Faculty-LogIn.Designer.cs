@@ -104,7 +104,7 @@
             this.pictureBox3.Image = global::gradesBookApp.Properties.Resources.FACADE3;
             this.pictureBox3.Location = new System.Drawing.Point(-307, -237);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(2370, 1633);
+            this.pictureBox3.Size = new System.Drawing.Size(2370, 1530);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
@@ -217,7 +217,7 @@
             this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnLogIn.Location = new System.Drawing.Point(1553, 772);
+            this.rbtnLogIn.Location = new System.Drawing.Point(1553, 720);
             this.rbtnLogIn.Name = "rbtnLogIn";
             this.rbtnLogIn.Size = new System.Drawing.Size(184, 40);
             this.rbtnLogIn.TabIndex = 4;
@@ -233,7 +233,7 @@
             this.roundedButton1.FlatAppearance.BorderSize = 0;
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton1.Location = new System.Drawing.Point(1170, 131);
+            this.roundedButton1.Location = new System.Drawing.Point(1170, 79);
             this.roundedButton1.Name = "roundedButton1";
             this.roundedButton1.Size = new System.Drawing.Size(1078, 1195);
             this.roundedButton1.TabIndex = 34;
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1794, 1158);
+            this.ClientSize = new System.Drawing.Size(1794, 1055);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label4);

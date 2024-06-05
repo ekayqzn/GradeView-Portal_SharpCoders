@@ -111,7 +111,7 @@ namespace gradesBookApp
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         finally
                         {
@@ -119,7 +119,7 @@ namespace gradesBookApp
                         }
 
                         //Once performed all operation, Message Box will show to notify the user. When clicked the OK button, this form will close and appears the CustomizeGrade form
-                        if (MessageBox.Show("Subject Created. Successfully Added the Subject", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                        if (MessageBox.Show("Successfully created the Subject", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                         {
                             this.Hide();
                             CustomizeGrade customizeGrade = new CustomizeGrade();
@@ -165,14 +165,14 @@ namespace gradesBookApp
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         finally
                         {
                             db.Disconnect();
                         }
 
-                        if (MessageBox.Show("Successfully Added the Subject", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                        if (MessageBox.Show("Successfully added the Subject", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                         {
                             //!ADD TO MESSAGE BOX THE CODE
 
@@ -186,7 +186,7 @@ namespace gradesBookApp
                 }
                 else //If the subject the user want to add is already in the database and in her dashboard
                 {
-                    if(MessageBox.Show("Subject is already Added to your Dashboard. Duplicate Subject is not allowed", "Duplicate Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK) {
+                    if(MessageBox.Show("Subject is already added to your Dashboard. Duplicate Subject is not allowed", "Duplicate Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK) {
                         this.Hide();
                         Teacher_s_Dashboard teacherDashboard = new Teacher_s_Dashboard();
                         teacherDashboard.ShowDialog();
@@ -196,7 +196,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

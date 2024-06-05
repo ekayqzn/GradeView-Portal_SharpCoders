@@ -134,6 +134,7 @@
             this.label4.TabIndex = 45;
             this.label4.Tag = "";
             this.label4.Text = " BULACAN TECHNOLOGICAL UNIVERSITY";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox6
             // 

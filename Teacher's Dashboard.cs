@@ -45,7 +45,7 @@ namespace gradesBookApp
                 db.cmd.CommandText = "SELECT class_id, subject_code FROM modern_gradesbook.class WHERE teacher_id = @teacherId";
 
                 db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID);
+                db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID);
                 //SelectCommand property select the sql command
                 db.dta.SelectCommand = db.cmd;
 
@@ -127,7 +127,7 @@ namespace gradesBookApp
             //When a tile is click
             Label label = (Label)sender;
             subjectTile = label.Text.Trim();
-            string teacherId = Faculty_LogIn.userID.Trim();
+            string teacherId = FacultyLogIn.userID.Trim();
 
             try
             {
@@ -159,6 +159,7 @@ namespace gradesBookApp
             {
                 db.Disconnect();
             }
+            MessageBox.Show(teacherId);
 
             this.Hide();
             Course_Dashboard courseDB = new Course_Dashboard();

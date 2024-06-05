@@ -62,8 +62,8 @@ namespace gradesBookApp
         private void rbtnFaculty_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Faculty_LogIn faculty = new Faculty_LogIn();
-            faculty.ShowDialog();
+            FacultyLogIn f = new FacultyLogIn();
+            f.ShowDialog();
             this.Close();
         }
 

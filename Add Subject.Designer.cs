@@ -137,6 +137,7 @@
             this.Name = "Add_Subject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Subject";
+            this.Load += new System.EventHandler(this.Add_Subject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

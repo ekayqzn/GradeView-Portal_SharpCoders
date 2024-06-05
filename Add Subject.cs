@@ -49,7 +49,7 @@ namespace gradesBookApp
 
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID.Trim());
+                db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
                 db.dta.SelectCommand = db.cmd;
 
                 DataTable dataTable = new DataTable();
@@ -82,7 +82,7 @@ namespace gradesBookApp
 
                         db.cmd.Parameters.Clear();
                         db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                        db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID.Trim());
+                        db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
                         db.cmd.ExecuteNonQuery();
 
                         try
@@ -93,12 +93,13 @@ namespace gradesBookApp
 
                             db.cmd.Parameters.Clear();
                             db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                            db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID.Trim());
+                            db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
 
                             db.dta.SelectCommand = db.cmd;
 
                             DataTable dataTable2 = new DataTable();
                             db.dta.Fill(dataTable2);
+
 
                             if (dataTable2.Rows.Count > 0)
                             {
@@ -107,7 +108,7 @@ namespace gradesBookApp
                             }
 
                             //Debug Tool Confirming the classID value
-                            //MessageBox.Show(classID.ToString());
+                            MessageBox.Show(classID.ToString());
                         }
                         catch (Exception ex)
                         {
@@ -135,7 +136,7 @@ namespace gradesBookApp
 
                         db.cmd.Parameters.Clear();
                         db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                        db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID.Trim());
+                        db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
                         db.cmd.ExecuteNonQuery();
                         
                         try
@@ -147,7 +148,7 @@ namespace gradesBookApp
 
                             db.cmd.Parameters.Clear();
                             db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                            db.cmd.Parameters.AddWithValue("@teacherId", Faculty_LogIn.userID.Trim());
+                            db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
 
                             db.dta.SelectCommand = db.cmd;
 
@@ -161,7 +162,7 @@ namespace gradesBookApp
                             }
 
                             //Debug Tool
-                            //MessageBox.Show(classCode);
+                            MessageBox.Show(classID.ToString());
                         }
                         catch (Exception ex)
                         {
@@ -203,6 +204,11 @@ namespace gradesBookApp
                 db.Disconnect();
             }
             
+        }
+
+        private void Add_Subject_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

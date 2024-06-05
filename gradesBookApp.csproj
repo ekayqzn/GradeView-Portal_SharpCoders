@@ -144,23 +144,17 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="databaseConnection.cs" />
-    <Compile Include="Faculty-LogIn.cs">
+    <Compile Include="FacultyLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Faculty-LogIn.Designer.cs">
-      <DependentUpon>Faculty-LogIn.cs</DependentUpon>
+    <Compile Include="FacultyLogIn.Designer.cs">
+      <DependentUpon>FacultyLogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="GradeBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GradeBook.Designer.cs">
       <DependentUpon>GradeBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="GradebookQuery.cs" />
     <Compile Include="LandingPage.cs">
@@ -221,14 +215,11 @@
     <EmbeddedResource Include="CustomizeGrade.resx">
       <DependentUpon>CustomizeGrade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Faculty-LogIn.resx">
-      <DependentUpon>Faculty-LogIn.cs</DependentUpon>
+    <EmbeddedResource Include="FacultyLogIn.resx">
+      <DependentUpon>FacultyLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GradeBook.resx">
       <DependentUpon>GradeBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>

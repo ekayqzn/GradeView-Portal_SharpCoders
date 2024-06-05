@@ -86,6 +86,7 @@
             this.textBox2.TabIndex = 49;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -149,7 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1794, 1055);
-            this.Controls.Add(this.label1);
+
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.roundedButton2);
             this.Controls.Add(this.pictureBox6);

@@ -32,8 +32,8 @@
             this.txtSubCode = new System.Windows.Forms.TextBox();
             this.txtSubName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rbtnNext = new gradesBookApp.RoundedButton();
             this.rbtnBack = new gradesBookApp.RoundedButton();
+            this.rbtnNext = new gradesBookApp.RoundedButton();
             this.SuspendLayout();
             // 
             // label1
@@ -89,6 +89,23 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Subject Name:";
             // 
+            // rbtnBack
+            // 
+            this.rbtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnBack.FlatAppearance.BorderSize = 0;
+            this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnBack.ForeColor = System.Drawing.Color.White;
+            this.rbtnBack.Location = new System.Drawing.Point(307, 274);
+            this.rbtnBack.Name = "rbtnBack";
+            this.rbtnBack.Size = new System.Drawing.Size(150, 40);
+            this.rbtnBack.TabIndex = 5;
+            this.rbtnBack.Text = "Cancel";
+            this.rbtnBack.UseVisualStyleBackColor = false;
+            this.rbtnBack.Click += new System.EventHandler(this.rbtnBack_Click);
+            // 
             // rbtnNext
             // 
             this.rbtnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -105,23 +122,6 @@
             this.rbtnNext.Text = "Next";
             this.rbtnNext.UseVisualStyleBackColor = false;
             this.rbtnNext.Click += new System.EventHandler(this.rbtnNext_Click);
-            // 
-            // rbtnBack
-            // 
-            this.rbtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnBack.FlatAppearance.BorderSize = 0;
-            this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnBack.ForeColor = System.Drawing.Color.White;
-            this.rbtnBack.Location = new System.Drawing.Point(307, 274);
-            this.rbtnBack.Name = "rbtnBack";
-            this.rbtnBack.Size = new System.Drawing.Size(150, 40);
-            this.rbtnBack.TabIndex = 5;
-            this.rbtnBack.Text = "Back";
-            this.rbtnBack.UseVisualStyleBackColor = false;
-            this.rbtnBack.Click += new System.EventHandler(this.rbtnBack_Click);
             // 
             // Add_Subject
             // 

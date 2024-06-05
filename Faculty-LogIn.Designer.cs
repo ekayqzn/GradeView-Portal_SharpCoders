@@ -130,10 +130,10 @@
             this.label4.Location = new System.Drawing.Point(27, 25);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(598, 32);
+            this.label4.Size = new System.Drawing.Size(604, 32);
             this.label4.TabIndex = 45;
             this.label4.Tag = "";
-            this.label4.Text = " BULACAN TECHNOLOGICAL UNIVERSITY";
+            this.label4.Text = " BULACAN TECHNOLOGICAL UNIVERSITY ";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox6

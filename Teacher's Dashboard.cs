@@ -27,10 +27,9 @@ namespace gradesBookApp
         private void rbtnAddSubject_Click(object sender, EventArgs e)
         {
             //Form to add subject will show
-            this.Hide();
             Add_Subject addSubject = new Add_Subject();
             addSubject.ShowDialog();
-            this.Close();
+            
         }
 
         private void Teacher_s_Dashboard_Load(object sender, EventArgs e)

@@ -609,5 +609,10 @@ namespace gradesBookApp
                 panel_fRecitation.Enabled = false;
             }
         }
+
+        private void RbtnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

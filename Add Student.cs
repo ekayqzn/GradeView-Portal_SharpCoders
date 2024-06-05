@@ -1,15 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using Mysqlx.Crud;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Collections.Specialized.BitVector32;
 
 namespace gradesBookApp
 {
@@ -32,6 +24,9 @@ namespace gradesBookApp
 
         private void cboProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cboProgram.SelectedItem == null)
+                return;
+
             string selectedProgram = cboProgram.SelectedItem.ToString();
 
             try
@@ -73,28 +68,43 @@ namespace gradesBookApp
             }
         }
 
-
         private void rbtnAdd_Click(object sender, EventArgs e)
         {
-            //Retrieve data from input
+            // Retrieve data from input
             studentID = txtStudentNum.Text.Trim();
             firstName = txtFName.Text.Trim();
             lastName = txtLName.Text.Trim();
             middleName = txtMName.Text.Trim();
-            programName = cboProgram.SelectedItem.ToString().Trim();
+            programName = cboProgram.SelectedItem?.ToString().Trim(); // Use null-conditional operator
             year = Convert.ToInt32(numYear.Value);
             section = Convert.ToInt32(numSection.Value);
 
-            //!Add Validation
+            // Add Validation
+            if (string.IsNullOrEmpty(studentID) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            //Add Info to student_info table
             try
             {
-                //! Add duplicate check
+                // Check for duplicate student ID
                 db.Connect();
                 db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "INSERT INTO modern_gradesbook.student_info (student_id, first_name, last_name, middle_name) VALUES(@studentID, @firstName, @lastName, @middleName)";
+                db.cmd.CommandText = "SELECT COUNT(*) FROM modern_gradesbook.student_info WHERE student_id = @studentID";
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
 
+                int studentCount = Convert.ToInt32(db.cmd.ExecuteScalar());
+
+                if (studentCount > 0)
+                {
+                    MessageBox.Show("A Student with the provided Student Number already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Add Info to student_info table
+                db.cmd.CommandText = "INSERT INTO modern_gradesbook.student_info (student_id, first_name, last_name, middle_name) VALUES(@studentID, @firstName, @lastName, @middleName)";
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@studentID", studentID);
                 db.cmd.Parameters.AddWithValue("@firstName", firstName);
@@ -106,65 +116,70 @@ namespace gradesBookApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             finally
             {
                 db.Disconnect();
             }
 
-            //Get program id
+            // Get program id
             try
             {
-                //Get program_id
                 db.Connect();
                 db.cmd.Connection = db.conn;
                 db.cmd.CommandText = "SELECT program_id FROM modern_gradesbook.program WHERE program_name = @programName AND year_level = @year AND section = @section";
-
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@programName", programName);
                 db.cmd.Parameters.AddWithValue("@year", year);
                 db.cmd.Parameters.AddWithValue("@section", section);
 
-                //SelectCommand property select the sql command
+                // SelectCommand property select the sql command
                 db.dta.SelectCommand = db.cmd;
 
-                //DataTable
+                // DataTable
                 DataTable dataTable = new DataTable();
-                db.dta.Fill(dataTable); //populate dataTable
+                db.dta.Fill(dataTable); // populate dataTable
 
-                programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
+                if (dataTable.Rows.Count > 0)
+                {
+                    programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
+                }
+                else
+                {
+                    MessageBox.Show("Program not found. Please check the program details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            finally 
-            { 
-                db.Disconnect(); 
+            finally
+            {
+                db.Disconnect();
             }
-                //Add info to section table
+
+            // Add info to section table
             try
             {
-                //!Add duplicate check
                 db.Connect();
                 db.cmd.Connection = db.conn;
                 db.cmd.CommandText = "INSERT INTO modern_gradesbook.section(student_id, program_id) VALUES(@studentNumber, @programID)";
-
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@studentNumber", studentID);
                 db.cmd.Parameters.AddWithValue("@programID", programID);
 
                 db.cmd.ExecuteNonQuery();
 
-                //DEbug tool
-                //MessageBox.Show("Added");
-                if (MessageBox.Show("Student Added!", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("Student Added Successfully!", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     txtFName.Text = "";
                     txtLName.Text = "";
                     txtMName.Text = "";
                     txtStudentNum.Text = "";
-                    cboProgram.Text = "Bachelor of Science in Information Technology";
+                    cboProgram.SelectedIndex = -1;
                     numSection.Value = 1;
                     numYear.Value = 1;
                 }
@@ -178,7 +193,6 @@ namespace gradesBookApp
                 db.Disconnect();
             }
         }
-
 
         private void LoadDataIntoDropdown()
         {
@@ -224,7 +238,8 @@ namespace gradesBookApp
         private void rbtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LandingPage l = new LandingPage();
+            LandingPage l = new
+                LandingPage();
             l.ShowDialog();
             this.Close();
         }
@@ -234,7 +249,7 @@ namespace gradesBookApp
             LoadDataIntoDropdown();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void Add_Student_Load_1(object sender, EventArgs e)
         {
 
         }

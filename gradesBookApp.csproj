@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About_Us.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About_Us.Designer.cs">
+      <DependentUpon>About_Us.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add Class.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
       <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
+    <EmbeddedResource Include="About_Us.resx">
+      <DependentUpon>About_Us.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add Class.resx">
       <DependentUpon>Add Class.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +331,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FACADE 5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN %281%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

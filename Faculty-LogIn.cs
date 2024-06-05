@@ -90,5 +90,13 @@ namespace gradesBookApp
             l.ShowDialog();
             this.Close();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            LandingPage l = new LandingPage();
+            l.ShowDialog();
+            this.Close();
+        }
     }
 }

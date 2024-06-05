@@ -1,5 +1,4 @@
-﻿using Org.BouncyCastle.Bcpg;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace gradesBookApp
 {
-    public partial class Faculty_LogIn : Form
+    public partial class FacultyLogIn : Form
     {
         //Instantiate DatabaseConnection Class
         databaseConnection db = new databaseConnection();
@@ -25,9 +23,36 @@ namespace gradesBookApp
 
         //Log In Successfully
         bool loggedIn = false;
-        public Faculty_LogIn()
+
+        public FacultyLogIn()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTeacherID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            LandingPage l = new LandingPage();
+            l.ShowDialog();
+            this.Close();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            this.Hide();
+            About_Us au = new About_Us();
+            au.ShowDialog();
+            this.Close();
         }
 
         private void rbtnLogIn_Click(object sender, EventArgs e)
@@ -56,7 +81,7 @@ namespace gradesBookApp
                 if (loggedIn)
                 {
                     //When both ID and Password exist in database
-                    if(MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                    if (MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                     {
                         //show dashboard of specific teacher
                         this.Hide();
@@ -80,33 +105,14 @@ namespace gradesBookApp
             {
                 db.Disconnect();
             }
-
-        }
-
-        private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            LandingPage l = new LandingPage();
-            l.ShowDialog();
-            this.Close();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            About_Us au = new About_Us();
             this.Hide();
-            LandingPage l = new LandingPage();
-            l.ShowDialog();
+            au.ShowDialog();
             this.Close();
-        }
-
-        private void Faculty_LogIn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

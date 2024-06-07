@@ -177,5 +177,13 @@ namespace gradesBookApp
         {
 
         }
+
+        private void LinkLBLlogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Teacher_s_Dashboard TDB = new Teacher_s_Dashboard();
+            TDB.ShowDialog();
+            this.Close();
+        }
     }
 }

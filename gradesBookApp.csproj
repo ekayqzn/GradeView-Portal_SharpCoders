@@ -353,5 +353,11 @@
   <ItemGroup>
     <None Include="Resources\BULACAN %285%292.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN TECHNOLOGICAL UNIVERSITY %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN TECHNOLOGICAL UNIVERSITY %284%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

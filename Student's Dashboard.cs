@@ -122,5 +122,11 @@ namespace gradesBookApp
         {
             //Will show student scores for that specific subject (GRADEBOOK)
         }
+
+        private void LinkLBLback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+
+        }
     }
 }

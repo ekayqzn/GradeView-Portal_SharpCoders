@@ -96,5 +96,13 @@ namespace gradesBookApp
                 db.Disconnect();
             }
         }
+
+        private void rbtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Student_s_Dashboard SDB = new Student_s_Dashboard();
+            SDB.ShowDialog();
+            this.Close();
+        }
     }
 }

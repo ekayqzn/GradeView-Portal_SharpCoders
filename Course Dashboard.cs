@@ -127,7 +127,7 @@ namespace gradesBookApp
                         label.Click += lblSection_Click;
 
                         //Add to panel
-                        panel1.Controls.Add(label);
+                        panel2.Controls.Add(label);
                     }
                 }
             }
@@ -167,8 +167,10 @@ namespace gradesBookApp
 
         private void rbtnSection_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Add_Section addSection = new Add_Section();
             addSection.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

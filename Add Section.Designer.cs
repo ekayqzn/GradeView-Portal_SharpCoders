@@ -34,9 +34,9 @@
             this.numYear = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.numSection = new System.Windows.Forms.NumericUpDown();
-            this.rbtnOK = new gradesBookApp.RoundedButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.rbtnOK = new gradesBookApp.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSection)).BeginInit();
             this.SuspendLayout();
@@ -44,13 +44,13 @@
             // cboProgram
             // 
             this.cboProgram.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProgram.FormattingEnabled = true;
             this.cboProgram.Location = new System.Drawing.Point(177, 159);
             this.cboProgram.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProgram.Name = "cboProgram";
-            this.cboProgram.Size = new System.Drawing.Size(438, 24);
+            this.cboProgram.Size = new System.Drawing.Size(438, 33);
             this.cboProgram.TabIndex = 0;
-            this.cboProgram.Text = "Bachelor of Science in Information Technology";
             this.cboProgram.SelectedIndexChanged += new System.EventHandler(this.cboProgram_SelectedIndexChanged);
             // 
             // label1
@@ -84,6 +84,7 @@
             // numYear
             // 
             this.numYear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.numYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numYear.Location = new System.Drawing.Point(177, 197);
             this.numYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numYear.Maximum = new decimal(new int[] {
@@ -97,7 +98,7 @@
             0,
             0});
             this.numYear.Name = "numYear";
-            this.numYear.Size = new System.Drawing.Size(438, 22);
+            this.numYear.Size = new System.Drawing.Size(438, 30);
             this.numYear.TabIndex = 3;
             this.numYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numYear.Value = new decimal(new int[] {
@@ -124,6 +125,7 @@
             // numSection
             // 
             this.numSection.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.numSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSection.Location = new System.Drawing.Point(177, 232);
             this.numSection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numSection.Maximum = new decimal(new int[] {
@@ -137,7 +139,7 @@
             0,
             0});
             this.numSection.Name = "numSection";
-            this.numSection.Size = new System.Drawing.Size(438, 22);
+            this.numSection.Size = new System.Drawing.Size(438, 30);
             this.numSection.TabIndex = 5;
             this.numSection.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numSection.Value = new decimal(new int[] {
@@ -146,22 +148,6 @@
             0,
             0});
             this.numSection.ValueChanged += new System.EventHandler(this.numSection_ValueChanged);
-            // 
-            // rbtnOK
-            // 
-            this.rbtnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnOK.FlatAppearance.BorderSize = 0;
-            this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rbtnOK.Location = new System.Drawing.Point(447, 274);
-            this.rbtnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtnOK.Name = "rbtnOK";
-            this.rbtnOK.Size = new System.Drawing.Size(168, 39);
-            this.rbtnOK.TabIndex = 6;
-            this.rbtnOK.Text = "OK";
-            this.rbtnOK.UseVisualStyleBackColor = false;
-            this.rbtnOK.Click += new System.EventHandler(this.rbtnOK_Click);
             // 
             // textBox2
             // 
@@ -191,6 +177,22 @@
             this.label4.Size = new System.Drawing.Size(224, 35);
             this.label4.TabIndex = 52;
             this.label4.Text = "ADD SECTION";
+            // 
+            // rbtnOK
+            // 
+            this.rbtnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnOK.FlatAppearance.BorderSize = 0;
+            this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnOK.ForeColor = System.Drawing.Color.White;
+            this.rbtnOK.Location = new System.Drawing.Point(447, 274);
+            this.rbtnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnOK.Name = "rbtnOK";
+            this.rbtnOK.Size = new System.Drawing.Size(168, 39);
+            this.rbtnOK.TabIndex = 6;
+            this.rbtnOK.Text = "OK";
+            this.rbtnOK.UseVisualStyleBackColor = false;
+            this.rbtnOK.Click += new System.EventHandler(this.rbtnOK_Click);
             // 
             // Add_Section
             // 

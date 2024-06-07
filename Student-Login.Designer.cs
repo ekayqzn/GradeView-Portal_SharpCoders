@@ -45,18 +45,18 @@
             this.roundedButton1 = new gradesBookApp.RoundedButton();
             this.roundedButton2 = new gradesBookApp.RoundedButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // txtStudentPass
@@ -64,7 +64,7 @@
             this.txtStudentPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStudentPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.txtStudentPass.Location = new System.Drawing.Point(1282, 619);
+            this.txtStudentPass.Location = new System.Drawing.Point(1282, 673);
             this.txtStudentPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStudentPass.Multiline = true;
             this.txtStudentPass.Name = "txtStudentPass";
@@ -76,7 +76,7 @@
             this.txtStudentID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.txtStudentID.Location = new System.Drawing.Point(1282, 489);
+            this.txtStudentID.Location = new System.Drawing.Point(1282, 543);
             this.txtStudentID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStudentID.Multiline = true;
             this.txtStudentID.Name = "txtStudentID";
@@ -92,7 +92,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(1277, 452);
+            this.label1.Location = new System.Drawing.Point(1277, 506);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 5;
@@ -169,7 +169,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(1277, 579);
+            this.label2.Location = new System.Drawing.Point(1277, 633);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 25);
             this.label2.TabIndex = 31;
@@ -229,7 +229,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(1298, 870);
+            this.textBox3.Location = new System.Drawing.Point(1298, 924);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(421, 63);
@@ -247,7 +247,7 @@
             this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(0)))), ((int)(((byte)(123)))));
-            this.rbtnLogIn.Location = new System.Drawing.Point(1483, 777);
+            this.rbtnLogIn.Location = new System.Drawing.Point(1483, 831);
             this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnLogIn.Name = "rbtnLogIn";
             this.rbtnLogIn.Size = new System.Drawing.Size(248, 39);
@@ -295,18 +295,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 37;
             this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.pictureBox5.Image = global::gradesBookApp.Properties.Resources.SHARP;
-            this.pictureBox5.Location = new System.Drawing.Point(1380, 160);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(257, 238);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 32;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -374,11 +362,24 @@
             this.linkLabel3.Text = "About Us";
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.pictureBox5.Image = global::gradesBookApp.Properties.Resources.BULACAN__3_;
+            this.pictureBox5.Location = new System.Drawing.Point(1374, 174);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(288, 287);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 48;
+            this.pictureBox5.TabStop = false;
+            // 
             // Student_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1794, 1158);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.textBox3);
@@ -386,7 +387,6 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.LinkLBLHome);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rbtnLogIn);
             this.Controls.Add(this.txtStudentPass);
@@ -407,11 +407,11 @@
             this.Text = "Student_Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,7 +433,6 @@
         private RoundedButton roundedButton2;
         private RoundedButton roundedButton1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.LinkLabel LinkLBLHome;
@@ -441,5 +440,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

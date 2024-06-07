@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacultyLogIn));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
@@ -35,7 +36,6 @@
             this.LinkLBLHome = new System.Windows.Forms.LinkLabel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@
             this.rbtnLogIn = new gradesBookApp.RoundedButton();
             this.roundedButton1 = new gradesBookApp.RoundedButton();
             this.roundedButton2 = new gradesBookApp.RoundedButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -152,18 +153,6 @@
             this.pictureBox3.TabIndex = 48;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.pictureBox5.Image = global::gradesBookApp.Properties.Resources.SHARP;
-            this.pictureBox5.Location = new System.Drawing.Point(1388, 169);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(257, 238);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 57;
-            this.pictureBox5.TabStop = false;
-            // 
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -171,7 +160,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(1298, 870);
+            this.textBox3.Location = new System.Drawing.Point(1298, 897);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(421, 63);
@@ -187,7 +176,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1290, 620);
+            this.label2.Location = new System.Drawing.Point(1290, 647);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 25);
             this.label2.TabIndex = 60;
@@ -201,7 +190,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1289, 487);
+            this.label1.Location = new System.Drawing.Point(1289, 514);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 59;
@@ -211,7 +200,7 @@
             // 
             this.txtTeacherID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTeacherID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeacherID.Location = new System.Drawing.Point(1288, 523);
+            this.txtTeacherID.Location = new System.Drawing.Point(1288, 550);
             this.txtTeacherID.Multiline = true;
             this.txtTeacherID.Name = "txtTeacherID";
             this.txtTeacherID.Size = new System.Drawing.Size(449, 47);
@@ -222,7 +211,7 @@
             // 
             this.txtTeacherPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTeacherPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeacherPass.Location = new System.Drawing.Point(1288, 656);
+            this.txtTeacherPass.Location = new System.Drawing.Point(1288, 683);
             this.txtTeacherPass.Multiline = true;
             this.txtTeacherPass.Name = "txtTeacherPass";
             this.txtTeacherPass.Size = new System.Drawing.Size(449, 47);
@@ -236,7 +225,7 @@
             this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnLogIn.Location = new System.Drawing.Point(1553, 772);
+            this.rbtnLogIn.Location = new System.Drawing.Point(1553, 799);
             this.rbtnLogIn.Name = "rbtnLogIn";
             this.rbtnLogIn.Size = new System.Drawing.Size(184, 40);
             this.rbtnLogIn.TabIndex = 63;
@@ -272,18 +261,30 @@
             this.roundedButton2.TabIndex = 55;
             this.roundedButton2.UseVisualStyleBackColor = false;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.pictureBox5.Image = global::gradesBookApp.Properties.Resources.BULACAN__3_;
+            this.pictureBox5.Location = new System.Drawing.Point(1374, 174);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(288, 287);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 64;
+            this.pictureBox5.TabStop = false;
+            // 
             // FacultyLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1794, 1158);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.rbtnLogIn);
             this.Controls.Add(this.txtTeacherPass);
             this.Controls.Add(this.txtTeacherID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.roundedButton2);
             this.Controls.Add(this.pictureBox4);
@@ -293,9 +294,11 @@
             this.Controls.Add(this.LinkLBLHome);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FacultyLogIn";
             this.Text = "FacultyLogIn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FacultyLogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -316,12 +319,12 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private RoundedButton roundedButton1;
         private RoundedButton roundedButton2;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTeacherID;
         private System.Windows.Forms.TextBox txtTeacherPass;
         private RoundedButton rbtnLogIn;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

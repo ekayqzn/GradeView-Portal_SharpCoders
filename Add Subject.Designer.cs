@@ -44,11 +44,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label1.Location = new System.Drawing.Point(165, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 18);
+            this.label1.Size = new System.Drawing.Size(127, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Subject Code:";
             // 
@@ -73,7 +73,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubName.BackColor = System.Drawing.Color.White;
             this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubName.Location = new System.Drawing.Point(158, 248);
+            this.txtSubName.Location = new System.Drawing.Point(158, 253);
             this.txtSubName.Multiline = true;
             this.txtSubName.Name = "txtSubName";
             this.txtSubName.Size = new System.Drawing.Size(451, 52);
@@ -85,11 +85,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(164, 227);
+            this.label2.Location = new System.Drawing.Point(164, 232);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 18);
+            this.label2.Size = new System.Drawing.Size(132, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Subject Name:";
             // 
@@ -102,7 +102,7 @@
             this.rbtnBack.FlatAppearance.BorderSize = 0;
             this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnBack.ForeColor = System.Drawing.Color.White;
-            this.rbtnBack.Location = new System.Drawing.Point(302, 316);
+            this.rbtnBack.Location = new System.Drawing.Point(302, 321);
             this.rbtnBack.Name = "rbtnBack";
             this.rbtnBack.Size = new System.Drawing.Size(150, 40);
             this.rbtnBack.TabIndex = 5;
@@ -119,7 +119,7 @@
             this.rbtnNext.FlatAppearance.BorderSize = 0;
             this.rbtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnNext.ForeColor = System.Drawing.Color.White;
-            this.rbtnNext.Location = new System.Drawing.Point(459, 316);
+            this.rbtnNext.Location = new System.Drawing.Point(459, 321);
             this.rbtnNext.Name = "rbtnNext";
             this.rbtnNext.Size = new System.Drawing.Size(150, 40);
             this.rbtnNext.TabIndex = 4;

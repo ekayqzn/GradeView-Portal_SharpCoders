@@ -163,6 +163,36 @@ namespace gradesBookApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BULACAN__5_ {
+            get {
+                object obj = ResourceManager.GetObject("BULACAN (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BULACAN__5_1 {
+            get {
+                object obj = ResourceManager.GetObject("BULACAN (5)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BULACAN__5_2 {
+            get {
+                object obj = ResourceManager.GetObject("BULACAN (5)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BULACAN_TECHNOLOGICAL_UNIVERSITY {
             get {
                 object obj = ResourceManager.GetObject("BULACAN TECHNOLOGICAL UNIVERSITY", resourceCulture);

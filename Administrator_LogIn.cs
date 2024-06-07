@@ -51,8 +51,8 @@ namespace gradesBookApp
                     {
                         //show dashboard of specific teacher
                         this.Hide();
-                        //Teacher_s_Dashboard dashboard = new Teacher_s_Dashboard();
-                        //dashboard.ShowDialog();
+                        Administrator_Dashboard dashboard = new Administrator_Dashboard();
+                        dashboard.ShowDialog();
                         this.Close();
                     }
                 }

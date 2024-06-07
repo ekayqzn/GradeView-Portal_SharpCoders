@@ -128,6 +128,12 @@
     <Compile Include="Add Subject.Designer.cs">
       <DependentUpon>Add Subject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator_Dashboard.Designer.cs">
+      <DependentUpon>Administrator_Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator_LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add Subject.resx">
       <DependentUpon>Add Subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator_Dashboard.resx">
+      <DependentUpon>Administrator_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator_LogIn.resx">
       <DependentUpon>Administrator_LogIn.cs</DependentUpon>

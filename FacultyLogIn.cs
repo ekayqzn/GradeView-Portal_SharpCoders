@@ -114,5 +114,10 @@ namespace gradesBookApp
             au.ShowDialog();
             this.Close();
         }
+
+        private void FacultyLogIn_Load(object sender, EventArgs e)
+        {
+            txtTeacherID.Focus();
+        }
     }
 }

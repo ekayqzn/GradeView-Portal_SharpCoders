@@ -118,12 +118,20 @@ namespace gradesBookApp
 
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void LinkLBLAbout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            About_Us au = new About_Us();
+            au.ShowDialog();
+            this.Close();
+        }
+
+        private void picHome_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void LinkLBLAbout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void picAboutUs_Click(object sender, EventArgs e)
         {
             this.Hide();
             About_Us au = new About_Us();

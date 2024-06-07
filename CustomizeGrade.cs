@@ -360,7 +360,7 @@ namespace gradesBookApp
             {
                 if(mAttendance)
                 {
-                    g.mAttendance("attendance", mAttendanceCount, mAttendancePercent);
+                    g.mAttRecit("attendance", mAttendanceCount, mAttendancePercent);
                     isValid = true;
                 }       
                 if (mActivity)
@@ -385,12 +385,12 @@ namespace gradesBookApp
                 }
                 if (mRecitation)
                 {
-                    g.mAttendance("recitation", mRecitationCount, mRecitationPercent);
+                    g.mAttRecit("recitation", mRecitationCount, mRecitationPercent);
                     isValid = true;
                 }                     
                 if (fAttendance)
                 {
-                    g.fAttendance("attendance", fAttendanceCount, fAttendancePercent);
+                    g.fAttRecit("attendance", fAttendanceCount, fAttendancePercent);
                     isValid = true;
                 }
                 if (fActivity)
@@ -415,7 +415,7 @@ namespace gradesBookApp
                 }
                 if (fRecitation)
                 {
-                    g.fAttendance("recitation", fRecitationCount, fRecitationPercent);
+                    g.fAttRecit("recitation", fRecitationCount, fRecitationPercent);
                     isValid = true;
                 }
             }
@@ -608,11 +608,6 @@ namespace gradesBookApp
             {
                 panel_fRecitation.Enabled = false;
             }
-        }
-
-        private void RbtnCancel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

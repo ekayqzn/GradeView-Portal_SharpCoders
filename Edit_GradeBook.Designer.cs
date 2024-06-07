@@ -1,6 +1,6 @@
 ﻿namespace gradesBookApp
 {
-    partial class Add_Subject
+    partial class Edit_GradeBook
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Subject));
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSubCode = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_GradeBook));
             this.txtSubName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtSubCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.rbtnBack = new gradesBookApp.RoundedButton();
             this.rbtnNext = new gradesBookApp.RoundedButton();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(165, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Subject Code:";
-            // 
-            // txtSubCode
-            // 
-            this.txtSubCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSubCode.BackColor = System.Drawing.Color.White;
-            this.txtSubCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.txtSubCode.Location = new System.Drawing.Point(158, 164);
-            this.txtSubCode.Multiline = true;
-            this.txtSubCode.Name = "txtSubCode";
-            this.txtSubCode.Size = new System.Drawing.Size(451, 52);
-            this.txtSubCode.TabIndex = 1;
             // 
             // txtSubName
             // 
@@ -75,13 +46,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubName.BackColor = System.Drawing.Color.White;
             this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtSubName.Location = new System.Drawing.Point(158, 253);
             this.txtSubName.Multiline = true;
             this.txtSubName.Name = "txtSubName";
             this.txtSubName.Size = new System.Drawing.Size(451, 52);
-            this.txtSubName.TabIndex = 3;
+            this.txtSubName.TabIndex = 7;
             // 
             // label2
             // 
@@ -93,9 +62,37 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label2.Location = new System.Drawing.Point(164, 232);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Subject Name:";
+            this.label2.Size = new System.Drawing.Size(64, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Score:";
+            // 
+            // txtSubCode
+            // 
+            this.txtSubCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSubCode.BackColor = System.Drawing.Color.White;
+            this.txtSubCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSubCode.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtSubCode.Location = new System.Drawing.Point(158, 164);
+            this.txtSubCode.Multiline = true;
+            this.txtSubCode.Name = "txtSubCode";
+            this.txtSubCode.Size = new System.Drawing.Size(451, 52);
+            this.txtSubCode.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.label1.Location = new System.Drawing.Point(165, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Name:";
             // 
             // rbtnBack
             // 
@@ -109,7 +106,7 @@
             this.rbtnBack.Location = new System.Drawing.Point(302, 321);
             this.rbtnBack.Name = "rbtnBack";
             this.rbtnBack.Size = new System.Drawing.Size(150, 40);
-            this.rbtnBack.TabIndex = 5;
+            this.rbtnBack.TabIndex = 9;
             this.rbtnBack.Text = "Cancel";
             this.rbtnBack.UseVisualStyleBackColor = false;
             this.rbtnBack.Click += new System.EventHandler(this.rbtnBack_Click);
@@ -126,10 +123,9 @@
             this.rbtnNext.Location = new System.Drawing.Point(459, 321);
             this.rbtnNext.Name = "rbtnNext";
             this.rbtnNext.Size = new System.Drawing.Size(150, 40);
-            this.rbtnNext.TabIndex = 4;
+            this.rbtnNext.TabIndex = 8;
             this.rbtnNext.Text = "Next";
             this.rbtnNext.UseVisualStyleBackColor = false;
-            this.rbtnNext.Click += new System.EventHandler(this.rbtnNext_Click);
             // 
             // label4
             // 
@@ -140,10 +136,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(271, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(225, 35);
-            this.label4.TabIndex = 54;
-            this.label4.Text = "ADD SUBJECT";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Size = new System.Drawing.Size(214, 35);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "GRADEBOOK";
             // 
             // textBox2
             // 
@@ -157,10 +152,10 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(1797, 83);
-            this.textBox2.TabIndex = 53;
+            this.textBox2.TabIndex = 55;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Add_Subject
+            // Edit_GradeBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -175,10 +170,9 @@
             this.Controls.Add(this.txtSubCode);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Add_Subject";
+            this.Name = "Edit_GradeBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
-            this.Load += new System.EventHandler(this.Add_Subject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,12 +180,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSubCode;
         private System.Windows.Forms.TextBox txtSubName;
         private System.Windows.Forms.Label label2;
-        private RoundedButton rbtnNext;
+        private System.Windows.Forms.TextBox txtSubCode;
+        private System.Windows.Forms.Label label1;
         private RoundedButton rbtnBack;
+        private RoundedButton rbtnNext;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
     }

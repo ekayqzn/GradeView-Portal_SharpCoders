@@ -52,8 +52,9 @@
             // 
             this.txtClassCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClassCode.Location = new System.Drawing.Point(105, 188);
+            this.txtClassCode.Multiline = true;
             this.txtClassCode.Name = "txtClassCode";
-            this.txtClassCode.Size = new System.Drawing.Size(462, 30);
+            this.txtClassCode.Size = new System.Drawing.Size(462, 44);
             this.txtClassCode.TabIndex = 1;
             // 
             // rbtnAddClass
@@ -63,7 +64,7 @@
             this.rbtnAddClass.FlatAppearance.BorderSize = 0;
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(417, 224);
+            this.rbtnAddClass.Location = new System.Drawing.Point(417, 238);
             this.rbtnAddClass.Name = "rbtnAddClass";
             this.rbtnAddClass.Size = new System.Drawing.Size(150, 40);
             this.rbtnAddClass.TabIndex = 2;
@@ -106,7 +107,7 @@
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rbtnCancel.Location = new System.Drawing.Point(261, 224);
+            this.rbtnCancel.Location = new System.Drawing.Point(261, 238);
             this.rbtnCancel.Name = "rbtnCancel";
             this.rbtnCancel.Size = new System.Drawing.Size(150, 40);
             this.rbtnCancel.TabIndex = 55;

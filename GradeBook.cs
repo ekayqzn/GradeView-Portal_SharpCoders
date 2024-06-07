@@ -181,5 +181,21 @@ This way, if the student_id, class_id, and program_id combination already exists
                 db.Disconnect();
             }
         }
+
+        private void LinkLBLback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Course_Dashboard CDB = new Course_Dashboard();
+            CDB.ShowDialog();
+            this.Close();
+        }
+
+        private void rbtnEdit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Edit_GradeBook EGB = new Edit_GradeBook();
+            EGB.ShowDialog();
+            this.Close();
+        }
     }
 }

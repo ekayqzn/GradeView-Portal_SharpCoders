@@ -37,12 +37,14 @@
             this.rbtnSection = new gradesBookApp.RoundedButton();
             this.TDB_Bg = new gradesBookApp.RoundedButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.LinkLBLlogout = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.LinkLBLlogout);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
@@ -152,6 +154,23 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // LinkLBLlogout
+            // 
+            this.LinkLBLlogout.ActiveLinkColor = System.Drawing.Color.Yellow;
+            this.LinkLBLlogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LinkLBLlogout.AutoSize = true;
+            this.LinkLBLlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.LinkLBLlogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLBLlogout.LinkColor = System.Drawing.Color.White;
+            this.LinkLBLlogout.Location = new System.Drawing.Point(1421, 30);
+            this.LinkLBLlogout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LinkLBLlogout.Name = "LinkLBLlogout";
+            this.LinkLBLlogout.Size = new System.Drawing.Size(60, 25);
+            this.LinkLBLlogout.TabIndex = 61;
+            this.LinkLBLlogout.TabStop = true;
+            this.LinkLBLlogout.Text = "Back";
+            this.LinkLBLlogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLBLlogout_LinkClicked);
+            // 
             // Course_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,5 +201,6 @@
         private RoundedButton TDB_Bg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.LinkLabel LinkLBLlogout;
     }
 }

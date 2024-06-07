@@ -196,5 +196,13 @@ namespace gradesBookApp
         {
 
         }
+
+        private void rbtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Course_Dashboard CDB = new Course_Dashboard();
+            CDB.ShowDialog();
+            this.Close();
+        }
     }
 }

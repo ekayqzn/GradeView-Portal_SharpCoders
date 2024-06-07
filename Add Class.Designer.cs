@@ -34,6 +34,7 @@
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.rbtnCancel = new gradesBookApp.RoundedButton();
             this.SuspendLayout();
             // 
             // label1
@@ -98,12 +99,28 @@
             this.textBox2.TabIndex = 53;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // rbtnCancel
+            // 
+            this.rbtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnCancel.FlatAppearance.BorderSize = 0;
+            this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnCancel.ForeColor = System.Drawing.Color.White;
+            this.rbtnCancel.Location = new System.Drawing.Point(261, 224);
+            this.rbtnCancel.Name = "rbtnCancel";
+            this.rbtnCancel.Size = new System.Drawing.Size(150, 40);
+            this.rbtnCancel.TabIndex = 55;
+            this.rbtnCancel.Text = "Cancel";
+            this.rbtnCancel.UseVisualStyleBackColor = false;
+            this.rbtnCancel.Click += new System.EventHandler(this.rbtnCancel_Click);
+            // 
             // Add_Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(666, 374);
+            this.Controls.Add(this.rbtnCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.rbtnAddClass);
@@ -125,5 +142,6 @@
         private RoundedButton rbtnAddClass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private RoundedButton rbtnCancel;
     }
 }

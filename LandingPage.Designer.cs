@@ -61,7 +61,7 @@
             this.llblHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.llblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblHome.LinkColor = System.Drawing.Color.White;
-            this.llblHome.Location = new System.Drawing.Point(2002, 34);
+            this.llblHome.Location = new System.Drawing.Point(2257, 34);
             this.llblHome.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.llblHome.Name = "llblHome";
             this.llblHome.Size = new System.Drawing.Size(68, 25);
@@ -78,7 +78,7 @@
             this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(1799, 34);
+            this.linkLabel1.Location = new System.Drawing.Point(2053, 34);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(80, 25);
@@ -95,8 +95,8 @@
             this.rbtnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnStudent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnStudent.Location = new System.Drawing.Point(1288, 605);
-            this.rbtnStudent.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnStudent.Location = new System.Drawing.Point(1300, 607);
+            this.rbtnStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnStudent.Name = "rbtnStudent";
             this.rbtnStudent.Size = new System.Drawing.Size(451, 71);
             this.rbtnStudent.TabIndex = 18;
@@ -112,8 +112,8 @@
             this.rbtnFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnFaculty.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFaculty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnFaculty.Location = new System.Drawing.Point(1288, 505);
-            this.rbtnFaculty.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnFaculty.Location = new System.Drawing.Point(1300, 506);
+            this.rbtnFaculty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnFaculty.Name = "rbtnFaculty";
             this.rbtnFaculty.Size = new System.Drawing.Size(451, 71);
             this.rbtnFaculty.TabIndex = 17;
@@ -129,8 +129,8 @@
             this.btnAdminstrator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdminstrator.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdminstrator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.btnAdminstrator.Location = new System.Drawing.Point(1288, 799);
-            this.btnAdminstrator.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdminstrator.Location = new System.Drawing.Point(1300, 800);
+            this.btnAdminstrator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdminstrator.Name = "btnAdminstrator";
             this.btnAdminstrator.Size = new System.Drawing.Size(451, 71);
             this.btnAdminstrator.TabIndex = 16;
@@ -146,8 +146,8 @@
             this.roundedButton1.FlatAppearance.BorderSize = 0;
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton1.Location = new System.Drawing.Point(1175, 128);
-            this.roundedButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.roundedButton1.Location = new System.Drawing.Point(1191, 127);
+            this.roundedButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.roundedButton1.Name = "roundedButton1";
             this.roundedButton1.Size = new System.Drawing.Size(1683, 1205);
             this.roundedButton1.TabIndex = 32;
@@ -161,7 +161,7 @@
             this.LinkLBLAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.LinkLBLAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLBLAbout.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLAbout.Location = new System.Drawing.Point(1520, 29);
+            this.LinkLBLAbout.Location = new System.Drawing.Point(1650, 30);
             this.LinkLBLAbout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinkLBLAbout.Name = "LinkLBLAbout";
             this.LinkLBLAbout.Size = new System.Drawing.Size(101, 25);
@@ -178,7 +178,7 @@
             this.LinkLBLHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.LinkLBLHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLBLHome.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLHome.Location = new System.Drawing.Point(1700, 29);
+            this.LinkLBLHome.Location = new System.Drawing.Point(1954, 30);
             this.LinkLBLHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinkLBLHome.Name = "LinkLBLHome";
             this.LinkLBLHome.Size = new System.Drawing.Size(68, 25);
@@ -194,11 +194,11 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(-1, -6);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(1797, 91);
+            this.textBox2.Size = new System.Drawing.Size(2051, 91);
             this.textBox2.TabIndex = 41;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -210,9 +210,10 @@
             this.roundedButton2.FlatAppearance.BorderSize = 0;
             this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton2.Location = new System.Drawing.Point(1084, 227);
+            this.roundedButton2.Location = new System.Drawing.Point(1095, 194);
+            this.roundedButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roundedButton2.Name = "roundedButton2";
-            this.roundedButton2.Size = new System.Drawing.Size(1222, 1026);
+            this.roundedButton2.Size = new System.Drawing.Size(1221, 1026);
             this.roundedButton2.TabIndex = 46;
             this.roundedButton2.UseVisualStyleBackColor = false;
             // 
@@ -222,6 +223,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.pictureBox5.Image = global::gradesBookApp.Properties.Resources.BULACAN__5_2;
             this.pictureBox5.Location = new System.Drawing.Point(1374, 174);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(288, 287);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -233,9 +235,10 @@
             this.picAboutUs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picAboutUs.Image = global::gradesBookApp.Properties.Resources.BULACAN__1_1;
-            this.picAboutUs.Location = new System.Drawing.Point(1463, 16);
+            this.picAboutUs.Location = new System.Drawing.Point(1593, 16);
+            this.picAboutUs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picAboutUs.Name = "picAboutUs";
-            this.picAboutUs.Size = new System.Drawing.Size(55, 50);
+            this.picAboutUs.Size = new System.Drawing.Size(55, 49);
             this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAboutUs.TabIndex = 45;
             this.picAboutUs.TabStop = false;
@@ -246,7 +249,8 @@
             this.picHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.picHome.Location = new System.Drawing.Point(1642, 19);
+            this.picHome.Location = new System.Drawing.Point(1897, 18);
+            this.picHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picHome.Name = "picHome";
             this.picHome.Size = new System.Drawing.Size(55, 50);
             this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -259,7 +263,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = global::gradesBookApp.Properties.Resources.Home_Icon;
             this.pictureBox2.Location = new System.Drawing.Point(2059, 20);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(65, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -273,8 +277,8 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(2037, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Location = new System.Drawing.Point(2291, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -289,10 +293,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = global::gradesBookApp.Properties.Resources.BULACAN_TECHNOLOGICAL_UNIVERSITY;
-            this.pictureBox3.Location = new System.Drawing.Point(-5, -156);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -164);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1920, 1318);
+            this.pictureBox3.Size = new System.Drawing.Size(1873, 1324);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -320,7 +324,7 @@
             this.Controls.Add(this.roundedButton2);
             this.Controls.Add(this.pictureBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "LandingPage";
             this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

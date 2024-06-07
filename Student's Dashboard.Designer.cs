@@ -36,6 +36,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TDB_Bg = new gradesBookApp.RoundedButton();
+            this.LinkLBLback = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,11 +137,29 @@
             this.TDB_Bg.TabIndex = 60;
             this.TDB_Bg.UseVisualStyleBackColor = false;
             // 
+            // LinkLBLback
+            // 
+            this.LinkLBLback.ActiveLinkColor = System.Drawing.Color.Yellow;
+            this.LinkLBLback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LinkLBLback.AutoSize = true;
+            this.LinkLBLback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.LinkLBLback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLBLback.LinkColor = System.Drawing.Color.White;
+            this.LinkLBLback.Location = new System.Drawing.Point(1421, 30);
+            this.LinkLBLback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LinkLBLback.Name = "LinkLBLback";
+            this.LinkLBLback.Size = new System.Drawing.Size(89, 25);
+            this.LinkLBLback.TabIndex = 62;
+            this.LinkLBLback.TabStop = true;
+            this.LinkLBLback.Text = "Log Out";
+            this.LinkLBLback.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLBLback_LinkClicked);
+            // 
             // Student_s_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1540, 942);
+            this.Controls.Add(this.LinkLBLback);
             this.Controls.Add(this.rbtnAddClass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -169,5 +188,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
         private RoundedButton TDB_Bg;
+        private System.Windows.Forms.LinkLabel LinkLBLback;
     }
 }

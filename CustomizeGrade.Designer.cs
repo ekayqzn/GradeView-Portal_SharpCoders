@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomizeGrade));
             this.label1 = new System.Windows.Forms.Label();
             this.chkMAttendance = new System.Windows.Forms.CheckBox();
             this.numMAttendance = new System.Windows.Forms.NumericUpDown();
@@ -1066,9 +1067,10 @@
             this.Controls.Add(this.textBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomizeGrade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CustomizeGrade";
+            this.Text = "Bulacan Technological University";
             ((System.ComponentModel.ISupportInitialize)(this.numMAttendance)).EndInit();
             this.panel_mAttendance.ResumeLayout(false);
             this.panel_mAttendance.PerformLayout();

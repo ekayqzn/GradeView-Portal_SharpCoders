@@ -296,7 +296,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FacultyLogIn";
-            this.Text = "FacultyLogIn";
+            this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FacultyLogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

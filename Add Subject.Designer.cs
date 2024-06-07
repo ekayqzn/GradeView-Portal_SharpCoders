@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Subject));
             this.label1 = new System.Windows.Forms.Label();
             this.txtSubCode = new System.Windows.Forms.TextBox();
             this.txtSubName = new System.Windows.Forms.TextBox();
@@ -134,11 +135,12 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(257, 24);
+            this.label4.Location = new System.Drawing.Point(271, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 35);
+            this.label4.Size = new System.Drawing.Size(225, 35);
             this.label4.TabIndex = 54;
-            this.label4.Text = "ADD SECTION";
+            this.label4.Text = "ADD SUBJECT";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox2
             // 
@@ -169,9 +171,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSubCode);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add_Subject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Subject";
+            this.Text = "Bulacan Technological University";
             this.Load += new System.EventHandler(this.Add_Subject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

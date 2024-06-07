@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_s_Dashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -147,9 +148,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Student_s_Dashboard";
-            this.Text = "Students_Dashboard";
+            this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Student_s_Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

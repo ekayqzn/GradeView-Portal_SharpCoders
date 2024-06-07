@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teacher_s_Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.rbtnAddSubject = new gradesBookApp.RoundedButton();
             this.LinkLBLlogout = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.rbtnAddSubject = new gradesBookApp.RoundedButton();
             this.TDB_Bg = new gradesBookApp.RoundedButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,6 +60,15 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel2.Location = new System.Drawing.Point(246, 246);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1091, 751);
+            this.panel2.TabIndex = 55;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -72,6 +82,23 @@
             this.label4.TabIndex = 54;
             this.label4.Tag = "";
             this.label4.Text = " BULACAN TECHNOLOGICAL UNIVERSITY";
+            // 
+            // rbtnAddSubject
+            // 
+            this.rbtnAddSubject.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbtnAddSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddSubject.FlatAppearance.BorderSize = 0;
+            this.rbtnAddSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAddSubject.ForeColor = System.Drawing.Color.White;
+            this.rbtnAddSubject.Location = new System.Drawing.Point(1076, 176);
+            this.rbtnAddSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnAddSubject.Name = "rbtnAddSubject";
+            this.rbtnAddSubject.Size = new System.Drawing.Size(261, 48);
+            this.rbtnAddSubject.TabIndex = 3;
+            this.rbtnAddSubject.Text = "Add Subject";
+            this.rbtnAddSubject.UseVisualStyleBackColor = false;
+            this.rbtnAddSubject.Click += new System.EventHandler(this.rbtnAddSubject_Click);
             // 
             // LinkLBLlogout
             // 
@@ -120,23 +147,6 @@
             this.textBox2.TabIndex = 34;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // rbtnAddSubject
-            // 
-            this.rbtnAddSubject.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rbtnAddSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnAddSubject.FlatAppearance.BorderSize = 0;
-            this.rbtnAddSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAddSubject.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddSubject.Location = new System.Drawing.Point(1076, 176);
-            this.rbtnAddSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtnAddSubject.Name = "rbtnAddSubject";
-            this.rbtnAddSubject.Size = new System.Drawing.Size(261, 48);
-            this.rbtnAddSubject.TabIndex = 3;
-            this.rbtnAddSubject.Text = "Add Subject";
-            this.rbtnAddSubject.UseVisualStyleBackColor = false;
-            this.rbtnAddSubject.Click += new System.EventHandler(this.rbtnAddSubject_Click);
-            // 
             // TDB_Bg
             // 
             this.TDB_Bg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -151,15 +161,6 @@
             this.TDB_Bg.Size = new System.Drawing.Size(1209, 893);
             this.TDB_Bg.TabIndex = 53;
             this.TDB_Bg.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel2.Location = new System.Drawing.Point(246, 246);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1091, 751);
-            this.panel2.TabIndex = 55;
             // 
             // pictureBox3
             // 
@@ -181,10 +182,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1540, 942);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Teacher_s_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Teacher\'s Dashboard";
+            this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Teacher_s_Dashboard_Load);
             this.panel1.ResumeLayout(false);

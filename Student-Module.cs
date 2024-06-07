@@ -16,5 +16,13 @@ namespace gradesBookApp
         {
             InitializeComponent();
         }
+
+        private void LinkLBLback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Student_s_Dashboard SDB = new Student_s_Dashboard();
+            SDB.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace gradesBookApp
 {
-    public partial class Administrator_Dashboard : Form
+    public partial class Edit_GradeBook : Form
     {
-        public Administrator_Dashboard()
+        public Edit_GradeBook()
         {
             InitializeComponent();
         }
 
-        private void rbtnAddStudent_Click(object sender, EventArgs e)
+        private void rbtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Add_Student addStudent = new Add_Student();
-            addStudent.ShowDialog();
+            GradeBook GB = new GradeBook(); 
+            GB.ShowDialog();
             this.Close();
-        }
-
-        private void LinkLBLlogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
         }
     }
 }

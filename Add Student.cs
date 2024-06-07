@@ -238,9 +238,8 @@ namespace gradesBookApp
         private void rbtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LandingPage l = new
-                LandingPage();
-            l.ShowDialog();
+            Administrator_Dashboard ADB = new Administrator_Dashboard();
+            ADB.ShowDialog();
             this.Close();
         }
 

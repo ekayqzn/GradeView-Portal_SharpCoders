@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LandingPage));
             this.llblHome = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.rbtnStudent = new gradesBookApp.RoundedButton();
@@ -318,8 +319,10 @@
             this.Controls.Add(this.llblHome);
             this.Controls.Add(this.roundedButton2);
             this.Controls.Add(this.pictureBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "LandingPage";
+            this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LandingPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

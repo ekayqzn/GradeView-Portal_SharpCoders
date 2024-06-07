@@ -170,8 +170,9 @@
             this.Controls.Add(this.LinkLBLHome);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About_Us";
-            this.Text = "About_Us";
+            this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

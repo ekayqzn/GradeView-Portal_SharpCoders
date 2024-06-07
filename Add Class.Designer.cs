@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Class));
             this.label1 = new System.Windows.Forms.Label();
             this.txtClassCode = new System.Windows.Forms.TextBox();
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
@@ -108,9 +109,10 @@
             this.Controls.Add(this.rbtnAddClass);
             this.Controls.Add(this.txtClassCode);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add_Class";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add_Class";
+            this.Text = "Bulacan Technological University";
             this.ResumeLayout(false);
             this.PerformLayout();
 

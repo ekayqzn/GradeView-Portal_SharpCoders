@@ -78,8 +78,8 @@ namespace gradesBookApp
         private void btnAdminstrator_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Add_Student addStudent = new Add_Student();
-            addStudent.ShowDialog();
+            Administrator_LogIn adminLogIn = new Administrator_LogIn();
+            adminLogIn.ShowDialog();
             this.Close();
         }
 

@@ -104,7 +104,7 @@ namespace gradesBookApp
                         label.Click += lblSubject_Click;
 
                         //Add to panel
-                        this.Controls.Add(label);
+                        panel2.Controls.Add(label);
                     }
                 }
             }

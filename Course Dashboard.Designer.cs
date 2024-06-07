@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.rbtnSection = new gradesBookApp.RoundedButton();
             this.TDB_Bg = new gradesBookApp.RoundedButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1540, 942);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel2.Location = new System.Drawing.Point(246, 246);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1091, 727);
+            this.panel2.TabIndex = 60;
             // 
             // label1
             // 
@@ -134,22 +143,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::gradesBookApp.Properties.Resources.BULACAN_TECHNOLOGICAL_UNIVERSITY__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(-295, -237);
+            this.pictureBox3.Location = new System.Drawing.Point(-288, -237);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(2116, 1417);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 57;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel2.Location = new System.Drawing.Point(246, 246);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1091, 727);
-            this.panel2.TabIndex = 60;
             // 
             // Course_Dashboard
             // 

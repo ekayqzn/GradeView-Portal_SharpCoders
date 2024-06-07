@@ -219,7 +219,7 @@
             // 
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.pictureBox5.Image = global::gradesBookApp.Properties.Resources.BULACAN__3_;
+            this.pictureBox5.Image = global::gradesBookApp.Properties.Resources.BULACAN__5_2;
             this.pictureBox5.Location = new System.Drawing.Point(1374, 174);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(288, 287);

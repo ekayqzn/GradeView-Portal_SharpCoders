@@ -56,7 +56,7 @@
             this.txtAdminID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdminID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtAdminID.Location = new System.Drawing.Point(158, 164);
-            this.txtAdminID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdminID.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdminID.Multiline = true;
             this.txtAdminID.Name = "txtAdminID";
             this.txtAdminID.Size = new System.Drawing.Size(451, 52);
@@ -80,9 +80,10 @@
             this.txtAdminPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdminPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtAdminPass.Location = new System.Drawing.Point(158, 253);
-            this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdminPass.Multiline = true;
             this.txtAdminPass.Name = "txtAdminPass";
+            this.txtAdminPass.PasswordChar = '*';
             this.txtAdminPass.Size = new System.Drawing.Size(451, 52);
             this.txtAdminPass.TabIndex = 3;
             // 
@@ -95,7 +96,7 @@
             this.rbtnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLogIn.ForeColor = System.Drawing.Color.White;
             this.rbtnLogIn.Location = new System.Drawing.Point(459, 321);
-            this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnLogIn.Name = "rbtnLogIn";
             this.rbtnLogIn.Size = new System.Drawing.Size(150, 40);
             this.rbtnLogIn.TabIndex = 4;
@@ -123,7 +124,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(-450, -1);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -145,10 +146,11 @@
             this.Controls.Add(this.txtAdminID);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Administrator_LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
+            this.Load += new System.EventHandler(this.Administrator_LogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

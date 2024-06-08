@@ -17,12 +17,15 @@ namespace gradesBookApp
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            this.Hide();
+            LandingPage l = new LandingPage();
+            l.ShowDialog();
+            this.Close();
         }
 
-        private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void picAboutUs_Click(object sender, EventArgs e)
         {
             this.Hide();
             LandingPage l = new LandingPage();

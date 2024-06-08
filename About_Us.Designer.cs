@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About_Us));
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.picAboutUs = new System.Windows.Forms.PictureBox();
             this.LinkLBLHome = new System.Windows.Forms.LinkLabel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -37,22 +37,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.roundedButton2 = new gradesBookApp.RoundedButton();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox6
+            // picAboutUs
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.pictureBox6.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.pictureBox6.Location = new System.Drawing.Point(1644, 17);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 51;
-            this.pictureBox6.TabStop = false;
+            this.picAboutUs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.picAboutUs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picAboutUs.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
+            this.picAboutUs.Location = new System.Drawing.Point(1644, 17);
+            this.picAboutUs.Name = "picAboutUs";
+            this.picAboutUs.Size = new System.Drawing.Size(55, 50);
+            this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAboutUs.TabIndex = 51;
+            this.picAboutUs.TabStop = false;
+            this.picAboutUs.Click += new System.EventHandler(this.picAboutUs_Click);
             // 
             // LinkLBLHome
             // 
@@ -60,6 +62,7 @@
             this.LinkLBLHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LinkLBLHome.AutoSize = true;
             this.LinkLBLHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.LinkLBLHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LinkLBLHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLBLHome.LinkColor = System.Drawing.Color.White;
             this.LinkLBLHome.Location = new System.Drawing.Point(1702, 29);
@@ -98,7 +101,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox3
             // 
@@ -166,7 +168,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.roundedButton2);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.picAboutUs);
             this.Controls.Add(this.LinkLBLHome);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox3);
@@ -174,7 +176,7 @@
             this.Name = "About_Us";
             this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -184,7 +186,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox picAboutUs;
         private System.Windows.Forms.LinkLabel LinkLBLHome;
         private System.Windows.Forms.TextBox textBox2;
         private RoundedButton roundedButton2;

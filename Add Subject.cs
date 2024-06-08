@@ -49,7 +49,7 @@ namespace gradesBookApp
 
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
+                db.cmd.Parameters.AddWithValue("@teacherId", LogInOperation.userID.Trim());
                 db.dta.SelectCommand = db.cmd;
 
                 DataTable dataTable = new DataTable();
@@ -82,7 +82,7 @@ namespace gradesBookApp
 
                         db.cmd.Parameters.Clear();
                         db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                        db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
+                        db.cmd.Parameters.AddWithValue("@teacherId", LogInOperation.userID.Trim());
                         db.cmd.ExecuteNonQuery();
 
                         try
@@ -93,7 +93,7 @@ namespace gradesBookApp
 
                             db.cmd.Parameters.Clear();
                             db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                            db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
+                            db.cmd.Parameters.AddWithValue("@teacherId", LogInOperation.userID.Trim());
 
                             db.dta.SelectCommand = db.cmd;
 
@@ -136,7 +136,7 @@ namespace gradesBookApp
 
                         db.cmd.Parameters.Clear();
                         db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                        db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
+                        db.cmd.Parameters.AddWithValue("@teacherId", LogInOperation.userID.Trim());
                         db.cmd.ExecuteNonQuery();
                         
                         try
@@ -148,7 +148,7 @@ namespace gradesBookApp
 
                             db.cmd.Parameters.Clear();
                             db.cmd.Parameters.AddWithValue("@subCode", subCode);
-                            db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID.Trim());
+                            db.cmd.Parameters.AddWithValue("@teacherId", LogInOperation.userID.Trim());
 
                             db.dta.SelectCommand = db.cmd;
 

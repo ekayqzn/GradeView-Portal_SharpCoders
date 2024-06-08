@@ -37,6 +37,7 @@ namespace gradesBookApp
         private void Teacher_s_Dashboard_Load(object sender, EventArgs e)
         {
             //This form will load when the user correctly input the login details
+            //MessageBox.Show(LogInOperation.userID);
 
             try
             {
@@ -46,7 +47,7 @@ namespace gradesBookApp
                 db.cmd.CommandText = "SELECT class_id, subject_code FROM modern_gradesbook.class WHERE teacher_id = @teacherId";
 
                 db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@teacherId", FacultyLogIn.userID);
+                db.cmd.Parameters.AddWithValue("@teacherId", LogInOperation.userID.Trim());
                 db.dta.SelectCommand = db.cmd;
 
                 DataTable dataTable = new DataTable();
@@ -63,10 +64,10 @@ namespace gradesBookApp
 
                 if (dataTable.Rows.Count > 0)
                 {
-                    int labelSizeX = 241;
+                    int labelSizeX = 210;
                     int labelSizeY = 178;
-                    int labelLocationX = 25; // Increment by 286
-                    int labelLocationY = 141; // Increment by 224
+                    int labelLocationX = 48; // Increment by 200
+                    int labelLocationY = 52; // Increment by 212
                     int tileCount = 0;
 
                     Random random = new Random();
@@ -86,14 +87,14 @@ namespace gradesBookApp
                         if (tileCount < 3)
                         {
                             label.Location = new Point(labelLocationX, labelLocationY);
-                            labelLocationX += 286;
+                            labelLocationX += 250;
                             tileCount++;
                         }
                         if (tileCount == 3)
                         {
                             tileCount = 0;
-                            labelLocationX = 25;
-                            labelLocationY += 224;
+                            labelLocationX = 48;
+                            labelLocationY += 212;
                         }
 
                         // Add Event Handler
@@ -122,7 +123,7 @@ namespace gradesBookApp
         {
             Label label = (Label)sender;
             subjectTile = label.Text.Trim();
-            string teacherId = FacultyLogIn.userID.Trim();
+            string teacherId = LogInOperation.userID.Trim();
 
             try
             {
@@ -161,27 +162,26 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            LandingPage l = new LandingPage();
-            l.ShowDialog();
-            this.Close();
+            if (MessageBox.Show("Are you sure you want to log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                FacultyLogIn l = new FacultyLogIn();
+                l.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                FacultyLogIn l = new FacultyLogIn();
+                l.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

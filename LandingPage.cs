@@ -24,41 +24,6 @@ namespace gradesBookApp
             this.TopMost = true; // Optional: Ensures the form stays on top
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSchoolName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void roundedButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void rbtnFaculty_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -83,52 +48,12 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void pictureBox3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void llblHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void roundedButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LinkLBLAbout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             About_Us au = new About_Us();
             au.ShowDialog();
             this.Close();
-        }
-
-        private void picHome_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void picAboutUs_Click(object sender, EventArgs e)

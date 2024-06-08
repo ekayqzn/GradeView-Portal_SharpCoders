@@ -153,6 +153,7 @@
     <Compile Include="Administrator_LogIn.Designer.cs">
       <DependentUpon>Administrator_LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogInAdmin.cs" />
     <Compile Include="Course Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +196,8 @@
       <DependentUpon>LandingPage.cs</DependentUpon>
     </Compile>
     <Compile Include="LogInOperation.cs" />
+    <Compile Include="LogInStudent.cs" />
+    <Compile Include="LogInTeacher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Randomize.cs" />

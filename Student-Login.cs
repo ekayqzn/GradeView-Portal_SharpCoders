@@ -30,60 +30,58 @@ namespace gradesBookApp
         private void rbtnLogIn_Click(object sender, EventArgs e)
         {
 
-            userID = txtStudentID.Text;
-            userPass = txtStudentPass.Text;
+            //userID = txtStudentID.Text;
+            //userPass = txtStudentPass.Text;
 
-            //Check if the user is a Student
-            try
-            {
-                db.Connect();
+            ////Check if the user is a Student
+            //try
+            //{
+            //    db.Connect();
 
-                db.cmd.Connection = db.conn;
-                //Since MySql is case insensitive, using BINARY will ensure that it will be case-sensitive esp. in this type of query
-                db.cmd.CommandText = "SELECT * FROM modern_gradesbook.student_info WHERE BINARY student_id = @studentID AND BINARY password = @studentPassword";
+            //    db.cmd.Connection = db.conn;
+            //    //Since MySql is case insensitive, using BINARY will ensure that it will be case-sensitive esp. in this type of query
+            //    db.cmd.CommandText = "SELECT * FROM modern_gradesbook.student_info WHERE BINARY student_id = @studentID AND BINARY password = @studentPassword";
 
-                //Clear existing parameter, so that when there's an error, User can still re-enter login details
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@studentID", userID);
-                db.cmd.Parameters.AddWithValue("@studentPassword", userPass);
+            //    //Clear existing parameter, so that when there's an error, User can still re-enter login details
+            //    db.cmd.Parameters.Clear();
+            //    db.cmd.Parameters.AddWithValue("@studentID", userID);
+            //    db.cmd.Parameters.AddWithValue("@studentPassword", userPass);
 
-                db.dtr = db.cmd.ExecuteReader();
-                loggedIn = db.dtr.Read();
-                db.dtr.Close();
+            //    db.dtr = db.cmd.ExecuteReader();
+            //    loggedIn = db.dtr.Read();
+            //    db.dtr.Close();
 
-                if (loggedIn)
-                {
-                    //When both ID and Password exist in database
-                    if (MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
-                    {
-                        //show dashboard of specific teacher
-                        this.Hide();
-                        Student_s_Dashboard dashboard = new Student_s_Dashboard();
-                        dashboard.ShowDialog();
-                        this.Close();
-                    }
-                }
-                else
-                {
-                    //Inform user and encourage to re-enter
-                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtStudentID.Focus();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
+            //    if (loggedIn)
+            //    {
+            //        //When both ID and Password exist in database
+            //        if (MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            //        {
+            //            //show dashboard of specific teacher
+            //            this.Hide();
+            //            Student_s_Dashboard dashboard = new Student_s_Dashboard();
+            //            dashboard.ShowDialog();
+            //            this.Close();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        //Inform user and encourage to re-enter
+            //        MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        txtStudentID.Focus();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //finally
+            //{
+            //    db.Disconnect();
+            //}
 
-        }
-
-        private void txtStudentID_TextChanged(object sender, EventArgs e)
-        {
-
+            LogInStudent l = new LogInStudent();
+            l.PerformLogIn(this, txtStudentID, txtStudentPass);
+            userID = LogInOperation.userID.Trim();
         }
 
         private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -102,14 +100,21 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void Student_Login_Load(object sender, EventArgs e)
         {
-
+            txtStudentID.Focus();
+            // Attach the KeyDown event handler to the TextBoxes
+            txtStudentID.KeyDown += new KeyEventHandler(OnKeyDownHandler);
+            txtStudentPass.KeyDown += new KeyEventHandler(OnKeyDownHandler);
         }
-
-        private void lnkLBLps_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                LogInStudent l = new LogInStudent();
+                l.PerformLogIn(this, txtStudentID, txtStudentPass);
+                userID = LogInOperation.userID.Trim();
+            }
         }
     }
 }

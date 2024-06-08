@@ -27,7 +27,7 @@ namespace gradesBookApp
                 }
             }
             string columns = string.Join(", ", attendanceColumns);
-            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}1, m_{tableName}2, m_{tableName}3, m_{tableName}4, m_{tableName}5, m_{tableName}6, m_{tableName}7, m_{tableName}8, m_{tableName}9, m_{tableName}_percentage, class_id) VALUES ({columns}, @percentage, @class_id)";
+            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}1, m_{tableName}2, m_{tableName}3, m_{tableName}4, m_{tableName}5, m_{tableName}6, m_{tableName}7, m_{tableName}8, m_{tableName}9, m_{tableName}_percentage, class_id, count) VALUES ({columns}, @percentage, @class_id, @count)";
 
             try
             {
@@ -37,6 +37,7 @@ namespace gradesBookApp
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
                 db.cmd.Parameters.AddWithValue("@percentage", percentage);
+                db.cmd.Parameters.AddWithValue("@count", count);
                 db.cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -129,7 +130,7 @@ namespace gradesBookApp
                 }
             }
             string columns = string.Join(", ", attendanceColumns);
-            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}1, f_{tableName}2, f_{tableName}3, f_{tableName}4, f_{tableName}5, f_{tableName}6, f_{tableName}7, f_{tableName}8, f_{tableName}9, f_{tableName}_percentage, class_id) VALUES ({columns}, @percentage, @class_id)";
+            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}1, f_{tableName}2, f_{tableName}3, f_{tableName}4, f_{tableName}5, f_{tableName}6, f_{tableName}7, f_{tableName}8, f_{tableName}9, f_{tableName}_percentage, class_id, count) VALUES ({columns}, @percentage, @class_id, @count)";
 
             try
             {
@@ -139,6 +140,7 @@ namespace gradesBookApp
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
                 db.cmd.Parameters.AddWithValue("@percentage", percentage);
+                db.cmd.Parameters.AddWithValue("@count", count);
                 db.cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

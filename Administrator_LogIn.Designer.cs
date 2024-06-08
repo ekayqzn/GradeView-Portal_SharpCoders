@@ -57,9 +57,8 @@
             this.txtAdminID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtAdminID.Location = new System.Drawing.Point(158, 164);
             this.txtAdminID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAdminID.Multiline = true;
             this.txtAdminID.Name = "txtAdminID";
-            this.txtAdminID.Size = new System.Drawing.Size(451, 52);
+            this.txtAdminID.Size = new System.Drawing.Size(451, 27);
             this.txtAdminID.TabIndex = 1;
             // 
             // label2
@@ -81,10 +80,9 @@
             this.txtAdminPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtAdminPass.Location = new System.Drawing.Point(158, 253);
             this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAdminPass.Multiline = true;
             this.txtAdminPass.Name = "txtAdminPass";
             this.txtAdminPass.PasswordChar = '*';
-            this.txtAdminPass.Size = new System.Drawing.Size(451, 52);
+            this.txtAdminPass.Size = new System.Drawing.Size(451, 27);
             this.txtAdminPass.TabIndex = 3;
             // 
             // rbtnLogIn

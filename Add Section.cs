@@ -167,35 +167,6 @@ namespace gradesBookApp
             LoadDataIntoDropdown();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numSection_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numYear_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void rbtnCancel_Click(object sender, EventArgs e)
         {

@@ -66,9 +66,9 @@
             this.txtStudentPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtStudentPass.Location = new System.Drawing.Point(1282, 673);
             this.txtStudentPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtStudentPass.Multiline = true;
             this.txtStudentPass.Name = "txtStudentPass";
-            this.txtStudentPass.Size = new System.Drawing.Size(449, 43);
+            this.txtStudentPass.PasswordChar = '*';
+            this.txtStudentPass.Size = new System.Drawing.Size(449, 30);
             this.txtStudentPass.TabIndex = 8;
             // 
             // txtStudentID
@@ -78,11 +78,9 @@
             this.txtStudentID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtStudentID.Location = new System.Drawing.Point(1282, 543);
             this.txtStudentID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtStudentID.Multiline = true;
             this.txtStudentID.Name = "txtStudentID";
-            this.txtStudentID.Size = new System.Drawing.Size(449, 43);
+            this.txtStudentID.Size = new System.Drawing.Size(449, 30);
             this.txtStudentID.TabIndex = 6;
-            this.txtStudentID.TextChanged += new System.EventHandler(this.txtStudentID_TextChanged);
             // 
             // label1
             // 
@@ -197,6 +195,7 @@
             this.LinkLBLHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LinkLBLHome.AutoSize = true;
             this.LinkLBLHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.LinkLBLHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LinkLBLHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLBLHome.LinkColor = System.Drawing.Color.White;
             this.LinkLBLHome.Location = new System.Drawing.Point(1700, 29);
@@ -237,12 +236,12 @@
             this.textBox3.Text = "By using this service, you understood and agree to the Bulacan Technological Univ" +
     "ersity Online Services Terms of Use and Privacy Statement.\r\n";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // rbtnLogIn
             // 
             this.rbtnLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnLogIn.BackColor = System.Drawing.Color.White;
+            this.rbtnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnLogIn.FlatAppearance.BorderSize = 0;
             this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -288,6 +287,7 @@
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
             this.pictureBox6.Location = new System.Drawing.Point(1642, 19);
             this.pictureBox6.Name = "pictureBox6";
@@ -337,6 +337,7 @@
             // 
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::gradesBookApp.Properties.Resources.BULACAN__1_1;
             this.pictureBox7.Location = new System.Drawing.Point(1461, 18);
             this.pictureBox7.Name = "pictureBox7";
@@ -351,6 +352,7 @@
             this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkColor = System.Drawing.Color.White;
             this.linkLabel3.Location = new System.Drawing.Point(1518, 31);
@@ -406,6 +408,7 @@
             this.Name = "Student_Login";
             this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Student_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

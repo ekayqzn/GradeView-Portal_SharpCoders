@@ -27,7 +27,24 @@ namespace gradesBookApp
 
         private void LinkLBLlogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Administrator_LogIn a = new Administrator_LogIn();
+                a.ShowDialog();
+                this.Close();
+            }
+        }
 
+        private void picLogOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Administrator_LogIn a = new Administrator_LogIn();
+                a.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

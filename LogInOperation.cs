@@ -7,12 +7,13 @@ using System.Windows.Forms;
 
 namespace gradesBookApp
 {
-    public class LogInOperation
+    public abstract class LogInOperation
     {
         databaseConnection db = new databaseConnection();
         public static string userID;
         public string userPass;
-        public void PerformLogIn(Form currentForm, TextBox txtID, TextBox txtPass, string tableName)
+        public string command;
+        public void PerformLogIn(Form currentForm, TextBox txtID, TextBox txtPass)
         {
             userID = txtID.Text;
             userPass = txtPass.Text;
@@ -25,7 +26,7 @@ namespace gradesBookApp
 
                     db.cmd.Connection = db.conn;
                     // Since MySQL is case insensitive, using BINARY will ensure that it will be case-sensitive especially in this type of query
-                    db.cmd.CommandText = $"SELECT * FROM modern_gradesbook.{tableName}_info WHERE BINARY {tableName}_id = @Id AND BINARY {tableName}_password = @Password";
+                    db.cmd.CommandText = GetCommand();
 
                     // Clear existing parameters
                     db.cmd.Parameters.Clear();
@@ -41,19 +42,7 @@ namespace gradesBookApp
                         // When both ID and Password exist in database
                         MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Redirect to the dashboard based on user type
-                        switch (tableName)
-                        {
-                            case "teacher":
-                                ShowTeacherDashboard(currentForm);
-                                break;
-                            case "student":
-                                ShowStudentDashboard(currentForm);
-                                break;
-                            default:
-                                MessageBox.Show("Invalid user type.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                break;
-                        }
+                        ShowDashboard(currentForm);
                     }
                     else
                     {
@@ -82,30 +71,8 @@ namespace gradesBookApp
                     txtPass.Focus();
             }
         }
-        private void ShowTeacherDashboard(Form currentForm)
-        {
-            currentForm.Hide();
-            Teacher_s_Dashboard dashboard = new Teacher_s_Dashboard();
-            dashboard.ShowDialog();
-            currentForm.Close();
-        }
 
-        private void ShowStudentDashboard(Form currentForm)
-        {
-            currentForm.Hide();
-            // Assuming you have a form named StudentDashboardForm for students
-            Student_s_Dashboard dashboard = new Student_s_Dashboard();
-            dashboard.ShowDialog();
-            currentForm.Close();
-        }
-
-        private void ShowAdminDashboard(Form currentForm)
-        {
-            currentForm.Hide();
-            // Assuming you have a form named StudentDashboardForm for students
-            Administrator_Dashboard dashboard = new Administrator_Dashboard();
-            dashboard.ShowDialog();
-            currentForm.Close();
-        }
+        public abstract string GetCommand();
+        public abstract void ShowDashboard(Form currentForm);
     }
 }

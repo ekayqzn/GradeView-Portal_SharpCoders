@@ -36,8 +36,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TDB_Bg = new gradesBookApp.RoundedButton();
-            this.LinkLBLback = new System.Windows.Forms.LinkLabel();
+            this.lblLogOut = new System.Windows.Forms.LinkLabel();
+            this.picLogOut = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogOut)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -137,29 +139,43 @@
             this.TDB_Bg.TabIndex = 60;
             this.TDB_Bg.UseVisualStyleBackColor = false;
             // 
-            // LinkLBLback
+            // lblLogOut
             // 
-            this.LinkLBLback.ActiveLinkColor = System.Drawing.Color.Yellow;
-            this.LinkLBLback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LinkLBLback.AutoSize = true;
-            this.LinkLBLback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.LinkLBLback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLBLback.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLback.Location = new System.Drawing.Point(1421, 30);
-            this.LinkLBLback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LinkLBLback.Name = "LinkLBLback";
-            this.LinkLBLback.Size = new System.Drawing.Size(89, 25);
-            this.LinkLBLback.TabIndex = 62;
-            this.LinkLBLback.TabStop = true;
-            this.LinkLBLback.Text = "Log Out";
-            this.LinkLBLback.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLBLback_LinkClicked);
+            this.lblLogOut.ActiveLinkColor = System.Drawing.Color.Yellow;
+            this.lblLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogOut.AutoSize = true;
+            this.lblLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.lblLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogOut.LinkColor = System.Drawing.Color.White;
+            this.lblLogOut.Location = new System.Drawing.Point(1421, 30);
+            this.lblLogOut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogOut.Name = "lblLogOut";
+            this.lblLogOut.Size = new System.Drawing.Size(89, 25);
+            this.lblLogOut.TabIndex = 62;
+            this.lblLogOut.TabStop = true;
+            this.lblLogOut.Text = "Log Out";
+            this.lblLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLogOut_LinkClicked);
+            // 
+            // picLogOut
+            // 
+            this.picLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.picLogOut.Image = global::gradesBookApp.Properties.Resources.k__2_;
+            this.picLogOut.Location = new System.Drawing.Point(1365, 20);
+            this.picLogOut.Name = "picLogOut";
+            this.picLogOut.Size = new System.Drawing.Size(55, 50);
+            this.picLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogOut.TabIndex = 68;
+            this.picLogOut.TabStop = false;
+            this.picLogOut.Click += new System.EventHandler(this.picLogOut_Click);
             // 
             // Student_s_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1540, 942);
-            this.Controls.Add(this.LinkLBLback);
+            this.Controls.Add(this.picLogOut);
+            this.Controls.Add(this.lblLogOut);
             this.Controls.Add(this.rbtnAddClass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -174,6 +190,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Student_s_Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogOut)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +205,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
         private RoundedButton TDB_Bg;
-        private System.Windows.Forms.LinkLabel LinkLBLback;
+        private System.Windows.Forms.LinkLabel lblLogOut;
+        private System.Windows.Forms.PictureBox picLogOut;
     }
 }

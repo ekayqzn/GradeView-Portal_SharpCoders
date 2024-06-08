@@ -40,7 +40,7 @@ namespace gradesBookApp
                     "WHERE e.student_id = @studentID";
 
                 db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@studentID", Student_Login.userID.Trim());
+                db.cmd.Parameters.AddWithValue("@studentID", LogInOperation.userID.Trim());
                 //SelectCommand property select the sql command
                 db.dta.SelectCommand = db.cmd;
 
@@ -64,10 +64,11 @@ namespace gradesBookApp
                 //if the database return the details, will dynamically create a tile/button for that specific subject
                 if (dataTable.Rows.Count > 0)
                 {
-                    int labelSizeX = 241;
+                    int labelSizeX = 210;
                     int labelSizeY = 178;
-                    int labelLocationX = 25; //increment by 286
-                    int labelLocationY = 141; //increment by 224
+                    int labelLocationX = 48; // Increment by 200
+                    int labelLocationY = 52; // Increment by 212
+
                     // Generates a random integer between 128 and 255 for light colors
                     Random random = new Random();
                     int red = random.Next(200, 256);
@@ -81,23 +82,21 @@ namespace gradesBookApp
                         label.Text = subjectName[i] + Environment.NewLine + subjectCode[i] + Environment.NewLine + teacherName[i];
                         label.AutoSize = false;
                         label.Size = new Size(labelSizeX, labelSizeY);
-                        label.BackColor = Color.FromArgb(red, green, blue);
-                        red = random.Next(200, 256);
-                        green = random.Next(150, 200);
-                        blue = random.Next(150, 200);
+                        label.BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256));
                         int tileCount = 0;
 
                         //tile is 3 per row
                         if (tileCount + 1 <= 3)
                         {
                             label.Location = new Point(labelLocationX, labelLocationY);
-                            labelLocationX += 286;
+                            labelLocationX += 250;
+                            tileCount++;
                         }
                         if (tileCount + 1 == 3) //New Line when reaches 3
                         {
                             tileCount = 0;
-                            labelLocationX = 25;
-                            labelLocationY += 224;
+                            labelLocationX = 48;
+                            labelLocationY += 212;
                         }
 
                         //Add Event Handler
@@ -121,12 +120,33 @@ namespace gradesBookApp
         private void lblSubject_Click (object sender, EventArgs e)
         {
             //Will show student scores for that specific subject (GRADEBOOK)
+            //!Add Query
+            this.Hide();
+            Student_Module studentModule = new Student_Module();
+            studentModule.ShowDialog();
+            this.Close();
         }
 
-        private void LinkLBLback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lblLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
+            if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Student_Login s = new Student_Login();
+                s.ShowDialog();
+                this.Close();
+            }
+        }
 
+        private void picLogOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Student_Login s = new Student_Login();
+                s.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

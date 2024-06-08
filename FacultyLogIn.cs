@@ -36,8 +36,8 @@ namespace gradesBookApp
 
         private void rbtnLogIn_Click(object sender, EventArgs e)
         {
-            LogInOperation l = new LogInOperation();
-            l.PerformLogIn(this, txtTeacherID, txtTeacherPass, "teacher");
+            LogInTeacher l = new LogInTeacher();
+            l.PerformLogIn(this, txtTeacherID, txtTeacherPass);
             userID = LogInOperation.userID.Trim();
         }
 
@@ -77,9 +77,8 @@ namespace gradesBookApp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true;
-                LogInOperation l = new LogInOperation();
-                l.PerformLogIn(this, txtTeacherID, txtTeacherPass, "teacher");
+                LogInTeacher l = new LogInTeacher();
+                l.PerformLogIn(this, txtTeacherID, txtTeacherPass);
                 userID = LogInOperation.userID.Trim();
             }
         }

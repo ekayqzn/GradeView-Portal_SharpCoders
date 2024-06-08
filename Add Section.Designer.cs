@@ -67,7 +67,6 @@
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Program:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -81,7 +80,6 @@
             this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Year:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // numYear
             // 
@@ -108,7 +106,6 @@
             0,
             0,
             0});
-            this.numYear.ValueChanged += new System.EventHandler(this.numYear_ValueChanged);
             // 
             // label3
             // 
@@ -122,7 +119,7 @@
             this.label3.Size = new System.Drawing.Size(70, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Section:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+
             // 
             // numSection
             // 
@@ -149,7 +146,7 @@
             0,
             0,
             0});
-            this.numSection.ValueChanged += new System.EventHandler(this.numSection_ValueChanged);
+
             // 
             // textBox2
             // 
@@ -165,7 +162,7 @@
             this.textBox2.Size = new System.Drawing.Size(1165, 83);
             this.textBox2.TabIndex = 51;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+
             // 
             // label4
             // 

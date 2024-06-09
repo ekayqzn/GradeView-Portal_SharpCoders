@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Math.Field;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,172 @@ namespace gradesBookApp
     public class GradebookQuery
     {
         databaseConnection db = new databaseConnection();
+
+        //Copy Customize Gradebook to student records
+        public bool mGetID (string tableName, int classID)
+        {
+            object result = false;
+            string commandText = $"SELECT m_{tableName}_id FROM modern_gradesbook.m_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                result = db.cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(1 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+            if (result != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool fGetID(string tableName, int classID)
+        {
+            object result = false;
+            string commandText = $"SELECT f_{tableName}_id FROM f_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                result = db.cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(2  + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+            if (result != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //Midterm Recit and Attendance
+        public void mAttRecitCopy(string tableName, int classID, string studentID)
+        {
+            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}1, m_{tableName}2, m_{tableName}3, m_{tableName}4, m_{tableName}5, m_{tableName}6, m_{tableName}7, m_{tableName}8, m_{tableName}9, m_{tableName}_percentage, class_id, count, student_id) SELECT m_{tableName}1, m_{tableName}2, m_{tableName}3, m_{tableName}4, m_{tableName}5, m_{tableName}6, m_{tableName}7, m_{tableName}8, m_{tableName}9, m_{tableName}_percentage, class_id, count, COALESCE(student_id, @studentID) FROM m_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(3 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
+
+        //Midterm Other Tasks
+        public void mOthersCopy(string tableName, int classID, string studentID)
+        {
+            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}1, m_{tableName}1_score, m_{tableName}2, m_{tableName}2_score, m_{tableName}3, m_{tableName}3_score, m_{tableName}4, m_{tableName}4_score, m_{tableName}5, m_{tableName}5_score, m_{tableName}6, m_{tableName}6_score, m_{tableName}7, m_{tableName}7_score, m_{tableName}8, m_{tableName}8_score, m_{tableName}9, m_{tableName}9_score, m_{tableName}_percentage, class_id, count, student_id) SELECT m_{tableName}1, m_{tableName}1_score, m_{tableName}2, m_{tableName}2_score, m_{tableName}3,  m_{tableName}3_score, m_{tableName}4, m_{tableName}4_score, m_{tableName}5, m_{tableName}5_score, m_{tableName}6, m_{tableName}6_score, m_{tableName}7, m_{tableName}7_score, m_{tableName}8, m_{tableName}8_score, m_{tableName}9, m_{tableName}9_score, m_{tableName}_percentage, class_id, count, COALESCE(student_id, @studentID) FROM m_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(4 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
+
+        //Final Recit and Attendance
+        public void fAttRecitCopy(string tableName, int classID, string studentID)
+        {
+            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}1, f_{tableName}2, f_{tableName}3, f_{tableName}4, f_{tableName}5, f_{tableName}6, f_{tableName}7, f_{tableName}8, f_{tableName}9, f_{tableName}_percentage, class_id, count, student_id) SELECT f_{tableName}1, f_{tableName}2, f_{tableName}3, f_{tableName}4, f_{tableName}5, f_{tableName}6, f_{tableName}7, f_{tableName}8, f_{tableName}9, f_{tableName}_percentage, class_id, count, COALESCE(student_id, @studentID) FROM f_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(5 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
+
+        //Midterm Other Tasks
+        public void fOthersCopy(string tableName, int classID, string studentID)
+        {
+            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}1, f_{tableName}1_score, f_{tableName}2, f_{tableName}2_score, f_{tableName}3, f_{tableName}3_score, f_{tableName}4, f_{tableName}4_score, f_{tableName}5, f_{tableName}5_score, f_{tableName}6, f_{tableName}6_score, f_{tableName}7, f_{tableName}7_score, f_{tableName}8, f_{tableName}8_score, f_{tableName}9, f_{tableName}9_score, f_{tableName}_percentage, class_id, count, student_id) SELECT f_{tableName}1, f_{tableName}1_score, f_{tableName}2, f_{tableName}2_score, f_{tableName}3,  f_{tableName}3_score, f_{tableName}4, f_{tableName}4_score, f_{tableName}5, f_{tableName}5_score, f_{tableName}6, f_{tableName}6_score, f_{tableName}7, f_{tableName}7_score, f_{tableName}8, f_{tableName}8_score, f_{tableName}9, f_{tableName}9_score, f_{tableName}_percentage, class_id, count, COALESCE(student_id, @studentID) FROM f_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show( 6 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
 
         //midterm attendance and recitation
         public void mAttRecit(string tableName, int count, int percentage)

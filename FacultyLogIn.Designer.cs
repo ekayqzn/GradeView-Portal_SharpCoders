@@ -38,10 +38,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTeacherID = new System.Windows.Forms.TextBox();
             this.txtTeacherPass = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.picAboutUs = new System.Windows.Forms.PictureBox();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btn = new System.Windows.Forms.Button();
             this.rbtnLogIn = new gradesBookApp.RoundedButton();
             this.roundedButton1 = new gradesBookApp.RoundedButton();
             this.roundedButton2 = new gradesBookApp.RoundedButton();
@@ -180,6 +183,28 @@
             this.txtTeacherPass.Size = new System.Drawing.Size(449, 30);
             this.txtTeacherPass.TabIndex = 62;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Image = global::gradesBookApp.Properties.Resources.hide;
+            this.btnClose.Location = new System.Drawing.Point(1704, 683);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(33, 30);
+            this.btnClose.TabIndex = 66;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOpen.Image = global::gradesBookApp.Properties.Resources.red_eye;
+            this.btnOpen.Location = new System.Drawing.Point(1704, 683);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(33, 30);
+            this.btnOpen.TabIndex = 65;
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -233,6 +258,16 @@
             this.pictureBox3.TabIndex = 48;
             this.pictureBox3.TabStop = false;
             // 
+            // btn
+            // 
+            this.btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn.Image = global::gradesBookApp.Properties.Resources.hide;
+            this.btn.Location = new System.Drawing.Point(1704, 719);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(33, 30);
+            this.btn.TabIndex = 66;
+            this.btn.UseVisualStyleBackColor = true;
+            // 
             // rbtnLogIn
             // 
             this.rbtnLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -283,6 +318,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1794, 1158);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.rbtnLogIn);
             this.Controls.Add(this.txtTeacherPass);
@@ -331,5 +368,8 @@
         private System.Windows.Forms.TextBox txtTeacherPass;
         private RoundedButton rbtnLogIn;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btn;
     }
 }

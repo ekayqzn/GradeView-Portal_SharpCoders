@@ -119,7 +119,6 @@
             this.label3.Size = new System.Drawing.Size(70, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Section:";
-
             // 
             // numSection
             // 
@@ -146,7 +145,6 @@
             0,
             0,
             0});
-
             // 
             // textBox2
             // 
@@ -162,7 +160,6 @@
             this.textBox2.Size = new System.Drawing.Size(1165, 83);
             this.textBox2.TabIndex = 51;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
             // 
             // label4
             // 
@@ -181,6 +178,7 @@
             // 
             this.rbtnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnOK.FlatAppearance.BorderSize = 0;
             this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnOK.ForeColor = System.Drawing.Color.White;
@@ -197,6 +195,7 @@
             // 
             this.rbtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
@@ -229,6 +228,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Add_Section";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";

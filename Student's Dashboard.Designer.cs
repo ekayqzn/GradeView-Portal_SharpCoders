@@ -59,6 +59,7 @@
             // 
             this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnAddClass.FlatAppearance.BorderSize = 0;
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,6 +146,7 @@
             this.lblLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLogOut.AutoSize = true;
             this.lblLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.lblLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogOut.LinkColor = System.Drawing.Color.White;
             this.lblLogOut.Location = new System.Drawing.Point(1421, 30);
@@ -160,6 +162,7 @@
             // 
             this.picLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.picLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogOut.Image = global::gradesBookApp.Properties.Resources.k__2_;
             this.picLogOut.Location = new System.Drawing.Point(1365, 20);
             this.picLogOut.Name = "picLogOut";

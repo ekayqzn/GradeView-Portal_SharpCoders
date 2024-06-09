@@ -40,5 +40,55 @@ namespace gradesBookApp
                 l.PerformLogIn(this, txtAdminID, txtAdminPass);
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if(txtAdminPass.PasswordChar == '*')
+            {
+                btnOpen.BringToFront();
+                txtAdminPass.PasswordChar = '\0';
+            }
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            if (txtAdminPass.PasswordChar == '\0')
+            {
+                btnClose.BringToFront();
+                txtAdminPass.PasswordChar = '*';
+            }
+        }
+
+        private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            LandingPage l = new LandingPage();
+            l.ShowDialog();
+            this.Close();
+        }
+
+        private void picHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LandingPage l = new LandingPage();
+            l.ShowDialog();
+            this.Close();
+        }
+
+        private void lblAboutUs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            About_Us a = new About_Us(); 
+            a.ShowDialog();
+            this.Close();
+        }
+
+        private void picAboutUs_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            About_Us a = new About_Us();
+            a.ShowDialog();
+            this.Close();
+        }
     }
 }

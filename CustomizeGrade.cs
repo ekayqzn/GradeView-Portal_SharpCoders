@@ -15,41 +15,41 @@ namespace gradesBookApp
     public partial class CustomizeGrade : Form
     {
         //Declare variable
-        public static int mAttendanceCount;
-        public static int mAttendancePercent;
+        public int mAttendanceCount;
+        public int mAttendancePercent;
 
-        public static int mQuizCount;
-        public static int mQuizPercent;
+        public int mQuizCount;
+        public int mQuizPercent;
 
-        public static int mActivityCount;
-        public static int mActivityPercent;
+        public int mActivityCount;
+        public int mActivityPercent;
 
-        public static int mLongQuizCount;
-        public static int mLongQuizPercent;
+        public int mLongQuizCount;
+        public int mLongQuizPercent;
 
-        public static int mAssignmentCount;
-        public static int mAssignmentPercent;
+        public int mAssignmentCount;
+        public int mAssignmentPercent;
 
-        public static int mRecitationCount;
-        public static int mRecitationPercent;
+        public int mRecitationCount;
+        public int mRecitationPercent;
 
-        public static int fAttendanceCount;
-        public static int fAttendancePercent;
+        public int fAttendanceCount;
+        public int fAttendancePercent;
 
-        public static int fQuizCount;
-        public static int fQuizPercent;
+        public int fQuizCount;
+        public int fQuizPercent;
 
-        public static int fActivityCount;
-        public static int fActivityPercent;
+        public int fActivityCount;
+        public int fActivityPercent;
 
-        public static int fLongQuizCount;
-        public static int fLongQuizPercent;
+        public int fLongQuizCount;
+        public int fLongQuizPercent;
 
-        public static int fAssignmentCount;
-        public static int fAssignmentPercent;
+        public int fAssignmentCount;
+        public int fAssignmentPercent;
 
-        public static int fRecitationCount;
-        public static int fRecitationPercent;
+        public int fRecitationCount;
+        public int fRecitationPercent;
 
         bool mAttendance = false;
         bool mQuiz = false;
@@ -355,6 +355,7 @@ namespace gradesBookApp
             {
                 MessageBox.Show("The total percentage for both midterm and final must be exactly 70%.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 isValid = false;
+                return;
             }
             else
             {
@@ -424,6 +425,7 @@ namespace gradesBookApp
             {
                 MessageBox.Show("Please select for the 30% for Midterm", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 isValid = false;
+                return;
             }
             else
             {
@@ -442,6 +444,7 @@ namespace gradesBookApp
             {
                 MessageBox.Show("Please select for the 30% for Final", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 isValid = false;
+                return;
             }
             else
             {

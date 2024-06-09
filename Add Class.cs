@@ -16,7 +16,8 @@ namespace gradesBookApp
         public static string classCode;
         databaseConnection db = new databaseConnection();
         public int courseId;
-        public string studentId = Student_Login.userID.Trim();
+        public int classId;
+        public string studentId = LogInOperation.userID.Trim();
         public Add_Class()
         {
             InitializeComponent();
@@ -25,75 +26,141 @@ namespace gradesBookApp
         private void rbtnAddClass_Click(object sender, EventArgs e)
         {
             classCode = txtClassCode.Text.Trim();
-
-            //!ADD VALIDATION
-            //check if the code exist by retrieving course_id
-            try
+            if(!String.IsNullOrEmpty(classCode))
             {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "SELECT course_id FROM modern_gradesbook.course WHERE course_code = @courseCode";
-
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@courseCode", classCode);
-                db.dta.SelectCommand = db.cmd;
-
-                DataTable dataTable = new DataTable();
-                db.dta.Fill(dataTable);
-
-                if(dataTable.Rows.Count == 0 ) //code not exist
+                //check if the code exist by retrieving course_id
+                try
                 {
-                    MessageBox.Show("Invalid Code");
-                    txtClassCode.Focus();
-                    txtClassCode.SelectAll();
-                    
-                }
-                else
-                {
-                    courseId = Convert.ToInt32(dataTable.Rows[0]["course_id"]);
-                    MessageBox.Show(courseId.ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
+                    db.Connect();
+                    db.cmd.Connection = db.conn;
+                    db.cmd.CommandText = "SELECT course_id, class_id FROM modern_gradesbook.course WHERE course_code = @courseCode";
 
-            //add student info to enroll
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "INSERT INTO modern_gradesbook.enroll(student_id, program_id, class_id) SELECT @studentID, program_id, class_id FROM modern_gradesbook.course WHERE course_id = @courseID";
+                    db.cmd.Parameters.Clear();
+                    db.cmd.Parameters.AddWithValue("@courseCode", classCode);
+                    db.dta.SelectCommand = db.cmd;
 
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@studentID", studentId);
-                db.cmd.Parameters.AddWithValue("@courseID", courseId);
+                    DataTable dataTable = new DataTable();
+                    db.dta.Fill(dataTable);
 
-                if (db.cmd.ExecuteNonQuery() > 0)
-                {
-                    if(MessageBox.Show("Subject Added to Dashboard", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                    if (dataTable.Rows.Count == 0) //code not exist
                     {
-                        this.Hide();
-                        Student_s_Dashboard studentDB = new Student_s_Dashboard(); 
-                        studentDB.ShowDialog();
-                        this.Close();
+                        MessageBox.Show("Invalid Code", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtClassCode.Focus();
+                        txtClassCode.SelectAll();
+                    }
+                    else //code exist
+                    {
+                        courseId = Convert.ToInt32(dataTable.Rows[0]["course_id"]);
+                        classId = Convert.ToInt32(dataTable.Rows[0]["class_id"]);
+                        MessageBox.Show(courseId.ToString() + Environment.NewLine + classId.ToString());
+                        //Get subject code
+                        try
+                        {
+                            db.Connect();
+                            db.cmd.Connection = db.conn;
+                            db.cmd.CommandText = "SELECT subject_code FROM modern_gradesbook.class WHERE class_id = @classID";
+
+                            db.cmd.Parameters.Clear();
+                            db.cmd.Parameters.AddWithValue("@classID", classId);
+
+                            db.dta.SelectCommand = db.cmd;
+                            DataTable dataTable1 = new DataTable();
+                            db.dta.Fill(dataTable1);
+
+                            //student can't enroll in the same subject at the same time
+                            if(dataTable1.Rows.Count == 0)
+                            {
+                                try //check if the student is already enrolled in the course
+                                {
+                                    db.Connect();
+                                    db.cmd.Connection = db.conn;
+                                    db.cmd.CommandText = "SELECT enroll_id FROM modern_gradesbook.enroll WHERE student_id = @studentID AND class_id = @classID";
+
+                                    db.cmd.Parameters.Clear();
+                                    db.cmd.Parameters.AddWithValue("@studentID", Student_Login.userID);
+                                    db.cmd.Parameters.AddWithValue("@classID", classId);
+
+                                    db.dta.SelectCommand = db.cmd;
+                                    DataTable dataTable2 = new DataTable();
+                                    db.dta.Fill(dataTable2);
+
+                                    if (dataTable2.Rows.Count == 0) //student not enrolled yet
+                                    {
+                                        //add student info to enroll
+                                        try
+                                        {
+                                            db.Connect();
+                                            db.cmd.Connection = db.conn;
+                                            db.cmd.CommandText = "INSERT INTO modern_gradesbook.enroll(student_id, program_id, class_id) SELECT @studentID, program_id, class_id FROM modern_gradesbook.course WHERE course_id = @courseID";
+
+                                            db.cmd.Parameters.Clear();
+                                            db.cmd.Parameters.AddWithValue("@studentID", studentId);
+                                            db.cmd.Parameters.AddWithValue("@courseID", courseId);
+
+                                            if (db.cmd.ExecuteNonQuery() > 0)
+                                            {
+                                                if (MessageBox.Show("Subject Added to Dashboard", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                                                {
+                                                    this.Hide();
+                                                    Student_s_Dashboard studentDB = new Student_s_Dashboard();
+                                                    studentDB.ShowDialog();
+                                                    this.Close();
+                                                }
+                                            }
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                        finally
+                                        {
+                                            db.Disconnect();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        //Student is already enrolled in specific subject in the same teacher
+                                        MessageBox.Show("You are already enrolled in that subject", "Already Enrolled", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                                finally
+                                {
+                                    db.Disconnect();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("The code you input appears to be the same subject you are currently enrolled. Students can't enroll in the same subject at the same time");
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            db.Disconnect();
+                        }
                     }
                 }
-
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    db.Disconnect();
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
+                MessageBox.Show("Empty field is not accepted", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtClassCode.Focus();
             }
         }
 

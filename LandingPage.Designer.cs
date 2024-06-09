@@ -245,6 +245,7 @@
             this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAboutUs.TabIndex = 45;
             this.picAboutUs.TabStop = false;
+            this.picAboutUs.Click += new System.EventHandler(this.picAboutUs_Click);
             // 
             // picHome
             // 

@@ -36,6 +36,14 @@
             this.rbtnLogIn = new gradesBookApp.RoundedButton();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.picAboutUs = new System.Windows.Forms.PictureBox();
+            this.lblAboutUs = new System.Windows.Forms.LinkLabel();
+            this.picHome = new System.Windows.Forms.PictureBox();
+            this.LinkLBLHome = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,6 +97,7 @@
             // 
             this.rbtnLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnLogIn.FlatAppearance.BorderSize = 0;
             this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,12 +139,102 @@
             this.textBox2.TabIndex = 55;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnOpen
+            // 
+            this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOpen.Image = global::gradesBookApp.Properties.Resources.red_eye;
+            this.btnOpen.Location = new System.Drawing.Point(576, 253);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(33, 30);
+            this.btnOpen.TabIndex = 69;
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Image = global::gradesBookApp.Properties.Resources.hide;
+            this.btnClose.Location = new System.Drawing.Point(576, 252);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(33, 30);
+            this.btnClose.TabIndex = 70;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // picAboutUs
+            // 
+            this.picAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.picAboutUs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picAboutUs.Image = global::gradesBookApp.Properties.Resources.BULACAN__1_1;
+            this.picAboutUs.Location = new System.Drawing.Point(22, 12);
+            this.picAboutUs.Name = "picAboutUs";
+            this.picAboutUs.Size = new System.Drawing.Size(55, 50);
+            this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAboutUs.TabIndex = 74;
+            this.picAboutUs.TabStop = false;
+            this.picAboutUs.Click += new System.EventHandler(this.picAboutUs_Click);
+            // 
+            // lblAboutUs
+            // 
+            this.lblAboutUs.ActiveLinkColor = System.Drawing.Color.Yellow;
+            this.lblAboutUs.AutoSize = true;
+            this.lblAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.lblAboutUs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAboutUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAboutUs.LinkColor = System.Drawing.Color.White;
+            this.lblAboutUs.Location = new System.Drawing.Point(84, 23);
+            this.lblAboutUs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAboutUs.Name = "lblAboutUs";
+            this.lblAboutUs.Size = new System.Drawing.Size(101, 25);
+            this.lblAboutUs.TabIndex = 73;
+            this.lblAboutUs.TabStop = true;
+            this.lblAboutUs.Text = "About Us";
+            this.lblAboutUs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAboutUs_LinkClicked);
+            // 
+            // picHome
+            // 
+            this.picHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
+            this.picHome.Location = new System.Drawing.Point(659, 15);
+            this.picHome.Name = "picHome";
+            this.picHome.Size = new System.Drawing.Size(55, 50);
+            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHome.TabIndex = 72;
+            this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
+            // 
+            // LinkLBLHome
+            // 
+            this.LinkLBLHome.ActiveLinkColor = System.Drawing.Color.Yellow;
+            this.LinkLBLHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LinkLBLHome.AutoSize = true;
+            this.LinkLBLHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.LinkLBLHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LinkLBLHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLBLHome.LinkColor = System.Drawing.Color.White;
+            this.LinkLBLHome.Location = new System.Drawing.Point(717, 25);
+            this.LinkLBLHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LinkLBLHome.Name = "LinkLBLHome";
+            this.LinkLBLHome.Size = new System.Drawing.Size(68, 25);
+            this.LinkLBLHome.TabIndex = 71;
+            this.LinkLBLHome.TabStop = true;
+            this.LinkLBLHome.Text = "Home";
+            this.LinkLBLHome.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLBLHome_LinkClicked);
+            // 
             // Administrator_LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.picAboutUs);
+            this.Controls.Add(this.lblAboutUs);
+            this.Controls.Add(this.picHome);
+            this.Controls.Add(this.LinkLBLHome);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.rbtnLogIn);
@@ -149,6 +248,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
             this.Load += new System.EventHandler(this.Administrator_LogIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +264,11 @@
         private RoundedButton rbtnLogIn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.PictureBox picAboutUs;
+        private System.Windows.Forms.LinkLabel lblAboutUs;
+        private System.Windows.Forms.PictureBox picHome;
+        private System.Windows.Forms.LinkLabel LinkLBLHome;
     }
 }

@@ -22,7 +22,6 @@ namespace gradesBookApp
         {
             InitializeComponent();
         }
-
         private void GradeBook_Load(object sender, EventArgs e)
         {
             string subjectName = "";
@@ -49,8 +48,10 @@ namespace gradesBookApp
                     subjectName = dataTable.Rows[0]["subject_name"].ToString();
                     Label label = new Label();
                     label.Text = Teacher_s_Dashboard.subjectTile + Environment.NewLine + subjectName + Environment.NewLine + Course_Dashboard.programName + Environment.NewLine + Course_Dashboard.yearLevel + " - " + Course_Dashboard.section + Environment.NewLine + "Code: " + Course_Dashboard.courseCode;
-                    label.Location = new Point(35, 35);
+                    label.Location = new Point(20, 80);
                     label.AutoSize = true;
+                    label.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+                    label.ForeColor = Color.FromArgb(0, 4, 93);
                     this.Controls.Add(label);
                 }
             }
@@ -181,7 +182,6 @@ This way, if the student_id, class_id, and program_id combination already exists
                 db.Disconnect();
             }
         }
-
         private void LinkLBLback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();

@@ -33,12 +33,12 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.rbtnAddSubject = new gradesBookApp.RoundedButton();
             this.LinkLBLlogout = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.TDB_Bg = new gradesBookApp.RoundedButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.rbtnAddSubject = new gradesBookApp.RoundedButton();
+            this.TDB_Bg = new gradesBookApp.RoundedButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,6 +66,7 @@
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::gradesBookApp.Properties.Resources.k__2_;
             this.pictureBox6.Location = new System.Drawing.Point(1372, 20);
             this.pictureBox6.Name = "pictureBox6";
@@ -100,29 +101,13 @@
             this.label4.Tag = "";
             this.label4.Text = " BULACAN TECHNOLOGICAL UNIVERSITY";
             // 
-            // rbtnAddSubject
-            // 
-            this.rbtnAddSubject.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rbtnAddSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnAddSubject.FlatAppearance.BorderSize = 0;
-            this.rbtnAddSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAddSubject.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddSubject.Location = new System.Drawing.Point(1076, 176);
-            this.rbtnAddSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtnAddSubject.Name = "rbtnAddSubject";
-            this.rbtnAddSubject.Size = new System.Drawing.Size(261, 48);
-            this.rbtnAddSubject.TabIndex = 3;
-            this.rbtnAddSubject.Text = "Add Subject";
-            this.rbtnAddSubject.UseVisualStyleBackColor = false;
-            this.rbtnAddSubject.Click += new System.EventHandler(this.rbtnAddSubject_Click);
-            // 
             // LinkLBLlogout
             // 
             this.LinkLBLlogout.ActiveLinkColor = System.Drawing.Color.Yellow;
             this.LinkLBLlogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LinkLBLlogout.AutoSize = true;
             this.LinkLBLlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.LinkLBLlogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LinkLBLlogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLBLlogout.LinkColor = System.Drawing.Color.White;
             this.LinkLBLlogout.Location = new System.Drawing.Point(1421, 30);
@@ -163,6 +148,36 @@
             this.textBox2.TabIndex = 34;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = global::gradesBookApp.Properties.Resources.BULACAN_TECHNOLOGICAL_UNIVERSITY__2_;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1540, 942);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 56;
+            this.pictureBox3.TabStop = false;
+            // 
+            // rbtnAddSubject
+            // 
+            this.rbtnAddSubject.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbtnAddSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddSubject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnAddSubject.FlatAppearance.BorderSize = 0;
+            this.rbtnAddSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAddSubject.ForeColor = System.Drawing.Color.White;
+            this.rbtnAddSubject.Location = new System.Drawing.Point(1076, 176);
+            this.rbtnAddSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnAddSubject.Name = "rbtnAddSubject";
+            this.rbtnAddSubject.Size = new System.Drawing.Size(261, 48);
+            this.rbtnAddSubject.TabIndex = 3;
+            this.rbtnAddSubject.Text = "Add Subject";
+            this.rbtnAddSubject.UseVisualStyleBackColor = false;
+            this.rbtnAddSubject.Click += new System.EventHandler(this.rbtnAddSubject_Click);
+            // 
             // TDB_Bg
             // 
             this.TDB_Bg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -178,18 +193,6 @@
             this.TDB_Bg.Size = new System.Drawing.Size(1209, 820);
             this.TDB_Bg.TabIndex = 53;
             this.TDB_Bg.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::gradesBookApp.Properties.Resources.BULACAN_TECHNOLOGICAL_UNIVERSITY__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1540, 942);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 56;
-            this.pictureBox3.TabStop = false;
             // 
             // Teacher_s_Dashboard
             // 

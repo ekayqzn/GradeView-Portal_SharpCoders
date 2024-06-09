@@ -66,58 +66,89 @@ namespace gradesBookApp
 
         private void rbtnOK_Click(object sender, EventArgs e)
         {
-            programName = cboProgram.SelectedItem.ToString().Trim();
-            year = Convert.ToInt32(numYear.Value);
-            section = Convert.ToInt32(numSection.Value);
-            courseCode = r.GenerateRandomCode();
-
-            //! Check for duplicates in database and course dashboard
-
-            // Add program_id, class_id, and code to course table
-            try
+            if(cboProgram.SelectedIndex == -1)
             {
-                // Get program_id
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "SELECT program_id FROM modern_gradesbook.program WHERE program_name = @programName AND year_level = @year AND section = @section";
-
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@programName", programName);
-                db.cmd.Parameters.AddWithValue("@year", year);
-                db.cmd.Parameters.AddWithValue("@section", section);
-
-                // SelectCommand property select the sql command
-                db.dta.SelectCommand = db.cmd;
-
-                // DataTable
-                DataTable dataTable = new DataTable();
-                db.dta.Fill(dataTable); // populate dataTable
-
-                programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
-
-                // RANDOMLY GENERATED CODE
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "INSERT INTO course (class_id, program_id, course_code) VALUES(@class_id, @program_id, @code)";
-
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@class_id", Teacher_s_Dashboard.classID);
-                db.cmd.Parameters.AddWithValue("@program_id", programID);
-                db.cmd.Parameters.AddWithValue("@code", courseCode);
-
-                db.cmd.ExecuteNonQuery();
-
+                MessageBox.Show("Please select a program", "No Selected Program", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboProgram.Focus();
+                return;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-                Course_Dashboard courseDB = new Course_Dashboard();
-                this.Hide();
-                courseDB.ShowDialog();
-                this.Close();
+                programName = cboProgram.SelectedItem.ToString().Trim();
+                year = Convert.ToInt32(numYear.Value);
+                section = Convert.ToInt32(numSection.Value);
+                courseCode = r.GenerateRandomCode(); //Randomly Generated Code
+
+
+                // Add program_id, class_id, and code to course table
+                try
+                {
+                    // Get program_id
+                    db.Connect();
+                    db.cmd.Connection = db.conn;
+                    db.cmd.CommandText = "SELECT program_id FROM modern_gradesbook.program WHERE program_name = @programName AND year_level = @year AND section = @section";
+
+                    db.cmd.Parameters.Clear();
+                    db.cmd.Parameters.AddWithValue("@programName", programName);
+                    db.cmd.Parameters.AddWithValue("@year", year);
+                    db.cmd.Parameters.AddWithValue("@section", section);
+
+                    // SelectCommand property select the sql command
+                    db.dta.SelectCommand = db.cmd;
+
+                    // DataTable
+                    DataTable dataTable = new DataTable();
+                    db.dta.Fill(dataTable); // populate dataTable
+
+                    programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
+
+
+                    //! Check for duplicates in database and course dashboard
+                    db.cmd.Connection = db.conn;
+                    db.cmd.CommandText = "SELECT course_id FROM modern_gradesbook.course " +
+                        "WHERE program_id = @programId AND class_id = @classID";
+
+                    db.cmd.Parameters.Clear();
+                    db.cmd.Parameters.AddWithValue("@programId", programID);
+                    db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID);
+                    db.dta.SelectCommand = db.cmd;
+                    DataTable dataTable2 = new DataTable();
+                    db.dta.Fill(dataTable2);
+
+                    if(dataTable2.Rows.Count == 0) //Program can be added
+                    {
+
+                        db.cmd.Connection = db.conn;
+                        db.cmd.CommandText = "INSERT INTO course (class_id, program_id, course_code) VALUES(@class_id, @program_id, @code)";
+
+                        db.cmd.Parameters.Clear();
+                        db.cmd.Parameters.AddWithValue("@class_id", Teacher_s_Dashboard.classID);
+                        db.cmd.Parameters.AddWithValue("@program_id", programID);
+                        db.cmd.Parameters.AddWithValue("@code", courseCode);
+
+                        db.cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Successfully added the program to your subject", "Program Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Course_Dashboard courseDB = new Course_Dashboard();
+                        this.Hide();
+                        courseDB.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("You already have record of the same program, year, and section in this subject", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        cboProgram.Focus();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    db.Disconnect();
+                }
             }
         }
 
@@ -161,6 +192,7 @@ namespace gradesBookApp
                 db.Disconnect();
             }
         }
+
 
         private void Add_Section_Load(object sender, EventArgs e)
         {

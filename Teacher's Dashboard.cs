@@ -44,7 +44,7 @@ namespace gradesBookApp
                 // Get class_id and subject code that the teacher teaches
                 db.Connect();
                 db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "SELECT class_id, subject_code FROM modern_gradesbook.class WHERE teacher_id = @teacherId";
+                db.cmd.CommandText = "SELECT class.class_id, class.subject_code, subject_info.subject_name FROM modern_gradesbook.class JOIN subject_info ON class.subject_code = subject_info.subject_code WHERE teacher_id = @teacherId";
 
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@teacherId", LogInOperation.userID.Trim());
@@ -55,11 +55,13 @@ namespace gradesBookApp
 
                 string[] classId = new string[dataTable.Rows.Count];
                 string[] subjectCode = new string[dataTable.Rows.Count];
+                string[] subjectName = new string[dataTable.Rows.Count];
 
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
                     classId[i] = dataTable.Rows[i]["class_id"].ToString();
                     subjectCode[i] = dataTable.Rows[i]["subject_code"].ToString();
+                    subjectName[i] = dataTable.Rows[i]["subject_name"].ToString();
                 }
 
                 if (dataTable.Rows.Count > 0)
@@ -77,11 +79,14 @@ namespace gradesBookApp
                         Label label = new Label
                         {
                             Name = "lblSub" + (i + 1).ToString(),
-                            TextAlign = ContentAlignment.BottomLeft,
-                            Text = subjectCode[i] + Environment.NewLine,
+                            TextAlign = ContentAlignment.MiddleCenter,
+                            Text = subjectCode[i] + Environment.NewLine + subjectName[i],
                             AutoSize = false,
                             Size = new Size(labelSizeX, labelSizeY),
-                            BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256))
+                            BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256)),
+                            Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold),
+                            ForeColor = Color.White,
+                            Cursor = Cursors.Hand
                         };
 
                         if (tileCount < 3)
@@ -122,9 +127,12 @@ namespace gradesBookApp
         private void lblSubject_Click(object sender, EventArgs e)
         {
             Label label = (Label)sender;
-            subjectTile = label.Text.Trim();
+            string[] labelParts = label.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+            subjectTile = labelParts[0].Trim(); // Only get the subject code part
             string teacherId = LogInOperation.userID.Trim();
 
+            //For Debug
+            //MessageBox.Show(subjectTile);
             try
             {
                 db.Connect();

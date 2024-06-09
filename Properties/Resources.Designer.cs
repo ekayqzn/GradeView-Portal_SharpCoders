@@ -293,6 +293,16 @@ namespace gradesBookApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hide {
+            get {
+                object obj = ResourceManager.GetObject("hide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_Icon {
             get {
                 object obj = ResourceManager.GetObject("Home_Icon", resourceCulture);
@@ -316,6 +326,16 @@ namespace gradesBookApp.Properties {
         internal static System.Drawing.Bitmap k__2_ {
             get {
                 object obj = ResourceManager.GetObject("k (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_eye {
+            get {
+                object obj = ResourceManager.GetObject("red-eye", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

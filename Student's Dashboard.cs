@@ -83,6 +83,9 @@ namespace gradesBookApp
                         label.AutoSize = false;
                         label.Size = new Size(labelSizeX, labelSizeY);
                         label.BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256));
+                        label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
+                        label.ForeColor = Color.White;
+                        label.Cursor = Cursors.Hand;
                         int tileCount = 0;
 
                         //tile is 3 per row

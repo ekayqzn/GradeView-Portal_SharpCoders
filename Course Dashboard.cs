@@ -26,50 +26,24 @@ namespace gradesBookApp
 
         private void Course_Dashboard_Load(object sender, EventArgs e)
         {
-            string subjectName = "";
             string subjectCode = Teacher_s_Dashboard.subjectTile.Trim(); // Trim any extra spaces
-
-            // Get the clicked subject name from the database. Display above
-            try
-            {
-                db.Connect();
-
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "SELECT subject_name FROM modern_gradesbook.subject_info WHERE subject_code = @subjectCode";
-
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@subjectCode", subjectCode);
-
-                db.dta.SelectCommand = db.cmd;
-
-                DataTable dataTable = new DataTable();
-                db.dta.Fill(dataTable);
-
-                if (dataTable.Rows.Count > 0)
-                {
-                    subjectName = dataTable.Rows[0]["subject_name"].ToString();
-                    Label label = new Label();
-                    label.Text = subjectCode + Environment.NewLine + subjectName;
-                    label.Location = new Point(35, 35);
-                    label.AutoSize = true;
-                    panel1.Controls.Add(label);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message + MessageBoxButtons.OK + MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
 
             //Get Section Information(program name, year level, section) will also be displayed as tile
             try
             {
                 db.Connect();
                 db.cmd.Connection = db.conn;
-                db.cmd.CommandText = "SELECT course.course_code, program.program_name, program.year_level, program.section FROM program JOIN course WHERE program.program_id IN(SELECT program_id FROM modern_gradesbook.course WHERE class_id = @classID)";
+                db.cmd.CommandText = @"SELECT si.subject_name, p.program_name, p.year_level, p.section, co.course_code 
+            FROM 
+                modern_gradesbook.subject_info si
+            INNER JOIN 
+                modern_gradesbook.class cl ON si.subject_code = cl.subject_code
+            INNER JOIN 
+                modern_gradesbook.course co ON cl.class_id = co.class_id
+            INNER JOIN 
+                modern_gradesbook.program p ON co.program_id = p.program_id
+            WHERE 
+                cl.class_id = @classID";
 
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID); //use classID from Teacher's Dashboard when the tile is click
@@ -80,6 +54,7 @@ namespace gradesBookApp
                 DataTable dataTable = new DataTable();
                 db.dta.Fill(dataTable); //populate dataTable
 
+                string[] subjectName = new string [dataTable.Rows.Count];
                 string[] programName = new string[dataTable.Rows.Count];
                 int[] yearLevel = new int[dataTable.Rows.Count];
                 int[] section = new int[dataTable.Rows.Count];
@@ -87,6 +62,7 @@ namespace gradesBookApp
 
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
+                    subjectName[i] = dataTable.Rows[i]["subject_name"].ToString();
                     programName[i] = dataTable.Rows[i]["program_name"].ToString();
                     yearLevel[i] = Convert.ToInt32(dataTable.Rows[i]["year_level"]);
                     section[i] = Convert.ToInt32(dataTable.Rows[i]["section"]);
@@ -95,15 +71,13 @@ namespace gradesBookApp
 
                 if (dataTable.Rows.Count >= 0)
                 {
-                    int labelSizeX = 450;
-                    int labelSizeY = 65;
-                    int labelLocationX = 49; //constant
-                    int labelLocationY = 169; //increment by 86
+                    int labelSizeX = 500;
+                    int labelSizeY = 85;
+                    int labelLocationX = 60; //constant
+                    int labelLocationY = 60; //increment by 86
                     // Generates a random integer between 128 and 255 for light colors
                     Random random = new Random();
-                    int red = random.Next(200, 256);
-                    int green = random.Next(150, 200);
-                    int blue = random.Next(150, 200);
+
                     for (int i = 0; i < dataTable.Rows.Count; i++)
                     {
                         Label label = new Label();
@@ -111,13 +85,13 @@ namespace gradesBookApp
                         label.TextAlign = ContentAlignment.MiddleLeft;
                         label.AutoSize = false;
                         label.Size = new Size(labelSizeX, labelSizeY);
-                        label.BackColor = Color.FromArgb(red, green, blue);
-                        red = random.Next(200, 256);
-                        green = random.Next(150, 200);
-                        blue = random.Next(150, 200);
+                        label.BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256));
                         label.Location = new Point(labelLocationX, labelLocationY);
-                        label.Text = programName[i] + Environment.NewLine + yearLevel[i].ToString() + " - " + section[i].ToString() + Environment.NewLine + "Code: " + courseCode[i];
-                        labelLocationY += 86;
+                        label.Text = subjectName[i] + Environment.NewLine + programName[i] + Environment.NewLine + yearLevel[i].ToString() + " - " + section[i].ToString() + Environment.NewLine + "Code: " + courseCode[i];
+                        label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
+                        label.ForeColor = Color.White;
+                        labelLocationY += 120;
+                        label.Cursor = Cursors.Hand;
 
                         // Store related data in the Tag property
                         //Tag - user defined data associated with the object
@@ -173,12 +147,15 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void picBackButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Teacher_s_Dashboard TDB = new Teacher_s_Dashboard();
+            TDB.ShowDialog();
+            this.Close();
         }
 
-        private void LinkLBLlogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLBLBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             Teacher_s_Dashboard TDB = new Teacher_s_Dashboard();

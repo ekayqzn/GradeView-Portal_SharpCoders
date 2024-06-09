@@ -82,5 +82,23 @@ namespace gradesBookApp
                 userID = LogInOperation.userID.Trim();
             }
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            if(txtTeacherPass.PasswordChar == '\0')
+            {
+                btnClose.BringToFront();
+                txtTeacherPass.PasswordChar = '*';
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (txtTeacherPass.PasswordChar == '*')
+            {
+                btnOpen.BringToFront();
+                txtTeacherPass.PasswordChar = '\0';
+            }
+        }
     }
 }

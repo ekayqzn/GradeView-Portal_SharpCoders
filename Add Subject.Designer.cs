@@ -63,9 +63,8 @@
             this.txtSubCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtSubCode.Location = new System.Drawing.Point(158, 164);
-            this.txtSubCode.Multiline = true;
             this.txtSubCode.Name = "txtSubCode";
-            this.txtSubCode.Size = new System.Drawing.Size(451, 52);
+            this.txtSubCode.Size = new System.Drawing.Size(451, 20);
             this.txtSubCode.TabIndex = 1;
             // 
             // txtSubName
@@ -78,9 +77,8 @@
             this.txtSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.txtSubName.Location = new System.Drawing.Point(158, 253);
-            this.txtSubName.Multiline = true;
             this.txtSubName.Name = "txtSubName";
-            this.txtSubName.Size = new System.Drawing.Size(451, 52);
+            this.txtSubName.Size = new System.Drawing.Size(451, 20);
             this.txtSubName.TabIndex = 3;
             // 
             // label2
@@ -103,6 +101,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnBack.FlatAppearance.BorderSize = 0;
             this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnBack.ForeColor = System.Drawing.Color.White;
@@ -120,6 +119,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnNext.FlatAppearance.BorderSize = 0;
             this.rbtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnNext.ForeColor = System.Drawing.Color.White;
@@ -175,6 +175,7 @@
             this.Controls.Add(this.txtSubCode);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Add_Subject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";

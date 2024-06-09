@@ -70,6 +70,7 @@ namespace gradesBookApp
                     int labelLocationY = 52; // Increment by 212
 
                     // Generates a random integer between 128 and 255 for light colors
+                    int tileCount = 0;
                     Random random = new Random();
                     int red = random.Next(200, 256);
                     int green = random.Next(150, 200);
@@ -86,16 +87,16 @@ namespace gradesBookApp
                         label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
                         label.ForeColor = Color.White;
                         label.Cursor = Cursors.Hand;
-                        int tileCount = 0;
+                        
 
                         //tile is 3 per row
-                        if (tileCount + 1 <= 3)
+                        if (tileCount < 3)
                         {
                             label.Location = new Point(labelLocationX, labelLocationY);
                             labelLocationX += 250;
                             tileCount++;
                         }
-                        if (tileCount + 1 == 3) //New Line when reaches 3
+                        if (tileCount == 3) //New Line when reaches 3
                         {
                             tileCount = 0;
                             labelLocationX = 48;

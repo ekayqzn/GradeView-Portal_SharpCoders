@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,11 +16,27 @@ namespace gradesBookApp
     {
         public static string courseCode;
         databaseConnection db = new databaseConnection();
+        GradebookQuery g = new GradebookQuery();
         public int courseId;
         public int classId;
         public string subjectCode;
         public string[] subjectCodeE;
         public string studentId = LogInOperation.userID.Trim();
+        bool isValid = false;
+
+        bool mAttendance = false;
+        bool mQuiz = false;
+        bool mRecitation = false;
+        bool mActivity = false;
+        bool mAssignment = false;
+        bool mLongQuiz = false;
+
+        bool fAttendance = false;
+        bool fQuiz = false;
+        bool fRecitation = false;
+        bool fActivity = false;
+        bool fAssignment = false;
+        bool fLongQuiz = false;
         public Add_Class()
         {
             InitializeComponent();
@@ -162,8 +179,78 @@ namespace gradesBookApp
                                         db.cmd.Parameters.Clear();
                                         db.cmd.Parameters.AddWithValue("@studentID", studentId);
                                         db.cmd.Parameters.AddWithValue("@courseID", courseId);
-
+                                        
                                         if (db.cmd.ExecuteNonQuery() > 0)
+                                        {
+                                            isValid = true;
+                                        }
+
+                                        //Add student to class tasks table
+                                        mActivity = g.mGetID("activity", classId);
+                                        mAssignment = g.mGetID("assignment", classId);
+                                        mAttendance = g.mGetID("attendance", classId);
+                                        mLongQuiz = g.mGetID("longquiz", classId);
+                                        mQuiz = g.mGetID("quiz", classId);
+                                        mRecitation = g.mGetID("recitation", classId);
+
+                                        fActivity = g.fGetID("activity", classId);
+                                        fAssignment = g.fGetID("assignment", classId);
+                                        fAttendance = g.fGetID("attendance", classId);
+                                        fLongQuiz = g.fGetID("longquiz", classId);
+                                        fQuiz = g.fGetID("quiz", classId);
+                                        fRecitation = g.fGetID("recitation", classId);
+
+                                        if(mAttendance)
+                                        {
+                                            g.mAttRecitCopy("attendance", classId, studentId);
+                                        }
+                                        if(mRecitation)
+                                        {
+                                            g.mAttRecitCopy("recitation", classId, studentId);
+                                        }
+                                        if(mActivity)
+                                        {
+                                            g.mOthersCopy("activity", classId, studentId);
+                                        }
+                                        if(mAssignment)
+                                        {
+                                            g.mOthersCopy("assignment", classId, studentId);
+                                        }
+                                        if(mLongQuiz)
+                                        {
+                                            g.mOthersCopy("longquiz", classId, studentId);
+                                        }
+                                        if(mQuiz)
+                                        {
+                                            g.mOthersCopy("quiz", classId, studentId);
+                                        }
+
+                                        if (fAttendance)
+                                        {
+                                            g.fAttRecitCopy("attendance", classId, studentId);
+                                        }
+                                        if (fRecitation)
+                                        {
+                                            g.fAttRecitCopy("recitation", classId, studentId);
+                                        }
+                                        if (fActivity)
+                                        {
+                                            g.fOthersCopy("activity", classId, studentId);
+                                        }
+                                        if (fAssignment)
+                                        {
+                                            g.fOthersCopy("assignment", classId, studentId);
+                                        }
+                                        if (fLongQuiz)
+                                        {
+                                            g.fOthersCopy("longquiz", classId, studentId);
+                                        }
+                                        if (fQuiz)
+                                        {
+                                            g.fOthersCopy("quiz", classId, studentId);
+                                        }
+
+                                        if (isValid)
                                         {
                                             if (MessageBox.Show("Subject Added to Dashboard", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                                             {

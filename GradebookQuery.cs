@@ -1,6 +1,9 @@
-﻿using Org.BouncyCastle.Math.Field;
+﻿using Mysqlx.Session;
+using MySqlX.XDevAPI.Common;
+using Org.BouncyCastle.Math.Field;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +14,69 @@ namespace gradesBookApp
     public class GradebookQuery
     {
         databaseConnection db = new databaseConnection();
+
+        
+        public int GetID(string prefix, string tableName, int classID, string studentID)
+        {
+            int result = 0;
+            string commandText = $"SELECT {prefix}_{tableName}_id FROM modern_gradesbook.{prefix}_{tableName} WHERE class_id = @classID AND student_id = @studentID";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.dta.SelectCommand = db.cmd;
+
+                db.dta.SelectCommand = db.cmd;
+                DataTable dataTable1 = new DataTable();
+                db.dta.Fill(dataTable1);
+
+                result = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}_id"]);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(1 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+                return result;
+        }
+        //Insert into enroll table the id per task
+        public void insertToEnroll (string prefix, string tableName, int classID, string studentID)
+        {
+            int id = GetID(prefix, tableName, classID, studentID);
+
+            string commandText = $"UPDATE enroll SET {prefix}_{tableName}_id = @id WHERE class_id = @classID AND student_id = @studentID";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.Parameters.AddWithValue("@id", id);
+                db.cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(1 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
 
         //Copy Customize Gradebook to student records
         public bool mGetID (string tableName, int classID)
@@ -128,6 +194,30 @@ namespace gradesBookApp
             }
         }
 
+        //Midterm Project and Exam
+        public void mRdoCopy(string tableName, int classID, string studentID)
+        {
+            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}, m_{tableName}_score, class_id, student_id) SELECT m_{tableName}, m_{tableName}_score, class_id, COALESCE(student_id, @studentID) FROM m_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(5 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
+
         //Final Recit and Attendance
         public void fAttRecitCopy(string tableName, int classID, string studentID)
         {
@@ -171,6 +261,30 @@ namespace gradesBookApp
             catch (Exception ex)
             {
                 MessageBox.Show( 6 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
+
+        //Final Project and Exam
+        public void fRdoCopy(string tableName, int classID, string studentID)
+        {
+            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}, f_{tableName}_score, class_id, student_id) SELECT f_{tableName}, f_{tableName}_score, class_id, COALESCE(student_id, @studentID) FROM f_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(5 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

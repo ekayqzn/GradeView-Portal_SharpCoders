@@ -30,6 +30,8 @@ namespace gradesBookApp
         bool mActivity = false;
         bool mAssignment = false;
         bool mLongQuiz = false;
+        bool mExam = false;
+        bool mProject = false;
 
         bool fAttendance = false;
         bool fQuiz = false;
@@ -37,6 +39,8 @@ namespace gradesBookApp
         bool fActivity = false;
         bool fAssignment = false;
         bool fLongQuiz = false;
+        bool fExam = false;
+        bool fProject = false;
         public Add_Class()
         {
             InitializeComponent();
@@ -186,12 +190,15 @@ namespace gradesBookApp
                                         }
 
                                         //Add student to class tasks table
+                                        //Get ID of customized gradebook
                                         mActivity = g.mGetID("activity", classId);
                                         mAssignment = g.mGetID("assignment", classId);
                                         mAttendance = g.mGetID("attendance", classId);
                                         mLongQuiz = g.mGetID("longquiz", classId);
                                         mQuiz = g.mGetID("quiz", classId);
                                         mRecitation = g.mGetID("recitation", classId);
+                                        mExam = g.mGetID("exam", classId);
+                                        mProject = g.mGetID("project", classId);
 
                                         fActivity = g.fGetID("activity", classId);
                                         fAssignment = g.fGetID("assignment", classId);
@@ -199,55 +206,90 @@ namespace gradesBookApp
                                         fLongQuiz = g.fGetID("longquiz", classId);
                                         fQuiz = g.fGetID("quiz", classId);
                                         fRecitation = g.fGetID("recitation", classId);
+                                        fExam = g.fGetID("exam", classId);
+                                        fProject = g.fGetID("project", classId);
 
-                                        if(mAttendance)
+                                        //Add copy for student
+                                        if (mAttendance)
                                         {
                                             g.mAttRecitCopy("attendance", classId, studentId);
+                                            g.insertToEnroll("m", "attendance", classId, studentId);
                                         }
                                         if(mRecitation)
                                         {
                                             g.mAttRecitCopy("recitation", classId, studentId);
+                                            g.insertToEnroll("m", "recitation", classId, studentId);
                                         }
                                         if(mActivity)
                                         {
                                             g.mOthersCopy("activity", classId, studentId);
+                                            g.insertToEnroll("m", "activity", classId, studentId);
                                         }
                                         if(mAssignment)
                                         {
                                             g.mOthersCopy("assignment", classId, studentId);
+                                            g.insertToEnroll("m", "assignment", classId, studentId);
                                         }
                                         if(mLongQuiz)
                                         {
                                             g.mOthersCopy("longquiz", classId, studentId);
+                                            g.insertToEnroll("m", "longquiz", classId, studentId);
                                         }
                                         if(mQuiz)
                                         {
                                             g.mOthersCopy("quiz", classId, studentId);
+                                            g.insertToEnroll("m", "quiz", classId, studentId);
+                                        }
+                                        if(mExam)
+                                        {
+                                            g.mRdoCopy("exam", classId, studentId);
+                                            g.insertToEnroll("m", "exam", classId, studentId);
+                                        }
+                                        if (mProject)
+                                        {
+                                            g.mRdoCopy("project", classId, studentId);
+                                            g.insertToEnroll("m", "project", classId, studentId);
                                         }
 
                                         if (fAttendance)
                                         {
                                             g.fAttRecitCopy("attendance", classId, studentId);
+                                            g.insertToEnroll("f", "attendance", classId, studentId);
                                         }
                                         if (fRecitation)
                                         {
                                             g.fAttRecitCopy("recitation", classId, studentId);
+                                            g.insertToEnroll("f", "recitation", classId, studentId);
                                         }
                                         if (fActivity)
                                         {
                                             g.fOthersCopy("activity", classId, studentId);
+                                            g.insertToEnroll("f", "activity", classId, studentId);
                                         }
                                         if (fAssignment)
                                         {
                                             g.fOthersCopy("assignment", classId, studentId);
+                                            g.insertToEnroll("f", "assignment", classId, studentId);
                                         }
                                         if (fLongQuiz)
                                         {
                                             g.fOthersCopy("longquiz", classId, studentId);
+                                            g.insertToEnroll("f", "longquiz", classId, studentId);
                                         }
                                         if (fQuiz)
                                         {
                                             g.fOthersCopy("quiz", classId, studentId);
+                                            g.insertToEnroll("f", "quiz", classId, studentId);
+                                        }
+                                        if (fExam)
+                                        {
+                                            g.fRdoCopy("exam", classId, studentId);
+                                            g.insertToEnroll("f", "exam", classId, studentId);
+                                        }
+                                        if (fProject)
+                                        {
+                                            g.fRdoCopy("project", classId, studentId);
+                                            g.insertToEnroll("f", "project", classId, studentId);
                                         }
 
                                         if (isValid)

@@ -230,6 +230,12 @@
     <Compile Include="Teacher%27s Dashboard.Designer.cs">
       <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheLandingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheLandingPage.Designer.cs">
+      <DependentUpon>TheLandingPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validation.cs" />
     <EmbeddedResource Include="About_Us.resx">
       <DependentUpon>About_Us.cs</DependentUpon>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher%27s Dashboard.resx">
       <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheLandingPage.resx">
+      <DependentUpon>TheLandingPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -416,6 +425,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LandingPageFacade.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

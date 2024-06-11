@@ -23,12 +23,40 @@ namespace gradesBookApp
 
         public static DataTable dtDisplay = new DataTable();
         public static DataRow newRow = dtDisplay.NewRow();
+        public static decimal mWritten = 0;
+        public static decimal mFinalReq = 0;
+        public static decimal fWritten = 0;
+        public static decimal fFinalReq = 0;
+
+        public static decimal midtermGrade = 0;
+        public static decimal finalGrade = 0;
+        public static decimal gwa = 0;
         public GradeBook()
         {
             InitializeComponent();
+
         }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Check if the cell value is -1
+            if (e.Value != null && e.Value is int && (int)e.Value == -1)
+            {
+                // Set the display value to empty string
+                e.Value = string.Empty;
+                e.FormattingApplied = true; // Indicate that the formatting was applied
+            }
+            else if (e.Value != null && e.Value is string && int.TryParse((string)e.Value, out int result) && result == -1)
+            {
+                e.Value = string.Empty;
+                e.FormattingApplied = true;
+            }
+        }
+
         private void GradeBook_Load(object sender, EventArgs e)
         {
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+
             dtDisplay.Rows.Clear();
             string subjectName = "";
             string subjectCode = Teacher_s_Dashboard.subjectTile.Trim(); // Trim any extra spaces
@@ -63,7 +91,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
             finally
             {
@@ -94,7 +122,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
             finally
             {
@@ -187,84 +215,100 @@ namespace gradesBookApp
                     if (mActivityID[i] != null)
                     {
                         int count = q.GetCount("m", "activity", (int)mActivityID[i]);
-                        q.GetRecordsOther("m", "activity", (int)mActivityID[i], count);
+                        mWritten += q.GetRecordsOther("m", "activity", (int)mActivityID[i], count);
                     }
                     if(mAssignmentID[i] != null)
                     {
                         int count = q.GetCount("m", "assignment", (int)mAssignmentID[i]);
-                        q.GetRecordsOther("m", "assignment", (int)mAssignmentID[i], count);
+                        mWritten += q.GetRecordsOther("m", "assignment", (int)mAssignmentID[i], count);
                     }
                     if (mAttendanceID[i] != null)
                     {
                         int count = q.GetCount("m", "attendance", (int)mAttendanceID[i]);
-                        q.GetRecordAttRecit("m", "attendance", (int)mAttendanceID[i], count);
+                        mWritten += q.GetRecordAttRecit("m", "attendance", (int)mAttendanceID[i], count);
                     }
                     if (mLongQuizID[i] != null)
                     {
                         int count = q.GetCount("m", "longquiz", (int)mLongQuizID[i]);
-                        q.GetRecordsOther("m", "longquiz", (int)mLongQuizID[i], count);
+                        mWritten += q.GetRecordsOther("m", "longquiz", (int)mLongQuizID[i], count);
                     }
                     if (mQuizID[i] != null)
                     {
                         int count = q.GetCount("m", "quiz", (int)mQuizID[i]);
-                        q.GetRecordsOther("m", "quiz", (int)mQuizID[i], count);
+                        mWritten += q.GetRecordsOther("m", "quiz", (int)mQuizID[i], count);
                     }
                     if (mRecitationID[i] != null)
                     {
                         int count = q.GetCount("m", "recitation", (int)mRecitationID[i]);
-                        q.GetRecordAttRecit("m", "recitation", (int)mRecitationID[i], count);
+                        mWritten += q.GetRecordAttRecit("m", "recitation", (int)mRecitationID[i], count);
                     }
                     if (mExamID[i] != null)
                     {
-                        q.GetRecordRdo("m", "exam", (int)mExamID[i]);
+                        mFinalReq = q.GetRecordRdo("m", "exam", (int)mExamID[i]);
                     }
                     if (mProjectID[i] != null)
                     {
                         q.GetRecordRdo("m", "project", (int)mProjectID[i]);
+                        mFinalReq = q.GetRecordRdo("m", "exam", (int)mExamID[i]);
                     }
 
+                    midtermGrade = mWritten + mFinalReq;
 
                     if (fActivityID[i] != null)
                     {
                         int count = q.GetCount("f", "activity", (int)fActivityID[i]);
-                        q.GetRecordsOther("f", "activity", (int)fActivityID[i], count);
+                        fWritten += q.GetRecordsOther("f", "activity", (int)fActivityID[i], count);
                     }
                     if (fAssignmentID[i] != null)
                     {
                         int count = q.GetCount("f", "assignment", (int)fAssignmentID[i]);
-                        q.GetRecordsOther("f", "assignment", (int)fAssignmentID[i], count);
+                        fWritten += q.GetRecordsOther("f", "assignment", (int)fAssignmentID[i], count);
                     }
                     if (fAttendanceID[i] != null)
                     {
                         int count = q.GetCount("f", "attendance", (int)fAttendanceID[i]);
-                        q.GetRecordAttRecit("f", "attendance", (int)fAttendanceID[i], count);
+                        fWritten += q.GetRecordAttRecit("f", "attendance", (int)fAttendanceID[i], count);
                     }
                     if (fLongQuizID[i] != null)
                     {
                         int count = q.GetCount("f", "longquiz", (int)fLongQuizID[i]);
-                        q.GetRecordsOther("f", "longquiz", (int)fLongQuizID[i], count);
+                        fWritten += q.GetRecordsOther("f", "longquiz", (int)fLongQuizID[i], count);
                     }
                     if (fQuizID[i] != null)
                     {
                         int count = q.GetCount("f", "quiz", (int)fQuizID[i]);
-                        q.GetRecordsOther("f", "quiz", (int)fQuizID[i], count);
+                        fWritten += q.GetRecordsOther("f", "quiz", (int)fQuizID[i], count);
                     }
                     if (fRecitationID[i] != null)
                     {
                         int count = q.GetCount("f", "recitation", (int)fRecitationID[i]);
-                        q.GetRecordAttRecit("f", "recitation", (int)fRecitationID[i], count);
+                        fWritten += q.GetRecordAttRecit("f", "recitation", (int)fRecitationID[i], count);
                     }
                     if (fExamID[i] != null)
                     {
-                        q.GetRecordRdo("f", "exam", (int)fExamID[i]);
+                        fFinalReq = q.GetRecordRdo("f", "exam", (int)fExamID[i]);
+                        
                     }
                     if (fProjectID[i] != null)
                     {
-                        q.GetRecordRdo("f", "project", (int)fProjectID[i]);
+                        fFinalReq = q.GetRecordRdo("f", "project", (int)fProjectID[i]);
                     }
+
+                    finalGrade = fWritten + fFinalReq;
+
+                    if ((!GradeBook.dtDisplay.Columns.Contains("Final Grade")))
+                    {
+                        dtDisplay.Columns.Add("Final Grade");
+                    }
+
+
+
+                    gwa = (midtermGrade + finalGrade) / 2;
+                    newRow["Final Grade"] = gwa.ToString("0.00");
 
                     dtDisplay.Rows.Add(newRow);
                     dataGridView1.DataSource = dtDisplay;
+
                 }
                 
             }

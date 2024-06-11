@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx.Crud;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -11,10 +12,12 @@ namespace gradesBookApp
     public class GetRecordQuery
     {
         databaseConnection db = new databaseConnection();
+        GradebookComputation c = new GradebookComputation();
         //Get records per student and add to datatable
         //Project and Exam
-        public void GetRecordRdo(string prefix, string tableName, int ID)
+        public decimal GetRecordRdo(string prefix, string tableName, int ID)
         {
+            decimal percentile = 0;
             string commandText = $"SELECT {prefix}_{tableName}, {prefix}_{tableName}_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
             if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}")))
             {
@@ -40,20 +43,26 @@ namespace gradesBookApp
                 GradeBook.newRow[$"{prefix}_{tableName}"] = dataTable1.Rows[0][$"{prefix}_{tableName}"];
                 GradeBook.newRow[$"{prefix}_{tableName}_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}_score"];
 
+                percentile = c.PercentileRdo(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}"]));
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
             finally
             {
                 db.Disconnect();
             }
+
+            return percentile;
         }
 
         //Recit And Attendance
-        public void GetRecordAttRecit(string prefix, string tableName, int ID, int count)
+        public decimal GetRecordAttRecit(string prefix, string tableName, int ID, int count)
         {
+            int summation = 0;
+            decimal percentile = 0;
             string commandText = "";
             switch (count)
             {
@@ -80,10 +89,13 @@ namespace gradesBookApp
 
                         GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
 
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -118,10 +130,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
                         GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
 
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -160,10 +175,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
                         GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
 
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -206,10 +224,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
                         GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
                         GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
+
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -258,10 +279,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
                         GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
 
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -316,10 +340,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
                         GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
 
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -378,10 +405,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
                         GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
 
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -443,12 +473,15 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
                         GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
                         GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
+                        GradeBook.newRow[$"{prefix}_{tableName}8"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
+
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}8"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
 
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -514,13 +547,16 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
                         GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
                         GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}9"];
+                        GradeBook.newRow[$"{prefix}_{tableName}8"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
+                        GradeBook.newRow[$"{prefix}_{tableName}9"] = dataTable1.Rows[0][$"{prefix}_{tableName}9"];
+
+                        summation = (Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}8"]) + Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}9"])) / count;
+                        percentile = c.Percentile(summation, (GetPercentage(prefix, tableName, ID)));
 
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -528,11 +564,14 @@ namespace gradesBookApp
                     }
                     break;
             }
+            return percentile;
         }
 
         //Other
-        public void GetRecordsOther(string prefix, string tableName, int ID, int count)
+        public decimal GetRecordsOther(string prefix, string tableName, int ID, int count)
         {
+            decimal summation = 0;
+            decimal percentile = 0;
             string commandText = "";
             switch (count)
             {
@@ -559,11 +598,12 @@ namespace gradesBookApp
 
                         GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
                         GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-
+                        summation = c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -601,10 +641,12 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
                         GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
 
+                        summation = (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"])));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -649,10 +691,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
                         GradeBook.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
 
+                        summation = (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"])));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -704,10 +749,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
                         GradeBook.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
 
+                        summation = (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"])));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -766,10 +814,12 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
                         GradeBook.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
 
+                        summation = (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"])));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -835,10 +885,12 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
                         GradeBook.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
 
+                        summation = (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6"])));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -911,10 +963,12 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
                         GradeBook.newRow[$"{prefix}_{tableName}7_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}7_score"];
 
+                        summation = (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7"])));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -994,10 +1048,12 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}8"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
                         GradeBook.newRow[$"{prefix}_{tableName}8_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}8_score"];
 
+                        summation = (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}8_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}8"])));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -1084,10 +1140,13 @@ namespace gradesBookApp
                         GradeBook.newRow[$"{prefix}_{tableName}8"] = dataTable1.Rows[0][$"{prefix}_{tableName}9"];
                         GradeBook.newRow[$"{prefix}_{tableName}8_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}9_score"];
 
+                        summation = (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}2"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}3"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}4"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}5"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}6"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}7"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}8_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}8"]))) + (c.ScoreStandardization(Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}9_score"]), Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}9"])));
+                        percentile = c.Percentile(GetPercentage(prefix, tableName, ID), summation);
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                     }
                     finally
                     {
@@ -1095,6 +1154,7 @@ namespace gradesBookApp
                     }
                     break;
             }
+            return percentile;
         }
 
         //Retrieve Student Name
@@ -1121,7 +1181,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
             finally
             {
@@ -1155,7 +1215,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
             finally
             {
@@ -1163,6 +1223,40 @@ namespace gradesBookApp
             }
 
             return count;
+        }
+
+        //Get Count
+        public int GetPercentage(string prefix, string tableName, int id)
+        {
+            int percentage = 0;
+            string commandText = $"SELECT {prefix}_{tableName}_percentage FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @id";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@id", id);
+                db.dta.SelectCommand = db.cmd;
+
+                db.dta.SelectCommand = db.cmd;
+                DataTable dataTable1 = new DataTable();
+                db.dta.Fill(dataTable1);
+
+                percentage = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}_percentage"]);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+            return percentage;
         }
 
     }

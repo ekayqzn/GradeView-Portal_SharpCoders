@@ -154,6 +154,7 @@
       <DependentUpon>Administrator_LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="GetRecordQuery.cs" />
+    <Compile Include="GradebookComputation.cs" />
     <Compile Include="LogInAdmin.cs" />
     <Compile Include="Course Dashboard.cs">
       <SubType>Form</SubType>

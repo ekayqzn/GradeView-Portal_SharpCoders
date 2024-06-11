@@ -141,8 +141,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SkyBlue;
@@ -152,14 +152,15 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.GridColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(-2, 335);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 335);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1569, 823);
+            this.dataGridView1.Size = new System.Drawing.Size(1794, 823);
             this.dataGridView1.TabIndex = 64;
             // 
             // rbtnDelete
@@ -170,7 +171,7 @@
             this.rbtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnDelete.ForeColor = System.Drawing.Color.White;
-            this.rbtnDelete.Location = new System.Drawing.Point(1573, 387);
+            this.rbtnDelete.Location = new System.Drawing.Point(1193, 283);
             this.rbtnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnDelete.Name = "rbtnDelete";
             this.rbtnDelete.Size = new System.Drawing.Size(191, 39);
@@ -186,7 +187,7 @@
             this.rbtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnEdit.ForeColor = System.Drawing.Color.White;
-            this.rbtnEdit.Location = new System.Drawing.Point(1573, 335);
+            this.rbtnEdit.Location = new System.Drawing.Point(960, 283);
             this.rbtnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnEdit.Name = "rbtnEdit";
             this.rbtnEdit.Size = new System.Drawing.Size(191, 39);

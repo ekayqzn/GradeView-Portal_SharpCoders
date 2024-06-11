@@ -37,8 +37,8 @@
             this.numSection = new System.Windows.Forms.NumericUpDown();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rbtnOK = new gradesBookApp.RoundedButton();
             this.rbtnCancel = new gradesBookApp.RoundedButton();
+            this.rbtnOK = new gradesBookApp.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSection)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,7 @@
             // cboProgram
             // 
             this.cboProgram.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboProgram.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProgram.FormattingEnabled = true;
             this.cboProgram.Location = new System.Drawing.Point(177, 159);
@@ -137,6 +138,7 @@
             0,
             0});
             this.numSection.Name = "numSection";
+            this.numSection.ReadOnly = true;
             this.numSection.Size = new System.Drawing.Size(438, 30);
             this.numSection.TabIndex = 5;
             this.numSection.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -174,23 +176,6 @@
             this.label4.TabIndex = 52;
             this.label4.Text = "ADD SECTION";
             // 
-            // rbtnOK
-            // 
-            this.rbtnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnOK.FlatAppearance.BorderSize = 0;
-            this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rbtnOK.Location = new System.Drawing.Point(447, 274);
-            this.rbtnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtnOK.Name = "rbtnOK";
-            this.rbtnOK.Size = new System.Drawing.Size(168, 39);
-            this.rbtnOK.TabIndex = 6;
-            this.rbtnOK.Text = "OK";
-            this.rbtnOK.UseVisualStyleBackColor = false;
-            this.rbtnOK.Click += new System.EventHandler(this.rbtnOK_Click);
-            // 
             // rbtnCancel
             // 
             this.rbtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -207,6 +192,23 @@
             this.rbtnCancel.Text = "Cancel";
             this.rbtnCancel.UseVisualStyleBackColor = false;
             this.rbtnCancel.Click += new System.EventHandler(this.rbtnCancel_Click);
+            // 
+            // rbtnOK
+            // 
+            this.rbtnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnOK.FlatAppearance.BorderSize = 0;
+            this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnOK.ForeColor = System.Drawing.Color.White;
+            this.rbtnOK.Location = new System.Drawing.Point(447, 274);
+            this.rbtnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnOK.Name = "rbtnOK";
+            this.rbtnOK.Size = new System.Drawing.Size(168, 39);
+            this.rbtnOK.TabIndex = 6;
+            this.rbtnOK.Text = "OK";
+            this.rbtnOK.UseVisualStyleBackColor = false;
+            this.rbtnOK.Click += new System.EventHandler(this.rbtnOK_Click);
             // 
             // Add_Section
             // 
@@ -229,6 +231,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Add_Section";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";

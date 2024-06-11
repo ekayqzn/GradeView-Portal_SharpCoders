@@ -24,5 +24,13 @@ namespace gradesBookApp
             SDB.ShowDialog();
             this.Close();
         }
+
+        private void picBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Student_s_Dashboard SDB = new Student_s_Dashboard();
+            SDB.ShowDialog();
+            this.Close();
+        }
     }
 }

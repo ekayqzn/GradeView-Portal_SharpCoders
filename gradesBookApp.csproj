@@ -212,12 +212,6 @@
     <Compile Include="Student%27s Dashboard.Designer.cs">
       <DependentUpon>Student%27s Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student-Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Student-Login.Designer.cs">
-      <DependentUpon>Student-Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Student-Module.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,11 +224,29 @@
     <Compile Include="Teacher%27s Dashboard.Designer.cs">
       <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheFacultyLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheFacultyLogIn.Designer.cs">
+      <DependentUpon>TheFacultyLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="TheLandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TheLandingPage.Designer.cs">
       <DependentUpon>TheLandingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheStudent-Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheStudent-Login.Designer.cs">
+      <DependentUpon>TheStudent-Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheTermsOfUseAndPrivacyStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheTermsOfUseAndPrivacyStatement.Designer.cs">
+      <DependentUpon>TheTermsOfUseAndPrivacyStatement.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateScores.cs" />
     <Compile Include="Validation.cs" />
@@ -299,17 +311,23 @@
     <EmbeddedResource Include="Student%27s Dashboard.resx">
       <DependentUpon>Student%27s Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student-Login.resx">
-      <DependentUpon>Student-Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Student-Module.resx">
       <DependentUpon>Student-Module.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher%27s Dashboard.resx">
       <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TheFacultyLogIn.resx">
+      <DependentUpon>TheFacultyLogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TheLandingPage.resx">
       <DependentUpon>TheLandingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheStudent-Login.resx">
+      <DependentUpon>TheStudent-Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheTermsOfUseAndPrivacyStatement.resx">
+      <DependentUpon>TheTermsOfUseAndPrivacyStatement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -459,6 +477,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LandingPageFacade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %282%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %283%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %284%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

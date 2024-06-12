@@ -19,7 +19,7 @@ namespace gradesBookApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LandingPage());//this will make this form on top of all the form when run.
+            Application.Run(new TheLandingPage());//this will make this form on top of all the form when run.
         }
     }
 

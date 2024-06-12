@@ -40,6 +40,40 @@ namespace gradesBookApp
                
         }
 
+        public bool isNumberforDB(string txtValue)
+        {
+            bool isValid = true;
+            double doubleValue = 0;
+
+            if (txtValue != "-1")
+            {
+                if (txtValue == "")
+                {
+                    // Empty field
+                    MessageBox.Show("Empty field is not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isValid = false;
+                }
+                else
+                {
+                    // Not empty, check if it's an integer or double
+                    if (!int.TryParse(txtValue, out int intValue) && !double.TryParse(txtValue, out doubleValue))
+                    {
+                        // Not a valid integer or double
+                        MessageBox.Show("String value is not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        isValid = false;
+                    }
+                    else if (doubleValue % 1 != Math.Floor(doubleValue)) //round down to nearest integer so that 10.00 will be consider as double. if it is != 0, it will be considered as integer
+                    {
+                        // It's a double, but with decimal places
+                        MessageBox.Show("Decimals are not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        isValid = false;
+                    }
+                }
+            }
+
+            return isValid;
+        }
+
 
     }
 }

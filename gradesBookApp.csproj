@@ -236,6 +236,7 @@
     <Compile Include="TheLandingPage.Designer.cs">
       <DependentUpon>TheLandingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateScores.cs" />
     <Compile Include="Validation.cs" />
     <EmbeddedResource Include="About_Us.resx">
       <DependentUpon>About_Us.cs</DependentUpon>

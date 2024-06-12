@@ -14,6 +14,8 @@ namespace gradesBookApp
 {
     public partial class GradeBook : Form
     {
+        private DataGridViewRow selectedRow;
+
         databaseConnection db = new databaseConnection();
         public static int programID;
         public static int courseID;
@@ -34,6 +36,7 @@ namespace gradesBookApp
         public GradeBook()
         {
             InitializeComponent();
+            this.Load += GradeBook_Load;
 
         }
 
@@ -43,19 +46,25 @@ namespace gradesBookApp
             if (e.Value != null && e.Value is int && (int)e.Value == -1)
             {
                 // Set the display value to empty string
-                e.Value = string.Empty;
+                e.Value = "-";
                 e.FormattingApplied = true; // Indicate that the formatting was applied
             }
             else if (e.Value != null && e.Value is string && int.TryParse((string)e.Value, out int result) && result == -1)
             {
-                e.Value = string.Empty;
+                e.Value = "-";
                 e.FormattingApplied = true;
             }
         }
 
-        private void GradeBook_Load(object sender, EventArgs e)
+        public void GradeBook_Load(object sender, EventArgs e)
         {
-            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting; //format cell as blank when the value is -1
+
+            if (dataGridView1.Rows.Count > 0)
+            {
+                dataGridView1.Rows[0].Selected = true;
+                selectedRow = dataGridView1.Rows[0];
+            }
 
             dtDisplay.Rows.Clear();
             string subjectName = "";
@@ -320,28 +329,45 @@ namespace gradesBookApp
             {
                 db.Disconnect();
             }
+
+            dataGridView1.CellClick += DataGridView1_CellClick; //when specific row is clicked
         }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Ensure the click is not on the header
+            {
+                selectedRow = dataGridView1.Rows[e.RowIndex];
+            }
+        }
+
         private void LinkLBLback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Course_Dashboard CDB = new Course_Dashboard();
-            CDB.ShowDialog();
+            Course_Dashboard c = new Course_Dashboard();
+            c.ShowDialog();
             this.Close();
         }
 
         private void rbtnEdit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Edit_GradeBook EGB = new Edit_GradeBook();
-            EGB.ShowDialog();
-            this.Close();
+            if (selectedRow != null)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                Edit_GradeBook editForm = new Edit_GradeBook(selectedRow);
+                editForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please select a row first.");
+            }
         }
 
         private void picBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Course_Dashboard CDB = new Course_Dashboard();
-            CDB.ShowDialog();
+            Course_Dashboard c = new Course_Dashboard();
+            c.ShowDialog();
             this.Close();
         }
     }

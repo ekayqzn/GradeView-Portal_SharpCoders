@@ -20,7 +20,7 @@ namespace gradesBookApp
         private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            LandingPage l = new LandingPage();
+            TheLandingPage l = new TheLandingPage();
             l.ShowDialog();
             this.Close();
         }
@@ -28,9 +28,14 @@ namespace gradesBookApp
         private void picAboutUs_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LandingPage l = new LandingPage();
+            TheLandingPage l = new TheLandingPage();
             l.ShowDialog();
             this.Close();
+        }
+
+        private void About_Us_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

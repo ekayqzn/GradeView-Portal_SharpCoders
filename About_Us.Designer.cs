@@ -48,9 +48,10 @@
             this.picAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picAboutUs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAboutUs.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.picAboutUs.Location = new System.Drawing.Point(1644, 17);
+            this.picAboutUs.Location = new System.Drawing.Point(1233, 14);
+            this.picAboutUs.Margin = new System.Windows.Forms.Padding(2);
             this.picAboutUs.Name = "picAboutUs";
-            this.picAboutUs.Size = new System.Drawing.Size(55, 50);
+            this.picAboutUs.Size = new System.Drawing.Size(41, 41);
             this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAboutUs.TabIndex = 51;
             this.picAboutUs.TabStop = false;
@@ -65,10 +66,9 @@
             this.LinkLBLHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LinkLBLHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLBLHome.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLHome.Location = new System.Drawing.Point(1702, 29);
-            this.LinkLBLHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LinkLBLHome.Location = new System.Drawing.Point(1276, 24);
             this.LinkLBLHome.Name = "LinkLBLHome";
-            this.LinkLBLHome.Size = new System.Drawing.Size(68, 25);
+            this.LinkLBLHome.Size = new System.Drawing.Size(56, 20);
             this.LinkLBLHome.TabIndex = 50;
             this.LinkLBLHome.TabStop = true;
             this.LinkLBLHome.Text = "Home";
@@ -81,12 +81,11 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(-10, -5);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(-8, -4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(1824, 91);
+            this.textBox2.Size = new System.Drawing.Size(1368, 74);
             this.textBox2.TabIndex = 49;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -95,9 +94,10 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Image = global::gradesBookApp.Properties.Resources.BULACAN;
-            this.pictureBox1.Location = new System.Drawing.Point(735, 144);
+            this.pictureBox1.Location = new System.Drawing.Point(551, 117);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(304, 310);
+            this.pictureBox1.Size = new System.Drawing.Size(228, 252);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
@@ -109,10 +109,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = global::gradesBookApp.Properties.Resources.BULACAN_TECHNOLOGICAL_UNIVERSITY__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(-63, -80);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox3.Location = new System.Drawing.Point(-47, -65);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1920, 1215);
+            this.pictureBox3.Size = new System.Drawing.Size(1440, 987);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 54;
             this.pictureBox3.TabStop = false;
@@ -140,9 +140,10 @@
             this.roundedButton2.FlatAppearance.BorderSize = 0;
             this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton2.ForeColor = System.Drawing.Color.White;
-            this.roundedButton2.Location = new System.Drawing.Point(233, 144);
+            this.roundedButton2.Location = new System.Drawing.Point(175, 117);
+            this.roundedButton2.Margin = new System.Windows.Forms.Padding(2);
             this.roundedButton2.Name = "roundedButton2";
-            this.roundedButton2.Size = new System.Drawing.Size(1323, 1007);
+            this.roundedButton2.Size = new System.Drawing.Size(992, 818);
             this.roundedButton2.TabIndex = 52;
             this.roundedButton2.UseVisualStyleBackColor = false;
             // 
@@ -152,19 +153,20 @@
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(420, 406);
+            this.label2.Location = new System.Drawing.Point(315, 330);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(937, 640);
+            this.label2.Size = new System.Drawing.Size(703, 520);
             this.label2.TabIndex = 55;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // About_Us
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1794, 1055);
+            this.ClientSize = new System.Drawing.Size(963, 765);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.roundedButton2);
@@ -173,9 +175,11 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "About_Us";
             this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.About_Us_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

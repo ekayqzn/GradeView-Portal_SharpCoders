@@ -26,34 +26,22 @@ namespace gradesBookApp
 
         private void rbtnFaculty_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FacultyLogIn f = new FacultyLogIn();
-            f.ShowDialog();
-            this.Close();
+           
         }
 
         private void rbtnStudent_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Student_Login student = new Student_Login();
-            student.ShowDialog();
-            this.Close();
+            
         }
 
         private void btnAdminstrator_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Administrator_LogIn adminLogIn = new Administrator_LogIn();
-            adminLogIn.ShowDialog();
-            this.Close();
+           
         }
 
         private void LinkLBLAbout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            About_Us au = new About_Us();
-            au.ShowDialog();
-            this.Close();
+           
         }
 
         private void picAboutUs_Click(object sender, EventArgs e)

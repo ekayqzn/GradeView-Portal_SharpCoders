@@ -15,7 +15,90 @@ namespace gradesBookApp
     {
         databaseConnection db = new databaseConnection();
 
-        
+        public void RemoveStudentToCourse (int classID, string studentID)
+        {
+            string commandText = "DELETE FROM enroll WHERE student_id = @studentID AND class_id = @classID";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
+        public void InsertEnrollId (string prefix, string tableName, int classID, string studentID)
+        {
+            int id = GetID("enroll", classID, studentID);
+            string commandText = $"UPDATE {prefix}_{tableName} SET enroll_id = @id WHERE class_id = @classID AND student_id = @studentID";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.cmd.Parameters.AddWithValue("@id", id);
+                db.cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+        }
+        public int GetID(string tableName, int classID, string studentID)
+        {
+            int result = 0;
+            string commandText = $"SELECT {tableName}_id FROM modern_gradesbook.{tableName} WHERE class_id = @classID AND student_id = @studentID";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@classID", classID);
+                db.cmd.Parameters.AddWithValue("@studentID", studentID);
+                db.dta.SelectCommand = db.cmd;
+
+                db.dta.SelectCommand = db.cmd;
+                DataTable dataTable1 = new DataTable();
+                db.dta.Fill(dataTable1);
+
+                result = Convert.ToInt32(dataTable1.Rows[0][$"{tableName}_id"]);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+            return result;
+        }
+
         public int GetID(string prefix, string tableName, int classID, string studentID)
         {
             int result = 0;
@@ -49,6 +132,7 @@ namespace gradesBookApp
 
                 return result;
         }
+
         //Insert into enroll table the id per task
         public void insertToEnroll (string prefix, string tableName, int classID, string studentID)
         {

@@ -36,8 +36,7 @@ namespace gradesBookApp
         public GradeBook()
         {
             InitializeComponent();
-            this.Load += GradeBook_Load;
-
+            txtSearch.TextChanged += txtSearch_TextChanged;
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -182,7 +181,7 @@ namespace gradesBookApp
                 // Debugging: Check if data is retrieved
                 if (dtIDs.Rows.Count == 0)
                 {
-                    MessageBox.Show("No data retrieved from the database.");
+                    MessageBox.Show("No student records found for this class.");
                     return;
                 }
                 else
@@ -371,6 +370,67 @@ namespace gradesBookApp
             Course_Dashboard c = new Course_Dashboard();
             c.ShowDialog();
             this.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string filterText = txtSearch.Text;
+            FilterDataGridView(filterText);
+        }
+
+        private void FilterDataGridView(string filterText)
+        {
+            DataView dv = dtDisplay.DefaultView;
+            if (string.IsNullOrWhiteSpace(filterText))
+            {
+                dv.RowFilter = string.Empty;
+            }
+            else
+            {
+                StringBuilder filterExpression = new StringBuilder();
+                foreach (DataColumn column in dtDisplay.Columns)
+                {
+                    if (filterExpression.Length > 0)
+                    {
+                        filterExpression.Append(" OR ");
+                    }
+                    filterExpression.AppendFormat("[{0}] LIKE '%{1}%'", column.ColumnName, filterText);
+                }
+                dv.RowFilter = filterExpression.ToString();
+            }
+            dataGridView1.DataSource = dv;
+        }
+
+        private void rbtnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Ensure selectedRow is set before proceeding
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    selectedRow = dataGridView1.SelectedRows[0];
+                }
+                else if (dataGridView1.CurrentRow != null)
+                {
+                    selectedRow = dataGridView1.CurrentRow;
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row first.");
+                    return;
+                }
+
+                string studentID = selectedRow.Cells["student_id"].Value.ToString().Trim();
+                g.RemoveStudentToCourse(Teacher_s_Dashboard.classID, studentID);
+                dataGridView1.Rows.Remove(selectedRow);
+                selectedRow = null;
+
+                MessageBox.Show($"Student with {studentID} student number has been removed from this course", "Student Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+            }
         }
     }
 }

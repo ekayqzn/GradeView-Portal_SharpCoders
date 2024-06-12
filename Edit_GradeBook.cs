@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gradesBookApp
 {
     public partial class Edit_GradeBook : Form
     {
+        public static string editStudentID = "";
         Validation v = new Validation();
+        UpdateScores u = new UpdateScores();
         public Edit_GradeBook(DataGridViewRow row)
         {
             InitializeComponent();
@@ -32,7 +35,7 @@ namespace gradesBookApp
 
         private void DisplayRowData(DataGridViewRow row)
         {
-            int y = 100; // Starting Y position for controls
+            int y = 10; // Starting Y position for controls
             int columnCount = row.Cells.Count - 1; // Exclude the last column
             for (int i = 0; i < columnCount; i++)
             {
@@ -40,21 +43,27 @@ namespace gradesBookApp
 
                 // Create and configure label
                 Label label = new Label();
+                label.Name = "label" + (i + 1);
                 label.Text = cell.OwningColumn.HeaderText;
                 label.Location = new System.Drawing.Point(20, y);
                 label.AutoSize = true;
                 label.Font = new Font("Arial", 11, FontStyle.Italic);
-                this.Controls.Add(label);
+                panel1.Controls.Add(label);
 
                 // Create and configure textbox
-                TextBox textBox = new TextBox();
+                System.Windows.Forms.TextBox textBox = new System.Windows.Forms.TextBox();
                 textBox.Name = "textBox" + (i + 1);
                 textBox.Text = cell.Value?.ToString();
+                if (i == 0)
+                {
+                    editStudentID = textBox.Text.Trim();
+                }
                 textBox.Location = new System.Drawing.Point(188, y);
                 textBox.AutoSize = true;
                 textBox.Font = new Font("Arial", 12, FontStyle.Regular);
                 textBox.Enabled = (i > 1); // Disable editing for the first two cells
-                this.Controls.Add(textBox);
+                panel1.Controls.Add(textBox);
+               
 
                 // Calculate the maximum width needed for the TextBox
                 int maxWidth = CalculateMaximumWidth(row.DataGridView.Columns[i]);
@@ -87,25 +96,29 @@ namespace gradesBookApp
 
         private void rbtnSave_Click(object sender, EventArgs e)
         {
+            
             bool isValid = true; // Initialize isValid to true
+            string tableName = "";
+            string columnName = "";
+            int newValue = -1;
 
             try
             {
-                foreach (Control control in this.Controls)
+                foreach (Control control in panel1.Controls)
                 {
-                    if (control is TextBox textBox)
+                    if (control is System.Windows.Forms.TextBox txt)
                     {
-                        if (textBox.Name == "textBox1" || textBox.Name == "textBox2")
+                        if (txt.Name == "textBox1" || txt.Name == "textBox2")
                         {
                             isValid = true;
                         }
                         else
                         {
-                            if (!v.isNumberforDB(textBox.Text))
+                            if (!v.isNumberforDB(txt.Text))
                             {
                                 isValid = false; // Set isValid to false if any textbox fails validation
-                                textBox.Focus();
-                                textBox.SelectAll();
+                                txt.Focus();
+                                txt.SelectAll();
                                 break; // Exit the loop as validation failed
                             }
 
@@ -115,12 +128,54 @@ namespace gradesBookApp
 
                 if (isValid)
                 {
-                    if(MessageBox.Show("All fields are valid") == DialogResult.OK)
+                    foreach (Control control in panel1.Controls)
                     {
-                        (Application.OpenForms["GradeBook"] as GradeBook)?.GradeBook_Load(this, EventArgs.Empty);
-                        this.Close();
+                        if (control is System.Windows.Forms.TextBox textBox)
+                        {
+                            if ((textBox.Name == "textBox1") || (textBox.Name == "textBox2"))
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                newValue = Convert.ToInt32(textBox.Text.Trim());
+                            }
+                        }
+
+                        if (control is Label label)
+                        {
+                            if ((label.Name == "label1") || (label.Name == "label2"))
+                            {
+
+                                continue;
+                            }
+                            else
+                            {
+                                columnName = label.Text;
+                                tableName = u.GetTableName(label.Text);
+                            }
+                        }
+
+                        u.UpdateGradebook(tableName, columnName, newValue);
                     }
                     //Add update to database
+                    if (MessageBox.Show("All fields are valid. Scores have been updated.", "Message", MessageBoxButtons.OK) == DialogResult.OK)
+                    {
+                        //GradeBook gradeBookForm = Application.OpenForms["GradeBook"] as GradeBook;
+                        //if (gradeBookForm != null)
+                        //{
+                        //    gradeBookForm.GradeBook_Load(this, EventArgs.Empty);
+                        //}
+                        //this.Close(); OPT 1: Gradebook is behind
+
+                        //OPT 2 Gradebook close
+                        this.Hide();
+                        GradeBook g = new GradeBook();
+                        g.ShowDialog();
+                        this.Close();
+                    }
+
+
                 }
             }
             catch (Exception ex)

@@ -34,6 +34,7 @@
             this.rbtnBack = new gradesBookApp.RoundedButton();
             this.rbtnSave = new gradesBookApp.RoundedButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +113,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 55);
             this.tableLayoutPanel1.TabIndex = 60;
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 89);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 306);
+            this.panel1.TabIndex = 62;
+            // 
             // Edit_GradeBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -119,6 +129,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
@@ -140,5 +151,6 @@
         private RoundedButton rbtnBack;
         private RoundedButton rbtnSave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

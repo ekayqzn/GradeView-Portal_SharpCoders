@@ -353,9 +353,11 @@ namespace gradesBookApp
         {
             if (selectedRow != null)
             {
+                this.Hide();
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 Edit_GradeBook editForm = new Edit_GradeBook(selectedRow);
                 editForm.ShowDialog();
+                this.Close();
             }
             else
             {

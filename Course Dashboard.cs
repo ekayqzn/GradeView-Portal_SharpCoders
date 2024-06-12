@@ -117,7 +117,6 @@ namespace gradesBookApp
 
         private void lblSection_Click(object sender, EventArgs e)
         {
-
             Label label = sender as Label;
             if (label != null && label.Tag != null)
             {
@@ -133,10 +132,11 @@ namespace gradesBookApp
             }
 
             //Open the Gradebook of specific section
-            this.Hide();
-            GradeBook gradeBook = new GradeBook();
-            gradeBook.ShowDialog();
-            this.Close();
+                this.Hide();
+                GradeBook gradeBook = new GradeBook();
+                gradeBook.ShowDialog();
+                this.Close();
+            
         }
 
         private void rbtnSection_Click(object sender, EventArgs e)

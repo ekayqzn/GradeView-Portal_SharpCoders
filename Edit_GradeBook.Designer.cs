@@ -88,7 +88,7 @@
             this.rbtnSave.FlatAppearance.BorderSize = 0;
             this.rbtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnSave.ForeColor = System.Drawing.Color.White;
-            this.rbtnSave.Location = new System.Drawing.Point(476, 3);
+            this.rbtnSave.Location = new System.Drawing.Point(475, 3);
             this.rbtnSave.Name = "rbtnSave";
             this.rbtnSave.Size = new System.Drawing.Size(150, 40);
             this.rbtnSave.TabIndex = 59;
@@ -101,7 +101,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.32217F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.67783F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
             this.tableLayoutPanel1.Controls.Add(this.rbtnSave, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.rbtnBack, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -109,7 +109,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 55);
             this.tableLayoutPanel1.TabIndex = 60;
             // 
@@ -138,7 +138,6 @@
             this.Name = "Edit_GradeBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
-            this.Load += new System.EventHandler(this.Edit_GradeBook_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

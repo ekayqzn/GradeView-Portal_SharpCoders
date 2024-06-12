@@ -28,11 +28,6 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void Edit_GradeBook_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void DisplayRowData(DataGridViewRow row)
         {
             int y = 10; // Starting Y position for controls

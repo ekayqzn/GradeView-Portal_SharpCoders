@@ -40,7 +40,6 @@
             this.txtFPass = new System.Windows.Forms.TextBox();
             this.btnUnshowPass = new System.Windows.Forms.Button();
             this.btnShowPass = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -65,7 +64,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 1, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -226,13 +224,6 @@
             this.btnShowPass.Visible = false;
             this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
             // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(282, 429);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(200, 43);
-            this.flowLayoutPanel3.TabIndex = 75;
-            // 
             // TheFacultyLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +259,5 @@
         private System.Windows.Forms.Button btnShowPass;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox picHome;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }

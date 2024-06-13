@@ -263,6 +263,36 @@ namespace gradesBookApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BG_Color__545454__7_ {
+            get {
+                object obj = ResourceManager.GetObject("BG Color #545454 (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG_Color__545454__8_ {
+            get {
+                object obj = ResourceManager.GetObject("BG Color #545454 (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG_Color__545454__9_ {
+            get {
+                object obj = ResourceManager.GetObject("BG Color #545454 (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BULACAN {
             get {
                 object obj = ResourceManager.GetObject("BULACAN", resourceCulture);
@@ -286,6 +316,16 @@ namespace gradesBookApp.Properties {
         internal static System.Drawing.Bitmap BULACAN__1_1 {
             get {
                 object obj = ResourceManager.GetObject("BULACAN (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BULACAN__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("BULACAN (1)2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -39,7 +39,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackgroundImage = global::gradesBookApp.Properties.Resources.BG_Color__545454__6_1;
+            this.tableLayoutPanel1.BackgroundImage = global::gradesBookApp.Properties.Resources.BG_Color__545454__7_;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.832347F));
@@ -69,7 +69,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(52, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(901, 596);
@@ -91,7 +91,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(909, 68);
             this.label2.TabIndex = 79;
-            this.label2.Text = "Bulacan Technological University Terms of Use and Privacy Statement";
+            this.label2.Text = "Terms of Use and Privacy Statement";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picHome
@@ -119,6 +119,7 @@
             this.BackgroundImage = global::gradesBookApp.Properties.Resources.BG_Color__545454__6_;
             this.ClientSize = new System.Drawing.Size(1014, 697);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Name = "TheTermsOfUseAndPrivacyStatement";
             this.Text = "TheTermsOfUseAndPrivacyStatement";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

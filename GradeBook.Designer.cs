@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradeBook));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.LinkLBLback = new System.Windows.Forms.LinkLabel();
-            this.picBack = new System.Windows.Forms.PictureBox();
-            this.pBsearch = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.rbtnDelete = new gradesBookApp.RoundedButton();
             this.rbtnEdit = new gradesBookApp.RoundedButton();
-            ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBsearch)).BeginInit();
+            this.picBack = new System.Windows.Forms.PictureBox();
+            this.picBoxX = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxX)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox2
@@ -114,30 +114,6 @@
             this.LinkLBLback.Text = "Back";
             this.LinkLBLback.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLBLback_LinkClicked);
             // 
-            // picBack
-            // 
-            this.picBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBack.Image = ((System.Drawing.Image)(resources.GetObject("picBack.Image")));
-            this.picBack.Location = new System.Drawing.Point(1643, 18);
-            this.picBack.Name = "picBack";
-            this.picBack.Size = new System.Drawing.Size(55, 50);
-            this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBack.TabIndex = 63;
-            this.picBack.TabStop = false;
-            this.picBack.Click += new System.EventHandler(this.picBack_Click);
-            // 
-            // pBsearch
-            // 
-            this.pBsearch.Image = global::gradesBookApp.Properties.Resources.Untitled_design__1_;
-            this.pBsearch.Location = new System.Drawing.Point(806, 281);
-            this.pBsearch.Name = "pBsearch";
-            this.pBsearch.Size = new System.Drawing.Size(48, 34);
-            this.pBsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBsearch.TabIndex = 53;
-            this.pBsearch.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -146,14 +122,14 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.GridColor = System.Drawing.Color.SkyBlue;
             this.dataGridView1.Location = new System.Drawing.Point(0, 335);
@@ -201,6 +177,33 @@
             this.rbtnEdit.UseVisualStyleBackColor = false;
             this.rbtnEdit.Click += new System.EventHandler(this.rbtnEdit_Click);
             // 
+            // picBack
+            // 
+            this.picBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBack.Image = ((System.Drawing.Image)(resources.GetObject("picBack.Image")));
+            this.picBack.Location = new System.Drawing.Point(1643, 18);
+            this.picBack.Name = "picBack";
+            this.picBack.Size = new System.Drawing.Size(55, 50);
+            this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBack.TabIndex = 63;
+            this.picBack.TabStop = false;
+            this.picBack.Click += new System.EventHandler(this.picBack_Click);
+            // 
+            // picBoxX
+            // 
+            this.picBoxX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBoxX.Image = global::gradesBookApp.Properties.Resources.close__1_;
+            this.picBoxX.Location = new System.Drawing.Point(806, 281);
+            this.picBoxX.Name = "picBoxX";
+            this.picBoxX.Size = new System.Drawing.Size(20, 20);
+            this.picBoxX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxX.TabIndex = 53;
+            this.picBoxX.TabStop = false;
+            this.picBoxX.Visible = false;
+            this.picBoxX.Click += new System.EventHandler(this.picBoxX_Click);
+            // 
             // GradeBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,7 +219,7 @@
             this.Controls.Add(this.rbtnDelete);
             this.Controls.Add(this.rbtnEdit);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.pBsearch);
+            this.Controls.Add(this.picBoxX);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -224,9 +227,9 @@
             this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GradeBook_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,7 +239,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.PictureBox pBsearch;
+        private System.Windows.Forms.PictureBox picBoxX;
         private RoundedButton rbtnEdit;
         private RoundedButton rbtnDelete;
         private System.Windows.Forms.Label label4;

@@ -56,8 +56,8 @@ namespace gradesBookApp
         }
         public void GradeBook_Load(object sender, EventArgs e)
         {
-            picBoxX.Parent = txtSearch;
-            picBoxX.Location = new Point(txtSearch.ClientSize.Width - ((picBoxX.Image.Width) + 5), 5);
+            //picBoxX.Parent = txtSearch;
+            //picBoxX.Location = new Point(txtSearch.ClientSize.Width - ((picBoxX.Image.Width) + 5), 5);
 
             dataGridView1.CellFormatting += dataGridView1_CellFormatting; //format cell as blank when the value is -1
 
@@ -376,14 +376,14 @@ namespace gradesBookApp
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtSearch.Text))
-            {
-                picBoxX.Visible = true;
-            }
-            else
-            {
-                picBoxX.Visible = false;
-            }
+            //if (!String.IsNullOrEmpty(txtSearch.Text))
+            //{
+            //    picBoxX.Visible = true;
+            //}
+            //else
+            //{
+            //    picBoxX.Visible = false;
+            //}
             string filterText = txtSearch.Text;
             FilterDataGridView(filterText);
         }

@@ -26,7 +26,12 @@ namespace gradesBookApp
 
         private void TheFacultyLogIn_Load(object sender, EventArgs e)
         {
-
+            btnUnshowPass.Visible = false;
+            btnShowPass.Visible = true;
+            btnUnshowPass.Parent = txtFPass;
+            btnUnshowPass.Location = new Point(txtFPass.ClientSize.Width - ((btnUnshowPass.Image.Width)+24), -2);
+            btnShowPass.Parent = txtFPass;
+            btnShowPass.Location = new Point(txtFPass.ClientSize.Width - ((btnShowPass.Image.Width)+24), -2);
         }
 
         private void picHome_Click(object sender, EventArgs e)
@@ -76,6 +81,7 @@ namespace gradesBookApp
             txtFPass.PasswordChar = '*'; // Hide password
             btnUnshowPass.Visible = false; // Hide UnshowPass button
             btnShowPass.Visible = true; // Show ShowPass button
+
         }
 
         private void btnShowPass_Click(object sender, EventArgs e)

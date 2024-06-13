@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradeBook));
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,10 +39,8 @@
             this.rbtnDelete = new gradesBookApp.RoundedButton();
             this.rbtnEdit = new gradesBookApp.RoundedButton();
             this.picBack = new System.Windows.Forms.PictureBox();
-            this.picBoxX = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxX)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox2
@@ -122,17 +120,17 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.GridColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 335);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 324);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -191,19 +189,6 @@
             this.picBack.TabStop = false;
             this.picBack.Click += new System.EventHandler(this.picBack_Click);
             // 
-            // picBoxX
-            // 
-            this.picBoxX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBoxX.Image = global::gradesBookApp.Properties.Resources.close__1_;
-            this.picBoxX.Location = new System.Drawing.Point(806, 281);
-            this.picBoxX.Name = "picBoxX";
-            this.picBoxX.Size = new System.Drawing.Size(20, 20);
-            this.picBoxX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxX.TabIndex = 53;
-            this.picBoxX.TabStop = false;
-            this.picBoxX.Visible = false;
-            this.picBoxX.Click += new System.EventHandler(this.picBoxX_Click);
-            // 
             // GradeBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,7 +196,7 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(2, 2);
             this.AutoScrollMinSize = new System.Drawing.Size(2, 2);
-            this.ClientSize = new System.Drawing.Size(1794, 1158);
+            this.ClientSize = new System.Drawing.Size(1815, 1055);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.picBack);
             this.Controls.Add(this.LinkLBLback);
@@ -219,7 +204,6 @@
             this.Controls.Add(this.rbtnDelete);
             this.Controls.Add(this.rbtnEdit);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.picBoxX);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -229,7 +213,6 @@
             this.Load += new System.EventHandler(this.GradeBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +222,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.PictureBox picBoxX;
         private RoundedButton rbtnEdit;
         private RoundedButton rbtnDelete;
         private System.Windows.Forms.Label label4;

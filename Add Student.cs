@@ -25,7 +25,10 @@ namespace gradesBookApp
         private void cboProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboProgram.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a valid program.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
 
             string selectedProgram = cboProgram.SelectedItem.ToString();
 
@@ -44,8 +47,8 @@ namespace gradesBookApp
                 {
                     if (reader.Read())
                     {
-                        int maxYear = reader.GetInt32("max_year");
-                        int maxSection = reader.GetInt32("max_section");
+                        int maxYear = reader.IsDBNull(reader.GetOrdinal("max_year")) ? 1 : reader.GetInt32("max_year");
+                        int maxSection = reader.IsDBNull(reader.GetOrdinal("max_section")) ? 1 : reader.GetInt32("max_section");
 
                         // Set the year numeric up-down control
                         numYear.Maximum = maxYear;
@@ -59,7 +62,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
             finally
             {
@@ -115,7 +118,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                 return;
             }
             finally
@@ -141,7 +144,7 @@ namespace gradesBookApp
                 DataTable dataTable = new DataTable();
                 db.dta.Fill(dataTable); // populate dataTable
 
-                if (dataTable.Rows.Count > 0)
+                if (dataTable != null && dataTable.Rows.Count > 0)
                 {
                     programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
                 }
@@ -153,7 +156,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
                 return;
             }
             finally
@@ -186,7 +189,7 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
             finally
             {
@@ -198,6 +201,9 @@ namespace gradesBookApp
         {
             try
             {
+                // Temporarily remove the event handler
+                cboProgram.SelectedIndexChanged -= cboProgram_SelectedIndexChanged;
+
                 // Open the database connection
                 db.Connect();
 
@@ -226,10 +232,13 @@ namespace gradesBookApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
             finally
             {
+                // Reassign the event handler
+                cboProgram.SelectedIndexChanged += cboProgram_SelectedIndexChanged;
+
                 // Close the database connection
                 db.Disconnect();
             }

@@ -43,5 +43,23 @@ namespace gradesBookApp
             l.ShowDialog();
             this.Close();
         }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picHome_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            TheLandingPage l = new TheLandingPage();
+            l.ShowDialog();
+            this.Close();
+        }
     }
 }

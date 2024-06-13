@@ -121,11 +121,17 @@
   <data name="BULACAN TECHNOLOGICAL UNIVERSITY (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN TECHNOLOGICAL UNIVERSITY (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BULACAN (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BULACAN (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BG Color #545454 (5)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (5)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BULACAN TECHNOLOGICAL UNIVERSITY (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN TECHNOLOGICAL UNIVERSITY (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FACADE 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FACADE 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG Color #545454 (3)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SignIn_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images&amp;Icons\SignIn_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,14 +142,14 @@
   <data name="BULACAN (5)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN (5)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FACADE 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FACADE 5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="BULACAN (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BULACAN (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG Color #545454 (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BULACAN1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,9 +159,6 @@
   </data>
   <data name="BG Color #545454 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BG Color #545454 (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG Color #545454 (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BULACAN (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,9 +174,6 @@
   </data>
   <data name="BULACAN TECHNOLOGICAL UNIVERSITY (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN TECHNOLOGICAL UNIVERSITY (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BG Color #545454 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG Color #545454 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="k (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\k (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,23 +193,32 @@
   <data name="Untitled design" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BULACAN (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BULACAN (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BULACAN TECHNOLOGICAL UNIVERSITY (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BULACAN TECHNOLOGICAL UNIVERSITY (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FACADE 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FACADE 4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images&amp;Icons\Home_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BULACAN TECHNOLOGICAL UNIVERSITY (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BULACAN TECHNOLOGICAL UNIVERSITY (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FACADE 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FACADE 5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FACADE3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FACADE3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG Color #545454 (3)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG Color #545454 (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BG Color #545454 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SHARP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SHARP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG Color #545454 (4)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (4)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -225,6 +234,12 @@
   </data>
   <data name="red-eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red-eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="school_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images&amp;Icons\school_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG Color #545454 (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BULACAN (5)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN (5)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,20 +259,20 @@
   <data name="BG Color #545454 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG Color #545454 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG Color #545454 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="k (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\k (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FACADE 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FACADE 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BG Color #545454 (4)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (4)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG Color #545454 (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SHARP (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SHARP (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="school_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images&amp;Icons\school_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BG Color #545454 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BG Color #545454 (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,7 +280,7 @@
   <data name="BULACAN (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG Color #545454 (4)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG Color #545454 (4)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BG Color #545454 (6)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (6)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

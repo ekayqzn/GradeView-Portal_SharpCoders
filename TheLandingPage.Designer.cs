@@ -31,18 +31,18 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rdbFaculty = new gradesBookApp.RoundedButton();
-            this.rdbStudent = new gradesBookApp.RoundedButton();
             this.rdbAdmin = new gradesBookApp.RoundedButton();
+            this.rdbStudent = new gradesBookApp.RoundedButton();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.picAboutUs = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.roundedButton1 = new gradesBookApp.RoundedButton();
             this.roundedButton2 = new gradesBookApp.RoundedButton();
             this.roundedButton3 = new gradesBookApp.RoundedButton();
-            this.picAboutUs = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -112,6 +112,23 @@
             this.rdbFaculty.UseVisualStyleBackColor = false;
             this.rdbFaculty.Click += new System.EventHandler(this.rdbFaculty_Click);
             // 
+            // rdbAdmin
+            // 
+            this.rdbAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbAdmin.BackColor = System.Drawing.Color.Blue;
+            this.rdbAdmin.FlatAppearance.BorderSize = 0;
+            this.rdbAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rdbAdmin.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbAdmin.ForeColor = System.Drawing.Color.White;
+            this.rdbAdmin.Location = new System.Drawing.Point(779, 568);
+            this.rdbAdmin.Name = "rdbAdmin";
+            this.rdbAdmin.Size = new System.Drawing.Size(210, 60);
+            this.rdbAdmin.TabIndex = 13;
+            this.rdbAdmin.Text = "ADMINISTRATOR";
+            this.rdbAdmin.UseVisualStyleBackColor = false;
+            this.rdbAdmin.Click += new System.EventHandler(this.rdbAdmin_Click);
+            // 
             // rdbStudent
             // 
             this.rdbStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -129,22 +146,49 @@
             this.rdbStudent.UseVisualStyleBackColor = false;
             this.rdbStudent.Click += new System.EventHandler(this.rdbStudent_Click);
             // 
-            // rdbAdmin
+            // flowLayoutPanel2
             // 
-            this.rdbAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbAdmin.BackColor = System.Drawing.Color.Blue;
-            this.rdbAdmin.FlatAppearance.BorderSize = 0;
-            this.rdbAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rdbAdmin.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbAdmin.ForeColor = System.Drawing.Color.White;
-            this.rdbAdmin.Location = new System.Drawing.Point(779, 568);
-            this.rdbAdmin.Name = "rdbAdmin";
-            this.rdbAdmin.Size = new System.Drawing.Size(210, 60);
-            this.rdbAdmin.TabIndex = 13;
-            this.rdbAdmin.Text = "ADMINISTRATOR";
-            this.rdbAdmin.UseVisualStyleBackColor = false;
-            this.rdbAdmin.Click += new System.EventHandler(this.rdbAdmin_Click);
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel2.Controls.Add(this.picAboutUs);
+            this.flowLayoutPanel2.Controls.Add(this.linkLabel1);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(779, 10);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(210, 51);
+            this.flowLayoutPanel2.TabIndex = 76;
+            // 
+            // picAboutUs
+            // 
+            this.picAboutUs.BackColor = System.Drawing.Color.Transparent;
+            this.picAboutUs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picAboutUs.Image = global::gradesBookApp.Properties.Resources.BULACAN__1_1;
+            this.picAboutUs.Location = new System.Drawing.Point(167, 2);
+            this.picAboutUs.Margin = new System.Windows.Forms.Padding(2);
+            this.picAboutUs.Name = "picAboutUs";
+            this.picAboutUs.Size = new System.Drawing.Size(41, 41);
+            this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAboutUs.TabIndex = 75;
+            this.picAboutUs.TabStop = false;
+            this.picAboutUs.Click += new System.EventHandler(this.picAboutUs_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(82, 11);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(80, 23);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "About Us";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // roundedButton1
             // 
@@ -196,50 +240,6 @@
             this.roundedButton3.UseVisualStyleBackColor = false;
             this.roundedButton3.Click += new System.EventHandler(this.roundedButton3_Click_1);
             // 
-            // picAboutUs
-            // 
-            this.picAboutUs.BackColor = System.Drawing.Color.Transparent;
-            this.picAboutUs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picAboutUs.Image = global::gradesBookApp.Properties.Resources.BULACAN__1_1;
-            this.picAboutUs.Location = new System.Drawing.Point(167, 2);
-            this.picAboutUs.Margin = new System.Windows.Forms.Padding(2);
-            this.picAboutUs.Name = "picAboutUs";
-            this.picAboutUs.Size = new System.Drawing.Size(41, 41);
-            this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAboutUs.TabIndex = 75;
-            this.picAboutUs.TabStop = false;
-            this.picAboutUs.Click += new System.EventHandler(this.picAboutUs_Click);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Controls.Add(this.picAboutUs);
-            this.flowLayoutPanel2.Controls.Add(this.linkLabel1);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(779, 10);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(210, 51);
-            this.flowLayoutPanel2.TabIndex = 76;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(82, 11);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(80, 23);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "About Us";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // TheLandingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,9 +252,9 @@
             this.Load += new System.EventHandler(this.TheLandingPage_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).EndInit();
             this.ResumeLayout(false);
 
         }

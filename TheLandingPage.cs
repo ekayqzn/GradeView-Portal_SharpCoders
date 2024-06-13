@@ -83,10 +83,6 @@ namespace gradesBookApp
 
         private void rdbAdmin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Administrator_LogIn adminLogIn = new Administrator_LogIn();
-            adminLogIn.ShowDialog();
-            this.Close();
         }
 
         private void picAboutUs_Click(object sender, EventArgs e)
@@ -94,6 +90,24 @@ namespace gradesBookApp
             this.Hide();
             About_Us au = new About_Us();
             au.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Administrator_LogIn adminLogIn = new Administrator_LogIn();
+            adminLogIn.ShowDialog();
+            this.Close();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            this.Hide();
+            TheTermsOfUseAndPrivacyStatement l = new TheTermsOfUseAndPrivacyStatement();
+            l.ShowDialog();
             this.Close();
         }
     }

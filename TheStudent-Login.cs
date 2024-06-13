@@ -134,10 +134,6 @@ namespace gradesBookApp
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-           TheTermsOfUseAndPrivacyStatement l = new TheTermsOfUseAndPrivacyStatement();
-            l.ShowDialog();
-            this.Close();
         }
 
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)

@@ -70,7 +70,7 @@ namespace gradesBookApp
         private void picHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LandingPage l = new LandingPage();
+            TheLandingPage l = new TheLandingPage();
             l.ShowDialog();
             this.Close();
         }

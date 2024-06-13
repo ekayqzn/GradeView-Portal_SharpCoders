@@ -37,5 +37,13 @@ namespace gradesBookApp
         {
 
         }
+
+        private void picHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TheLandingPage l = new TheLandingPage();
+            l.ShowDialog();
+            this.Close();
+        }
     }
 }

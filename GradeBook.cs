@@ -54,13 +54,11 @@ namespace gradesBookApp
                 e.FormattingApplied = true;
             }
         }
-
         public void GradeBook_Load(object sender, EventArgs e)
         {
             picBoxX.Parent = txtSearch;
             picBoxX.Location = new Point(txtSearch.ClientSize.Width - ((picBoxX.Image.Width) + 5), 5);
 
-            dataGridView1.CellFormatting += dataGridView1_CellFormatting; //format cell as blank when the value is -1
             dataGridView1.CellFormatting += dataGridView1_CellFormatting; //format cell as blank when the value is -1
 
             if (dataGridView1.Rows.Count > 0)

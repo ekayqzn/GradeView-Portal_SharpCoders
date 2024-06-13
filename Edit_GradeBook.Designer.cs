@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_GradeBook));
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.rbtnBack = new gradesBookApp.RoundedButton();
+            this.rbtnCancel = new gradesBookApp.RoundedButton();
             this.rbtnSave = new gradesBookApp.RoundedButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,20 +66,20 @@
             this.textBox2.TabIndex = 55;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // rbtnBack
+            // rbtnCancel
             // 
-            this.rbtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnBack.FlatAppearance.BorderSize = 0;
-            this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnBack.ForeColor = System.Drawing.Color.White;
-            this.rbtnBack.Location = new System.Drawing.Point(647, 3);
-            this.rbtnBack.Name = "rbtnBack";
-            this.rbtnBack.Size = new System.Drawing.Size(150, 40);
-            this.rbtnBack.TabIndex = 9;
-            this.rbtnBack.Text = "Cancel";
-            this.rbtnBack.UseVisualStyleBackColor = false;
-            this.rbtnBack.Click += new System.EventHandler(this.rbtnBack_Click);
+            this.rbtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnCancel.FlatAppearance.BorderSize = 0;
+            this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnCancel.ForeColor = System.Drawing.Color.White;
+            this.rbtnCancel.Location = new System.Drawing.Point(647, 3);
+            this.rbtnCancel.Name = "rbtnCancel";
+            this.rbtnCancel.Size = new System.Drawing.Size(150, 40);
+            this.rbtnCancel.TabIndex = 9;
+            this.rbtnCancel.Text = "Cancel";
+            this.rbtnCancel.UseVisualStyleBackColor = false;
+            this.rbtnCancel.Click += new System.EventHandler(this.rbtnBack_Click);
             // 
             // rbtnSave
             // 
@@ -88,7 +88,7 @@
             this.rbtnSave.FlatAppearance.BorderSize = 0;
             this.rbtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnSave.ForeColor = System.Drawing.Color.White;
-            this.rbtnSave.Location = new System.Drawing.Point(475, 3);
+            this.rbtnSave.Location = new System.Drawing.Point(474, 3);
             this.rbtnSave.Name = "rbtnSave";
             this.rbtnSave.Size = new System.Drawing.Size(150, 40);
             this.rbtnSave.TabIndex = 59;
@@ -101,9 +101,9 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.32217F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.67783F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel1.Controls.Add(this.rbtnSave, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rbtnBack, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rbtnCancel, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 395);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -147,7 +147,7 @@
         #endregion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        private RoundedButton rbtnBack;
+        private RoundedButton rbtnCancel;
         private RoundedButton rbtnSave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;

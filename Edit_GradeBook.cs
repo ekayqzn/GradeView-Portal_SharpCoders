@@ -25,6 +25,9 @@ namespace gradesBookApp
 
         private void rbtnBack_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            GradeBook g = new GradeBook();
+            g.ShowDialog();
             this.Close();
         }
 

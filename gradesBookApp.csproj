@@ -490,5 +490,20 @@
   <ItemGroup>
     <None Include="Resources\BG Color #545454 %284%291.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %284%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %286%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

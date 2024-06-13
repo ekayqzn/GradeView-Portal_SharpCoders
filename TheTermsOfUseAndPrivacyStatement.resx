@@ -117,4 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Acceptance of Terms
+By accessing and using the University Portal, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the portal.
+
+ Eligibility
+Use of the University Portal is limited to students, faculty, staff, and authorized users of the university. Unauthorized access or use is strictly prohibited.
+.
+Account Use
+ You agree to use your account only for its intended purposes and not for any unauthorized activities.
+
+Privacy
+Your use of the University Portal is subject to the university’s Privacy Policy. Personal information collected through the portal will be handled in accordance with this policy.
+
+ Acceptable Use
+Compliance: You agree to use the portal in compliance with all applicable laws and university policies.
+
+Prohibited Activities
+ You must not use the portal to engage in activities that are harmful, illegal, or that disrupt the operation of the portal.
+
+University Content
+ All content provided by the university through the portal is the property of the university or its licensors and is protected by intellectual property laws.
+
+Security
+Security Measures: The university implements reasonable security measures to protect the portal and its users. However, the university cannot guarantee absolute security.
+
+Limitation of Liability
+The university is not liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the portal, even if the university has been advised of the possibility of such damages.
+
+ Modifications to Terms
+The university reserves the right to modify these Terms and Conditions at any time. Users will be notified of significant changes, and continued use of the portal constitutes acceptance of the modified terms.
+
+Termination
+The university reserves the right to terminate or suspend access to the portal for any user who violates these Terms and Conditions or for any reason deemed necessary by the university.
+
+ Governing Law
+These Terms and Conditions are governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law principles.
+
+ Contact Information
+For any questions or concerns about these Terms and Conditions, please contact [+639151843750] or email us at [@btu_admin@gmail.com].
+
+By using the Bulacan Technological University Portal, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</value>
+  </data>
 </root>

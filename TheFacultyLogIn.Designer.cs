@@ -29,23 +29,22 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.rbtnLogIn = new gradesBookApp.RoundedButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.picHome = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtFPass = new System.Windows.Forms.TextBox();
             this.btnUnshowPass = new System.Windows.Forms.Button();
             this.btnShowPass = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.picHome = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.rbtnLogIn = new gradesBookApp.RoundedButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -65,10 +64,10 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 1, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.18933F));
@@ -81,25 +80,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.009923F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.445F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.03958F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1014, 697);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1352, 858);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // rbtnLogIn
-            // 
-            this.rbtnLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnLogIn.BackColor = System.Drawing.Color.Navy;
-            this.rbtnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnLogIn.FlatAppearance.BorderSize = 0;
-            this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnLogIn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnLogIn.ForeColor = System.Drawing.Color.White;
-            this.rbtnLogIn.Location = new System.Drawing.Point(876, 478);
-            this.rbtnLogIn.Name = "rbtnLogIn";
-            this.rbtnLogIn.Size = new System.Drawing.Size(112, 32);
-            this.rbtnLogIn.TabIndex = 5;
-            this.rbtnLogIn.Text = "Log In";
-            this.rbtnLogIn.UseVisualStyleBackColor = false;
-            this.rbtnLogIn.Click += new System.EventHandler(this.rbtnLogIn_Click);
             // 
             // pictureBox1
             // 
@@ -109,9 +91,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::gradesBookApp.Properties.Resources.BULACAN;
             this.pictureBox1.Image = global::gradesBookApp.Properties.Resources.BULACAN3;
-            this.pictureBox1.Location = new System.Drawing.Point(769, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(1025, 176);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(219, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(292, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -123,9 +106,10 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(769, 333);
+            this.label1.Location = new System.Drawing.Point(1025, 409);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 23);
+            this.label1.Size = new System.Drawing.Size(292, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "Faculty ID:";
             // 
@@ -134,9 +118,10 @@
             this.txtFID.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtFID.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFID.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtFID.Location = new System.Drawing.Point(769, 360);
+            this.txtFID.Location = new System.Drawing.Point(1025, 443);
+            this.txtFID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFID.Name = "txtFID";
-            this.txtFID.Size = new System.Drawing.Size(219, 29);
+            this.txtFID.Size = new System.Drawing.Size(292, 35);
             this.txtFID.TabIndex = 14;
             // 
             // label2
@@ -146,11 +131,39 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(769, 403);
+            this.label2.Location = new System.Drawing.Point(1025, 495);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 23);
+            this.label2.Size = new System.Drawing.Size(292, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "Password:";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel2.Controls.Add(this.picHome);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(1025, 12);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(292, 63);
+            this.flowLayoutPanel2.TabIndex = 74;
+            // 
+            // picHome
+            // 
+            this.picHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picHome.BackColor = System.Drawing.Color.Transparent;
+            this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
+            this.picHome.Location = new System.Drawing.Point(234, 2);
+            this.picHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picHome.Name = "picHome";
+            this.picHome.Size = new System.Drawing.Size(55, 50);
+            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHome.TabIndex = 73;
+            this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -160,9 +173,10 @@
             this.flowLayoutPanel1.Controls.Add(this.txtFPass);
             this.flowLayoutPanel1.Controls.Add(this.btnUnshowPass);
             this.flowLayoutPanel1.Controls.Add(this.btnShowPass);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(769, 429);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1025, 528);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(219, 43);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 53);
             this.flowLayoutPanel1.TabIndex = 19;
             this.flowLayoutPanel1.WrapContents = false;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
@@ -172,73 +186,65 @@
             this.txtFPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFPass.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFPass.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtFPass.Location = new System.Drawing.Point(3, 3);
+            this.txtFPass.Location = new System.Drawing.Point(4, 4);
+            this.txtFPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFPass.Name = "txtFPass";
-            this.txtFPass.Size = new System.Drawing.Size(139, 29);
+            this.txtFPass.PasswordChar = '*';
+            this.txtFPass.Size = new System.Drawing.Size(451, 35);
             this.txtFPass.TabIndex = 15;
             // 
             // btnUnshowPass
             // 
             this.btnUnshowPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUnshowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUnshowPass.Image = global::gradesBookApp.Properties.Resources.red_eye;
-            this.btnUnshowPass.Location = new System.Drawing.Point(148, 3);
+            this.btnUnshowPass.Location = new System.Drawing.Point(463, 4);
+            this.btnUnshowPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUnshowPass.Name = "btnUnshowPass";
-            this.btnUnshowPass.Size = new System.Drawing.Size(34, 29);
+            this.btnUnshowPass.Size = new System.Drawing.Size(45, 36);
             this.btnUnshowPass.TabIndex = 17;
             this.btnUnshowPass.UseVisualStyleBackColor = true;
+            this.btnUnshowPass.Visible = false;
             this.btnUnshowPass.Click += new System.EventHandler(this.btnUnshowPass_Click);
             // 
             // btnShowPass
             // 
             this.btnShowPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowPass.Image = global::gradesBookApp.Properties.Resources.hide;
-            this.btnShowPass.Location = new System.Drawing.Point(188, 3);
+            this.btnShowPass.Location = new System.Drawing.Point(516, 4);
+            this.btnShowPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowPass.Name = "btnShowPass";
-            this.btnShowPass.Size = new System.Drawing.Size(32, 29);
+            this.btnShowPass.Size = new System.Drawing.Size(43, 36);
             this.btnShowPass.TabIndex = 16;
             this.btnShowPass.UseVisualStyleBackColor = true;
-            this.btnShowPass.Visible = false;
             this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
             // 
-            // flowLayoutPanel2
+            // rbtnLogIn
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Controls.Add(this.picHome);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(769, 10);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(219, 51);
-            this.flowLayoutPanel2.TabIndex = 74;
-            // 
-            // picHome
-            // 
-            this.picHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picHome.BackColor = System.Drawing.Color.Transparent;
-            this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.picHome.Location = new System.Drawing.Point(176, 2);
-            this.picHome.Margin = new System.Windows.Forms.Padding(2);
-            this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(41, 41);
-            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picHome.TabIndex = 73;
-            this.picHome.TabStop = false;
-            this.picHome.Click += new System.EventHandler(this.picHome_Click);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(282, 429);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(200, 43);
-            this.flowLayoutPanel3.TabIndex = 75;
+            this.rbtnLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnLogIn.BackColor = System.Drawing.Color.Navy;
+            this.rbtnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnLogIn.FlatAppearance.BorderSize = 0;
+            this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnLogIn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnLogIn.ForeColor = System.Drawing.Color.White;
+            this.rbtnLogIn.Location = new System.Drawing.Point(1168, 589);
+            this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnLogIn.Name = "rbtnLogIn";
+            this.rbtnLogIn.Size = new System.Drawing.Size(149, 39);
+            this.rbtnLogIn.TabIndex = 5;
+            this.rbtnLogIn.Text = "Log In";
+            this.rbtnLogIn.UseVisualStyleBackColor = false;
+            this.rbtnLogIn.Click += new System.EventHandler(this.rbtnLogIn_Click);
             // 
             // TheFacultyLogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 697);
+            this.ClientSize = new System.Drawing.Size(1352, 858);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TheFacultyLogIn";
             this.Text = "TheFacultyLogIn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -246,10 +252,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -268,6 +274,5 @@
         private System.Windows.Forms.Button btnShowPass;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox picHome;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }

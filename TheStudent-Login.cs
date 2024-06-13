@@ -104,7 +104,12 @@ namespace gradesBookApp
 
         private void TheStudent_Login_Load(object sender, EventArgs e)
         {
-
+            btnUnshowPass.Visible = false;
+            btnShowPass.Visible = true;
+            btnUnshowPass.Parent = txtSPass;
+            btnUnshowPass.Location = new Point(txtSPass.ClientSize.Width - ((btnUnshowPass.Image.Width) + 24), -2);
+            btnShowPass.Parent = txtSPass;
+            btnShowPass.Location = new Point(txtSPass.ClientSize.Width - ((btnShowPass.Image.Width) + 24), -2);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

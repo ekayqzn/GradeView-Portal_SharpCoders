@@ -28,72 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.roundedButton1 = new gradesBookApp.RoundedButton();
-            this.roundedButton2 = new gradesBookApp.RoundedButton();
-            this.roundedButton3 = new gradesBookApp.RoundedButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rdbFaculty = new gradesBookApp.RoundedButton();
-            this.rdbStudent = new gradesBookApp.RoundedButton();
             this.picAboutUs = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.rdbFaculty = new gradesBookApp.RoundedButton();
+            this.rdbStudent = new gradesBookApp.RoundedButton();
+            this.roundedButton1 = new gradesBookApp.RoundedButton();
+            this.roundedButton2 = new gradesBookApp.RoundedButton();
+            this.roundedButton3 = new gradesBookApp.RoundedButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // roundedButton1
-            // 
-            this.roundedButton1.BackColor = System.Drawing.Color.Navy;
-            this.roundedButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.roundedButton1.FlatAppearance.BorderSize = 0;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton1.ForeColor = System.Drawing.Color.White;
-            this.roundedButton1.Location = new System.Drawing.Point(779, 325);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(210, 56);
-            this.roundedButton1.TabIndex = 7;
-            this.roundedButton1.Text = "FACULTY";
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click_1);
-            // 
-            // roundedButton2
-            // 
-            this.roundedButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedButton2.BackColor = System.Drawing.Color.White;
-            this.roundedButton2.FlatAppearance.BorderSize = 0;
-            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.roundedButton2.Location = new System.Drawing.Point(779, 389);
-            this.roundedButton2.Name = "roundedButton2";
-            this.roundedButton2.Size = new System.Drawing.Size(210, 56);
-            this.roundedButton2.TabIndex = 8;
-            this.roundedButton2.Text = "STUDENT";
-            this.roundedButton2.UseVisualStyleBackColor = false;
-            this.roundedButton2.Click += new System.EventHandler(this.roundedButton2_Click);
-            // 
-            // roundedButton3
-            // 
-            this.roundedButton3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedButton3.BackColor = System.Drawing.Color.Blue;
-            this.roundedButton3.FlatAppearance.BorderSize = 0;
-            this.roundedButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton3.ForeColor = System.Drawing.Color.White;
-            this.roundedButton3.Location = new System.Drawing.Point(779, 515);
-            this.roundedButton3.Name = "roundedButton3";
-            this.roundedButton3.Size = new System.Drawing.Size(210, 56);
-            this.roundedButton3.TabIndex = 9;
-            this.roundedButton3.Text = "ADMINISTRATOR";
-            this.roundedButton3.UseVisualStyleBackColor = false;
-            this.roundedButton3.Click += new System.EventHandler(this.roundedButton3_Click_1);
             // 
             // tableLayoutPanel1
             // 
@@ -148,40 +98,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // rdbFaculty
-            // 
-            this.rdbFaculty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbFaculty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rdbFaculty.FlatAppearance.BorderSize = 0;
-            this.rdbFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rdbFaculty.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbFaculty.ForeColor = System.Drawing.Color.White;
-            this.rdbFaculty.Location = new System.Drawing.Point(780, 315);
-            this.rdbFaculty.Name = "rdbFaculty";
-            this.rdbFaculty.Size = new System.Drawing.Size(210, 60);
-            this.rdbFaculty.TabIndex = 11;
-            this.rdbFaculty.Text = "FACULTY";
-            this.rdbFaculty.UseVisualStyleBackColor = false;
-            this.rdbFaculty.Click += new System.EventHandler(this.rdbFaculty_Click);
-            // 
-            // rdbStudent
-            // 
-            this.rdbStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbStudent.BackColor = System.Drawing.Color.White;
-            this.rdbStudent.FlatAppearance.BorderSize = 0;
-            this.rdbStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rdbStudent.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rdbStudent.Location = new System.Drawing.Point(780, 406);
-            this.rdbStudent.Name = "rdbStudent";
-            this.rdbStudent.Size = new System.Drawing.Size(210, 60);
-            this.rdbStudent.TabIndex = 12;
-            this.rdbStudent.Text = "STUDENT";
-            this.rdbStudent.UseVisualStyleBackColor = false;
-            this.rdbStudent.Click += new System.EventHandler(this.rdbStudent_Click);
-            // 
             // picAboutUs
             // 
             this.picAboutUs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -231,6 +147,7 @@
             // 
             // linkLabel3
             // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.Gold;
             this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel3.AutoSize = true;
@@ -246,6 +163,90 @@
             this.linkLabel3.Text = "Terms of Use and Privacy Statement";
             this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // rdbFaculty
+            // 
+            this.rdbFaculty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbFaculty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rdbFaculty.FlatAppearance.BorderSize = 0;
+            this.rdbFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rdbFaculty.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbFaculty.ForeColor = System.Drawing.Color.White;
+            this.rdbFaculty.Location = new System.Drawing.Point(780, 315);
+            this.rdbFaculty.Name = "rdbFaculty";
+            this.rdbFaculty.Size = new System.Drawing.Size(210, 60);
+            this.rdbFaculty.TabIndex = 11;
+            this.rdbFaculty.Text = "FACULTY";
+            this.rdbFaculty.UseVisualStyleBackColor = false;
+            this.rdbFaculty.Click += new System.EventHandler(this.rdbFaculty_Click);
+            // 
+            // rdbStudent
+            // 
+            this.rdbStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbStudent.BackColor = System.Drawing.Color.White;
+            this.rdbStudent.FlatAppearance.BorderSize = 0;
+            this.rdbStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rdbStudent.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rdbStudent.Location = new System.Drawing.Point(780, 406);
+            this.rdbStudent.Name = "rdbStudent";
+            this.rdbStudent.Size = new System.Drawing.Size(210, 60);
+            this.rdbStudent.TabIndex = 12;
+            this.rdbStudent.Text = "STUDENT";
+            this.rdbStudent.UseVisualStyleBackColor = false;
+            this.rdbStudent.Click += new System.EventHandler(this.rdbStudent_Click);
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.Navy;
+            this.roundedButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.roundedButton1.FlatAppearance.BorderSize = 0;
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton1.ForeColor = System.Drawing.Color.White;
+            this.roundedButton1.Location = new System.Drawing.Point(779, 325);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(210, 56);
+            this.roundedButton1.TabIndex = 7;
+            this.roundedButton1.Text = "FACULTY";
+            this.roundedButton1.UseVisualStyleBackColor = false;
+            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click_1);
+            // 
+            // roundedButton2
+            // 
+            this.roundedButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundedButton2.BackColor = System.Drawing.Color.White;
+            this.roundedButton2.FlatAppearance.BorderSize = 0;
+            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.roundedButton2.Location = new System.Drawing.Point(779, 389);
+            this.roundedButton2.Name = "roundedButton2";
+            this.roundedButton2.Size = new System.Drawing.Size(210, 56);
+            this.roundedButton2.TabIndex = 8;
+            this.roundedButton2.Text = "STUDENT";
+            this.roundedButton2.UseVisualStyleBackColor = false;
+            this.roundedButton2.Click += new System.EventHandler(this.roundedButton2_Click);
+            // 
+            // roundedButton3
+            // 
+            this.roundedButton3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundedButton3.BackColor = System.Drawing.Color.Blue;
+            this.roundedButton3.FlatAppearance.BorderSize = 0;
+            this.roundedButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton3.ForeColor = System.Drawing.Color.White;
+            this.roundedButton3.Location = new System.Drawing.Point(779, 515);
+            this.roundedButton3.Name = "roundedButton3";
+            this.roundedButton3.Size = new System.Drawing.Size(210, 56);
+            this.roundedButton3.TabIndex = 9;
+            this.roundedButton3.Text = "ADMINISTRATOR";
+            this.roundedButton3.UseVisualStyleBackColor = false;
+            this.roundedButton3.Click += new System.EventHandler(this.roundedButton3_Click_1);
             // 
             // TheLandingPage
             // 

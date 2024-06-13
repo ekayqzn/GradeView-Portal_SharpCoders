@@ -91,21 +91,19 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(909, 68);
             this.label2.TabIndex = 79;
-            this.label2.Text = "Terms of Use and Privacy Statement";
+            this.label2.Text = "TERMS OF USE AND PRIVACY STATEMENT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picHome
             // 
-            this.picHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picHome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picHome.BackColor = System.Drawing.Color.Transparent;
             this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.picHome.Location = new System.Drawing.Point(966, 2);
+            this.picHome.Location = new System.Drawing.Point(966, 14);
             this.picHome.Margin = new System.Windows.Forms.Padding(2);
             this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(46, 64);
+            this.picHome.Size = new System.Drawing.Size(46, 40);
             this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHome.TabIndex = 80;
             this.picHome.TabStop = false;

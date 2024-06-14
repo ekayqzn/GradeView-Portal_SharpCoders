@@ -178,12 +178,6 @@
     <Compile Include="Edit_GradeBook.Designer.cs">
       <DependentUpon>Edit_GradeBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacultyLogIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FacultyLogIn.Designer.cs">
-      <DependentUpon>FacultyLogIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="GradeBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,12 +185,6 @@
       <DependentUpon>GradeBook.cs</DependentUpon>
     </Compile>
     <Compile Include="GradebookQuery.cs" />
-    <Compile Include="LandingPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LandingPage.Designer.cs">
-      <DependentUpon>LandingPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="LogInOperation.cs" />
     <Compile Include="LogInStudent.cs" />
     <Compile Include="LogInTeacher.cs" />
@@ -286,14 +274,8 @@
     <EmbeddedResource Include="Edit_GradeBook.resx">
       <DependentUpon>Edit_GradeBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacultyLogIn.resx">
-      <DependentUpon>FacultyLogIn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GradeBook.resx">
       <DependentUpon>GradeBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LandingPage.resx">
-      <DependentUpon>LandingPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Program.resx">
       <DependentUpon>Program.cs</DependentUpon>
@@ -516,7 +498,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BG Color #545454 %289%29.png" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

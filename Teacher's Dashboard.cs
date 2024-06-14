@@ -175,7 +175,7 @@ namespace gradesBookApp
             if (MessageBox.Show("Are you sure you want to log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
-                FacultyLogIn l = new FacultyLogIn();
+                TheFacultyLogIn l = new TheFacultyLogIn();
                 l.ShowDialog();
                 this.Close();
             }
@@ -186,7 +186,7 @@ namespace gradesBookApp
             if (MessageBox.Show("Are you sure you want to log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
-                FacultyLogIn l = new FacultyLogIn();
+                TheFacultyLogIn l = new TheFacultyLogIn();
                 l.ShowDialog();
                 this.Close();
             }

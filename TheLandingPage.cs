@@ -17,74 +17,6 @@ namespace gradesBookApp
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedButton1_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void roundedButton2_Click(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void roundedButton3_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            About_Us au = new About_Us();
-            au.ShowDialog();
-            this.Close();
-        }
-
-        private void TheLandingPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdbFaculty_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TheFacultyLogIn f = new TheFacultyLogIn();
-            f.ShowDialog();
-            this.Close();
-        }
-
-        private void rdbStudent_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TheStudent_Login student = new TheStudent_Login();
-            student.ShowDialog();
-            this.Close();
-        }
-
-        private void rdbAdmin_Click(object sender, EventArgs e)
-        {
-        }
-
         private void picAboutUs_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -93,18 +25,32 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void rbtnFaculty_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            TheFacultyLogIn f = new TheFacultyLogIn();
+            f.ShowDialog();
+            this.Close();
+        }
 
+        private void rbtnStudent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TheStudent_Login student = new TheStudent_Login();
+            student.ShowDialog();
+            this.Close();
+        }
+
+        private void picAdmin_Click(object sender, EventArgs e)
+        {
             this.Hide();
             Administrator_LogIn adminLogIn = new Administrator_LogIn();
             adminLogIn.ShowDialog();
             this.Close();
         }
 
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkTermsPrivacy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
             this.Hide();
             TheTermsOfUseAndPrivacyStatement l = new TheTermsOfUseAndPrivacyStatement();
             l.ShowDialog();

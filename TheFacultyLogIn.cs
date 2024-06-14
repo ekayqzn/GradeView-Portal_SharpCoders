@@ -26,12 +26,17 @@ namespace gradesBookApp
 
         private void TheFacultyLogIn_Load(object sender, EventArgs e)
         {
+            txtTeacherID.Focus();
+            // Attach the KeyDown event handler to the TextBoxes
+            txtTeacherID.KeyDown += new KeyEventHandler(OnKeyDownHandler);
+            txtTeacherPass.KeyDown += new KeyEventHandler(OnKeyDownHandler);
+
             btnUnshowPass.Visible = false;
             btnShowPass.Visible = true;
-            btnUnshowPass.Parent = txtFPass;
-            btnUnshowPass.Location = new Point(txtFPass.ClientSize.Width - ((btnUnshowPass.Image.Width)+24), -2);
-            btnShowPass.Parent = txtFPass;
-            btnShowPass.Location = new Point(txtFPass.ClientSize.Width - ((btnShowPass.Image.Width)+24), -2);
+            btnUnshowPass.Parent = txtTeacherPass;
+            btnUnshowPass.Location = new Point(txtTeacherPass.ClientSize.Width - ((btnUnshowPass.Image.Width)+24), -2);
+            btnShowPass.Parent = txtTeacherPass;
+            btnShowPass.Location = new Point(txtTeacherPass.ClientSize.Width - ((btnShowPass.Image.Width)+24), -2);
         }
 
         private void picHome_Click(object sender, EventArgs e)
@@ -42,27 +47,11 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            TheLandingPage l = new TheLandingPage();
-            l.ShowDialog();
-            this.Close();
-        }
-
         private void rbtnLogIn_Click(object sender, EventArgs e)
         {
             LogInTeacher l = new LogInTeacher();
-            l.PerformLogIn(this, txtFID, txtFPass);
+            l.PerformLogIn(this, txtTeacherID, txtTeacherPass);
             userID = LogInOperation.userID.Trim();
-        }
-
-        private void FacultyLogIn_Load(object sender, EventArgs e)
-        {
-            txtFID.Focus();
-            // Attach the KeyDown event handler to the TextBoxes
-            txtFID.KeyDown += new KeyEventHandler(OnKeyDownHandler);
-            txtFPass.KeyDown += new KeyEventHandler(OnKeyDownHandler);
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
@@ -70,7 +59,7 @@ namespace gradesBookApp
             if (e.KeyCode == Keys.Enter)
             {
                 LogInTeacher l = new LogInTeacher();
-                l.PerformLogIn(this, txtFID, txtFPass);
+                l.PerformLogIn(this, txtTeacherID, txtTeacherPass);
                 userID = LogInOperation.userID.Trim();
             }
         }
@@ -78,7 +67,7 @@ namespace gradesBookApp
         private void btnUnshowPass_Click(object sender, EventArgs e)
         {
             // When hiding the password
-            txtFPass.PasswordChar = '*'; // Hide password
+            txtTeacherPass.PasswordChar = '*'; // Hide password
             btnUnshowPass.Visible = false; // Hide UnshowPass button
             btnShowPass.Visible = true; // Show ShowPass button
 
@@ -87,14 +76,9 @@ namespace gradesBookApp
         private void btnShowPass_Click(object sender, EventArgs e)
         {
             // When showing the password
-            txtFPass.PasswordChar = '\0'; // Show password
+            txtTeacherPass.PasswordChar = '\0'; // Show password
             btnShowPass.Visible = false; // Hide ShowPass button
             btnUnshowPass.Visible = true; // Show UnshowPass button
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

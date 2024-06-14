@@ -62,7 +62,7 @@ namespace gradesBookApp
         private void LinkLBLHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            LandingPage l = new LandingPage();
+            TheLandingPage l = new TheLandingPage();
             l.ShowDialog();
             this.Close();
         }

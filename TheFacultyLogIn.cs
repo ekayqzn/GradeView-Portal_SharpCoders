@@ -34,9 +34,9 @@ namespace gradesBookApp
             btnUnshowPass.Visible = false;
             btnShowPass.Visible = true;
             btnUnshowPass.Parent = txtTeacherPass;
-            btnUnshowPass.Location = new Point(txtTeacherPass.ClientSize.Width - ((btnUnshowPass.Image.Width)+24), -2);
+            btnUnshowPass.Location = new Point(txtTeacherPass.ClientSize.Width - ((btnUnshowPass.Image.Width)+15), -2);
             btnShowPass.Parent = txtTeacherPass;
-            btnShowPass.Location = new Point(txtTeacherPass.ClientSize.Width - ((btnShowPass.Image.Width)+24), -2);
+            btnShowPass.Location = new Point(txtTeacherPass.ClientSize.Width - ((btnShowPass.Image.Width)+15), -2);
         }
 
         private void picHome_Click(object sender, EventArgs e)

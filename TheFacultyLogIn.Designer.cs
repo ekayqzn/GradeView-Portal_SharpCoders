@@ -37,11 +37,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.picHome = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtTeacherPass = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnUnshowPass = new System.Windows.Forms.Button();
             this.btnShowPass = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtTeacherPass = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -172,7 +172,7 @@
             this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
             this.picHome.Location = new System.Drawing.Point(166, 2);
-            this.picHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picHome.Margin = new System.Windows.Forms.Padding(2);
             this.picHome.Name = "picHome";
             this.picHome.Size = new System.Drawing.Size(41, 41);
             this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -180,27 +180,15 @@
             this.picHome.TabStop = false;
             this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanel3
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(267, 143);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(426, 43);
-            this.flowLayoutPanel1.TabIndex = 19;
-            this.flowLayoutPanel1.WrapContents = false;
-            // 
-            // txtTeacherPass
-            // 
-            this.txtTeacherPass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTeacherPass.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeacherPass.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtTeacherPass.Location = new System.Drawing.Point(727, 429);
-            this.txtTeacherPass.Name = "txtTeacherPass";
-            this.txtTeacherPass.PasswordChar = '*';
-            this.txtTeacherPass.Size = new System.Drawing.Size(209, 29);
-            this.txtTeacherPass.TabIndex = 15;
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel3.Controls.Add(this.btnUnshowPass);
+            this.flowLayoutPanel3.Controls.Add(this.btnShowPass);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(942, 429);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(18, 43);
+            this.flowLayoutPanel3.TabIndex = 75;
             // 
             // btnUnshowPass
             // 
@@ -227,15 +215,27 @@
             this.btnShowPass.UseVisualStyleBackColor = true;
             this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
             // 
-            // flowLayoutPanel3
+            // flowLayoutPanel1
             // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel3.Controls.Add(this.btnUnshowPass);
-            this.flowLayoutPanel3.Controls.Add(this.btnShowPass);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(942, 429);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(18, 43);
-            this.flowLayoutPanel3.TabIndex = 75;
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(267, 143);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(426, 43);
+            this.flowLayoutPanel1.TabIndex = 19;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // txtTeacherPass
+            // 
+            this.txtTeacherPass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTeacherPass.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTeacherPass.ForeColor = System.Drawing.Color.DarkBlue;
+            this.txtTeacherPass.Location = new System.Drawing.Point(727, 429);
+            this.txtTeacherPass.Name = "txtTeacherPass";
+            this.txtTeacherPass.PasswordChar = '*';
+            this.txtTeacherPass.Size = new System.Drawing.Size(209, 29);
+            this.txtTeacherPass.TabIndex = 15;
             // 
             // TheFacultyLogIn
             // 

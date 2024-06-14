@@ -14,7 +14,7 @@ namespace gradesBookApp
 {
     public partial class GradeBook : Form
     {
-        private DataGridViewRow selectedRow;
+        public DataGridViewRow selectedRow;
 
         databaseConnection db = new databaseConnection();
         public static int programID;
@@ -37,6 +37,7 @@ namespace gradesBookApp
         {
             InitializeComponent();
             txtSearch.TextChanged += txtSearch_TextChanged;
+            
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -56,16 +57,18 @@ namespace gradesBookApp
         }
         public void GradeBook_Load(object sender, EventArgs e)
         {
-            //picBoxX.Parent = txtSearch;
-            //picBoxX.Location = new Point(txtSearch.ClientSize.Width - ((picBoxX.Image.Width) + 5), 5);
+
+            //Refresh value
+            finalGrade = 0;
+            mWritten = 0;
+            mFinalReq = 0;
+            fFinalReq = 0;
+            fWritten = 0;
+
+            picDeleteSearch.Parent = txtSearch;
+            picDeleteSearch.Location = new Point(txtSearch.ClientSize.Width - ((picDeleteSearch.Image.Width) + 5), 5);
 
             dataGridView1.CellFormatting += dataGridView1_CellFormatting; //format cell as blank when the value is -1
-
-            if (dataGridView1.Rows.Count > 0)
-            {
-                dataGridView1.Rows[0].Selected = true;
-                selectedRow = dataGridView1.Rows[0];
-            }
 
             dtDisplay.Rows.Clear();
             string subjectName = "";
@@ -145,7 +148,7 @@ namespace gradesBookApp
                 db.cmd.Connection = db.conn;
 
                 // Retrieve IDs
-                db.cmd.CommandText = "SELECT student_id, m_activity_id, m_assignment_id, m_attendance_id, m_longquiz_id, m_quiz_id, m_project_id, m_exam_id, m_recitation_id, f_activity_id, f_assignment_id, f_attendance_id, f_longquiz_id, f_quiz_id, f_project_id, f_exam_id, f_recitation_id FROM enroll WHERE program_id = @programID AND class_id = @classID";
+                db.cmd.CommandText = "SELECT student_id, m_activity_id, m_assignment_id, m_longquiz_id, m_quiz_id, m_project_id, m_exam_id, m_recitation_id, f_activity_id, f_assignment_id, f_longquiz_id, f_quiz_id, f_project_id, f_exam_id, f_recitation_id FROM enroll WHERE program_id = @programID AND class_id = @classID";
 
                 DataTable dtIDs = new DataTable();
 
@@ -164,7 +167,6 @@ namespace gradesBookApp
 
                 List<int?> mActivityID = new List<int?>();
                 List<int?> mAssignmentID = new List<int?>();
-                List<int?> mAttendanceID = new List<int?>();
                 List<int?> mLongQuizID = new List<int?>();
                 List<int?> mQuizID = new List<int?>();
                 List<int?> mRecitationID = new List<int?>();
@@ -173,7 +175,6 @@ namespace gradesBookApp
 
                 List<int?> fActivityID = new List<int?>();
                 List<int?> fAssignmentID = new List<int?>();
-                List<int?> fAttendanceID = new List<int?>();
                 List<int?> fLongQuizID = new List<int?>();
                 List<int?> fQuizID = new List<int?>();
                 List<int?> fRecitationID = new List<int?>();
@@ -194,7 +195,6 @@ namespace gradesBookApp
 
                         mActivityID.Add((row["m_activity_id"] == DBNull.Value) ? null : (int?)row["m_activity_id"]);
                         mAssignmentID.Add((row["m_assignment_id"] == DBNull.Value) ? null : (int?)row["m_assignment_id"]);
-                        mAttendanceID.Add((row["m_attendance_id"] == DBNull.Value) ? null : (int?)row["m_attendance_id"]);
                         mLongQuizID.Add((row["m_longquiz_id"] == DBNull.Value) ? null : (int?)row["m_longquiz_id"]);
                         mQuizID.Add((row["m_quiz_id"] == DBNull.Value) ? null : (int?)row["m_quiz_id"]);
                         mRecitationID.Add((row["m_recitation_id"] == DBNull.Value) ? null : (int?)row["m_recitation_id"]);
@@ -203,7 +203,6 @@ namespace gradesBookApp
 
                         fActivityID.Add((row["f_activity_id"] == DBNull.Value) ? null : (int?)row["f_activity_id"]);
                         fAssignmentID.Add((row["f_assignment_id"] == DBNull.Value) ? null : (int?)row["f_assignment_id"]);
-                        fAttendanceID.Add((row["f_attendance_id"] == DBNull.Value) ? null : (int?)row["f_attendance_id"]);
                         fLongQuizID.Add((row["f_longquiz_id"] == DBNull.Value) ? null : (int?)row["f_longquiz_id"]);
                         fQuizID.Add((row["f_quiz_id"] == DBNull.Value) ? null : (int?)row["f_quiz_id"]);
                         fRecitationID.Add((row["f_recitation_id"] == DBNull.Value) ? null : (int?)row["f_recitation_id"]);
@@ -218,6 +217,12 @@ namespace gradesBookApp
 
                 for (int i = 0; i < studentIDs.Count; i++)
                 {
+                    finalGrade = 0;
+                    mWritten = 0;
+                    mFinalReq = 0;
+                    fWritten = 0;
+                    fFinalReq = 0;
+
                     newRow = dtDisplay.NewRow();
                     newRow["student_id"] = studentIDs[i];
                     newRow["student_name"] = q.GetStudentName(studentIDs[i]);
@@ -232,11 +237,6 @@ namespace gradesBookApp
                         int count = q.GetCount("m", "assignment", (int)mAssignmentID[i]);
                         mWritten += q.GetRecordsOther("m", "assignment", (int)mAssignmentID[i], count);
                     }
-                    if (mAttendanceID[i] != null)
-                    {
-                        int count = q.GetCount("m", "attendance", (int)mAttendanceID[i]);
-                        mWritten += q.GetRecordAttRecit("m", "attendance", (int)mAttendanceID[i], count);
-                    }
                     if (mLongQuizID[i] != null)
                     {
                         int count = q.GetCount("m", "longquiz", (int)mLongQuizID[i]);
@@ -250,7 +250,7 @@ namespace gradesBookApp
                     if (mRecitationID[i] != null)
                     {
                         int count = q.GetCount("m", "recitation", (int)mRecitationID[i]);
-                        mWritten += q.GetRecordAttRecit("m", "recitation", (int)mRecitationID[i], count);
+                        mWritten += q.GetRecordsOther("m", "recitation", (int)mRecitationID[i], count);
                     }
                     if (mExamID[i] != null)
                     {
@@ -263,6 +263,7 @@ namespace gradesBookApp
                     }
 
                     midtermGrade = mWritten + mFinalReq;
+                    //MessageBox.Show(midtermGrade.ToString());
 
                     if (fActivityID[i] != null)
                     {
@@ -273,11 +274,6 @@ namespace gradesBookApp
                     {
                         int count = q.GetCount("f", "assignment", (int)fAssignmentID[i]);
                         fWritten += q.GetRecordsOther("f", "assignment", (int)fAssignmentID[i], count);
-                    }
-                    if (fAttendanceID[i] != null)
-                    {
-                        int count = q.GetCount("f", "attendance", (int)fAttendanceID[i]);
-                        fWritten += q.GetRecordAttRecit("f", "attendance", (int)fAttendanceID[i], count);
                     }
                     if (fLongQuizID[i] != null)
                     {
@@ -292,7 +288,7 @@ namespace gradesBookApp
                     if (fRecitationID[i] != null)
                     {
                         int count = q.GetCount("f", "recitation", (int)fRecitationID[i]);
-                        fWritten += q.GetRecordAttRecit("f", "recitation", (int)fRecitationID[i], count);
+                        fWritten += q.GetRecordsOther("f", "recitation", (int)fRecitationID[i], count);
                     }
                     if (fExamID[i] != null)
                     {
@@ -320,7 +316,13 @@ namespace gradesBookApp
                     dataGridView1.DataSource = dtDisplay;
 
                 }
-                
+              
+                dataGridView1.CellClick += DataGridView1_CellClick; //when specific row is clicked
+                if (dataGridView1.Rows.Count > 0)
+                {
+                    dataGridView1.Rows[0].Selected = true;
+                    selectedRow = dataGridView1.Rows[0];
+                }
             }
             catch (Exception ex)
             {
@@ -331,12 +333,12 @@ namespace gradesBookApp
                 db.Disconnect();
             }
 
-            dataGridView1.CellClick += DataGridView1_CellClick; //when specific row is clicked
+            
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Ensure the click is not on the header
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count) //ensure click is not on the header or greater than row
             {
                 selectedRow = dataGridView1.Rows[e.RowIndex];
             }
@@ -355,7 +357,6 @@ namespace gradesBookApp
             if (selectedRow != null)
             {
                 this.Hide();
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 Edit_GradeBook editForm = new Edit_GradeBook(selectedRow);
                 editForm.ShowDialog();
                 this.Close();
@@ -376,14 +377,14 @@ namespace gradesBookApp
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //if (!String.IsNullOrEmpty(txtSearch.Text))
-            //{
-            //    picBoxX.Visible = true;
-            //}
-            //else
-            //{
-            //    picBoxX.Visible = false;
-            //}
+            if (!String.IsNullOrEmpty(txtSearch.Text))
+            {
+                picDeleteSearch.Visible = true;
+            }
+            else
+            {
+                picDeleteSearch.Visible = false;
+            }
             string filterText = txtSearch.Text;
             FilterDataGridView(filterText);
         }
@@ -443,7 +444,7 @@ namespace gradesBookApp
             }
         }
 
-        private void picBoxX_Click(object sender, EventArgs e)
+        private void picDeleteSearch_Click(object sender, EventArgs e)
         {
             txtSearch.Text = "";
         }

@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomizeGrade));
             this.label1 = new System.Windows.Forms.Label();
-            this.chkMAttendance = new System.Windows.Forms.CheckBox();
-            this.numMAttendance = new System.Windows.Forms.NumericUpDown();
-            this.txtMAttendance = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel_mAttendance = new System.Windows.Forms.Panel();
             this.panel_mAssignment = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMAssignment = new System.Windows.Forms.TextBox();
@@ -93,16 +88,9 @@
             this.txtFAssignment = new System.Windows.Forms.TextBox();
             this.numFAssignment = new System.Windows.Forms.NumericUpDown();
             this.chkFAssignment = new System.Windows.Forms.CheckBox();
-            this.panel_fAttendance = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtFAttendance = new System.Windows.Forms.TextBox();
-            this.numFAttendance = new System.Windows.Forms.NumericUpDown();
-            this.chkFAttendance = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.rbtnOK = new gradesBookApp.RoundedButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numMAttendance)).BeginInit();
-            this.panel_mAttendance.SuspendLayout();
             this.panel_mAssignment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMAssignment)).BeginInit();
             this.panel_mLongQuiz.SuspendLayout();
@@ -125,8 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFLongQuiz)).BeginInit();
             this.panel_fAssignment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAssignment)).BeginInit();
-            this.panel_fAttendance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numFAttendance)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -141,69 +127,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "MIDTERM";
             // 
-            // chkMAttendance
-            // 
-            this.chkMAttendance.AutoSize = true;
-            this.chkMAttendance.Location = new System.Drawing.Point(72, 197);
-            this.chkMAttendance.Name = "chkMAttendance";
-            this.chkMAttendance.Size = new System.Drawing.Size(103, 22);
-            this.chkMAttendance.TabIndex = 2;
-            this.chkMAttendance.Text = "Attendance";
-            this.chkMAttendance.UseVisualStyleBackColor = true;
-            this.chkMAttendance.CheckedChanged += new System.EventHandler(this.chkMAttendance_CheckedChanged);
-            // 
-            // numMAttendance
-            // 
-            this.numMAttendance.Location = new System.Drawing.Point(22, 14);
-            this.numMAttendance.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.numMAttendance.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numMAttendance.Name = "numMAttendance";
-            this.numMAttendance.Size = new System.Drawing.Size(135, 24);
-            this.numMAttendance.TabIndex = 3;
-            this.numMAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numMAttendance.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // txtMAttendance
-            // 
-            this.txtMAttendance.Location = new System.Drawing.Point(230, 12);
-            this.txtMAttendance.Name = "txtMAttendance";
-            this.txtMAttendance.Size = new System.Drawing.Size(98, 24);
-            this.txtMAttendance.TabIndex = 4;
-            this.txtMAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(336, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 18);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "%";
-            // 
-            // panel_mAttendance
-            // 
-            this.panel_mAttendance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel_mAttendance.Controls.Add(this.label2);
-            this.panel_mAttendance.Controls.Add(this.txtMAttendance);
-            this.panel_mAttendance.Controls.Add(this.numMAttendance);
-            this.panel_mAttendance.Enabled = false;
-            this.panel_mAttendance.Location = new System.Drawing.Point(213, 183);
-            this.panel_mAttendance.Name = "panel_mAttendance";
-            this.panel_mAttendance.Size = new System.Drawing.Size(381, 57);
-            this.panel_mAttendance.TabIndex = 5;
-            // 
             // panel_mAssignment
             // 
             this.panel_mAssignment.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -211,7 +134,7 @@
             this.panel_mAssignment.Controls.Add(this.txtMAssignment);
             this.panel_mAssignment.Controls.Add(this.numMAssignment);
             this.panel_mAssignment.Enabled = false;
-            this.panel_mAssignment.Location = new System.Drawing.Point(213, 248);
+            this.panel_mAssignment.Location = new System.Drawing.Point(213, 181);
             this.panel_mAssignment.Name = "panel_mAssignment";
             this.panel_mAssignment.Size = new System.Drawing.Size(381, 57);
             this.panel_mAssignment.TabIndex = 7;
@@ -259,7 +182,7 @@
             // chkMAssignment
             // 
             this.chkMAssignment.AutoSize = true;
-            this.chkMAssignment.Location = new System.Drawing.Point(72, 261);
+            this.chkMAssignment.Location = new System.Drawing.Point(72, 194);
             this.chkMAssignment.Name = "chkMAssignment";
             this.chkMAssignment.Size = new System.Drawing.Size(107, 22);
             this.chkMAssignment.TabIndex = 6;
@@ -274,7 +197,7 @@
             this.panel_mLongQuiz.Controls.Add(this.txtMLongQuiz);
             this.panel_mLongQuiz.Controls.Add(this.numMLongQuiz);
             this.panel_mLongQuiz.Enabled = false;
-            this.panel_mLongQuiz.Location = new System.Drawing.Point(213, 312);
+            this.panel_mLongQuiz.Location = new System.Drawing.Point(213, 245);
             this.panel_mLongQuiz.Name = "panel_mLongQuiz";
             this.panel_mLongQuiz.Size = new System.Drawing.Size(381, 57);
             this.panel_mLongQuiz.TabIndex = 9;
@@ -322,7 +245,7 @@
             // chkMLongQuiz
             // 
             this.chkMLongQuiz.AutoSize = true;
-            this.chkMLongQuiz.Location = new System.Drawing.Point(72, 325);
+            this.chkMLongQuiz.Location = new System.Drawing.Point(72, 258);
             this.chkMLongQuiz.Name = "chkMLongQuiz";
             this.chkMLongQuiz.Size = new System.Drawing.Size(98, 22);
             this.chkMLongQuiz.TabIndex = 8;
@@ -337,7 +260,7 @@
             this.panel_mQuiz.Controls.Add(this.txtMQuiz);
             this.panel_mQuiz.Controls.Add(this.numMQuiz);
             this.panel_mQuiz.Enabled = false;
-            this.panel_mQuiz.Location = new System.Drawing.Point(213, 376);
+            this.panel_mQuiz.Location = new System.Drawing.Point(213, 309);
             this.panel_mQuiz.Name = "panel_mQuiz";
             this.panel_mQuiz.Size = new System.Drawing.Size(381, 57);
             this.panel_mQuiz.TabIndex = 11;
@@ -385,7 +308,7 @@
             // chkMQuiz
             // 
             this.chkMQuiz.AutoSize = true;
-            this.chkMQuiz.Location = new System.Drawing.Point(72, 389);
+            this.chkMQuiz.Location = new System.Drawing.Point(72, 322);
             this.chkMQuiz.Name = "chkMQuiz";
             this.chkMQuiz.Size = new System.Drawing.Size(61, 22);
             this.chkMQuiz.TabIndex = 10;
@@ -400,7 +323,7 @@
             this.panel_mRecitation.Controls.Add(this.txtMRecitation);
             this.panel_mRecitation.Controls.Add(this.numMRecitation);
             this.panel_mRecitation.Enabled = false;
-            this.panel_mRecitation.Location = new System.Drawing.Point(213, 440);
+            this.panel_mRecitation.Location = new System.Drawing.Point(213, 373);
             this.panel_mRecitation.Name = "panel_mRecitation";
             this.panel_mRecitation.Size = new System.Drawing.Size(381, 57);
             this.panel_mRecitation.TabIndex = 13;
@@ -448,7 +371,7 @@
             // chkMRecitation
             // 
             this.chkMRecitation.AutoSize = true;
-            this.chkMRecitation.Location = new System.Drawing.Point(72, 453);
+            this.chkMRecitation.Location = new System.Drawing.Point(72, 386);
             this.chkMRecitation.Name = "chkMRecitation";
             this.chkMRecitation.Size = new System.Drawing.Size(96, 22);
             this.chkMRecitation.TabIndex = 12;
@@ -534,9 +457,9 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.rdoMProject);
             this.groupBox1.Controls.Add(this.rdoMExam);
-            this.groupBox1.Location = new System.Drawing.Point(57, 543);
+            this.groupBox1.Location = new System.Drawing.Point(63, 459);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(537, 148);
+            this.groupBox1.Size = new System.Drawing.Size(531, 148);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "30%";
@@ -568,9 +491,9 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox2.Controls.Add(this.rdoFProject);
             this.groupBox2.Controls.Add(this.rdoFExam);
-            this.groupBox2.Location = new System.Drawing.Point(656, 543);
+            this.groupBox2.Location = new System.Drawing.Point(662, 459);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(537, 148);
+            this.groupBox2.Size = new System.Drawing.Size(531, 148);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "30%";
@@ -677,7 +600,7 @@
             this.panel_fRecitation.Controls.Add(this.txtFRecitation);
             this.panel_fRecitation.Controls.Add(this.numFRecitation);
             this.panel_fRecitation.Enabled = false;
-            this.panel_fRecitation.Location = new System.Drawing.Point(811, 440);
+            this.panel_fRecitation.Location = new System.Drawing.Point(811, 373);
             this.panel_fRecitation.Name = "panel_fRecitation";
             this.panel_fRecitation.Size = new System.Drawing.Size(381, 57);
             this.panel_fRecitation.TabIndex = 29;
@@ -725,7 +648,7 @@
             // chkFRecitation
             // 
             this.chkFRecitation.AutoSize = true;
-            this.chkFRecitation.Location = new System.Drawing.Point(670, 453);
+            this.chkFRecitation.Location = new System.Drawing.Point(670, 386);
             this.chkFRecitation.Name = "chkFRecitation";
             this.chkFRecitation.Size = new System.Drawing.Size(96, 22);
             this.chkFRecitation.TabIndex = 28;
@@ -740,7 +663,7 @@
             this.panel_fQuiz.Controls.Add(this.txtFQuiz);
             this.panel_fQuiz.Controls.Add(this.numFQuiz);
             this.panel_fQuiz.Enabled = false;
-            this.panel_fQuiz.Location = new System.Drawing.Point(811, 376);
+            this.panel_fQuiz.Location = new System.Drawing.Point(811, 309);
             this.panel_fQuiz.Name = "panel_fQuiz";
             this.panel_fQuiz.Size = new System.Drawing.Size(381, 57);
             this.panel_fQuiz.TabIndex = 27;
@@ -788,7 +711,7 @@
             // chkFQuiz
             // 
             this.chkFQuiz.AutoSize = true;
-            this.chkFQuiz.Location = new System.Drawing.Point(670, 389);
+            this.chkFQuiz.Location = new System.Drawing.Point(670, 322);
             this.chkFQuiz.Name = "chkFQuiz";
             this.chkFQuiz.Size = new System.Drawing.Size(61, 22);
             this.chkFQuiz.TabIndex = 26;
@@ -803,7 +726,7 @@
             this.panel_fLongQuiz.Controls.Add(this.txtFLongQuiz);
             this.panel_fLongQuiz.Controls.Add(this.numFLongQuiz);
             this.panel_fLongQuiz.Enabled = false;
-            this.panel_fLongQuiz.Location = new System.Drawing.Point(811, 312);
+            this.panel_fLongQuiz.Location = new System.Drawing.Point(811, 245);
             this.panel_fLongQuiz.Name = "panel_fLongQuiz";
             this.panel_fLongQuiz.Size = new System.Drawing.Size(381, 57);
             this.panel_fLongQuiz.TabIndex = 25;
@@ -851,7 +774,7 @@
             // chkFLongQuiz
             // 
             this.chkFLongQuiz.AutoSize = true;
-            this.chkFLongQuiz.Location = new System.Drawing.Point(670, 325);
+            this.chkFLongQuiz.Location = new System.Drawing.Point(670, 258);
             this.chkFLongQuiz.Name = "chkFLongQuiz";
             this.chkFLongQuiz.Size = new System.Drawing.Size(98, 22);
             this.chkFLongQuiz.TabIndex = 24;
@@ -866,7 +789,7 @@
             this.panel_fAssignment.Controls.Add(this.txtFAssignment);
             this.panel_fAssignment.Controls.Add(this.numFAssignment);
             this.panel_fAssignment.Enabled = false;
-            this.panel_fAssignment.Location = new System.Drawing.Point(811, 248);
+            this.panel_fAssignment.Location = new System.Drawing.Point(811, 181);
             this.panel_fAssignment.Name = "panel_fAssignment";
             this.panel_fAssignment.Size = new System.Drawing.Size(381, 57);
             this.panel_fAssignment.TabIndex = 23;
@@ -914,76 +837,13 @@
             // chkFAssignment
             // 
             this.chkFAssignment.AutoSize = true;
-            this.chkFAssignment.Location = new System.Drawing.Point(670, 261);
+            this.chkFAssignment.Location = new System.Drawing.Point(670, 194);
             this.chkFAssignment.Name = "chkFAssignment";
             this.chkFAssignment.Size = new System.Drawing.Size(107, 22);
             this.chkFAssignment.TabIndex = 22;
             this.chkFAssignment.Text = "Assignment";
             this.chkFAssignment.UseVisualStyleBackColor = true;
             this.chkFAssignment.CheckedChanged += new System.EventHandler(this.chkFAssignment_CheckedChanged);
-            // 
-            // panel_fAttendance
-            // 
-            this.panel_fAttendance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel_fAttendance.Controls.Add(this.label15);
-            this.panel_fAttendance.Controls.Add(this.txtFAttendance);
-            this.panel_fAttendance.Controls.Add(this.numFAttendance);
-            this.panel_fAttendance.Enabled = false;
-            this.panel_fAttendance.Location = new System.Drawing.Point(811, 183);
-            this.panel_fAttendance.Name = "panel_fAttendance";
-            this.panel_fAttendance.Size = new System.Drawing.Size(381, 57);
-            this.panel_fAttendance.TabIndex = 21;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(336, 17);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(21, 18);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "%";
-            // 
-            // txtFAttendance
-            // 
-            this.txtFAttendance.Location = new System.Drawing.Point(230, 12);
-            this.txtFAttendance.Name = "txtFAttendance";
-            this.txtFAttendance.Size = new System.Drawing.Size(98, 24);
-            this.txtFAttendance.TabIndex = 4;
-            this.txtFAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // numFAttendance
-            // 
-            this.numFAttendance.Location = new System.Drawing.Point(22, 14);
-            this.numFAttendance.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.numFAttendance.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numFAttendance.Name = "numFAttendance";
-            this.numFAttendance.Size = new System.Drawing.Size(135, 24);
-            this.numFAttendance.TabIndex = 3;
-            this.numFAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numFAttendance.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // chkFAttendance
-            // 
-            this.chkFAttendance.AutoSize = true;
-            this.chkFAttendance.Location = new System.Drawing.Point(670, 197);
-            this.chkFAttendance.Name = "chkFAttendance";
-            this.chkFAttendance.Size = new System.Drawing.Size(103, 22);
-            this.chkFAttendance.TabIndex = 20;
-            this.chkFAttendance.Text = "Attendance";
-            this.chkFAttendance.UseVisualStyleBackColor = true;
-            this.chkFAttendance.CheckedChanged += new System.EventHandler(this.chkFAttendance_CheckedChanged);
             // 
             // label16
             // 
@@ -1057,12 +917,8 @@
             this.Controls.Add(this.chkMLongQuiz);
             this.Controls.Add(this.chkFAssignment);
             this.Controls.Add(this.panel_mAssignment);
-            this.Controls.Add(this.panel_fAttendance);
             this.Controls.Add(this.chkMAssignment);
-            this.Controls.Add(this.chkFAttendance);
-            this.Controls.Add(this.panel_mAttendance);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.chkMAttendance);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rbtnOK);
             this.Controls.Add(this.textBox2);
@@ -1073,9 +929,6 @@
             this.Name = "CustomizeGrade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
-            ((System.ComponentModel.ISupportInitialize)(this.numMAttendance)).EndInit();
-            this.panel_mAttendance.ResumeLayout(false);
-            this.panel_mAttendance.PerformLayout();
             this.panel_mAssignment.ResumeLayout(false);
             this.panel_mAssignment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMAssignment)).EndInit();
@@ -1110,9 +963,6 @@
             this.panel_fAssignment.ResumeLayout(false);
             this.panel_fAssignment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAssignment)).EndInit();
-            this.panel_fAttendance.ResumeLayout(false);
-            this.panel_fAttendance.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numFAttendance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1122,11 +972,6 @@
 
         private RoundedButton rbtnOK;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox chkMAttendance;
-        private System.Windows.Forms.NumericUpDown numMAttendance;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMAttendance;
-        private System.Windows.Forms.Panel panel_mAttendance;
         private System.Windows.Forms.Panel panel_mAssignment;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMAssignment;
@@ -1185,11 +1030,6 @@
         private System.Windows.Forms.TextBox txtFAssignment;
         private System.Windows.Forms.NumericUpDown numFAssignment;
         private System.Windows.Forms.CheckBox chkFAssignment;
-        private System.Windows.Forms.Panel panel_fAttendance;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtFAttendance;
-        private System.Windows.Forms.NumericUpDown numFAttendance;
-        private System.Windows.Forms.CheckBox chkFAttendance;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox2;
     }

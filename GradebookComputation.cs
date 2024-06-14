@@ -11,22 +11,32 @@ namespace gradesBookApp
     {
         public decimal ScoreStandardization (int score, int totalScore)
         {
-            decimal result = (score / totalScore) * 50 + 50;
+            // Ensure totalScore is not zero to avoid division by zero
+            if (totalScore == 0) throw new ArgumentException("Total score must be greater than zero.");
+
+            // Convert to decimal for precise division and correct the formula
+            decimal result = ((decimal)score / totalScore) * 50 + 50;
 
             return result;
         }
 
         public decimal Percentile (int percentage, decimal summation)
         {
-            decimal result = summation * (percentage / 100);
+            // Ensure percentage is between 0 and 100
+            if (percentage < 0 || percentage > 100) throw new ArgumentException("Percentage must be between 0 and 100.");
+
+            decimal result = summation * (percentage / 100m);
 
             return result;
         }
 
         public decimal PercentileRdo (int score, int totalScore)
         {
+            // Standardize the score first
             decimal standardize = ScoreStandardization(score, totalScore);
-            return (standardize * (30/100));
+
+            // Calculate 30% of the standardized score
+            return standardize * 0.30m;
         }
     }
 }

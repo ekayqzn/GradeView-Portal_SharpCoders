@@ -102,25 +102,45 @@ namespace gradesBookApp
 
             try
             {
-                foreach (Control control in panel1.Controls)
+                // Loop through all controls in the panel
+                for (int i = 0; i < panel1.Controls.Count; i++)
                 {
-                    if (control is System.Windows.Forms.TextBox txt)
+                    // Check if the current control is a TextBox
+                    if (panel1.Controls[i] is System.Windows.Forms.TextBox txt)
                     {
+                        // Skip validation for specific textboxes
                         if (txt.Name == "textBox1" || txt.Name == "textBox2")
                         {
-                            isValid = true;
+                            continue;
+                        }
+
+                        // Check if the text is a valid number
+                        if (!v.isNumberforDB(txt.Text))
+                        {
+                            isValid = false; // Set isValid to false if validation fails
+                            txt.Focus();
+                            txt.SelectAll();
+                            MessageBox.Show("Invalid number in the textbox.");
+                            break; // Exit the loop as validation failed
                         }
                         else
                         {
-                            if (!v.isNumberforDB(txt.Text))
+                            int j = i + 2;
+                            // Check if j is within the valid range of panel1.Controls
+                            if (j < panel1.Controls.Count && panel1.Controls[j] is System.Windows.Forms.TextBox nextTxt && !string.IsNullOrEmpty(nextTxt.Text))
                             {
-                                isValid = false; // Set isValid to false if any textbox fails validation
-                                txt.Focus();
-                                txt.SelectAll();
-                                break; // Exit the loop as validation failed
+                                // Compare the values of the current and next textboxes
+                                if (Convert.ToInt32(txt.Text) > Convert.ToInt32(nextTxt.Text))
+                                {
+                                    isValid = false; // Set isValid to false if the current score is greater than the total score
+                                    txt.Focus();
+                                    txt.SelectAll();
+                                    MessageBox.Show("Score is greater than Total Score");
+                                    break;
+                                }
                             }
-
                         }
+                        i += 2;
                     }
                 }
 

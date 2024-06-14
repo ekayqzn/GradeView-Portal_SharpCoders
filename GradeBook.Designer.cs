@@ -36,10 +36,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.LinkLBLback = new System.Windows.Forms.LinkLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.picDeleteSearch = new System.Windows.Forms.PictureBox();
+            this.picBack = new System.Windows.Forms.PictureBox();
             this.rbtnDelete = new gradesBookApp.RoundedButton();
             this.rbtnEdit = new gradesBookApp.RoundedButton();
-            this.picBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDeleteSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +105,7 @@
             this.LinkLBLback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.LinkLBLback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLBLback.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLback.Location = new System.Drawing.Point(1701, 29);
+            this.LinkLBLback.Location = new System.Drawing.Point(1638, 29);
             this.LinkLBLback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinkLBLback.Name = "LinkLBLback";
             this.LinkLBLback.Size = new System.Drawing.Size(60, 25);
@@ -136,8 +138,37 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1794, 823);
+            this.dataGridView1.Size = new System.Drawing.Size(1899, 823);
             this.dataGridView1.TabIndex = 64;
+            // 
+            // picDeleteSearch
+            // 
+            this.picDeleteSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picDeleteSearch.BackColor = System.Drawing.Color.Transparent;
+            this.picDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDeleteSearch.Image = global::gradesBookApp.Properties.Resources.close__1_;
+            this.picDeleteSearch.Location = new System.Drawing.Point(764, 290);
+            this.picDeleteSearch.Name = "picDeleteSearch";
+            this.picDeleteSearch.Size = new System.Drawing.Size(20, 20);
+            this.picDeleteSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDeleteSearch.TabIndex = 65;
+            this.picDeleteSearch.TabStop = false;
+            this.picDeleteSearch.Visible = false;
+            this.picDeleteSearch.Click += new System.EventHandler(this.picDeleteSearch_Click);
+            // 
+            // picBack
+            // 
+            this.picBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBack.Image = ((System.Drawing.Image)(resources.GetObject("picBack.Image")));
+            this.picBack.Location = new System.Drawing.Point(1580, 18);
+            this.picBack.Name = "picBack";
+            this.picBack.Size = new System.Drawing.Size(55, 50);
+            this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBack.TabIndex = 63;
+            this.picBack.TabStop = false;
+            this.picBack.Click += new System.EventHandler(this.picBack_Click);
             // 
             // rbtnDelete
             // 
@@ -148,7 +179,7 @@
             this.rbtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnDelete.ForeColor = System.Drawing.Color.White;
-            this.rbtnDelete.Location = new System.Drawing.Point(1193, 283);
+            this.rbtnDelete.Location = new System.Drawing.Point(1130, 283);
             this.rbtnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnDelete.Name = "rbtnDelete";
             this.rbtnDelete.Size = new System.Drawing.Size(191, 39);
@@ -166,7 +197,7 @@
             this.rbtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnEdit.ForeColor = System.Drawing.Color.White;
-            this.rbtnEdit.Location = new System.Drawing.Point(960, 283);
+            this.rbtnEdit.Location = new System.Drawing.Point(897, 283);
             this.rbtnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnEdit.Name = "rbtnEdit";
             this.rbtnEdit.Size = new System.Drawing.Size(191, 39);
@@ -175,20 +206,6 @@
             this.rbtnEdit.UseVisualStyleBackColor = false;
             this.rbtnEdit.Click += new System.EventHandler(this.rbtnEdit_Click);
             // 
-            // picBack
-            // 
-            this.picBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBack.Image = ((System.Drawing.Image)(resources.GetObject("picBack.Image")));
-            this.picBack.Location = new System.Drawing.Point(1643, 18);
-            this.picBack.Name = "picBack";
-            this.picBack.Size = new System.Drawing.Size(55, 50);
-            this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBack.TabIndex = 63;
-            this.picBack.TabStop = false;
-            this.picBack.Click += new System.EventHandler(this.picBack_Click);
-            // 
             // GradeBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -196,7 +213,8 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(2, 2);
             this.AutoScrollMinSize = new System.Drawing.Size(2, 2);
-            this.ClientSize = new System.Drawing.Size(1815, 1055);
+            this.ClientSize = new System.Drawing.Size(1920, 1055);
+            this.Controls.Add(this.picDeleteSearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.picBack);
             this.Controls.Add(this.LinkLBLback);
@@ -212,6 +230,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GradeBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDeleteSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,5 +247,6 @@
         private System.Windows.Forms.LinkLabel LinkLBLback;
         private System.Windows.Forms.PictureBox picBack;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox picDeleteSearch;
     }
 }

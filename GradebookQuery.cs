@@ -228,31 +228,6 @@ namespace gradesBookApp
             }
         }
 
-        //Midterm Recit and Attendance
-        public void mAttRecitCopy(string tableName, int classID, string studentID)
-        {
-            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}1, m_{tableName}2, m_{tableName}3, m_{tableName}4, m_{tableName}5, m_{tableName}6, m_{tableName}7, m_{tableName}8, m_{tableName}9, m_{tableName}_percentage, class_id, count, student_id) SELECT m_{tableName}1, m_{tableName}2, m_{tableName}3, m_{tableName}4, m_{tableName}5, m_{tableName}6, m_{tableName}7, m_{tableName}8, m_{tableName}9, m_{tableName}_percentage, class_id, count, COALESCE(student_id, @studentID) FROM m_{tableName} WHERE class_id = @classID AND student_id IS NULL";
-
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = commandText;
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@classID", classID);
-                db.cmd.Parameters.AddWithValue("@studentID", studentID);
-                db.cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(3 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
-        }
-
         //Midterm Other Tasks
         public void mOthersCopy(string tableName, int classID, string studentID)
         {
@@ -282,31 +257,6 @@ namespace gradesBookApp
         public void mRdoCopy(string tableName, int classID, string studentID)
         {
             string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}, m_{tableName}_score, class_id, student_id) SELECT m_{tableName}, m_{tableName}_score, class_id, COALESCE(student_id, @studentID) FROM m_{tableName} WHERE class_id = @classID AND student_id IS NULL";
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = commandText;
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@classID", classID);
-                db.cmd.Parameters.AddWithValue("@studentID", studentID);
-                db.cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(5 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
-        }
-
-        //Final Recit and Attendance
-        public void fAttRecitCopy(string tableName, int classID, string studentID)
-        {
-            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}1, f_{tableName}2, f_{tableName}3, f_{tableName}4, f_{tableName}5, f_{tableName}6, f_{tableName}7, f_{tableName}8, f_{tableName}9, f_{tableName}_percentage, class_id, count, student_id) SELECT f_{tableName}1, f_{tableName}2, f_{tableName}3, f_{tableName}4, f_{tableName}5, f_{tableName}6, f_{tableName}7, f_{tableName}8, f_{tableName}9, f_{tableName}_percentage, class_id, count, COALESCE(student_id, @studentID) FROM f_{tableName} WHERE class_id = @classID AND student_id IS NULL";
-
             try
             {
                 db.Connect();
@@ -376,45 +326,6 @@ namespace gradesBookApp
             }
         }
 
-        //midterm attendance and recitation
-        public void mAttRecit(string tableName, int count, int percentage)
-        {
-            int[] attendanceColumns = new int[9];
-            for (int i = 0; i < attendanceColumns.Length; i++)
-            {
-                if (i < count)
-                {
-                    attendanceColumns[i] = -1;
-                }
-                else
-                {
-                    attendanceColumns[i] = 0;
-                }
-            }
-            string columns = string.Join(", ", attendanceColumns);
-            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}1, m_{tableName}2, m_{tableName}3, m_{tableName}4, m_{tableName}5, m_{tableName}6, m_{tableName}7, m_{tableName}8, m_{tableName}9, m_{tableName}_percentage, class_id, count) VALUES ({columns}, @percentage, @class_id, @count)";
-
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = commandText;
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
-                db.cmd.Parameters.AddWithValue("@percentage", percentage);
-                db.cmd.Parameters.AddWithValue("@count", count);
-                db.cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
-        }
-
         //Other midterm tasks
         public void mOthers(string tableName, int count, int percentage)
         {
@@ -467,45 +378,6 @@ namespace gradesBookApp
                 db.cmd.CommandText = commandText;
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
-                db.cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
-        }
-
-        //final Attendance and recitation
-        public void fAttRecit(string tableName, int count, int percentage)
-        {
-            int[] attendanceColumns = new int[9];
-            for (int i = 0; i < attendanceColumns.Length; i++)
-            {
-                if (i < count)
-                {
-                    attendanceColumns[i] = -1;
-                }
-                else
-                {
-                    attendanceColumns[i] = 0;
-                }
-            }
-            string columns = string.Join(", ", attendanceColumns);
-            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}1, f_{tableName}2, f_{tableName}3, f_{tableName}4, f_{tableName}5, f_{tableName}6, f_{tableName}7, f_{tableName}8, f_{tableName}9, f_{tableName}_percentage, class_id, count) VALUES ({columns}, @percentage, @class_id, @count)";
-
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = commandText;
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
-                db.cmd.Parameters.AddWithValue("@percentage", percentage);
-                db.cmd.Parameters.AddWithValue("@count", count);
                 db.cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

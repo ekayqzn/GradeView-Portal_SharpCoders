@@ -15,8 +15,6 @@ namespace gradesBookApp
     public partial class CustomizeGrade : Form
     {
         //Declare variable
-        public int mAttendanceCount;
-        public int mAttendancePercent;
 
         public int mQuizCount;
         public int mQuizPercent;
@@ -33,9 +31,6 @@ namespace gradesBookApp
         public int mRecitationCount;
         public int mRecitationPercent;
 
-        public int fAttendanceCount;
-        public int fAttendancePercent;
-
         public int fQuizCount;
         public int fQuizPercent;
 
@@ -51,7 +46,6 @@ namespace gradesBookApp
         public int fRecitationCount;
         public int fRecitationPercent;
 
-        bool mAttendance = false;
         bool mQuiz = false;
         bool mRecitation = false;
         bool mActivity = false;
@@ -59,7 +53,6 @@ namespace gradesBookApp
         bool mLongQuiz = false;
         bool isMChecked = false;
 
-        bool fAttendance = false;
         bool fQuiz = false;
         bool fRecitation = false;
         bool fActivity = false;
@@ -84,26 +77,6 @@ namespace gradesBookApp
 
 
             //Midterm
-
-            //Midterm Attendance
-            if (chkMAttendance.Checked)
-            {
-                mAttendancePercent = validate.isNumber(txtMAttendance.Text);
-                if(mAttendancePercent == 0)
-                {
-                    txtMAttendance.Focus();
-                    txtMAttendance.SelectAll();
-                    return;
-                }
-                else
-                {
-                    mAttendanceCount = Convert.ToInt32(numMAttendance.Value);
-                    mAttendancePercent = Convert.ToInt32(txtMAttendance.Text.Trim());
-                    midtermTotalPercent += mAttendancePercent;                 
-
-                    mAttendance = true;
-                }
-            }
             
             //Midterm Activity
             if (chkMActivity.Checked)
@@ -219,26 +192,6 @@ namespace gradesBookApp
             }
 
             //Final
-
-            //Final Attendance
-            if (chkFAttendance.Checked)
-            {
-                fAttendancePercent = validate.isNumber(txtFAttendance.Text);
-                if (fAttendancePercent == 0)
-                {
-                    txtFAttendance.Focus();
-                    txtFAttendance.SelectAll();
-                    return;
-                }
-                else
-                {
-                    fAttendanceCount = Convert.ToInt32(numFAttendance.Value);
-                    fAttendancePercent = Convert.ToInt32(txtFAttendance.Text.Trim());
-                    finalTotalPercent += fAttendancePercent;
-
-                    fAttendance = true;
-                }
-            }
 
             //Final Activity
             if (chkFActivity.Checked)
@@ -358,12 +311,7 @@ namespace gradesBookApp
                 return;
             }
             else
-            {
-                if(mAttendance)
-                {
-                    g.mAttRecit("attendance", mAttendanceCount, mAttendancePercent);
-                    isValid = true;
-                }       
+            {    
                 if (mActivity)
                 {
                     g.mOthers("activity", mActivityCount, mActivityPercent);
@@ -386,14 +334,10 @@ namespace gradesBookApp
                 }
                 if (mRecitation)
                 {
-                    g.mAttRecit("recitation", mRecitationCount, mRecitationPercent);
+                    g.mOthers("recitation", mRecitationCount, mRecitationPercent);
                     isValid = true;
                 }                     
-                if (fAttendance)
-                {
-                    g.fAttRecit("attendance", fAttendanceCount, fAttendancePercent);
-                    isValid = true;
-                }
+
                 if (fActivity)
                 {
                     g.fOthers("activity", fActivityCount, fActivityPercent);
@@ -416,7 +360,7 @@ namespace gradesBookApp
                 }
                 if (fRecitation)
                 {
-                    g.fAttRecit("recitation", fRecitationCount, fRecitationPercent);
+                    g.fOthers("recitation", fRecitationCount, fRecitationPercent);
                     isValid = true;
                 }
             }
@@ -481,17 +425,6 @@ namespace gradesBookApp
             }
         }
 
-        private void chkMAttendance_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkMAttendance.Checked)
-            {
-                panel_mAttendance.Enabled = true;
-            }
-            else
-            {
-                panel_mAttendance.Enabled = false;
-            }
-        }
 
         private void chkMAssignment_CheckedChanged(object sender, EventArgs e)
         {
@@ -553,17 +486,6 @@ namespace gradesBookApp
             }
         }
 
-        private void chkFAttendance_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkFAttendance.Checked)
-            {
-                panel_fAttendance.Enabled = true;
-            }
-            else
-            {
-                panel_fAttendance.Enabled = false;
-            }
-        }
 
         private void chkFAssignment_CheckedChanged(object sender, EventArgs e)
         {

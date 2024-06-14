@@ -24,7 +24,6 @@ namespace gradesBookApp
         public string studentId = LogInOperation.userID.Trim();
         bool isValid = false;
 
-        bool mAttendance = false;
         bool mQuiz = false;
         bool mRecitation = false;
         bool mActivity = false;
@@ -33,7 +32,6 @@ namespace gradesBookApp
         bool mExam = false;
         bool mProject = false;
 
-        bool fAttendance = false;
         bool fQuiz = false;
         bool fRecitation = false;
         bool fActivity = false;
@@ -196,7 +194,6 @@ namespace gradesBookApp
                                         //Will be used to copy
                                         mActivity = g.mGetID("activity", classId);
                                         mAssignment = g.mGetID("assignment", classId);
-                                        mAttendance = g.mGetID("attendance", classId);
                                         mLongQuiz = g.mGetID("longquiz", classId);
                                         mQuiz = g.mGetID("quiz", classId);
                                         mRecitation = g.mGetID("recitation", classId);
@@ -205,7 +202,6 @@ namespace gradesBookApp
 
                                         fActivity = g.fGetID("activity", classId);
                                         fAssignment = g.fGetID("assignment", classId);
-                                        fAttendance = g.fGetID("attendance", classId);
                                         fLongQuiz = g.fGetID("longquiz", classId);
                                         fQuiz = g.fGetID("quiz", classId);
                                         fRecitation = g.fGetID("recitation", classId);
@@ -214,19 +210,9 @@ namespace gradesBookApp
 
                                         //Add copy for student if task is checked in customize gradebook
                                         //variable has value if it is checked in customize gradebook
-                                        if (mAttendance)
-                                        {
-                                            //Copy of student
-                                            g.mAttRecitCopy("attendance", classId, studentId);
-                                            //Insert ID to Enroll
-                                            g.insertToEnroll("m", "attendance", classId, studentId);
-                                            //get ID of enroll insert to task table
-                                            g.InsertEnrollId("m", "attendance", classId , studentId);
-
-                                        }
                                         if(mRecitation)
                                         {
-                                            g.mAttRecitCopy("recitation", classId, studentId);
+                                            g.mOthersCopy("recitation", classId, studentId);
                                             g.insertToEnroll("m", "recitation", classId, studentId);
                                             //get ID of enroll insert to task table
                                             g.InsertEnrollId("m", "recitation", classId, studentId);
@@ -274,16 +260,9 @@ namespace gradesBookApp
                                             g.InsertEnrollId("m", "project", classId, studentId);
                                         }
 
-                                        if (fAttendance)
-                                        {
-                                            g.fAttRecitCopy("attendance", classId, studentId);
-                                            g.insertToEnroll("f", "attendance", classId, studentId);
-                                            //get ID of enroll insert to task table
-                                            g.InsertEnrollId("f", "attendance", classId, studentId);
-                                        }
                                         if (fRecitation)
                                         {
-                                            g.fAttRecitCopy("recitation", classId, studentId);
+                                            g.fOthersCopy("recitation", classId, studentId);
                                             g.insertToEnroll("f", "recitation", classId, studentId);
                                             g.InsertEnrollId("f", "recitation", classId, studentId);
                                         }

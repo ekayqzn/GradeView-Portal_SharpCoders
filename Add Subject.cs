@@ -29,7 +29,7 @@ namespace gradesBookApp
             //Back Button 
             //Go back to the Teacher Dashboard
             this.Hide();
-            Teacher_s_Dashboard teacherDashboard = new Teacher_s_Dashboard();
+           TheFacultyDashboard teacherDashboard = new TheFacultyDashboard();
             teacherDashboard.ShowDialog();
             this.Close();
         }

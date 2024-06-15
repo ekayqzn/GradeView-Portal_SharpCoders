@@ -36,9 +36,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -52,8 +52,8 @@
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.659751F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.90871F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.431535F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.08099F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.361371F));
             this.tableLayoutPanel1.Controls.Add(this.logoutButton, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 2);
@@ -72,17 +72,20 @@
             // 
             // logoutButton
             // 
-            this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutButton.BackColor = System.Drawing.Color.Transparent;
             this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutButton.Image = global::gradesBookApp.Properties.Resources.k__2_;
-            this.logoutButton.Location = new System.Drawing.Point(902, 15);
+            this.logoutButton.Location = new System.Drawing.Point(922, 2);
             this.logoutButton.Margin = new System.Windows.Forms.Padding(2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(59, 39);
+            this.logoutButton.Size = new System.Drawing.Size(39, 65);
             this.logoutButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutButton.TabIndex = 71;
             this.logoutButton.TabStop = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -133,30 +136,13 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.rbtnAddClass, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 94);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 93);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(879, 55);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(899, 55);
             this.tableLayoutPanel2.TabIndex = 75;
-            // 
-            // rbtnAddClass
-            // 
-            this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnAddClass.FlatAppearance.BorderSize = 0;
-            this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(744, 8);
-            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(2);
-            this.rbtnAddClass.Name = "rbtnAddClass";
-            this.rbtnAddClass.Size = new System.Drawing.Size(133, 39);
-            this.rbtnAddClass.TabIndex = 77;
-            this.rbtnAddClass.Text = "Enter a class";
-            this.rbtnAddClass.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -174,13 +160,33 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(48, 154);
+            this.panel2.Location = new System.Drawing.Point(17, 153);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(818, 501);
+            this.panel2.Size = new System.Drawing.Size(901, 501);
             this.panel2.TabIndex = 76;
+            // 
+            // rbtnAddClass
+            // 
+            this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnAddClass.FlatAppearance.BorderSize = 0;
+            this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
+            this.rbtnAddClass.Location = new System.Drawing.Point(784, 8);
+            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(2);
+            this.rbtnAddClass.Name = "rbtnAddClass";
+            this.rbtnAddClass.Size = new System.Drawing.Size(113, 39);
+            this.rbtnAddClass.TabIndex = 77;
+            this.rbtnAddClass.Text = "Add subject";
+            this.rbtnAddClass.UseVisualStyleBackColor = false;
+            this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click);
             // 
             // TheFacultyDashboard
             // 
@@ -190,6 +196,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TheFacultyDashboard";
             this.Text = "TheFacultyDashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.TheFacultyDashboard_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);

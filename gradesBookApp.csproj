@@ -224,6 +224,12 @@
     <Compile Include="TheLandingPage.Designer.cs">
       <DependentUpon>TheLandingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheStudent%27s Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheStudent%27s Dashboard.Designer.cs">
+      <DependentUpon>TheStudent%27s Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="TheStudent-Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TheLandingPage.resx">
       <DependentUpon>TheLandingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheStudent%27s Dashboard.resx">
+      <DependentUpon>TheStudent%27s Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TheStudent-Login.resx">
       <DependentUpon>TheStudent-Login.cs</DependentUpon>

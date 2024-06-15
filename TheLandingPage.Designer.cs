@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheLandingPage));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,6 +41,8 @@
             this.roundedButton1 = new gradesBookApp.RoundedButton();
             this.roundedButton2 = new gradesBookApp.RoundedButton();
             this.roundedButton3 = new gradesBookApp.RoundedButton();
+            this.toolTipAdmin = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipAboutUs = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAboutUs)).BeginInit();
@@ -54,9 +57,9 @@
             this.tableLayoutPanel1.BackgroundImage = global::gradesBookApp.Properties.Resources.LandingPageFacade;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.831378F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.438186F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.49525F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.194587F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.999269F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.59254F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.12127F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.017323F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 3, 2);
@@ -91,10 +94,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::gradesBookApp.Properties.Resources.BULACAN;
             this.pictureBox1.Image = global::gradesBookApp.Properties.Resources.BULACAN3;
-            this.pictureBox1.Location = new System.Drawing.Point(1039, 176);
+            this.pictureBox1.Location = new System.Drawing.Point(1040, 176);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(281, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(280, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -109,10 +112,10 @@
             this.rbtnFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnFaculty.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFaculty.ForeColor = System.Drawing.Color.White;
-            this.rbtnFaculty.Location = new System.Drawing.Point(1039, 387);
+            this.rbtnFaculty.Location = new System.Drawing.Point(1040, 387);
             this.rbtnFaculty.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnFaculty.Name = "rbtnFaculty";
-            this.rbtnFaculty.Size = new System.Drawing.Size(281, 74);
+            this.rbtnFaculty.Size = new System.Drawing.Size(280, 74);
             this.rbtnFaculty.TabIndex = 11;
             this.rbtnFaculty.Text = "FACULTY";
             this.rbtnFaculty.UseVisualStyleBackColor = false;
@@ -128,10 +131,10 @@
             this.rbtnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnStudent.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnStudent.Location = new System.Drawing.Point(1039, 500);
+            this.rbtnStudent.Location = new System.Drawing.Point(1040, 500);
             this.rbtnStudent.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnStudent.Name = "rbtnStudent";
-            this.rbtnStudent.Size = new System.Drawing.Size(281, 74);
+            this.rbtnStudent.Size = new System.Drawing.Size(280, 74);
             this.rbtnStudent.TabIndex = 12;
             this.rbtnStudent.Text = "STUDENT";
             this.rbtnStudent.UseVisualStyleBackColor = false;
@@ -145,13 +148,14 @@
             this.picAboutUs.BackColor = System.Drawing.Color.Transparent;
             this.picAboutUs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAboutUs.Image = global::gradesBookApp.Properties.Resources.BULACAN__1_1;
-            this.picAboutUs.Location = new System.Drawing.Point(41, 2);
+            this.picAboutUs.Location = new System.Drawing.Point(33, 2);
             this.picAboutUs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picAboutUs.Name = "picAboutUs";
-            this.picAboutUs.Size = new System.Drawing.Size(41, 83);
+            this.picAboutUs.Size = new System.Drawing.Size(35, 83);
             this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAboutUs.TabIndex = 75;
             this.picAboutUs.TabStop = false;
+            this.toolTipAboutUs.SetToolTip(this.picAboutUs, "About Us");
             this.picAboutUs.Click += new System.EventHandler(this.picAboutUs_Click);
             // 
             // picAdmin
@@ -167,6 +171,7 @@
             this.picAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAdmin.TabIndex = 76;
             this.picAdmin.TabStop = false;
+            this.toolTipAdmin.SetToolTip(this.picAdmin, "Administrator");
             this.picAdmin.Click += new System.EventHandler(this.picAdmin_Click);
             // 
             // label3
@@ -177,10 +182,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1039, 679);
+            this.label3.Location = new System.Drawing.Point(1040, 679);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(281, 48);
+            this.label3.Size = new System.Drawing.Size(280, 48);
             this.label3.TabIndex = 77;
             this.label3.Text = "By using the system you agree to the";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,10 +201,10 @@
             this.linkTermsPrivacy.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkTermsPrivacy.ForeColor = System.Drawing.Color.White;
             this.linkTermsPrivacy.LinkColor = System.Drawing.Color.White;
-            this.linkTermsPrivacy.Location = new System.Drawing.Point(1039, 727);
+            this.linkTermsPrivacy.Location = new System.Drawing.Point(1040, 727);
             this.linkTermsPrivacy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkTermsPrivacy.Name = "linkTermsPrivacy";
-            this.linkTermsPrivacy.Size = new System.Drawing.Size(281, 48);
+            this.linkTermsPrivacy.Size = new System.Drawing.Size(280, 48);
             this.linkTermsPrivacy.TabIndex = 78;
             this.linkTermsPrivacy.TabStop = true;
             this.linkTermsPrivacy.Text = "Terms of Use and Privacy Statement";
@@ -286,5 +291,7 @@
         private System.Windows.Forms.PictureBox picAdmin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkTermsPrivacy;
+        private System.Windows.Forms.ToolTip toolTipAboutUs;
+        private System.Windows.Forms.ToolTip toolTipAdmin;
     }
 }

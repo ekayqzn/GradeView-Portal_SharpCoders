@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheStudent_Login));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.rbtnLogIn = new gradesBookApp.RoundedButton();
@@ -41,6 +42,7 @@
             this.btnShowPass = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.picHome = new System.Windows.Forms.PictureBox();
+            this.toolTipHome = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -232,6 +234,7 @@
             this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHome.TabIndex = 73;
             this.picHome.TabStop = false;
+            this.toolTipHome.SetToolTip(this.picHome, "Home");
             this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // TheStudent_Login
@@ -272,5 +275,6 @@
         private System.Windows.Forms.Button btnUnshowPass;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.ToolTip toolTipHome;
     }
 }

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Course_Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.picBackButton = new System.Windows.Forms.PictureBox();
-            this.LinkLBLBack = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +39,7 @@
             this.rbtnSection = new gradesBookApp.RoundedButton();
             this.TDB_Bg = new gradesBookApp.RoundedButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.toolTipBack = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -47,7 +48,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.picBackButton);
-            this.panel1.Controls.Add(this.LinkLBLBack);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
@@ -63,34 +63,17 @@
             // 
             // picBackButton
             // 
-            this.picBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBackButton.Image = global::gradesBookApp.Properties.Resources.k__1_;
-            this.picBackButton.Location = new System.Drawing.Point(1394, 18);
+            this.picBackButton.Location = new System.Drawing.Point(28, 19);
             this.picBackButton.Name = "picBackButton";
             this.picBackButton.Size = new System.Drawing.Size(55, 50);
             this.picBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBackButton.TabIndex = 64;
             this.picBackButton.TabStop = false;
+            this.toolTipBack.SetToolTip(this.picBackButton, "Back");
             this.picBackButton.Click += new System.EventHandler(this.picBackButton_Click);
-            // 
-            // LinkLBLBack
-            // 
-            this.LinkLBLBack.ActiveLinkColor = System.Drawing.Color.Yellow;
-            this.LinkLBLBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LinkLBLBack.AutoSize = true;
-            this.LinkLBLBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.LinkLBLBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLBLBack.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLBack.Location = new System.Drawing.Point(1450, 30);
-            this.LinkLBLBack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LinkLBLBack.Name = "LinkLBLBack";
-            this.LinkLBLBack.Size = new System.Drawing.Size(60, 25);
-            this.LinkLBLBack.TabIndex = 61;
-            this.LinkLBLBack.TabStop = true;
-            this.LinkLBLBack.Text = "Back";
-            this.LinkLBLBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLBLBack_LinkClicked);
             // 
             // panel2
             // 
@@ -116,11 +99,12 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(28, 24);
+            this.label4.Location = new System.Drawing.Point(870, 30);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(598, 32);
@@ -130,17 +114,16 @@
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(-1, -6);
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(1543, 91);
+            this.textBox2.Size = new System.Drawing.Size(1540, 91);
             this.textBox2.TabIndex = 55;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -219,7 +202,7 @@
         private RoundedButton TDB_Bg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.LinkLabel LinkLBLBack;
         private System.Windows.Forms.PictureBox picBackButton;
+        private System.Windows.Forms.ToolTip toolTipBack;
     }
 }

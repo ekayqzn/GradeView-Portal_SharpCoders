@@ -17,7 +17,7 @@ namespace gradesBookApp
         public override void ShowDashboard(Form currentForm)
         {
             currentForm.Hide();
-            Student_s_Dashboard s = new Student_s_Dashboard();
+            TheStudentDashboard s = new TheStudentDashboard();
             s.ShowDialog();
             currentForm.Close();
         }

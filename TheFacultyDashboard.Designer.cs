@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheFacultyDashboard));
             this.toolTipHome = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutButton = new System.Windows.Forms.PictureBox();
@@ -36,9 +37,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -60,6 +61,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.89957F));
@@ -67,21 +69,19 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.751794F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.45337F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.738881F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(963, 697);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 858);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // logoutButton
             // 
-            this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logoutButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logoutButton.BackColor = System.Drawing.Color.Transparent;
             this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutButton.Image = global::gradesBookApp.Properties.Resources.k__2_;
-            this.logoutButton.Location = new System.Drawing.Point(922, 2);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.logoutButton.Location = new System.Drawing.Point(1230, 5);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(39, 65);
+            this.logoutButton.Size = new System.Drawing.Size(51, 73);
             this.logoutButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutButton.TabIndex = 71;
             this.logoutButton.TabStop = false;
@@ -93,9 +93,10 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 63);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1043, 76);
             this.flowLayoutPanel1.TabIndex = 72;
             // 
             // pictureBox2
@@ -104,9 +105,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::gradesBookApp.Properties.Resources.BULACAN;
             this.pictureBox2.Image = global::gradesBookApp.Properties.Resources.BULACAN3;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox2.Size = new System.Drawing.Size(76, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 73;
             this.pictureBox2.TabStop = false;
@@ -118,9 +120,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(66, 0);
+            this.label1.Location = new System.Drawing.Point(88, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 66);
+            this.label1.Size = new System.Drawing.Size(583, 82);
             this.label1.TabIndex = 74;
             this.label1.Text = "BULACAN TECHNOLOGICAL UNIVERSITY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,39 +139,14 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.rbtnAddClass, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 93);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 115);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(899, 55);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1198, 67);
             this.tableLayoutPanel2.TabIndex = 75;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 55);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "       DASHBOARD";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(17, 153);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(901, 501);
-            this.panel2.TabIndex = 76;
             // 
             // rbtnAddClass
             // 
@@ -179,21 +157,52 @@
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(784, 8);
-            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(2);
+            this.rbtnAddClass.Location = new System.Drawing.Point(1044, 9);
+            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnAddClass.Name = "rbtnAddClass";
-            this.rbtnAddClass.Size = new System.Drawing.Size(113, 39);
+            this.rbtnAddClass.Size = new System.Drawing.Size(151, 48);
             this.rbtnAddClass.TabIndex = 77;
             this.rbtnAddClass.Text = "Add subject";
             this.rbtnAddClass.UseVisualStyleBackColor = false;
             this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click);
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(254, 67);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "       DASHBOARD";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(24, 188);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1200, 617);
+            this.panel2.TabIndex = 76;
+            // 
             // TheFacultyDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 697);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1284, 858);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TheFacultyDashboard";
             this.Text = "TheFacultyDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

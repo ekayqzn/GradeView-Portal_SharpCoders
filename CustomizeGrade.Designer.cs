@@ -860,6 +860,7 @@
             // rbtnOK
             // 
             this.rbtnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnOK.FlatAppearance.BorderSize = 0;
             this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnOK.ForeColor = System.Drawing.Color.White;

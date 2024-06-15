@@ -191,7 +191,7 @@ namespace gradesBookApp
                         if (MessageBox.Show("Subject is already added to your Dashboard. Duplicate Subject is not allowed", "Duplicate Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
                         {
                             this.Hide();
-                            Teacher_s_Dashboard teacherDashboard = new Teacher_s_Dashboard();
+                            TheFacultyDashboard teacherDashboard = new TheFacultyDashboard();
                             teacherDashboard.ShowDialog();
                             this.Close();
                         }
@@ -228,16 +228,6 @@ namespace gradesBookApp
                 }
             }
             
-        }
-
-        private void Add_Subject_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

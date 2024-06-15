@@ -26,7 +26,7 @@ namespace gradesBookApp
 
         private void Course_Dashboard_Load(object sender, EventArgs e)
         {
-            string subjectCode = Teacher_s_Dashboard.subjectTile.Trim(); // Trim any extra spaces
+            string subjectCode = TheFacultyDashboard.subjectTile.Trim(); // Trim any extra spaces
 
             //Get Section Information(program name, year level, section) will also be displayed as tile
             try
@@ -46,7 +46,7 @@ namespace gradesBookApp
                 cl.class_id = @classID";
 
                 db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID); //use classID from Teacher's Dashboard when the tile is click
+                db.cmd.Parameters.AddWithValue("@classID", TheFacultyDashboard.classID); //use classID from Teacher's Dashboard when the tile is click
 
                 db.dta.SelectCommand = db.cmd;
 
@@ -150,15 +150,7 @@ namespace gradesBookApp
         private void picBackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Teacher_s_Dashboard TDB = new Teacher_s_Dashboard();
-            TDB.ShowDialog();
-            this.Close();
-        }
-
-        private void LinkLBLBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            Teacher_s_Dashboard TDB = new Teacher_s_Dashboard();
+            TheFacultyDashboard TDB = new TheFacultyDashboard();
             TDB.ShowDialog();
             this.Close();
         }

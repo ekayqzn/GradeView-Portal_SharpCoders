@@ -66,8 +66,8 @@ namespace gradesBookApp
                 {
                     int labelSizeX = 210;
                     int labelSizeY = 178;
-                    int labelLocationX = 48; // Increment by 200
-                    int labelLocationY = 52; // Increment by 212
+                    int labelLocationX = 131; // Increment by 200
+                    int labelLocationY = 40; // Increment by 212
                     int tileCount = 0;
 
                     Random random = new Random();
@@ -87,13 +87,13 @@ namespace gradesBookApp
                             Cursor = Cursors.Hand
                         };
 
-                        if (tileCount < 3)
+                        if (tileCount < 5)
                         {
                             label.Location = new Point(labelLocationX, labelLocationY);
                             labelLocationX += 250;
                             tileCount++;
                         }
-                        if (tileCount == 3)
+                        if (tileCount == 5)
                         {
                             tileCount = 0;
                             labelLocationX = 48;

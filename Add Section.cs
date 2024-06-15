@@ -110,7 +110,7 @@ namespace gradesBookApp
 
                     db.cmd.Parameters.Clear();
                     db.cmd.Parameters.AddWithValue("@programId", programID);
-                    db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID);
+                    db.cmd.Parameters.AddWithValue("@classID", TheFacultyDashboard.classID);
                     db.dta.SelectCommand = db.cmd;
                     DataTable dataTable2 = new DataTable();
                     db.dta.Fill(dataTable2);
@@ -122,7 +122,7 @@ namespace gradesBookApp
                         db.cmd.CommandText = "INSERT INTO course (class_id, program_id, course_code) VALUES(@class_id, @program_id, @code)";
 
                         db.cmd.Parameters.Clear();
-                        db.cmd.Parameters.AddWithValue("@class_id", Teacher_s_Dashboard.classID);
+                        db.cmd.Parameters.AddWithValue("@class_id", TheFacultyDashboard.classID);
                         db.cmd.Parameters.AddWithValue("@program_id", programID);
                         db.cmd.Parameters.AddWithValue("@code", courseCode);
 

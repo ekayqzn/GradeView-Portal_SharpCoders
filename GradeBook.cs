@@ -72,7 +72,7 @@ namespace gradesBookApp
 
             dtDisplay.Rows.Clear();
             string subjectName = "";
-            string subjectCode = Teacher_s_Dashboard.subjectTile.Trim(); // Trim any extra spaces
+            string subjectCode = TheFacultyDashboard.subjectTile.Trim(); // Trim any extra spaces
 
             // Get the clicked subject name from the database. Display above
             try
@@ -94,7 +94,7 @@ namespace gradesBookApp
                 {
                     subjectName = dataTable.Rows[0]["subject_name"].ToString();
                     Label label = new Label();
-                    label.Text = Teacher_s_Dashboard.subjectTile + Environment.NewLine + subjectName + Environment.NewLine + Course_Dashboard.programName + Environment.NewLine + Course_Dashboard.yearLevel + " - " + Course_Dashboard.section + Environment.NewLine + "Code: " + Course_Dashboard.courseCode;
+                    label.Text = TheFacultyDashboard.subjectTile + Environment.NewLine + subjectName + Environment.NewLine + Course_Dashboard.programName + Environment.NewLine + Course_Dashboard.yearLevel + " - " + Course_Dashboard.section + Environment.NewLine + "Code: " + Course_Dashboard.courseCode;
                     label.Location = new Point(20, 80);
                     label.AutoSize = true;
                     label.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
@@ -154,7 +154,7 @@ namespace gradesBookApp
 
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@programID", programID);
-                db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID);
+                db.cmd.Parameters.AddWithValue("@classID", TheFacultyDashboard.classID);
 
                 // Log the parameters FOR DEBUG
                 //MessageBox.Show($"Query: {db.cmd.CommandText}\nParameters:\nprogramID: {programID}\nclassID: {Teacher_s_Dashboard.classID}");
@@ -432,7 +432,7 @@ namespace gradesBookApp
                 }
 
                 string studentID = selectedRow.Cells["student_id"].Value.ToString().Trim();
-                g.RemoveStudentToCourse(Teacher_s_Dashboard.classID, studentID);
+                g.RemoveStudentToCourse(TheFacultyDashboard.classID, studentID);
                 dataGridView1.Rows.Remove(selectedRow);
                 selectedRow = null;
 

@@ -92,7 +92,7 @@ namespace gradesBookApp
                 db.cmd.CommandText = commandText;
 
                 db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@classID", Teacher_s_Dashboard.classID);
+                db.cmd.Parameters.AddWithValue("@classID", TheFacultyDashboard.classID);
                 db.cmd.Parameters.AddWithValue("@studentID", Edit_GradeBook.editStudentID);
                 db.cmd.Parameters.AddWithValue("@newValue", newValue);
                 db.cmd.ExecuteNonQuery();

@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.25.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
@@ -195,23 +195,11 @@
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Student%27s Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Student%27s Dashboard.Designer.cs">
-      <DependentUpon>Student%27s Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Student-Module.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Student-Module.Designer.cs">
       <DependentUpon>Student-Module.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Teacher%27s Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Teacher%27s Dashboard.Designer.cs">
-      <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="TheFacultyDashboard.cs">
       <SubType>Form</SubType>
@@ -303,14 +291,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Student%27s Dashboard.resx">
-      <DependentUpon>Student%27s Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Student-Module.resx">
       <DependentUpon>Student-Module.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Teacher%27s Dashboard.resx">
-      <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TheFacultyDashboard.resx">
       <DependentUpon>TheFacultyDashboard.cs</DependentUpon>

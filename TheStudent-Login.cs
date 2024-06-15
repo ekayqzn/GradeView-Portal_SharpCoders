@@ -76,9 +76,10 @@ namespace gradesBookApp
             btnUnshowPass.Visible = false;
             btnShowPass.Visible = true;
             btnUnshowPass.Parent = txtStudentPass;
-            btnUnshowPass.Location = new Point(txtStudentPass.ClientSize.Width - ((btnUnshowPass.Image.Width) + 24), -2);
+            btnUnshowPass.Location = new Point(txtStudentPass.ClientSize.Width - ((btnUnshowPass.Image.Width) + 15), -2);
             btnShowPass.Parent = txtStudentPass;
-            btnShowPass.Location = new Point(txtStudentPass.ClientSize.Width - ((btnShowPass.Image.Width) + 24), -2);
+            btnShowPass.Location = new Point(txtStudentPass.ClientSize.Width - ((btnShowPass.Image.Width) + 15), -2);
         }
+
     }
 }

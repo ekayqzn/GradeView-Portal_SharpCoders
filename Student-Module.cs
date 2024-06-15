@@ -28,7 +28,7 @@ namespace gradesBookApp
         private void LinkLBLback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Student_s_Dashboard SDB = new Student_s_Dashboard();
+            TheStudentDashboard SDB = new TheStudentDashboard();
             SDB.ShowDialog();
             this.Close();
         }
@@ -36,7 +36,7 @@ namespace gradesBookApp
         private void picBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Student_s_Dashboard SDB = new Student_s_Dashboard();
+            TheStudentDashboard SDB = new TheStudentDashboard();
             SDB.ShowDialog();
             this.Close();
         }
@@ -44,7 +44,7 @@ namespace gradesBookApp
         private void picBack_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Student_s_Dashboard SDB = new Student_s_Dashboard();
+            TheStudentDashboard SDB = new TheStudentDashboard();
             SDB.ShowDialog();
             this.Close();
         }
@@ -55,101 +55,101 @@ namespace gradesBookApp
             xLocation = 20;
             try
             {
-                if (Student_s_Dashboard.mActivityID != null)
+                if (TheStudentDashboard.mActivityID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("m", "activity", (int)Student_s_Dashboard.mActivityID);
-                    s.GetRecordsOther("m", "activity", (int)Student_s_Dashboard.mActivityID, count, this);
+                    int count = q.GetCount("m", "activity", (int)TheStudentDashboard.mActivityID);
+                    s.GetRecordsOther("m", "activity", (int)TheStudentDashboard.mActivityID, count, this);
                 }
-                if (Student_s_Dashboard.mAssignmentID != null)
+                if (TheStudentDashboard.mAssignmentID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("m", "assignment", (int)Student_s_Dashboard.mAssignmentID);
-                    s.GetRecordsOther("m", "assignment", (int)Student_s_Dashboard.mAssignmentID, count, this);
+                    int count = q.GetCount("m", "assignment", (int)TheStudentDashboard.mAssignmentID);
+                    s.GetRecordsOther("m", "assignment", (int)TheStudentDashboard.mAssignmentID, count, this);
                 }
-                if (Student_s_Dashboard.mLongQuizID != null)
+                if (TheStudentDashboard.mLongQuizID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("m", "longquiz", (int)Student_s_Dashboard.mLongQuizID);
-                    s.GetRecordsOther("m", "longquiz", (int)Student_s_Dashboard.mLongQuizID, count, this);
+                    int count = q.GetCount("m", "longquiz", (int)TheStudentDashboard.mLongQuizID);
+                    s.GetRecordsOther("m", "longquiz", (int)TheStudentDashboard.mLongQuizID, count, this);
                 }
-                if (Student_s_Dashboard.mQuizID != null)
+                if (TheStudentDashboard.mQuizID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("m", "quiz", (int)Student_s_Dashboard.mQuizID);
-                    s.GetRecordsOther("m", "quiz", (int)Student_s_Dashboard.mQuizID, count, this);
+                    int count = q.GetCount("m", "quiz", (int)TheStudentDashboard.mQuizID);
+                    s.GetRecordsOther("m", "quiz", (int)TheStudentDashboard.mQuizID, count, this);
                 }
-                if (Student_s_Dashboard.mRecitationID != null)
+                if (TheStudentDashboard.mRecitationID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("m", "recitation", (int)Student_s_Dashboard.mRecitationID);
-                    s.GetRecordsOther("m", "recitation", (int)Student_s_Dashboard.mRecitationID, count, this);
+                    int count = q.GetCount("m", "recitation", (int)TheStudentDashboard.mRecitationID);
+                    s.GetRecordsOther("m", "recitation", (int)TheStudentDashboard.mRecitationID, count, this);
                 }
-                if (Student_s_Dashboard.mExamID != null)
+                if (TheStudentDashboard.mExamID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    s.GetRecordRdo("m", "exam", (int)Student_s_Dashboard.mExamID, this);
+                    s.GetRecordRdo("m", "exam", (int)TheStudentDashboard.mExamID, this);
                 }
-                if (Student_s_Dashboard.mProjectID != null)
+                if (TheStudentDashboard.mProjectID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    s.GetRecordRdo("m", "project", (int)Student_s_Dashboard.mProjectID, this);
+                    s.GetRecordRdo("m", "project", (int)TheStudentDashboard.mProjectID, this);
                 }
 
-                if (Student_s_Dashboard.fActivityID != null)
+                if (TheStudentDashboard.fActivityID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("f", "activity", (int)Student_s_Dashboard.fActivityID);
-                    s.GetRecordsOther("f", "activity", (int)Student_s_Dashboard.fActivityID, count, this);
+                    int count = q.GetCount("f", "activity", (int)TheStudentDashboard.fActivityID);
+                    s.GetRecordsOther("f", "activity", (int)TheStudentDashboard.fActivityID, count, this);
                 }
-                if (Student_s_Dashboard.fAssignmentID != null)
+                if (TheStudentDashboard.fAssignmentID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("f", "assignment", (int)Student_s_Dashboard.fAssignmentID);
-                    s.GetRecordsOther("f", "assignment", (int)Student_s_Dashboard.fAssignmentID, count, this);
+                    int count = q.GetCount("f", "assignment", (int)TheStudentDashboard.fAssignmentID);
+                    s.GetRecordsOther("f", "assignment", (int)TheStudentDashboard.fAssignmentID, count, this);
                 }
-                if (Student_s_Dashboard.fLongQuizID != null)
+                if (TheStudentDashboard.fLongQuizID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("f", "longquiz", (int)Student_s_Dashboard.fLongQuizID);
-                    s.GetRecordsOther("f", "longquiz", (int)Student_s_Dashboard.fLongQuizID, count, this);
+                    int count = q.GetCount("f", "longquiz", (int)TheStudentDashboard.fLongQuizID);
+                    s.GetRecordsOther("f", "longquiz", (int)TheStudentDashboard.fLongQuizID, count, this);
                 }
-                if (Student_s_Dashboard.fQuizID != null)
+                if (TheStudentDashboard.fQuizID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("f", "quiz", (int)Student_s_Dashboard.fQuizID);
-                    s.GetRecordsOther("f", "quiz", (int)Student_s_Dashboard.fQuizID, count, this);
+                    int count = q.GetCount("f", "quiz", (int)TheStudentDashboard.fQuizID);
+                    s.GetRecordsOther("f", "quiz", (int)TheStudentDashboard.fQuizID, count, this);
                 }
-                if (Student_s_Dashboard.fRecitationID != null)
+                if (TheStudentDashboard.fRecitationID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    int count = q.GetCount("f", "recitation", (int)Student_s_Dashboard.fRecitationID);
-                    s.GetRecordsOther("f", "recitation", (int)Student_s_Dashboard.fRecitationID, count, this);
+                    int count = q.GetCount("f", "recitation", (int)TheStudentDashboard.fRecitationID);
+                    s.GetRecordsOther("f", "recitation", (int)TheStudentDashboard.fRecitationID, count, this);
                 }
-                if (Student_s_Dashboard.fExamID != null)
+                if (TheStudentDashboard.fExamID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    s.GetRecordRdo("f", "exam", (int)Student_s_Dashboard.fExamID, this);
+                    s.GetRecordRdo("f", "exam", (int)TheStudentDashboard.fExamID, this);
 
                 }
-                if (Student_s_Dashboard.fProjectID != null)
+                if (TheStudentDashboard.fProjectID != null)
                 {
                     dtScores.Columns.Clear();
                     dtScores.Rows.Clear();
-                    s.GetRecordRdo("f", "project", (int)Student_s_Dashboard.fProjectID, this);
+                    s.GetRecordRdo("f", "project", (int)TheStudentDashboard.fProjectID, this);
                 }
 
                 if(isComplete)

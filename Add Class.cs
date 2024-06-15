@@ -308,7 +308,7 @@ namespace gradesBookApp
                                             if (MessageBox.Show("Subject Added to Dashboard", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                                             {
                                                 this.Hide();
-                                                Student_s_Dashboard studentDB = new Student_s_Dashboard();
+                                                TheStudentDashboard studentDB = new TheStudentDashboard();
                                                 studentDB.ShowDialog();
                                                 this.Close();
                                             }

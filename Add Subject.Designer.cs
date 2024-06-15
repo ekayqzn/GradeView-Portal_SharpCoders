@@ -143,7 +143,6 @@
             this.label4.Size = new System.Drawing.Size(225, 35);
             this.label4.TabIndex = 54;
             this.label4.Text = "ADD SUBJECT";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox2
             // 
@@ -179,7 +178,6 @@
             this.Name = "Add_Subject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
-            this.Load += new System.EventHandler(this.Add_Subject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

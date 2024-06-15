@@ -87,8 +87,8 @@ namespace gradesBookApp
                 {
                     int labelSizeX = 210;
                     int labelSizeY = 178;
-                    int labelLocationX = 48; // Increment by 200
-                    int labelLocationY = 52; // Increment by 212
+                    int labelLocationX = 131; // Increment by 200
+                    int labelLocationY = 40; // Increment by 212
 
                     // Generates a random integer between 128 and 255 for light colors
                     int tileCount = 0;

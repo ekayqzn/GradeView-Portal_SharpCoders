@@ -407,7 +407,7 @@ namespace gradesBookApp
             {
                 MessageBox.Show("SUCCESS");
                 this.Hide();
-                Teacher_s_Dashboard teachersDashboard = new Teacher_s_Dashboard();
+                TheFacultyDashboard teachersDashboard = new TheFacultyDashboard();
                 teachersDashboard.ShowDialog();
                 this.Close();
             }      

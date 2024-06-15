@@ -63,6 +63,16 @@ namespace gradesBookApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5 {
+            get {
+                object obj = ResourceManager.GetObject("5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BG_1___LOGIN {
             get {
                 object obj = ResourceManager.GetObject("BG 1 - LOGIN", resourceCulture);
@@ -243,9 +253,39 @@ namespace gradesBookApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BG_Color__545454__6_2 {
+            get {
+                object obj = ResourceManager.GetObject("BG Color #545454 (6)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BG_Color__545454__7_ {
             get {
                 object obj = ResourceManager.GetObject("BG Color #545454 (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG_Color__545454__7_1 {
+            get {
+                object obj = ResourceManager.GetObject("BG Color #545454 (7)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG_Color__545454__7_2 {
+            get {
+                object obj = ResourceManager.GetObject("BG Color #545454 (7)2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

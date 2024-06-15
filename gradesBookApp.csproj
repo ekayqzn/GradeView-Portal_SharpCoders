@@ -213,6 +213,12 @@
     <Compile Include="Teacher%27s Dashboard.Designer.cs">
       <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheFacultyDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheFacultyDashboard.Designer.cs">
+      <DependentUpon>TheFacultyDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="TheFacultyLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,12 @@
     </Compile>
     <Compile Include="TheStudent-Login.Designer.cs">
       <DependentUpon>TheStudent-Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheStudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheStudentDashboard.Designer.cs">
+      <DependentUpon>TheStudentDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="TheTermsOfUseAndPrivacyStatement.cs">
       <SubType>Form</SubType>
@@ -300,6 +312,9 @@
     <EmbeddedResource Include="Teacher%27s Dashboard.resx">
       <DependentUpon>Teacher%27s Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TheFacultyDashboard.resx">
+      <DependentUpon>TheFacultyDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TheFacultyLogIn.resx">
       <DependentUpon>TheFacultyLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TheStudent-Login.resx">
       <DependentUpon>TheStudent-Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheStudentDashboard.resx">
+      <DependentUpon>TheStudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TheTermsOfUseAndPrivacyStatement.resx">
       <DependentUpon>TheTermsOfUseAndPrivacyStatement.cs</DependentUpon>
@@ -502,6 +520,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %286%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %287%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %287%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

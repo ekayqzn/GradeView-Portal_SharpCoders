@@ -359,7 +359,7 @@ namespace gradesBookApp
         private void rbtnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Student_s_Dashboard SDB = new Student_s_Dashboard();
+           TheStudentDashboard SDB = new TheStudentDashboard();
             SDB.ShowDialog();
             this.Close();
         }

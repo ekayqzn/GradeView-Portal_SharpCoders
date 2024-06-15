@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradeBook));
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.LinkLBLback = new System.Windows.Forms.LinkLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.picDeleteSearch = new System.Windows.Forms.PictureBox();
             this.picBack = new System.Windows.Forms.PictureBox();
             this.rbtnDelete = new gradesBookApp.RoundedButton();
             this.rbtnEdit = new gradesBookApp.RoundedButton();
+            this.toolTipBack = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDeleteSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
@@ -47,17 +48,16 @@
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(-2, -5);
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(1797, 91);
+            this.textBox2.Size = new System.Drawing.Size(1899, 91);
             this.textBox2.TabIndex = 50;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -85,34 +85,18 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(27, 25);
+            this.label4.Location = new System.Drawing.Point(1260, 33);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(598, 32);
             this.label4.TabIndex = 56;
             this.label4.Tag = "";
             this.label4.Text = " BULACAN TECHNOLOGICAL UNIVERSITY";
-            // 
-            // LinkLBLback
-            // 
-            this.LinkLBLback.ActiveLinkColor = System.Drawing.Color.Yellow;
-            this.LinkLBLback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LinkLBLback.AutoSize = true;
-            this.LinkLBLback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.LinkLBLback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLBLback.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLback.Location = new System.Drawing.Point(1638, 29);
-            this.LinkLBLback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LinkLBLback.Name = "LinkLBLback";
-            this.LinkLBLback.Size = new System.Drawing.Size(60, 25);
-            this.LinkLBLback.TabIndex = 62;
-            this.LinkLBLback.TabStop = true;
-            this.LinkLBLback.Text = "Back";
-            this.LinkLBLback.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLBLback_LinkClicked);
             // 
             // dataGridView1
             // 
@@ -147,7 +131,7 @@
             this.picDeleteSearch.BackColor = System.Drawing.Color.Transparent;
             this.picDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDeleteSearch.Image = global::gradesBookApp.Properties.Resources.close__1_;
-            this.picDeleteSearch.Location = new System.Drawing.Point(764, 290);
+            this.picDeleteSearch.Location = new System.Drawing.Point(743, 290);
             this.picDeleteSearch.Name = "picDeleteSearch";
             this.picDeleteSearch.Size = new System.Drawing.Size(20, 20);
             this.picDeleteSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,11 +142,10 @@
             // 
             // picBack
             // 
-            this.picBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBack.Image = ((System.Drawing.Image)(resources.GetObject("picBack.Image")));
-            this.picBack.Location = new System.Drawing.Point(1580, 18);
+            this.picBack.Location = new System.Drawing.Point(38, 20);
             this.picBack.Name = "picBack";
             this.picBack.Size = new System.Drawing.Size(55, 50);
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +162,7 @@
             this.rbtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnDelete.ForeColor = System.Drawing.Color.White;
-            this.rbtnDelete.Location = new System.Drawing.Point(1130, 283);
+            this.rbtnDelete.Location = new System.Drawing.Point(1109, 283);
             this.rbtnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnDelete.Name = "rbtnDelete";
             this.rbtnDelete.Size = new System.Drawing.Size(191, 39);
@@ -197,7 +180,7 @@
             this.rbtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnEdit.ForeColor = System.Drawing.Color.White;
-            this.rbtnEdit.Location = new System.Drawing.Point(897, 283);
+            this.rbtnEdit.Location = new System.Drawing.Point(876, 283);
             this.rbtnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnEdit.Name = "rbtnEdit";
             this.rbtnEdit.Size = new System.Drawing.Size(191, 39);
@@ -217,7 +200,6 @@
             this.Controls.Add(this.picDeleteSearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.picBack);
-            this.Controls.Add(this.LinkLBLback);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.rbtnDelete);
             this.Controls.Add(this.rbtnEdit);
@@ -244,9 +226,9 @@
         private RoundedButton rbtnEdit;
         private RoundedButton rbtnDelete;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel LinkLBLback;
         private System.Windows.Forms.PictureBox picBack;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox picDeleteSearch;
+        private System.Windows.Forms.ToolTip toolTipBack;
     }
 }

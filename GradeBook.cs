@@ -258,8 +258,8 @@ namespace gradesBookApp
                     }
                     if (mProjectID[i] != null)
                     {
-                        q.GetRecordRdo("m", "project", (int)mProjectID[i]);
-                        mFinalReq = q.GetRecordRdo("m", "exam", (int)mExamID[i]);
+                       
+                        mFinalReq = q.GetRecordRdo("m", "project", (int)mProjectID[i]);
                     }
 
                     midtermGrade = mWritten + mFinalReq;

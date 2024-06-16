@@ -47,7 +47,7 @@ namespace gradesBookApp
                     else
                     {
                         // Inform user and encourage to re-enter
-                        MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Invalid ID or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)

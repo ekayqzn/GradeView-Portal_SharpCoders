@@ -21,10 +21,11 @@ namespace gradesBookApp
         public static int courseID;
         DataTable dt = new DataTable();
         GradebookQuery g = new GradebookQuery();
-        GetRecordQuery q = new GetRecordQuery();
+        private GetRecordQuery q;
 
-        public static DataTable dtDisplay = new DataTable();
-        public static DataRow newRow = dtDisplay.NewRow();
+        public DataTable dtDisplay { get; private set; }
+        public DataRow newRow { get; private set; }
+
         public static decimal mWritten = 0;
         public static decimal mFinalReq = 0;
         public static decimal fWritten = 0;
@@ -37,7 +38,12 @@ namespace gradesBookApp
         {
             InitializeComponent();
             txtSearch.TextChanged += txtSearch_TextChanged;
-            
+
+            // Initialize dtDisplay and newRow here
+            dtDisplay = new DataTable();
+            newRow = dtDisplay.NewRow();
+
+            q = new GetRecordQuery(this);
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -223,7 +229,7 @@ namespace gradesBookApp
                     fWritten = 0;
                     fFinalReq = 0;
 
-                    newRow = dtDisplay.NewRow();
+                    DataRow newRow = dtDisplay.NewRow();
                     newRow["student_id"] = studentIDs[i];
                     newRow["student_name"] = q.GetStudentName(studentIDs[i]);
 
@@ -302,7 +308,7 @@ namespace gradesBookApp
 
                     finalGrade = fWritten + fFinalReq;
 
-                    if ((!GradeBook.dtDisplay.Columns.Contains("Final Grade")))
+                    if ((!dtDisplay.Columns.Contains("Final Grade")))
                     {
                         dtDisplay.Columns.Add("Final Grade");
                     }
@@ -354,17 +360,25 @@ namespace gradesBookApp
 
         private void rbtnEdit_Click(object sender, EventArgs e)
         {
-            if (selectedRow != null)
+            try
             {
-                this.Hide();
-                Edit_GradeBook editForm = new Edit_GradeBook(selectedRow);
-                editForm.ShowDialog();
-                this.Close();
+                if (selectedRow != null && selectedRow.Index >= 0)
+                {
+                    this.Hide();
+                    Edit_GradeBook editForm = new Edit_GradeBook(selectedRow);
+                    editForm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a valid row, not a column header.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select a row first.");
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
             }
+
         }
 
         private void picBack_Click(object sender, EventArgs e)
@@ -416,6 +430,14 @@ namespace gradesBookApp
         {
             try
             {
+
+                // Check if a column is selected
+                if (dataGridView1.SelectedColumns.Count > 0)
+                {
+                    MessageBox.Show("You cannot delete a column. Please select a row to delete.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 // Ensure selectedRow is set before proceeding
                 if (dataGridView1.SelectedRows.Count > 0)
                 {

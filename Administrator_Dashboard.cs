@@ -46,5 +46,13 @@ namespace gradesBookApp
                 this.Close();
             }
         }
+
+        private void rbtnAddProgram_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_Program a = new Add_Program();
+            a.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -59,8 +59,8 @@
             this.txtAdminID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtAdminID.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtAdminID.ForeColor = System.Drawing.Color.Black;
-            this.txtAdminID.Location = new System.Drawing.Point(160, 164);
-            this.txtAdminID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdminID.Location = new System.Drawing.Point(190, 164);
+            this.txtAdminID.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdminID.Name = "txtAdminID";
             this.txtAdminID.Size = new System.Drawing.Size(451, 34);
             this.txtAdminID.TabIndex = 1;
@@ -82,8 +82,8 @@
             this.txtAdminPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtAdminPass.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtAdminPass.ForeColor = System.Drawing.Color.Black;
-            this.txtAdminPass.Location = new System.Drawing.Point(160, 254);
-            this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdminPass.Location = new System.Drawing.Point(190, 254);
+            this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdminPass.Name = "txtAdminPass";
             this.txtAdminPass.PasswordChar = '*';
             this.txtAdminPass.Size = new System.Drawing.Size(451, 34);
@@ -98,8 +98,8 @@
             this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnLogIn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLogIn.ForeColor = System.Drawing.Color.White;
-            this.rbtnLogIn.Location = new System.Drawing.Point(459, 321);
-            this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnLogIn.Location = new System.Drawing.Point(492, 324);
+            this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnLogIn.Name = "rbtnLogIn";
             this.rbtnLogIn.Size = new System.Drawing.Size(149, 39);
             this.rbtnLogIn.TabIndex = 4;
@@ -114,7 +114,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(271, 23);
+            this.label4.Location = new System.Drawing.Point(301, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(223, 35);
             this.label4.TabIndex = 56;
@@ -126,8 +126,8 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(-451, -1);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(-421, -1);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -142,7 +142,7 @@
             this.btnOpen.FlatAppearance.BorderSize = 0;
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpen.Image = global::gradesBookApp.Properties.Resources.red_eye;
-            this.btnOpen.Location = new System.Drawing.Point(576, 256);
+            this.btnOpen.Location = new System.Drawing.Point(608, 260);
             this.btnOpen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(30, 27);
@@ -157,7 +157,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::gradesBookApp.Properties.Resources.hide;
-            this.btnClose.Location = new System.Drawing.Point(575, 256);
+            this.btnClose.Location = new System.Drawing.Point(606, 258);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(33, 27);
@@ -171,7 +171,7 @@
             this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.picHome.Location = new System.Drawing.Point(731, 14);
+            this.picHome.Location = new System.Drawing.Point(12, 11);
             this.picHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picHome.Name = "picHome";
             this.picHome.Size = new System.Drawing.Size(55, 50);
@@ -185,7 +185,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(861, 497);
             this.Controls.Add(this.picHome);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnOpen);
@@ -197,7 +197,7 @@
             this.Controls.Add(this.txtAdminID);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Administrator_LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -135,6 +135,7 @@
     <Compile Include="Add Subject.Designer.cs">
       <DependentUpon>Add Subject.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddQuery.cs" />
     <Compile Include="Add_Teacher.cs">
       <SubType>Form</SubType>
     </Compile>

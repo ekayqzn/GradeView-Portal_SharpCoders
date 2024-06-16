@@ -9,6 +9,30 @@ namespace gradesBookApp
 {
     public class Validation
     {
+        public bool isValidID(string textvalue)
+        {
+            bool isValid = false;
+            if(String.IsNullOrEmpty(textvalue))
+            {
+                MessageBox.Show("Empty field is not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //not empty
+                //is a string
+                if (int.TryParse(textvalue, out int ignore) == (false))
+                {
+                    MessageBox.Show("String value is not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    isValid = true;
+                }
+            }
+
+            return isValid;
+        }
         public int isNumber(string txtValue)
         {
             if (txtValue == "")

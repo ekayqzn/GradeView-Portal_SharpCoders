@@ -71,9 +71,8 @@
             this.txtFName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtFName.Location = new System.Drawing.Point(34, 223);
             this.txtFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtFName.Multiline = true;
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(259, 37);
+            this.txtFName.Size = new System.Drawing.Size(259, 34);
             this.txtFName.TabIndex = 4;
             // 
             // label2
@@ -93,9 +92,8 @@
             this.txtMName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtMName.Location = new System.Drawing.Point(299, 223);
             this.txtMName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMName.Multiline = true;
             this.txtMName.Name = "txtMName";
-            this.txtMName.Size = new System.Drawing.Size(259, 37);
+            this.txtMName.Size = new System.Drawing.Size(259, 34);
             this.txtMName.TabIndex = 6;
             // 
             // label3
@@ -115,9 +113,8 @@
             this.txtLName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtLName.Location = new System.Drawing.Point(564, 223);
             this.txtLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtLName.Multiline = true;
             this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(259, 37);
+            this.txtLName.Size = new System.Drawing.Size(259, 34);
             this.txtLName.TabIndex = 8;
             // 
             // label
@@ -220,8 +217,10 @@
             // 
             // cboProgram
             // 
+            this.cboProgram.DropDownHeight = 80;
             this.cboProgram.Font = new System.Drawing.Font("Arial", 13.8F);
             this.cboProgram.FormattingEnabled = true;
+            this.cboProgram.IntegralHeight = false;
             this.cboProgram.Location = new System.Drawing.Point(132, 281);
             this.cboProgram.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProgram.Name = "cboProgram";

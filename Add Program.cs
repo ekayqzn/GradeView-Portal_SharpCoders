@@ -33,12 +33,12 @@ namespace gradesBookApp
             int year = Convert.ToInt32(numYear.Value);
             int section = Convert.ToInt32(numSection.Value);
             bool isAdded = true;
-            if(v.isString(programName))
+            if (v.isString(programName))
             {
-                isAdded = a.Add_Program(programName, year, section);
+                isAdded = a.AddProgram(programName, year, section);
             }
 
-            if(isAdded)
+            if (isAdded)
             {
                 txtProgramName.Focus();
                 txtProgramName.Text = "";
@@ -56,6 +56,40 @@ namespace gradesBookApp
             Administrator_Dashboard a = new Administrator_Dashboard();
             a.ShowDialog();
             this.Close();
+        }
+
+        private void Add_Program_Load(object sender, EventArgs e)
+        {
+            txtProgramName.Focus();
+            txtProgramName.KeyDown += new KeyEventHandler(OnKeyDownHandler);
+            numYear.KeyDown += new KeyEventHandler(OnKeyDownHandler);
+            numSection.KeyDown += new KeyEventHandler(OnKeyDownHandler);
+        }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string programName = txtProgramName.Text;
+                int year = Convert.ToInt32(numYear.Value);
+                int section = Convert.ToInt32(numSection.Value);
+                bool isAdded = true;
+                if (v.isString(programName))
+                {
+                    isAdded = a.AddProgram(programName, year, section);
+                }
+
+                if (isAdded)
+                {
+                    txtProgramName.Focus();
+                    txtProgramName.Text = "";
+                }
+                else
+                {
+                    txtProgramName.Focus();
+                    txtProgramName.SelectAll();
+                }
+            }
         }
     }
 }

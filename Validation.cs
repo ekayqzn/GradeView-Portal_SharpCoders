@@ -74,6 +74,33 @@ namespace gradesBookApp
             return isValid;
         }
 
+        public bool isString(string txtValue)
+        {
+            bool isValid = true;
+            if(String.IsNullOrEmpty(txtValue))
+            {
+                // Empty field
+                MessageBox.Show("Empty field is not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isValid= false;
+            }
+            else
+            {
+                if(int.TryParse(txtValue, out int ignore))
+                {
+                    // Integer
+                    MessageBox.Show("Integer value is not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isValid = false;
+                }
+                else if(double.TryParse(txtValue, out double dIgnore))
+                {
+                    // Integer
+                    MessageBox.Show("Integer value is not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isValid = false;
+                }
+            }
+
+            return isValid;
+        }
 
     }
 }

@@ -12,12 +12,80 @@ namespace gradesBookApp
     public class AddQuery
     {
         databaseConnection db = new databaseConnection();
-        public bool Add_Program(string programName, int year, int section)
+
+        public bool AddTeacher(string teacherNum, string fName, string mName, string lName)
+        {
+            bool isAdded = true;
+            bool isDuplicateNum = false;
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = "SELECT teacher_id FROM modern_gradesbook.teacher_info WHERE teacher_id = @teacherID";
+
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@teacherID", teacherNum);
+
+                db.dta.SelectCommand = db.cmd;
+                DataTable dt = new DataTable();
+                db.dta.Fill(dt);
+
+                if(dt.Rows.Count > 0)
+                {
+                    isDuplicateNum = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occur: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+            if(isDuplicateNum)
+            {
+                MessageBox.Show("Provided Teacher Number already exist!");
+                isAdded = false;
+            }
+            else
+            {
+                try
+                {
+                    db.Connect();
+                    db.cmd.Connection = db.conn;
+                    db.cmd.CommandText = "INSERT INTO modern_gradesbook.teacher_info (teacher_id, teacher_fname, teacher_mname, teacher_lname) VALUES (@ID, @fname, @mname, @lname)";
+
+                    db.cmd.Parameters.Clear();
+                    db.cmd.Parameters.AddWithValue("@ID", teacherNum);
+                    db.cmd.Parameters.AddWithValue("@fname", fName);
+                    db.cmd.Parameters.AddWithValue("@mname", mName);
+                    db.cmd.Parameters.AddWithValue("@lname", lName);
+
+                    db.cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Teacher Successfully Added");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occur: " + ex.Message + "\n" + ex.StackTrace);
+                    isAdded = false;
+                }
+                finally
+                {
+                    db.Disconnect();
+                }
+            }
+            return isAdded;
+        }
+        public bool AddProgram(string programName, int year, int section)
         {
             bool isAdded = true;
             bool isDuplicate = false;
 
-            try
+            try //get programID to check if program name already exists
             {
                 db.Connect();
                 db.cmd.Connection = db.conn;
@@ -44,11 +112,11 @@ namespace gradesBookApp
                 db.Disconnect();
             }
 
-            if (!isDuplicate)
+            if (!isDuplicate) //if program name not exists yet
             {
                 for (int i = 1; i <= year; i++)
                 {
-                    for (int j = 1; j <= section; j++)
+                    for (int j = 1; j <= section; j++) //use nested loop to insert year and section per program
                     {
                         try
                         {
@@ -77,7 +145,7 @@ namespace gradesBookApp
             }
             else
             {
-                MessageBox.Show("Duplicate Program!");
+                MessageBox.Show("Duplicate Program!"); //Otherwise, program already exists
                 isAdded = false;
             }
 

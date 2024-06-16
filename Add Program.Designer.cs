@@ -65,7 +65,7 @@
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -76,7 +76,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Location = new System.Drawing.Point(41, 244);
@@ -88,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label5.Location = new System.Drawing.Point(41, 199);
@@ -100,7 +100,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label6.Location = new System.Drawing.Point(41, 149);
@@ -216,7 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(861, 497);
             this.Controls.Add(this.picBackButton);
             this.Controls.Add(this.rbtnBack);
@@ -234,6 +234,7 @@
             this.Name = "Add_Program";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Program";
+            this.Load += new System.EventHandler(this.Add_Program_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).EndInit();

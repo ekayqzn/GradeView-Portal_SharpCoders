@@ -72,6 +72,7 @@
             // 
             this.rbtnAddTeacher.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rbtnAddTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnAddTeacher.FlatAppearance.BorderSize = 0;
             this.rbtnAddTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,11 +84,13 @@
             this.rbtnAddTeacher.TabIndex = 2;
             this.rbtnAddTeacher.Text = "Add Teacher";
             this.rbtnAddTeacher.UseVisualStyleBackColor = false;
+            this.rbtnAddTeacher.Click += new System.EventHandler(this.rbtnAddTeacher_Click);
             // 
             // rbtnAddProgram
             // 
             this.rbtnAddProgram.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rbtnAddProgram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddProgram.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnAddProgram.FlatAppearance.BorderSize = 0;
             this.rbtnAddProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,6 +108,7 @@
             // 
             this.rbtnAddStudent.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rbtnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnAddStudent.FlatAppearance.BorderSize = 0;
             this.rbtnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -54,5 +54,13 @@ namespace gradesBookApp
             a.ShowDialog();
             this.Close();
         }
+
+        private void rbtnAddTeacher_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_Teacher a = new Add_Teacher();
+            a.ShowDialog();
+            this.Close();
+        }
     }
 }

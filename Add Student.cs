@@ -182,7 +182,7 @@ namespace gradesBookApp
                     txtLName.Text = "";
                     txtMName.Text = "";
                     txtStudentNum.Text = "";
-                    cboProgram.SelectedIndex = -1;
+                    cboProgram.SelectedItem = -1;
                     numSection.Value = 1;
                     numYear.Value = 1;
                 }
@@ -257,9 +257,5 @@ namespace gradesBookApp
             LoadDataIntoDropdown();
         }
 
-        private void Add_Student_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

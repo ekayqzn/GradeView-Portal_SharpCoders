@@ -14,6 +14,15 @@ namespace gradesBookApp
         databaseConnection db = new databaseConnection();
         GradebookComputation c = new GradebookComputation();
 
+        private GradeBook g;
+        public GetRecordQuery(GradeBook gradeBook)
+        {
+            g = gradeBook;
+        }
+        public GetRecordQuery()
+        {
+           
+        }
         //Get records per student and add to datatable
 
         //Project and Exam
@@ -23,13 +32,13 @@ namespace gradesBookApp
         int totalScore = 0;
         decimal percentile = 0;
             string commandText = $"SELECT {prefix}_{tableName}, {prefix}_{tableName}_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-            if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}_score")))
+            if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}_score")))
             {
-                GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}_score");
+                g.dtDisplay.Columns.Add($"{prefix}_{tableName}_score");
             }
-            if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}")))
+            if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}")))
             {
-                GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}");
+                g.dtDisplay.Columns.Add($"{prefix}_{tableName}");
             }
             
             try
@@ -45,8 +54,8 @@ namespace gradesBookApp
                 DataTable dataTable1 = new DataTable();
                 db.dta.Fill(dataTable1);
 
-                GradeBook.newRow[$"{prefix}_{tableName}"] = dataTable1.Rows[0][$"{prefix}_{tableName}"];
-                GradeBook.newRow[$"{prefix}_{tableName}_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}_score"];
+                g.newRow[$"{prefix}_{tableName}"] = dataTable1.Rows[0][$"{prefix}_{tableName}"];
+                g.newRow[$"{prefix}_{tableName}_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}_score"];
 
                 score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}_score"]);
                 totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}"]);
@@ -83,10 +92,10 @@ namespace gradesBookApp
             {
                 case 1:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
 
                     try
@@ -102,8 +111,8 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
                         
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);
@@ -125,15 +134,15 @@ namespace gradesBookApp
                     break;
                 case 2:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score, {prefix}_{tableName}2, {prefix}_{tableName}2_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
                     }
 
                     try
@@ -149,10 +158,10 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
+                        g.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
 
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);
@@ -185,20 +194,20 @@ namespace gradesBookApp
                     break;
                 case 3:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score, {prefix}_{tableName}2, {prefix}_{tableName}2_score, {prefix}_{tableName}3, {prefix}_{tableName}3_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
                     }
 
                     try
@@ -214,12 +223,12 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
+                        g.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
+                        g.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
+                        g.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
 
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);
@@ -260,25 +269,25 @@ namespace gradesBookApp
                     break;
                 case 4:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score, {prefix}_{tableName}2, {prefix}_{tableName}2_score, {prefix}_{tableName}3, {prefix}_{tableName}3_score, {prefix}_{tableName}4, {prefix}_{tableName}4_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
                     }
 
                     try
@@ -294,14 +303,14 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
+                        g.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
+                        g.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
+                        g.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
+                        g.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
+                        g.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
 
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);
@@ -350,30 +359,30 @@ namespace gradesBookApp
                     break;
                 case 5:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score, {prefix}_{tableName}2, {prefix}_{tableName}2_score, {prefix}_{tableName}3, {prefix}_{tableName}3_score, {prefix}_{tableName}4, {prefix}_{tableName}4_score, {prefix}_{tableName}5, {prefix}_{tableName}5_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
                     }
 
                     try
@@ -389,16 +398,16 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
+                        g.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
+                        g.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
+                        g.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
+                        g.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
+                        g.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
+                        g.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
+                        g.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
 
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);
@@ -454,35 +463,35 @@ namespace gradesBookApp
                     break;
                 case 6:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score, {prefix}_{tableName}2, {prefix}_{tableName}2_score, {prefix}_{tableName}3, {prefix}_{tableName}3_score, {prefix}_{tableName}4, {prefix}_{tableName}4_score, {prefix}_{tableName}5, {prefix}_{tableName}5_score, {prefix}_{tableName}6, {prefix}_{tableName}6_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}6")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}6")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}6_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}6");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}6_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}6");
                     }
 
                     try
@@ -498,18 +507,18 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
-                        GradeBook.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
+                        g.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
+                        g.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
+                        g.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
+                        g.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
+                        g.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
+                        g.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
+                        g.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
+                        g.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
+                        g.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
 
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);
@@ -573,40 +582,40 @@ namespace gradesBookApp
                     break;
                 case 7:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score, {prefix}_{tableName}2, {prefix}_{tableName}2_score, {prefix}_{tableName}3, {prefix}_{tableName}3_score, {prefix}_{tableName}4, {prefix}_{tableName}4_score, {prefix}_{tableName}5, {prefix}_{tableName}5_score, {prefix}_{tableName}6, {prefix}_{tableName}6_score, {prefix}_{tableName}7, {prefix}_{tableName}7_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}6")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}6")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}6_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}6");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}6_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}6");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}7")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}7")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}7_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}7");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}7_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}7");
                     }
 
                     try
@@ -622,20 +631,20 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
-                        GradeBook.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}7_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
+                        g.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
+                        g.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
+                        g.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
+                        g.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
+                        g.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
+                        g.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
+                        g.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
+                        g.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
+                        g.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
+                        g.newRow[$"{prefix}_{tableName}7_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}7_score"];
+                        g.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
 
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);
@@ -707,45 +716,45 @@ namespace gradesBookApp
                     break;
                 case 8:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score, {prefix}_{tableName}2, {prefix}_{tableName}2_score, {prefix}_{tableName}3, {prefix}_{tableName}3_score, {prefix}_{tableName}4, {prefix}_{tableName}4_score, {prefix}_{tableName}5, {prefix}_{tableName}5_score, {prefix}_{tableName}6, {prefix}_{tableName}6_score, {prefix}_{tableName}7, {prefix}_{tableName}7_score, {prefix}_{tableName}8, {prefix}_{tableName}8_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}6")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}6")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}6_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}6");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}6_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}6");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}7")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}7")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}7_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}7");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}7_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}7");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}8")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}8")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}8_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}8");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}8_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}8");
                     }
 
                     try
@@ -761,22 +770,22 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
-                        GradeBook.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}7_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
-                        GradeBook.newRow[$"{prefix}_{tableName}8_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}8_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}8"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
+                        g.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
+                        g.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
+                        g.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
+                        g.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
+                        g.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
+                        g.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
+                        g.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
+                        g.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
+                        g.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
+                        g.newRow[$"{prefix}_{tableName}7_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}7_score"];
+                        g.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
+                        g.newRow[$"{prefix}_{tableName}8_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}8_score"];
+                        g.newRow[$"{prefix}_{tableName}8"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
 
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);
@@ -856,50 +865,50 @@ namespace gradesBookApp
                     break;
                 case 9:
                     commandText = $"SELECT {prefix}_{tableName}1, {prefix}_{tableName}1_score, {prefix}_{tableName}2, {prefix}_{tableName}2_score, {prefix}_{tableName}3, {prefix}_{tableName}3_score, {prefix}_{tableName}4, {prefix}_{tableName}4_score, {prefix}_{tableName}5, {prefix}_{tableName}5_score, {prefix}_{tableName}6, {prefix}_{tableName}6_score, {prefix}_{tableName}7, {prefix}_{tableName}7_score, {prefix}_{tableName}8, {prefix}_{tableName}8_score, {prefix}_{tableName}9, {prefix}_{tableName}9_score FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @ID";
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}1")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}1");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}2")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}2");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}3")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}3");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}4")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}4");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}5")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}5");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}6")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}6")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}6_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}6");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}6_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}6");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}7")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}7")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}7_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}7");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}7_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}7");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}8")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}8")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}8_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}8");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}8_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}8");
                     }
-                    if ((!GradeBook.dtDisplay.Columns.Contains($"{prefix}_{tableName}9")))
+                    if ((!g.dtDisplay.Columns.Contains($"{prefix}_{tableName}9")))
                     {
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}9_score");
-                        GradeBook.dtDisplay.Columns.Add($"{prefix}_{tableName}9");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}9_score");
+                        g.dtDisplay.Columns.Add($"{prefix}_{tableName}9");
                     }
 
                     try
@@ -915,24 +924,24 @@ namespace gradesBookApp
                         DataTable dataTable1 = new DataTable();
                         db.dta.Fill(dataTable1);
 
-                        GradeBook.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
-                        GradeBook.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}7_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
-                        GradeBook.newRow[$"{prefix}_{tableName}8_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}8_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}8"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
-                        GradeBook.newRow[$"{prefix}_{tableName}9_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}9_score"];
-                        GradeBook.newRow[$"{prefix}_{tableName}9"] = dataTable1.Rows[0][$"{prefix}_{tableName}9"];
+                        g.newRow[$"{prefix}_{tableName}1_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}1_score"];
+                        g.newRow[$"{prefix}_{tableName}1"] = dataTable1.Rows[0][$"{prefix}_{tableName}1"];
+                        g.newRow[$"{prefix}_{tableName}2_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}2_score"];
+                        g.newRow[$"{prefix}_{tableName}2"] = dataTable1.Rows[0][$"{prefix}_{tableName}2"];
+                        g.newRow[$"{prefix}_{tableName}3_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}3_score"];
+                        g.newRow[$"{prefix}_{tableName}3"] = dataTable1.Rows[0][$"{prefix}_{tableName}3"];
+                        g.newRow[$"{prefix}_{tableName}4_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}4_score"];
+                        g.newRow[$"{prefix}_{tableName}4"] = dataTable1.Rows[0][$"{prefix}_{tableName}4"];
+                        g.newRow[$"{prefix}_{tableName}5_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}5_score"];
+                        g.newRow[$"{prefix}_{tableName}5"] = dataTable1.Rows[0][$"{prefix}_{tableName}5"];
+                        g.newRow[$"{prefix}_{tableName}6_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}6_score"];
+                        g.newRow[$"{prefix}_{tableName}6"] = dataTable1.Rows[0][$"{prefix}_{tableName}6"];
+                        g.newRow[$"{prefix}_{tableName}7_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}7_score"];
+                        g.newRow[$"{prefix}_{tableName}7"] = dataTable1.Rows[0][$"{prefix}_{tableName}7"];
+                        g.newRow[$"{prefix}_{tableName}8_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}8_score"];
+                        g.newRow[$"{prefix}_{tableName}8"] = dataTable1.Rows[0][$"{prefix}_{tableName}8"];
+                        g.newRow[$"{prefix}_{tableName}9_score"] = dataTable1.Rows[0][$"{prefix}_{tableName}9_score"];
+                        g.newRow[$"{prefix}_{tableName}9"] = dataTable1.Rows[0][$"{prefix}_{tableName}9"];
 
                         score = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1_score"]);
                         totalScore = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}1"]);

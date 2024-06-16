@@ -120,7 +120,7 @@ namespace gradesBookApp
                             isValid = false; // Set isValid to false if validation fails
                             txt.Focus();
                             txt.SelectAll();
-                            MessageBox.Show("Invalid number in the textbox.");
+                            //MessageBox.Show("Invalid number in the textbox.");
                             break; // Exit the loop as validation failed
                         }
                         else

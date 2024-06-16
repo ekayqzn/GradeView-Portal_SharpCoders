@@ -65,7 +65,7 @@
             // 
             // txtStudentNum
             // 
-            this.txtStudentNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentNum.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtStudentNum.Location = new System.Drawing.Point(95, 142);
             this.txtStudentNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStudentNum.Multiline = true;
@@ -75,7 +75,7 @@
             // 
             // txtFName
             // 
-            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtFName.Location = new System.Drawing.Point(95, 224);
             this.txtFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFName.Multiline = true;
@@ -97,7 +97,7 @@
             // 
             // txtMName
             // 
-            this.txtMName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtMName.Location = new System.Drawing.Point(416, 224);
             this.txtMName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMName.Multiline = true;
@@ -119,7 +119,7 @@
             // 
             // txtLName
             // 
-            this.txtLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtLName.Location = new System.Drawing.Point(737, 224);
             this.txtLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLName.Multiline = true;
@@ -141,7 +141,7 @@
             // 
             // numSection
             // 
-            this.numSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSection.Font = new System.Drawing.Font("Arial", 13.8F);
             this.numSection.Location = new System.Drawing.Point(205, 379);
             this.numSection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numSection.Maximum = new decimal(new int[] {
@@ -155,7 +155,7 @@
             0,
             0});
             this.numSection.Name = "numSection";
-            this.numSection.Size = new System.Drawing.Size(845, 24);
+            this.numSection.Size = new System.Drawing.Size(845, 34);
             this.numSection.TabIndex = 14;
             this.numSection.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numSection.Value = new decimal(new int[] {
@@ -170,7 +170,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label4.Location = new System.Drawing.Point(100, 377);
+            this.label4.Location = new System.Drawing.Point(100, 384);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 25);
             this.label4.TabIndex = 13;
@@ -178,7 +178,7 @@
             // 
             // numYear
             // 
-            this.numYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numYear.Font = new System.Drawing.Font("Arial", 13.8F);
             this.numYear.Location = new System.Drawing.Point(205, 338);
             this.numYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numYear.Maximum = new decimal(new int[] {
@@ -192,7 +192,7 @@
             0,
             0});
             this.numYear.Name = "numYear";
-            this.numYear.Size = new System.Drawing.Size(845, 24);
+            this.numYear.Size = new System.Drawing.Size(845, 34);
             this.numYear.TabIndex = 12;
             this.numYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numYear.Value = new decimal(new int[] {
@@ -207,7 +207,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label5.Location = new System.Drawing.Point(100, 335);
+            this.label5.Location = new System.Drawing.Point(100, 342);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 25);
             this.label5.TabIndex = 11;
@@ -219,7 +219,7 @@
             this.label6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label6.Location = new System.Drawing.Point(100, 294);
+            this.label6.Location = new System.Drawing.Point(100, 296);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 25);
             this.label6.TabIndex = 10;
@@ -227,20 +227,12 @@
             // 
             // cboProgram
             // 
-            this.cboProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProgram.Font = new System.Drawing.Font("Arial", 13.8F);
             this.cboProgram.FormattingEnabled = true;
-            this.cboProgram.Items.AddRange(new object[] {
-            "Bachelor of Science in Accountancy",
-            "Bachelor of Science in Computer Engineering",
-            "Bachelor of Science in Enterepreneurship",
-            "Bachelor of Science in Hospitality Management",
-            "Bachelor of Science in Information Technology",
-            "Bachelor of Secondary Education major in English",
-            "Bachelor of Secondary Education major in Mathematics"});
             this.cboProgram.Location = new System.Drawing.Point(205, 293);
             this.cboProgram.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProgram.Name = "cboProgram";
-            this.cboProgram.Size = new System.Drawing.Size(847, 26);
+            this.cboProgram.Size = new System.Drawing.Size(847, 34);
             this.cboProgram.TabIndex = 9;
             this.cboProgram.SelectedIndexChanged += new System.EventHandler(this.cboProgram_SelectedIndexChanged);
             // 
@@ -251,10 +243,10 @@
             this.rbtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAdd.ForeColor = System.Drawing.Color.White;
-            this.rbtnAdd.Location = new System.Drawing.Point(859, 427);
+            this.rbtnAdd.Location = new System.Drawing.Point(859, 443);
             this.rbtnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnAdd.Name = "rbtnAdd";
-            this.rbtnAdd.Size = new System.Drawing.Size(191, 39);
+            this.rbtnAdd.Size = new System.Drawing.Size(191, 46);
             this.rbtnAdd.TabIndex = 15;
             this.rbtnAdd.Text = "Add";
             this.rbtnAdd.UseVisualStyleBackColor = false;
@@ -267,10 +259,10 @@
             this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnBack.ForeColor = System.Drawing.Color.White;
-            this.rbtnBack.Location = new System.Drawing.Point(632, 428);
+            this.rbtnBack.Location = new System.Drawing.Point(637, 443);
             this.rbtnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnBack.Name = "rbtnBack";
-            this.rbtnBack.Size = new System.Drawing.Size(199, 38);
+            this.rbtnBack.Size = new System.Drawing.Size(199, 46);
             this.rbtnBack.TabIndex = 16;
             this.rbtnBack.Text = "Back";
             this.rbtnBack.UseVisualStyleBackColor = false;
@@ -334,7 +326,7 @@
             this.Name = "Add_Student";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
-            this.Load += new System.EventHandler(this.Add_Student_Load_1);
+            this.Load += new System.EventHandler(this.Add_Student_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
             this.ResumeLayout(false);

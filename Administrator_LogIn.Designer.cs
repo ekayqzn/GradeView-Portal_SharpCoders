@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(155, 132);
+            this.label1.Location = new System.Drawing.Point(161, 159);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 29);
@@ -59,7 +59,7 @@
             this.txtAdminID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtAdminID.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtAdminID.ForeColor = System.Drawing.Color.Black;
-            this.txtAdminID.Location = new System.Drawing.Point(190, 164);
+            this.txtAdminID.Location = new System.Drawing.Point(196, 191);
             this.txtAdminID.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdminID.Name = "txtAdminID";
             this.txtAdminID.Size = new System.Drawing.Size(451, 34);
@@ -70,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(155, 223);
+            this.label2.Location = new System.Drawing.Point(161, 250);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 29);
@@ -82,7 +82,7 @@
             this.txtAdminPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtAdminPass.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtAdminPass.ForeColor = System.Drawing.Color.Black;
-            this.txtAdminPass.Location = new System.Drawing.Point(190, 254);
+            this.txtAdminPass.Location = new System.Drawing.Point(196, 281);
             this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdminPass.Name = "txtAdminPass";
             this.txtAdminPass.PasswordChar = '*';
@@ -98,7 +98,7 @@
             this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnLogIn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLogIn.ForeColor = System.Drawing.Color.White;
-            this.rbtnLogIn.Location = new System.Drawing.Point(492, 324);
+            this.rbtnLogIn.Location = new System.Drawing.Point(498, 351);
             this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnLogIn.Name = "rbtnLogIn";
             this.rbtnLogIn.Size = new System.Drawing.Size(149, 39);
@@ -142,7 +142,7 @@
             this.btnOpen.FlatAppearance.BorderSize = 0;
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpen.Image = global::gradesBookApp.Properties.Resources.red_eye;
-            this.btnOpen.Location = new System.Drawing.Point(608, 260);
+            this.btnOpen.Location = new System.Drawing.Point(614, 287);
             this.btnOpen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(30, 27);
@@ -157,7 +157,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::gradesBookApp.Properties.Resources.hide;
-            this.btnClose.Location = new System.Drawing.Point(606, 258);
+            this.btnClose.Location = new System.Drawing.Point(612, 285);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(33, 27);

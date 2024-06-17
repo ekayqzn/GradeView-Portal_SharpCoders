@@ -46,7 +46,7 @@ namespace gradesBookApp
                 string mName = txtMName.Text.Trim();
                 bool isAdded = false;
 
-                if (string.IsNullOrEmpty(teacherNum) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName))
+                if (string.IsNullOrEmpty(txtTeacherNum.Text) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName))
                 {
                     MessageBox.Show("Please complete all required fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 

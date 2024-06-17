@@ -135,7 +135,8 @@ namespace gradesBookApp
                                     isValid = false; // Set isValid to false if the current score is greater than the total score
                                     txt.Focus();
                                     txt.SelectAll();
-                                    MessageBox.Show("Score is greater than Total Score");
+                                    MessageBox.Show("The score entered exceeds the total possible score.", "Invalid Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                                     break;
                                 }
                             }
@@ -164,7 +165,6 @@ namespace gradesBookApp
                         {
                             if ((label.Name == "label1") || (label.Name == "label2"))
                             {
-
                                 continue;
                             }
                             else
@@ -177,7 +177,7 @@ namespace gradesBookApp
                         u.UpdateGradebook(tableName, columnName, newValue);
                     }
                     //Add update to database
-                    if (MessageBox.Show("All fields are valid. Scores have been updated.", "Message", MessageBoxButtons.OK) == DialogResult.OK)
+                    if (MessageBox.Show("All fields are valid. Scores have been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                     {
                         //GradeBook gradeBookForm = Application.OpenForms["GradeBook"] as GradeBook;
                         //if (gradeBookForm != null)

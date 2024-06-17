@@ -24,6 +24,10 @@ namespace gradesBookApp
 
         private void cboProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Check if the event was triggered by user interaction
+            if (!cboProgram.Focused)
+                return; // Exit early if not user interaction
+
             if (cboProgram.SelectedItem == null)
             {
                 MessageBox.Show("Please select a valid program.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -83,9 +87,25 @@ namespace gradesBookApp
             section = Convert.ToInt32(numSection.Value);
 
             // Add Validation
-            if (string.IsNullOrEmpty(studentID) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
+            if (string.IsNullOrEmpty(txtStudentNum.Text) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
             {
                 MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (string.IsNullOrEmpty(txtStudentNum.Text))
+                {
+                    txtStudentNum.Focus();
+                    return;
+                }
+                if(string.IsNullOrEmpty(firstName))
+                {
+                    txtFName.Focus();
+                    return;
+                }
+                if(string.IsNullOrEmpty(lastName))
+                {
+                    txtLName.Focus();
+                    return;
+                }
+                
             }
             else
             {
@@ -96,9 +116,10 @@ namespace gradesBookApp
                     MessageBox.Show("String value is not accepted");
                     return;
                 }
-                if(cboProgram.SelectedIndex == -1)
+                // Check if a program is selected
+                if (cboProgram.SelectedIndex == -1)
                 {
-                    MessageBox.Show("No Selected Program");
+                    MessageBox.Show("Please select a program.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     cboProgram.Focus();
                     return;
                 }
@@ -196,7 +217,7 @@ namespace gradesBookApp
                         txtLName.Text = "";
                         txtMName.Text = "";
                         txtStudentNum.Text = "";
-                        cboProgram.SelectedItem = -1;
+                        cboProgram.SelectedIndex = -1;
                         numSection.Value = 1;
                         numYear.Value = 1;
                     }

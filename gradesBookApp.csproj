@@ -202,6 +202,12 @@
     <Compile Include="Student-Module.Designer.cs">
       <DependentUpon>Student-Module.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheCourseDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheCourseDashboard.Designer.cs">
+      <DependentUpon>TheCourseDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="TheFacultyDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </Compile>
     <EmbeddedResource Include="Student-Module.resx">
       <DependentUpon>Student-Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheCourseDashboard.resx">
+      <DependentUpon>TheCourseDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TheFacultyDashboard.resx">
       <DependentUpon>TheFacultyDashboard.cs</DependentUpon>

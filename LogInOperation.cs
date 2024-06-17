@@ -47,7 +47,7 @@ namespace gradesBookApp
                     else
                     {
                         // Inform user and encourage to re-enter
-                        MessageBox.Show("Invalid ID or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Try Again! Invalid ID or password input.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)
@@ -62,7 +62,7 @@ namespace gradesBookApp
             else // One or both fields are empty
             {
                 // Inform user about empty fields
-                MessageBox.Show("Both fields are required.", "Missing Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Try Again! Field cannot be empty.", "Missing Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 // Set focus to the empty field
                 if (string.IsNullOrEmpty(userID))

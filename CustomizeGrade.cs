@@ -405,7 +405,7 @@ namespace gradesBookApp
             // Proceed if valid
             if (isValid)
             {
-                MessageBox.Show("SUCCESS");
+                MessageBox.Show("Grade components have been customized.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 TheFacultyDashboard teachersDashboard = new TheFacultyDashboard();
                 teachersDashboard.ShowDialog();
@@ -533,6 +533,11 @@ namespace gradesBookApp
             {
                 panel_fRecitation.Enabled = false;
             }
+        }
+
+        private void CustomizeGrade_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

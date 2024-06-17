@@ -121,7 +121,7 @@ namespace gradesBookApp
                             }
 
                             //Once performed all operation, Message Box will show to notify the user. When clicked the OK button, this form will close and appears the CustomizeGrade form
-                            if (MessageBox.Show("Successfully created the Subject", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                            if (MessageBox.Show("The subject is successfully added to your dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                             {
                                 this.Hide();
                                 CustomizeGrade customizeGrade = new CustomizeGrade();
@@ -174,7 +174,7 @@ namespace gradesBookApp
                                 db.Disconnect();
                             }
 
-                            if (MessageBox.Show("Successfully added the Subject", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                            if (MessageBox.Show("Subject successfully added to your dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                             {
                                 //!ADD TO MESSAGE BOX THE CODE
 
@@ -188,7 +188,7 @@ namespace gradesBookApp
                     }
                     else //If the subject the user want to add is already in the database and in her dashboard
                     {
-                        if (MessageBox.Show("Subject is already added to your Dashboard. Duplicate Subject is not allowed", "Duplicate Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                        if (MessageBox.Show("Subject is already added to your Dashboard. Duplicated subject is not allowed.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
                         {
                             this.Hide();
                             TheFacultyDashboard teacherDashboard = new TheFacultyDashboard();
@@ -210,7 +210,7 @@ namespace gradesBookApp
             {
                 if(String.IsNullOrEmpty(subCode) && String.IsNullOrEmpty(subName))
                 {
-                    MessageBox.Show("Both fields are required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Try Again! Field cannot be empty", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtSubCode.Focus();
                     return;
                 }

@@ -154,5 +154,10 @@ namespace gradesBookApp
             TDB.ShowDialog();
             this.Close();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

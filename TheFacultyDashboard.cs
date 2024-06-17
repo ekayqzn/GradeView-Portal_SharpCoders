@@ -33,6 +33,15 @@ namespace gradesBookApp
 
         private void TheFacultyDashboard_Load(object sender, EventArgs e)
         {
+            LoadDashboard();
+
+        }
+
+        private void LoadDashboard()
+        {
+            // Clear existing controls
+            panel2.Controls.Clear();
+
             //This form will load when the user correctly input the login details
             //MessageBox.Show(LogInOperation.userID);
 
@@ -83,7 +92,8 @@ namespace gradesBookApp
                             BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256)),
                             Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold),
                             ForeColor = Color.White,
-                            Cursor = Cursors.Hand
+                            Cursor = Cursors.Hand,
+                            ContextMenuStrip = cMenuDelete
                         };
 
                         if (tileCount < 5)
@@ -118,7 +128,6 @@ namespace gradesBookApp
             {
                 db.Disconnect();
             }
-
         }
 
         private void lblSubject_Click(object sender, EventArgs e)
@@ -203,5 +212,46 @@ namespace gradesBookApp
             base.WndProc(ref m);
         }
 
+        private void menuDeleteClass_Click(object sender, EventArgs e)
+        {
+            //Context Menu Strip
+            //Right-click label
+
+            ToolStripMenuItem menuItem = (ToolStripMenuItem)sender;
+            ContextMenuStrip menuStrip = (ContextMenuStrip)menuItem.Owner;
+            Label label = (Label)menuStrip.SourceControl;
+            string[] labelParts = label.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+            string subjectTile = labelParts[0].Trim(); // Only get the subject code part
+            string teacherId = LogInOperation.userID.Trim();
+
+            if (MessageBox.Show("Deleting this class will also delete the programs and student enrolled in this class. Are you sure you want to continue?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                try
+                {
+                    db.Connect();
+                    db.cmd.Connection = db.conn;
+                    db.cmd.CommandText = "DELETE FROM class WHERE teacher_id = @teacherID AND subject_code = @subjectCode";
+
+                    db.cmd.Parameters.Clear();
+                    db.cmd.Parameters.AddWithValue("@teacherID", teacherId);
+                    db.cmd.Parameters.AddWithValue("@subjectCode", subjectTile);
+
+                    if (db.cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Successfully deleted the class");
+                        LoadDashboard();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occur: " + ex.Message + "\n" + ex.StackTrace);
+                }
+                finally
+                {
+                    db.Disconnect();
+                }
+            }
+            
+        }
     }
 }

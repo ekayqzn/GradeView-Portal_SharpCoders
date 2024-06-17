@@ -90,7 +90,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1260, 33);
+            this.label4.Location = new System.Drawing.Point(1239, 33);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(598, 32);
@@ -131,7 +131,7 @@
             this.picDeleteSearch.BackColor = System.Drawing.Color.Transparent;
             this.picDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDeleteSearch.Image = global::gradesBookApp.Properties.Resources.close__1_;
-            this.picDeleteSearch.Location = new System.Drawing.Point(743, 290);
+            this.picDeleteSearch.Location = new System.Drawing.Point(722, 290);
             this.picDeleteSearch.Name = "picDeleteSearch";
             this.picDeleteSearch.Size = new System.Drawing.Size(20, 20);
             this.picDeleteSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +162,7 @@
             this.rbtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnDelete.ForeColor = System.Drawing.Color.White;
-            this.rbtnDelete.Location = new System.Drawing.Point(1109, 283);
+            this.rbtnDelete.Location = new System.Drawing.Point(1088, 283);
             this.rbtnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnDelete.Name = "rbtnDelete";
             this.rbtnDelete.Size = new System.Drawing.Size(191, 39);
@@ -180,7 +180,7 @@
             this.rbtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnEdit.ForeColor = System.Drawing.Color.White;
-            this.rbtnEdit.Location = new System.Drawing.Point(876, 283);
+            this.rbtnEdit.Location = new System.Drawing.Point(855, 283);
             this.rbtnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnEdit.Name = "rbtnEdit";
             this.rbtnEdit.Size = new System.Drawing.Size(191, 39);

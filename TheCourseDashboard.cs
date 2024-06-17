@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -48,8 +49,11 @@ namespace gradesBookApp
             }
         }
 
-        private void TheCourseDashboard_Load(object sender, EventArgs e)
+        private void LoadDashboard()
         {
+            // Clear existing controls
+            panel2.Controls.Clear(); 
+
             string subjectCode = TheFacultyDashboard.subjectTile.Trim(); // Trim any extra spaces
 
             //Get Section Information(program name, year level, section) will also be displayed as tile
@@ -116,6 +120,7 @@ namespace gradesBookApp
                         label.ForeColor = Color.White;
                         labelLocationY += 120;
                         label.Cursor = Cursors.Hand;
+                        label.ContextMenuStrip = cMenuDeleteProgram;
 
                         // Store related data in the Tag property
                         //Tag - user defined data associated with the object
@@ -137,6 +142,12 @@ namespace gradesBookApp
             {
                 db.Disconnect();
             }
+        }
+
+        private void TheCourseDashboard_Load(object sender, EventArgs e)
+        {
+            LoadDashboard();
+
         }
 
         private void lblSection_Click(object sender, EventArgs e)
@@ -161,6 +172,52 @@ namespace gradesBookApp
             gradeBook.ShowDialog();
             this.Close();
 
+        }
+
+        private void deleteProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Context Menu Strip
+            //Right-click label
+
+            ToolStripMenuItem menuItem = (ToolStripMenuItem)sender;
+            ContextMenuStrip menuStrip = (ContextMenuStrip)menuItem.Owner;
+            Label label = (Label)menuStrip.SourceControl;
+            
+            var data = (dynamic)label.Tag;
+            string courseCode = data.CourseCode.Trim();
+
+            //Debug
+            //MessageBox.Show("Course Code" + courseCode);
+
+            if(MessageBox.Show("Deleting this program-section will delete all records of students in this class. Are you sure you want to continue?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    db.Connect();
+                    db.cmd.Connection = db.conn;
+                    db.cmd.CommandText = "DELETE FROM course WHERE course_code = @courseCode";
+
+                    db.cmd.Parameters.Clear();
+                    db.cmd.Parameters.AddWithValue("@courseCode", courseCode);
+
+                    if(db.cmd.ExecuteNonQuery() > 0)
+                    {
+                        if(MessageBox.Show("Successfully deleted the program", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                        {
+                            LoadDashboard();
+                        }
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occur:" + ex.Message + "\n" + ex.StackTrace);
+                }
+                finally
+                {
+                    db.Disconnect();
+                }
+            }
         }
     }
 }

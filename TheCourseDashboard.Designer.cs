@@ -39,11 +39,14 @@
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cMenuDeleteProgram = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            this.cMenuDeleteProgram.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,6 +63,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.89957F));
@@ -67,7 +71,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.751794F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.45337F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.738881F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(963, 697);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 858);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // logoutButton
@@ -76,10 +80,10 @@
             this.logoutButton.BackColor = System.Drawing.Color.Transparent;
             this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutButton.Image = global::gradesBookApp.Properties.Resources.k__2_;
-            this.logoutButton.Location = new System.Drawing.Point(920, 5);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.logoutButton.Location = new System.Drawing.Point(1227, 5);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(38, 59);
+            this.logoutButton.Size = new System.Drawing.Size(51, 73);
             this.logoutButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutButton.TabIndex = 71;
             this.logoutButton.TabStop = false;
@@ -91,9 +95,10 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(44, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(59, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 62);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1043, 76);
             this.flowLayoutPanel1.TabIndex = 72;
             // 
             // pictureBox2
@@ -102,9 +107,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::gradesBookApp.Properties.Resources.BULACAN;
             this.pictureBox2.Image = global::gradesBookApp.Properties.Resources.BULACAN3;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox2.Size = new System.Drawing.Size(76, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 73;
             this.pictureBox2.TabStop = false;
@@ -116,9 +122,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(66, 0);
+            this.label1.Location = new System.Drawing.Point(88, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 66);
+            this.label1.Size = new System.Drawing.Size(583, 82);
             this.label1.TabIndex = 74;
             this.label1.Text = "BULACAN TECHNOLOGICAL UNIVERSITY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,12 +141,13 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.rbtnAddClass, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(44, 93);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(59, 115);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(869, 55);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1158, 67);
             this.tableLayoutPanel2.TabIndex = 75;
             // 
             // rbtnAddClass
@@ -151,12 +159,12 @@
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(754, 8);
-            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(2);
+            this.rbtnAddClass.Location = new System.Drawing.Point(1004, 9);
+            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnAddClass.Name = "rbtnAddClass";
-            this.rbtnAddClass.Size = new System.Drawing.Size(113, 39);
+            this.rbtnAddClass.Size = new System.Drawing.Size(151, 48);
             this.rbtnAddClass.TabIndex = 77;
-            this.rbtnAddClass.Text = "Add Subject";
+            this.rbtnAddClass.Text = "Add Section";
             this.rbtnAddClass.UseVisualStyleBackColor = false;
             this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click_1);
             // 
@@ -167,9 +175,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(4, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 55);
+            this.label2.Size = new System.Drawing.Size(198, 67);
             this.label2.TabIndex = 73;
             this.label2.Text = "DASHBOARD";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,18 +190,34 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(43, 153);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(58, 188);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(871, 501);
+            this.panel2.Size = new System.Drawing.Size(1160, 617);
             this.panel2.TabIndex = 76;
+            // 
+            // cMenuDeleteProgram
+            // 
+            this.cMenuDeleteProgram.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cMenuDeleteProgram.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteProgramToolStripMenuItem});
+            this.cMenuDeleteProgram.Name = "cMenuDeleteProgram";
+            this.cMenuDeleteProgram.Size = new System.Drawing.Size(253, 28);
+            // 
+            // deleteProgramToolStripMenuItem
+            // 
+            this.deleteProgramToolStripMenuItem.Name = "deleteProgramToolStripMenuItem";
+            this.deleteProgramToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.deleteProgramToolStripMenuItem.Text = "Delete Program && Section";
+            this.deleteProgramToolStripMenuItem.Click += new System.EventHandler(this.deleteProgramToolStripMenuItem_Click);
             // 
             // TheCourseDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 697);
+            this.ClientSize = new System.Drawing.Size(1284, 858);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TheCourseDashboard";
             this.Text = "TheCourseDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -204,6 +229,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.cMenuDeleteProgram.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -220,5 +246,7 @@
         private RoundedButton rbtnAddClass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ContextMenuStrip cMenuDeleteProgram;
+        private System.Windows.Forms.ToolStripMenuItem deleteProgramToolStripMenuItem;
     }
 }

@@ -353,7 +353,7 @@ namespace gradesBookApp
         private void LinkLBLback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Course_Dashboard c = new Course_Dashboard();
+            TheCourseDashboard c = new TheCourseDashboard();
             c.ShowDialog();
             this.Close();
         }
@@ -384,7 +384,7 @@ namespace gradesBookApp
         private void picBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Course_Dashboard c = new Course_Dashboard();
+            TheCourseDashboard c = new TheCourseDashboard();
             c.ShowDialog();
             this.Close();
         }

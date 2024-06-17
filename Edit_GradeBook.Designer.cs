@@ -70,6 +70,7 @@
             // 
             this.rbtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
@@ -85,10 +86,11 @@
             // 
             this.rbtnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnSave.FlatAppearance.BorderSize = 0;
             this.rbtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnSave.ForeColor = System.Drawing.Color.White;
-            this.rbtnSave.Location = new System.Drawing.Point(473, 3);
+            this.rbtnSave.Location = new System.Drawing.Point(472, 3);
             this.rbtnSave.Name = "rbtnSave";
             this.rbtnSave.Size = new System.Drawing.Size(150, 40);
             this.rbtnSave.TabIndex = 59;
@@ -101,7 +103,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.32217F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.67783F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
             this.tableLayoutPanel1.Controls.Add(this.rbtnSave, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.rbtnCancel, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;

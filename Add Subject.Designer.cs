@@ -33,10 +33,10 @@
             this.txtSubCode = new System.Windows.Forms.TextBox();
             this.txtSubName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rbtnBack = new gradesBookApp.RoundedButton();
-            this.rbtnNext = new gradesBookApp.RoundedButton();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.rbtnBack = new gradesBookApp.RoundedButton();
+            this.rbtnNext = new gradesBookApp.RoundedButton();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(165, 143);
+            this.label1.Location = new System.Drawing.Point(52, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 20);
             this.label1.TabIndex = 0;
@@ -60,11 +60,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubCode.BackColor = System.Drawing.Color.White;
             this.txtSubCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.txtSubCode.Location = new System.Drawing.Point(158, 164);
+            this.txtSubCode.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtSubCode.Location = new System.Drawing.Point(45, 166);
             this.txtSubCode.Name = "txtSubCode";
-            this.txtSubCode.Size = new System.Drawing.Size(451, 20);
+            this.txtSubCode.Size = new System.Drawing.Size(672, 27);
             this.txtSubCode.TabIndex = 1;
             // 
             // txtSubName
@@ -74,11 +74,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubName.BackColor = System.Drawing.Color.White;
             this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.txtSubName.Location = new System.Drawing.Point(158, 253);
+            this.txtSubName.Font = new System.Drawing.Font("Arial", 13.8F);
+            this.txtSubName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtSubName.Location = new System.Drawing.Point(45, 254);
             this.txtSubName.Name = "txtSubName";
-            this.txtSubName.Size = new System.Drawing.Size(451, 20);
+            this.txtSubName.Size = new System.Drawing.Size(672, 27);
             this.txtSubName.TabIndex = 3;
             // 
             // label2
@@ -89,47 +89,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(164, 232);
+            this.label2.Location = new System.Drawing.Point(51, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Subject Name:";
-            // 
-            // rbtnBack
-            // 
-            this.rbtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnBack.FlatAppearance.BorderSize = 0;
-            this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnBack.ForeColor = System.Drawing.Color.White;
-            this.rbtnBack.Location = new System.Drawing.Point(302, 321);
-            this.rbtnBack.Name = "rbtnBack";
-            this.rbtnBack.Size = new System.Drawing.Size(150, 40);
-            this.rbtnBack.TabIndex = 5;
-            this.rbtnBack.Text = "Cancel";
-            this.rbtnBack.UseVisualStyleBackColor = false;
-            this.rbtnBack.Click += new System.EventHandler(this.rbtnBack_Click);
-            // 
-            // rbtnNext
-            // 
-            this.rbtnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnNext.FlatAppearance.BorderSize = 0;
-            this.rbtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnNext.ForeColor = System.Drawing.Color.White;
-            this.rbtnNext.Location = new System.Drawing.Point(459, 321);
-            this.rbtnNext.Name = "rbtnNext";
-            this.rbtnNext.Size = new System.Drawing.Size(150, 40);
-            this.rbtnNext.TabIndex = 4;
-            this.rbtnNext.Text = "Next";
-            this.rbtnNext.UseVisualStyleBackColor = false;
-            this.rbtnNext.Click += new System.EventHandler(this.rbtnNext_Click);
             // 
             // label4
             // 
@@ -159,6 +123,44 @@
             this.textBox2.TabIndex = 53;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // rbtnBack
+            // 
+            this.rbtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnBack.FlatAppearance.BorderSize = 0;
+            this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnBack.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnBack.ForeColor = System.Drawing.Color.White;
+            this.rbtnBack.Location = new System.Drawing.Point(338, 336);
+            this.rbtnBack.Name = "rbtnBack";
+            this.rbtnBack.Size = new System.Drawing.Size(175, 58);
+            this.rbtnBack.TabIndex = 5;
+            this.rbtnBack.Text = "Cancel";
+            this.rbtnBack.UseVisualStyleBackColor = false;
+            this.rbtnBack.Click += new System.EventHandler(this.rbtnBack_Click);
+            // 
+            // rbtnNext
+            // 
+            this.rbtnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnNext.FlatAppearance.BorderSize = 0;
+            this.rbtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnNext.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnNext.ForeColor = System.Drawing.Color.White;
+            this.rbtnNext.Location = new System.Drawing.Point(542, 336);
+            this.rbtnNext.Name = "rbtnNext";
+            this.rbtnNext.Size = new System.Drawing.Size(175, 58);
+            this.rbtnNext.TabIndex = 4;
+            this.rbtnNext.Text = "Next";
+            this.rbtnNext.UseVisualStyleBackColor = false;
+            this.rbtnNext.Click += new System.EventHandler(this.rbtnNext_Click);
+            // 
             // Add_Subject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -175,9 +177,12 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "Add_Subject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
+            this.Load += new System.EventHandler(this.Add_Subject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

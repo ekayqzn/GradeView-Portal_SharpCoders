@@ -218,6 +218,7 @@
             // cboProgram
             // 
             this.cboProgram.DropDownHeight = 80;
+            this.cboProgram.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProgram.Font = new System.Drawing.Font("Arial", 13.8F);
             this.cboProgram.FormattingEnabled = true;
             this.cboProgram.IntegralHeight = false;

@@ -126,5 +126,32 @@ namespace gradesBookApp
             return isValid;
         }
 
+        public bool isStringMName(string txtValue)
+        {
+            bool isValid = true;
+            if (String.IsNullOrEmpty(txtValue))
+            {
+                // Empty field. Possible doesnt have middle name
+                isValid = true;
+            }
+            else
+            {
+                if (int.TryParse(txtValue, out int ignore))
+                {
+                    // Integer
+                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isValid = false;
+                }
+                else if (double.TryParse(txtValue, out double dIgnore))
+                {
+                    // Integer
+                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isValid = false;
+                }
+            }
+
+            return isValid;
+        }
+
     }
 }

@@ -40,8 +40,39 @@ namespace gradesBookApp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
-               
+                string teacherNum = "TBTU-" + txtTeacherNum.Text.Trim();
+                string fName = txtFName.Text.Trim();
+                string lName = txtLName.Text.Trim();
+                string mName = txtMName.Text.Trim();
+                bool isAdded = false;
+
+                if (string.IsNullOrEmpty(teacherNum) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName))
+                {
+                    MessageBox.Show("Please complete all fields");
+                }
+                else
+                {
+                    if ((v.isValidID(txtTeacherNum.Text)) && (v.isString(fName)) && (v.isString(lName)) && (v.isStringMName(mName)))
+                    {
+                        isAdded = a.AddTeacher(teacherNum, fName, lName, mName);
+                    }
+                }
+
+
+                if (isAdded)
+                {
+                    txtTeacherNum.Focus();
+                    txtTeacherNum.Text = "";
+                    txtLName.Text = "";
+                    txtMName.Text = "";
+                    txtFName.Text = "";
+                }
+                else
+                {
+                    txtTeacherNum.Focus();
+                    txtTeacherNum.SelectAll();
+                }
+
             }
         }
 
@@ -53,13 +84,13 @@ namespace gradesBookApp
             string mName = txtMName.Text.Trim();
             bool isAdded = false;
 
-            if(string.IsNullOrEmpty(teacherNum) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName) || string.IsNullOrEmpty(mName))
+            if(string.IsNullOrEmpty(teacherNum) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName))
             {
                 MessageBox.Show("Please complete all fields");
             }
             else
             {
-                if ((v.isValidID(txtTeacherNum.Text)) && (v.isString(fName)) && (v.isString(lName)) && (v.isString(mName)))
+                if ((v.isValidID(txtTeacherNum.Text)) && (v.isString(fName)) && (v.isString(lName)) && (v.isStringMName(mName)))
                 {
                     isAdded = a.AddTeacher(teacherNum, fName, lName, mName);
                 }

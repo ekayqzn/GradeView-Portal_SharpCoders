@@ -537,6 +537,27 @@ namespace gradesBookApp
 
         private void CustomizeGrade_Load(object sender, EventArgs e)
         {
+            //chkMActivity.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkMAssignment.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkMLongQuiz.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkMQuiz.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkMRecitation.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkFActivity.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkFAssignment.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkFLongQuiz.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkFQuiz.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //chkFRecitation.KeyDown += new KeyEventHandler(rbtnOK_Click);
+
+            //txtFActivity.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtFAssignment.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtFLongQuiz.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtFQuiz.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtFRecitation.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtMActivity.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtMAssignment.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtMLongQuiz.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtMQuiz.KeyDown += new KeyEventHandler(rbtnOK_Click);
+            //txtMRecitation.KeyDown += new KeyEventHandler(rbtnOK_Click);
 
         }
     }

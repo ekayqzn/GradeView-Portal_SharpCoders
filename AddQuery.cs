@@ -47,7 +47,7 @@ namespace gradesBookApp
 
             if(isDuplicateNum)
             {
-                MessageBox.Show("Provided Teacher Number already exist!");
+                MessageBox.Show("The Teacher Number you provided already exists. Please enter a different number.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 isAdded = false;
             }
             else
@@ -66,7 +66,8 @@ namespace gradesBookApp
 
                     db.cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Teacher Successfully Added");
+                    MessageBox.Show("Teacher has been successfully added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 catch (Exception ex)
                 {
@@ -141,11 +142,13 @@ namespace gradesBookApp
                         }
                     }
                 }
-                MessageBox.Show("Program Successfully Added");
+                MessageBox.Show("Program has been successfully added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else
             {
-                MessageBox.Show("Duplicate Program!"); //Otherwise, program already exists
+                MessageBox.Show("The program already exists. Please enter a different program.", "Duplicate Program", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //Otherwise, program already exists
                 isAdded = false;
             }
 

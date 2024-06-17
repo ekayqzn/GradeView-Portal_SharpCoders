@@ -48,7 +48,8 @@ namespace gradesBookApp
 
                 if (string.IsNullOrEmpty(teacherNum) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName))
                 {
-                    MessageBox.Show("Please complete all fields");
+                    MessageBox.Show("Please complete all required fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
                 else
                 {
@@ -86,7 +87,8 @@ namespace gradesBookApp
 
             if(string.IsNullOrEmpty(teacherNum) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName))
             {
-                MessageBox.Show("Please complete all fields");
+                MessageBox.Show("Please complete all required fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
             {

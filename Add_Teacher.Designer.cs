@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rbtnBack = new gradesBookApp.RoundedButton();
             this.rbtnAdd = new gradesBookApp.RoundedButton();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +109,7 @@
             // txtLName
             // 
             this.txtLName.Font = new System.Drawing.Font("Arial", 13.8F);
-            this.txtLName.Location = new System.Drawing.Point(571, 238);
+            this.txtLName.Location = new System.Drawing.Point(571, 272);
             this.txtLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(259, 34);
@@ -120,7 +121,7 @@
             this.label.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label.Location = new System.Drawing.Point(575, 210);
+            this.label.Location = new System.Drawing.Point(575, 244);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(122, 25);
             this.label.TabIndex = 75;
@@ -129,7 +130,7 @@
             // txtMName
             // 
             this.txtMName.Font = new System.Drawing.Font("Arial", 13.8F);
-            this.txtMName.Location = new System.Drawing.Point(306, 238);
+            this.txtMName.Location = new System.Drawing.Point(306, 272);
             this.txtMName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMName.Name = "txtMName";
             this.txtMName.Size = new System.Drawing.Size(259, 34);
@@ -141,7 +142,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label3.Location = new System.Drawing.Point(306, 210);
+            this.label3.Location = new System.Drawing.Point(306, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 25);
             this.label3.TabIndex = 73;
@@ -150,7 +151,7 @@
             // txtFName
             // 
             this.txtFName.Font = new System.Drawing.Font("Arial", 13.8F);
-            this.txtFName.Location = new System.Drawing.Point(41, 238);
+            this.txtFName.Location = new System.Drawing.Point(41, 272);
             this.txtFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(259, 34);
@@ -162,7 +163,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(45, 210);
+            this.label2.Location = new System.Drawing.Point(45, 244);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 25);
             this.label2.TabIndex = 71;
@@ -183,6 +184,7 @@
             // rbtnBack
             // 
             this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnBack.FlatAppearance.BorderSize = 0;
             this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,6 +201,7 @@
             // rbtnAdd
             // 
             this.rbtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnAdd.FlatAppearance.BorderSize = 0;
             this.rbtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,12 +215,26 @@
             this.rbtnAdd.UseVisualStyleBackColor = false;
             this.rbtnAdd.Click += new System.EventHandler(this.rbtnAdd_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Firebrick;
+            this.label8.Location = new System.Drawing.Point(97, 197);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(602, 17);
+            this.label8.TabIndex = 89;
+            this.label8.Text = "Please enter only numbers. Letters and special characters (such as /, -, @) are n" +
+    "ot allowed.";
+            // 
             // Add_Teacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(861, 497);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.picBackButton);
             this.Controls.Add(this.txtTeacherNum);
             this.Controls.Add(this.lblSBTU);
@@ -260,5 +277,6 @@
         private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
     }
 }

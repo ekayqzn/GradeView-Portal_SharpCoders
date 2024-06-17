@@ -112,15 +112,15 @@
             // txtProgramName
             // 
             this.txtProgramName.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProgramName.Location = new System.Drawing.Point(212, 149);
+            this.txtProgramName.Location = new System.Drawing.Point(220, 149);
             this.txtProgramName.Name = "txtProgramName";
-            this.txtProgramName.Size = new System.Drawing.Size(553, 34);
+            this.txtProgramName.Size = new System.Drawing.Size(585, 34);
             this.txtProgramName.TabIndex = 62;
             // 
             // numYear
             // 
             this.numYear.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numYear.Location = new System.Drawing.Point(322, 197);
+            this.numYear.Location = new System.Drawing.Point(333, 199);
             this.numYear.Maximum = new decimal(new int[] {
             8,
             0,
@@ -133,7 +133,7 @@
             0});
             this.numYear.Name = "numYear";
             this.numYear.ReadOnly = true;
-            this.numYear.Size = new System.Drawing.Size(443, 34);
+            this.numYear.Size = new System.Drawing.Size(472, 34);
             this.numYear.TabIndex = 63;
             this.numYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numYear.Value = new decimal(new int[] {
@@ -145,7 +145,7 @@
             // numSection
             // 
             this.numSection.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSection.Location = new System.Drawing.Point(352, 241);
+            this.numSection.Location = new System.Drawing.Point(371, 241);
             this.numSection.Maximum = new decimal(new int[] {
             5,
             0,
@@ -158,7 +158,7 @@
             0});
             this.numSection.Name = "numSection";
             this.numSection.ReadOnly = true;
-            this.numSection.Size = new System.Drawing.Size(414, 34);
+            this.numSection.Size = new System.Drawing.Size(434, 34);
             this.numSection.TabIndex = 64;
             this.numSection.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numSection.Value = new decimal(new int[] {
@@ -170,6 +170,7 @@
             // rbtnBack
             // 
             this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnBack.FlatAppearance.BorderSize = 0;
             this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,6 +187,7 @@
             // rbtnAdd
             // 
             this.rbtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnAdd.FlatAppearance.BorderSize = 0;
             this.rbtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

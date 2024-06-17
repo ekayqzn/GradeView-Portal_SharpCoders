@@ -163,7 +163,7 @@ namespace gradesBookApp
             //MessageBox.Show($"Clicked on: {subjectTile}, Teacher ID: {teacherId}, Class ID: {classID}");
 
             this.Hide();
-            Course_Dashboard courseDB = new Course_Dashboard();
+            TheCourseDashboard courseDB = new TheCourseDashboard();
             courseDB.ShowDialog();
             this.Close();
         }

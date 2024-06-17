@@ -129,7 +129,7 @@ namespace gradesBookApp
                         db.cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Successfully added the program to your subject", "Program Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Course_Dashboard courseDB = new Course_Dashboard();
+                        TheCourseDashboard courseDB = new TheCourseDashboard();
                         this.Hide();
                         courseDB.ShowDialog();
                         this.Close();
@@ -203,7 +203,7 @@ namespace gradesBookApp
         private void rbtnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Course_Dashboard CDB = new Course_Dashboard();
+            TheCourseDashboard CDB = new TheCourseDashboard();
             CDB.ShowDialog();
             this.Close();
         }

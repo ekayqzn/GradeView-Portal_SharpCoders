@@ -229,5 +229,10 @@ namespace gradesBookApp
             }
             
         }
+
+        private void Add_Subject_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

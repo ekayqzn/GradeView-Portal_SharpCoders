@@ -24,10 +24,6 @@ namespace gradesBookApp
             InitializeComponent();
         }
 
-        private void rbtnAddClass_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void rbtnAddClass_Click_1(object sender, EventArgs e)
         {
@@ -245,14 +241,30 @@ namespace gradesBookApp
             base.WndProc(ref m);
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void picBack_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            TheFacultyDashboard f = new TheFacultyDashboard(); 
+            f.ShowDialog();
+            this.Close();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void menuLogOut_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                TheFacultyLogIn s = new TheFacultyLogIn();
+                s.ShowDialog();
+                this.Close();
+            }
+        }
 
+        private void menuPassword_Click(object sender, EventArgs e)
+        {
+            Manage_Password m = new Manage_Password();
+            TheFacultyDashboard.type = "teacher";
+            m.ShowDialog();
         }
     }
 }

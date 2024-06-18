@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,46 @@ namespace gradesBookApp
 {
     public class Validation
     {
+        databaseConnection db = new databaseConnection();
+        public bool passwordValid (string tableName, string password, string userID)
+        {
+            bool result = false;
+            string command;
+            command = $"SELECT password FROM {tableName}_info WHERE {tableName}_id = @ID AND password = @password";
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = command;
+
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@ID", userID);
+                db.cmd.Parameters.AddWithValue("@password", password);
+
+                db.dta.SelectCommand = db.cmd;
+                DataTable dt = new DataTable();
+                db.dta.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occur:" + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+            return result;
+        }
         public bool isValidID(string textvalue)
         {
             bool isValid = false;

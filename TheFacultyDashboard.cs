@@ -18,6 +18,8 @@ namespace gradesBookApp
         //Clicked Subject Tile
         public static string subjectTile;
         public static int classID;
+
+        public static string type = "";
         public TheFacultyDashboard()
         {
             InitializeComponent();
@@ -74,7 +76,7 @@ namespace gradesBookApp
                 {
                     int labelSizeX = 210;
                     int labelSizeY = 178;
-                    int labelLocationX = 131; // Increment by 200
+                    int labelLocationX = 52; // Increment by 200
                     int labelLocationY = 40; // Increment by 212
                     int tileCount = 0;
 
@@ -105,7 +107,7 @@ namespace gradesBookApp
                         if (tileCount == 5)
                         {
                             tileCount = 0;
-                            labelLocationX = 131;
+                            labelLocationX = 52;
                             labelLocationY += 212;
                         }
 
@@ -178,13 +180,7 @@ namespace gradesBookApp
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Hide();
-                TheFacultyLogIn s = new TheFacultyLogIn();
-                s.ShowDialog();
-                this.Close();
-            }
+            
         }
 
         //REFERENCE: https://stackoverflow.com/questions/9588540/how-can-i-stop-a-double-click-of-the-window-title-bar-from-maximizing-a-window-o
@@ -252,6 +248,24 @@ namespace gradesBookApp
                 }
             }
             
+        }
+
+        private void menuLogOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                TheFacultyLogIn s = new TheFacultyLogIn();
+                s.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void menuPassword_Click(object sender, EventArgs e)
+        {
+            Manage_Password m = new Manage_Password();
+            type = "teacher";
+            m.ShowDialog();
         }
     }
 }

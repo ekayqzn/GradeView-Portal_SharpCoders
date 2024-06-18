@@ -44,9 +44,9 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void TheStudentDashboard_Load(object sender, EventArgs e)
+        private void LoadDashboard()
         {
-
+            panel2.Controls.Clear();
             try
             {
                 //get class_id and subject code that the teacher teaches
@@ -108,6 +108,7 @@ namespace gradesBookApp
                         label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
                         label.ForeColor = Color.White;
                         label.Cursor = Cursors.Hand;
+                        label.ContextMenuStrip = contextUnenroll;
 
 
                         //tile is 3 per row
@@ -131,7 +132,7 @@ namespace gradesBookApp
                         label.Click += lblSubject_Click;
 
                         //Add to panel
-                       panel2.Controls.Add(label);
+                        panel2.Controls.Add(label);
                     }
                 }
             }
@@ -143,6 +144,10 @@ namespace gradesBookApp
             {
                 db.Disconnect();
             }
+        }
+        private void TheStudentDashboard_Load(object sender, EventArgs e)
+        {
+            LoadDashboard();
         }
 
         private void lblSubject_Click(object sender, EventArgs e)
@@ -156,6 +161,7 @@ namespace gradesBookApp
             //Will show student scores for that specific subject (GRADEBOOK)
             try
             {
+
                 db.Connect();
                 db.cmd.Connection = db.conn;
 
@@ -219,26 +225,6 @@ namespace gradesBookApp
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void logoutButton_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void logoutButton_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -250,15 +236,6 @@ namespace gradesBookApp
             }
         }
 
-        private void rbtnAddClass_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void rbtnAddClass_Click_2(object sender, EventArgs e)
         {
@@ -266,6 +243,133 @@ namespace gradesBookApp
             Add_Class addClass = new Add_Class();
             addClass.ShowDialog();
             this.Close();
+        }
+
+        private void toolUnenroll_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
+                ContextMenuStrip menuStrip = menuItem.Owner as ContextMenuStrip;
+                Label label = menuStrip.SourceControl as Label;
+
+                classId = (int)label.Tag;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (MessageBox.Show("Removing this class will also remove you from the class record. Are you sure you want to continue?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                try
+                {
+                    db.Connect();
+                    db.cmd.Connection = db.conn;
+                    db.cmd.CommandText = "DELETE FROM enroll WHERE student_id = @ID AND class_id = @classID";
+
+                    db.cmd.Parameters.Clear();
+                    db.cmd.Parameters.AddWithValue("@ID", LogInStudent.userID);
+                    db.cmd.Parameters.AddWithValue("@classID", classId);
+
+                    if (db.cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Successfully unenrolled from this class");
+                        LoadDashboard();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occur: " + ex.Message + "\n" + ex.StackTrace);
+                }
+                finally
+                {
+                    db.Disconnect();
+                }
+            }
+        }
+
+        private void toolView_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
+                ContextMenuStrip menuStrip = menuItem.Owner as ContextMenuStrip;
+                Label label = menuStrip.SourceControl as Label;
+
+                classId = (int)label.Tag;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //Will show student scores for that specific subject (GRADEBOOK)
+            try
+            {
+
+                db.Connect();
+                db.cmd.Connection = db.conn;
+
+                // Retrieve IDs
+                db.cmd.CommandText = "SELECT m_activity_id, m_assignment_id, m_longquiz_id, m_quiz_id, m_project_id, m_exam_id, m_recitation_id, f_activity_id, f_assignment_id, f_longquiz_id, f_quiz_id, f_project_id, f_exam_id, f_recitation_id FROM enroll WHERE student_id = @studentID AND class_id = @classID";
+
+                DataTable dtIDs = new DataTable();
+
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@studentID", LogInOperation.userID);
+                db.cmd.Parameters.AddWithValue("@classID", classId);
+
+                // Log the parameters FOR DEBUG
+                //MessageBox.Show($"Query: {db.cmd.CommandText}\nParameters:\nprogramID: {programID}\nclassID: {Teacher_s_Dashboard.classID}");
+
+                db.dta.SelectCommand = db.cmd;
+                db.dta.Fill(dtIDs);
+
+                // Debugging: Check if data is retrieved
+                if (dtIDs.Rows.Count == 0)
+                {
+                    MessageBox.Show("No student records found for this class.");
+                    return;
+                }
+                else
+                {
+                    for (int i = 0; i < dtIDs.Rows.Count; i++)
+                    {
+                        mActivityID = dtIDs.Rows[i]["m_activity_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["m_activity_id"]) : (int?)null;
+                        mAssignmentID = dtIDs.Rows[i]["m_assignment_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["m_assignment_id"]) : (int?)null;
+                        mLongQuizID = dtIDs.Rows[i]["m_longquiz_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["m_longquiz_id"]) : (int?)null;
+                        mQuizID = dtIDs.Rows[i]["m_quiz_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["m_quiz_id"]) : (int?)null;
+                        mRecitationID = dtIDs.Rows[i]["m_recitation_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["m_recitation_id"]) : (int?)null;
+                        mExamID = dtIDs.Rows[i]["m_exam_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["m_exam_id"]) : (int?)null;
+                        mProjectID = dtIDs.Rows[i]["m_project_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["m_project_id"]) : (int?)null;
+
+                        fActivityID = dtIDs.Rows[i]["f_activity_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["f_activity_id"]) : (int?)null;
+                        fAssignmentID = dtIDs.Rows[i]["f_assignment_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["f_assignment_id"]) : (int?)null;
+                        fLongQuizID = dtIDs.Rows[i]["f_longquiz_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["f_longquiz_id"]) : (int?)null;
+                        fQuizID = dtIDs.Rows[i]["f_quiz_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["f_quiz_id"]) : (int?)null;
+                        fRecitationID = dtIDs.Rows[i]["f_recitation_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["f_recitation_id"]) : (int?)null;
+                        fExamID = dtIDs.Rows[i]["f_exam_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["f_exam_id"]) : (int?)null;
+                        fProjectID = dtIDs.Rows[i]["f_project_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["f_project_id"]) : (int?)null;
+                    }
+
+                    this.Hide();
+                    Student_Module studentModule = new Student_Module();
+                    studentModule.ShowDialog();
+                    this.Close();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
         }
     }
 }

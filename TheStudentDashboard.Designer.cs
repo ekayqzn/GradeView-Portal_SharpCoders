@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheStudentDashboard));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutButton = new System.Windows.Forms.PictureBox();
@@ -35,14 +36,19 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.contextUnenroll = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolUnenroll = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolView = new System.Windows.Forms.ToolStripMenuItem();
+            this.rbtnAddClass = new gradesBookApp.RoundedButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            this.contextUnenroll.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -59,7 +65,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.89957F));
@@ -92,7 +98,7 @@
             this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 4);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1043, 76);
             this.flowLayoutPanel1.TabIndex = 72;
@@ -104,7 +110,7 @@
             this.pictureBox2.BackgroundImage = global::gradesBookApp.Properties.Resources.BULACAN;
             this.pictureBox2.Image = global::gradesBookApp.Properties.Resources.BULACAN3;
             this.pictureBox2.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(76, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,30 +144,12 @@
             this.tableLayoutPanel2.Controls.Add(this.rbtnAddClass, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 116);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1198, 65);
             this.tableLayoutPanel2.TabIndex = 75;
-            // 
-            // rbtnAddClass
-            // 
-            this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnAddClass.FlatAppearance.BorderSize = 0;
-            this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(953, 8);
-            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtnAddClass.Name = "rbtnAddClass";
-            this.rbtnAddClass.Size = new System.Drawing.Size(242, 48);
-            this.rbtnAddClass.TabIndex = 6;
-            this.rbtnAddClass.Text = "Enter a class code";
-            this.rbtnAddClass.UseVisualStyleBackColor = false;
-            this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click_2);
             // 
             // label2
             // 
@@ -190,6 +178,53 @@
             this.panel2.Size = new System.Drawing.Size(1200, 616);
             this.panel2.TabIndex = 76;
             // 
+            // contextUnenroll
+            // 
+            this.contextUnenroll.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextUnenroll.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolUnenroll,
+            this.toolStripSeparator1,
+            this.toolView});
+            this.contextUnenroll.Name = "contextUnenroll";
+            this.contextUnenroll.Size = new System.Drawing.Size(135, 58);
+            // 
+            // toolUnenroll
+            // 
+            this.toolUnenroll.Name = "toolUnenroll";
+            this.toolUnenroll.Size = new System.Drawing.Size(134, 24);
+            this.toolUnenroll.Text = "Unenroll";
+            this.toolUnenroll.Click += new System.EventHandler(this.toolUnenroll_Click);
+            // 
+            // toolView
+            // 
+            this.toolView.Name = "toolView";
+            this.toolView.Size = new System.Drawing.Size(134, 24);
+            this.toolView.Text = "View";
+            this.toolView.Click += new System.EventHandler(this.toolView_Click);
+            // 
+            // rbtnAddClass
+            // 
+            this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnAddClass.FlatAppearance.BorderSize = 0;
+            this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
+            this.rbtnAddClass.Location = new System.Drawing.Point(953, 8);
+            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnAddClass.Name = "rbtnAddClass";
+            this.rbtnAddClass.Size = new System.Drawing.Size(242, 48);
+            this.rbtnAddClass.TabIndex = 6;
+            this.rbtnAddClass.Text = "Enter a class code";
+            this.rbtnAddClass.UseVisualStyleBackColor = false;
+            this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click_2);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
+            // 
             // TheStudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -197,7 +232,7 @@
             this.ClientSize = new System.Drawing.Size(1284, 858);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TheStudentDashboard";
             this.Text = "TheStudentDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -209,6 +244,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.contextUnenroll.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -223,5 +259,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private RoundedButton rbtnAddClass;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ContextMenuStrip contextUnenroll;
+        private System.Windows.Forms.ToolStripMenuItem toolUnenroll;
+        private System.Windows.Forms.ToolStripMenuItem toolView;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

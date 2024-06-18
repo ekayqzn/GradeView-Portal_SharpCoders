@@ -45,11 +45,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label1.Location = new System.Drawing.Point(52, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 20);
+            this.label1.Size = new System.Drawing.Size(150, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Subject Code:";
             // 
@@ -62,7 +62,7 @@
             this.txtSubCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSubCode.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSubCode.Location = new System.Drawing.Point(45, 166);
+            this.txtSubCode.Location = new System.Drawing.Point(45, 170);
             this.txtSubCode.Name = "txtSubCode";
             this.txtSubCode.Size = new System.Drawing.Size(672, 27);
             this.txtSubCode.TabIndex = 1;
@@ -76,7 +76,7 @@
             this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSubName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtSubName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSubName.Location = new System.Drawing.Point(45, 254);
+            this.txtSubName.Location = new System.Drawing.Point(45, 259);
             this.txtSubName.Name = "txtSubName";
             this.txtSubName.Size = new System.Drawing.Size(672, 27);
             this.txtSubName.TabIndex = 3;
@@ -87,11 +87,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label2.Location = new System.Drawing.Point(51, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 20);
+            this.label2.Size = new System.Drawing.Size(154, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Subject Name:";
             // 

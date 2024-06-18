@@ -158,12 +158,6 @@
     <Compile Include="GetStudentScore.cs" />
     <Compile Include="GradebookComputation.cs" />
     <Compile Include="LogInAdmin.cs" />
-    <Compile Include="Course Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Course Dashboard.Designer.cs">
-      <DependentUpon>Course Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomizeGrade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,9 +273,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator_LogIn.resx">
       <DependentUpon>Administrator_LogIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Course Dashboard.resx">
-      <DependentUpon>Course Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomizeGrade.resx">
       <DependentUpon>CustomizeGrade.cs</DependentUpon>

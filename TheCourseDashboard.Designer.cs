@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheCourseDashboard));
             this.toolTipHome = new System.Windows.Forms.ToolTip(this.components);
+            this.picBack = new System.Windows.Forms.PictureBox();
             this.cMenuDeleteProgram = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -38,16 +39,33 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picHome = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.logoutButton = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuLogOut = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
             this.cMenuDeleteProgram.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // picBack
+            // 
+            this.picBack.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.picBack.BackColor = System.Drawing.Color.Transparent;
+            this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBack.Image = global::gradesBookApp.Properties.Resources.k__1_1;
+            this.picBack.Location = new System.Drawing.Point(19, 14);
+            this.picBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBack.Name = "picBack";
+            this.picBack.Size = new System.Drawing.Size(74, 56);
+            this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBack.TabIndex = 74;
+            this.picBack.TabStop = false;
+            this.toolTipHome.SetToolTip(this.picBack, "Home");
+            this.picBack.Click += new System.EventHandler(this.picBack_Click);
             // 
             // cMenuDeleteProgram
             // 
@@ -76,8 +94,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.picHome, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.picBack, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -90,7 +108,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.744385F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 858);
             this.tableLayoutPanel1.TabIndex = 2;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label7
             // 
@@ -99,9 +116,9 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
             this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(446, 0);
+            this.label7.Location = new System.Drawing.Point(453, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(386, 85);
+            this.label7.Size = new System.Drawing.Size(373, 85);
             this.label7.TabIndex = 87;
             this.label7.Text = "COURSE DASHBOARD";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,44 +164,65 @@
             this.panel2.Size = new System.Drawing.Size(1081, 592);
             this.panel2.TabIndex = 76;
             // 
-            // picHome
+            // menuStrip1
             // 
-            this.picHome.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.picHome.BackColor = System.Drawing.Color.Transparent;
-            this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHome.Image = global::gradesBookApp.Properties.Resources.k__1_1;
-            this.picHome.Location = new System.Drawing.Point(19, 14);
-            this.picHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(74, 56);
-            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picHome.TabIndex = 74;
-            this.picHome.TabStop = false;
-            this.toolTipHome.SetToolTip(this.picHome, "Home");
+            this.menuStrip1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolMenu});
+            this.menuStrip1.Location = new System.Drawing.Point(1183, 23);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(85, 38);
+            this.menuStrip1.Stretch = false;
+            this.menuStrip1.TabIndex = 89;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // panel3
+            // toolMenu
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.logoutButton);
-            this.panel3.Location = new System.Drawing.Point(1186, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(55, 79);
-            this.panel3.TabIndex = 89;
+            this.toolMenu.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.toolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuPassword,
+            this.toolStripSeparator1,
+            this.menuLogOut});
+            this.toolMenu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolMenu.Image = global::gradesBookApp.Properties.Resources.BULACAN__5___1_1;
+            this.toolMenu.Name = "toolMenu";
+            this.toolMenu.Size = new System.Drawing.Size(44, 34);
+            this.toolMenu.ToolTipText = "Menu";
             // 
-            // logoutButton
+            // menuPassword
             // 
-            this.logoutButton.BackColor = System.Drawing.Color.Transparent;
-            this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoutButton.Image = global::gradesBookApp.Properties.Resources.BULACAN__5___1_;
-            this.logoutButton.Location = new System.Drawing.Point(0, 0);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(55, 79);
-            this.logoutButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoutButton.TabIndex = 71;
-            this.logoutButton.TabStop = false;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            this.menuPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuPassword.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.menuPassword.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.menuPassword.Name = "menuPassword";
+            this.menuPassword.Size = new System.Drawing.Size(241, 26);
+            this.menuPassword.Text = "Manage Password";
+            this.menuPassword.Click += new System.EventHandler(this.menuPassword_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
+            // 
+            // menuLogOut
+            // 
+            this.menuLogOut.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.menuLogOut.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.menuLogOut.Name = "menuLogOut";
+            this.menuLogOut.ShortcutKeyDisplayString = "Ctrl+Shift+L";
+            this.menuLogOut.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.L)));
+            this.menuLogOut.Size = new System.Drawing.Size(241, 26);
+            this.menuLogOut.Text = "Log Out";
+            this.menuLogOut.Click += new System.EventHandler(this.menuLogOut_Click);
             // 
             // TheCourseDashboard
             // 
@@ -192,6 +230,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 858);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -200,13 +239,13 @@
             this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TheCourseDashboard_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
             this.cMenuDeleteProgram.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -216,13 +255,16 @@
         private System.Windows.Forms.ToolTip toolTipHome;
         private System.Windows.Forms.ContextMenuStrip cMenuDeleteProgram;
         private System.Windows.Forms.ToolStripMenuItem deleteProgramToolStripMenuItem;
-        private System.Windows.Forms.PictureBox logoutButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private RoundedButton rbtnAddClass;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox picHome;
+        private System.Windows.Forms.PictureBox picBack;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolMenu;
+        private System.Windows.Forms.ToolStripMenuItem menuPassword;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem menuLogOut;
     }
 }

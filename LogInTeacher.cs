@@ -11,7 +11,7 @@ namespace gradesBookApp
     {
         public override string GetCommand()
         {
-            return $"SELECT * FROM modern_gradesbook.teacher_info WHERE BINARY teacher_id = @Id AND BINARY teacher_password = @Password";
+            return $"SELECT * FROM modern_gradesbook.teacher_info WHERE BINARY teacher_id = @Id AND BINARY password = @Password";
         }
 
         public override void ShowDashboard(Form currentForm)

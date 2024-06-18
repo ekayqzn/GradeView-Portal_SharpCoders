@@ -561,5 +561,29 @@
   <ItemGroup>
     <None Include="Resources\BG Color #545454 %2812%296.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454 %285%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neww.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neww1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #545454.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #5454541.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BULACAN %285%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #5454542.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

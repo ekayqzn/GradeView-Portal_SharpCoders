@@ -34,6 +34,8 @@ namespace gradesBookApp
         public static decimal midtermGrade = 0;
         public static decimal finalGrade = 0;
         public static decimal gwa = 0;
+
+        GradebookComputation c = new GradebookComputation();
         public GradeBook()
         {
             InitializeComponent();
@@ -229,6 +231,7 @@ namespace gradesBookApp
                 dtDisplay.Columns.Clear();
                 dtDisplay.Columns.Add("student_id");
                 dtDisplay.Columns.Add("student_name");
+                
 
                 for (int i = 0; i < studentIDs.Count; i++)
                 {
@@ -326,6 +329,13 @@ namespace gradesBookApp
 
                     gwa = (midtermGrade + finalGrade) / 2;
                     newRow["Final Grade"] = gwa.ToString("0.00");
+
+                    if ((!dtDisplay.Columns.Contains("Equivalent Grade")))
+                    {
+                        dtDisplay.Columns.Add("Equivalent Grade");
+                    }
+                    
+                    newRow["Equivalent Grade"] = c.GradePoints(gwa).ToString("0.00");
 
                     dtDisplay.Rows.Add(newRow);
                     dataGridView1.DataSource = dtDisplay;
@@ -478,6 +488,31 @@ namespace gradesBookApp
         private void picDeleteSearch_Click(object sender, EventArgs e)
         {
             txtSearch.Text = "";
+        }
+
+        //REFERENCE: https://stackoverflow.com/questions/9588540/how-can-i-stop-a-double-click-of-the-window-title-bar-from-maximizing-a-window-o
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_SYSCOMMAND = 0x0112;
+            const int SC_MOVE = 0xF010;
+            const int WM_NCLBUTTONDBLCLK = 0x00A3; //double click on a title bar a.k.a. non-client area of the form
+
+            switch (m.Msg)
+            {
+                case WM_SYSCOMMAND:             //preventing the form from being moved by the mouse.
+                    int command = m.WParam.ToInt32() & 0xfff0;
+                    if (command == SC_MOVE)
+                        return;
+                    break;
+            }
+
+            if (m.Msg == WM_NCLBUTTONDBLCLK)       //preventing the form being resized by the mouse double click on the title bar.
+            {
+                m.Result = IntPtr.Zero;
+                return;
+            }
+
+            base.WndProc(ref m);
         }
     }
 }

@@ -38,5 +38,52 @@ namespace gradesBookApp
             // Calculate 30% of the standardized score
             return standardize * 0.30m;
         }
+
+        public decimal GradePoints (decimal percentage)
+        {
+            decimal result = 0;
+            if(percentage >= 97 && percentage <= 100)
+            {
+                result = 1.0m;
+            }
+            else if(percentage >= 94 && percentage <= 96)
+            {
+                result = 1.25m;
+            }
+            else if (percentage >= 91 && percentage <= 93)
+            {
+                result = 1.5m;
+            }
+            else if (percentage >= 88 && percentage <= 90)
+            {
+                result = 1.75m;
+            }
+            else if (percentage >= 85 && percentage <= 87)
+            {
+                result = 2.0m;
+            }
+            else if (percentage >= 82 && percentage <= 84)
+            {
+                result = 2.25m;
+            }
+            else if (percentage >= 79 && percentage <= 81)
+            {
+                result = 2.5m;
+            }
+            else if (percentage >= 76 && percentage <= 78)
+            {
+                result = 2.75m;
+            }
+            else if (percentage == 75)
+            {
+                result = 3.0m;
+            }
+            else
+            {
+                result = 5.0m;
+            }
+
+            return result;
+        }
     }
 }

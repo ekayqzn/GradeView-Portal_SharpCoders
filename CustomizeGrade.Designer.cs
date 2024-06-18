@@ -185,7 +185,8 @@
             this.chkMAssignment.Location = new System.Drawing.Point(72, 194);
             this.chkMAssignment.Name = "chkMAssignment";
             this.chkMAssignment.Size = new System.Drawing.Size(107, 22);
-            this.chkMAssignment.TabIndex = 6;
+            this.chkMAssignment.TabIndex = 1;
+            this.chkMAssignment.TabStop = false;
             this.chkMAssignment.Text = "Assignment";
             this.chkMAssignment.UseVisualStyleBackColor = true;
             this.chkMAssignment.CheckedChanged += new System.EventHandler(this.chkMAssignment_CheckedChanged);
@@ -216,7 +217,7 @@
             this.txtMLongQuiz.Location = new System.Drawing.Point(230, 12);
             this.txtMLongQuiz.Name = "txtMLongQuiz";
             this.txtMLongQuiz.Size = new System.Drawing.Size(98, 24);
-            this.txtMLongQuiz.TabIndex = 4;
+            this.txtMLongQuiz.TabIndex = 6;
             this.txtMLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMLongQuiz
@@ -234,7 +235,7 @@
             0});
             this.numMLongQuiz.Name = "numMLongQuiz";
             this.numMLongQuiz.Size = new System.Drawing.Size(135, 24);
-            this.numMLongQuiz.TabIndex = 3;
+            this.numMLongQuiz.TabIndex = 5;
             this.numMLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMLongQuiz.Value = new decimal(new int[] {
             1,
@@ -248,7 +249,8 @@
             this.chkMLongQuiz.Location = new System.Drawing.Point(72, 258);
             this.chkMLongQuiz.Name = "chkMLongQuiz";
             this.chkMLongQuiz.Size = new System.Drawing.Size(98, 22);
-            this.chkMLongQuiz.TabIndex = 8;
+            this.chkMLongQuiz.TabIndex = 1;
+            this.chkMLongQuiz.TabStop = false;
             this.chkMLongQuiz.Text = "Long Quiz";
             this.chkMLongQuiz.UseVisualStyleBackColor = true;
             this.chkMLongQuiz.CheckedChanged += new System.EventHandler(this.chkMLongQuiz_CheckedChanged);
@@ -279,7 +281,7 @@
             this.txtMQuiz.Location = new System.Drawing.Point(230, 12);
             this.txtMQuiz.Name = "txtMQuiz";
             this.txtMQuiz.Size = new System.Drawing.Size(98, 24);
-            this.txtMQuiz.TabIndex = 4;
+            this.txtMQuiz.TabIndex = 8;
             this.txtMQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMQuiz
@@ -297,7 +299,7 @@
             0});
             this.numMQuiz.Name = "numMQuiz";
             this.numMQuiz.Size = new System.Drawing.Size(135, 24);
-            this.numMQuiz.TabIndex = 3;
+            this.numMQuiz.TabIndex = 7;
             this.numMQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMQuiz.Value = new decimal(new int[] {
             1,
@@ -311,7 +313,8 @@
             this.chkMQuiz.Location = new System.Drawing.Point(72, 322);
             this.chkMQuiz.Name = "chkMQuiz";
             this.chkMQuiz.Size = new System.Drawing.Size(61, 22);
-            this.chkMQuiz.TabIndex = 10;
+            this.chkMQuiz.TabIndex = 1;
+            this.chkMQuiz.TabStop = false;
             this.chkMQuiz.Text = "Quiz";
             this.chkMQuiz.UseVisualStyleBackColor = true;
             this.chkMQuiz.CheckedChanged += new System.EventHandler(this.chkMQuiz_CheckedChanged);
@@ -342,7 +345,7 @@
             this.txtMRecitation.Location = new System.Drawing.Point(230, 12);
             this.txtMRecitation.Name = "txtMRecitation";
             this.txtMRecitation.Size = new System.Drawing.Size(98, 24);
-            this.txtMRecitation.TabIndex = 4;
+            this.txtMRecitation.TabIndex = 10;
             this.txtMRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMRecitation
@@ -360,7 +363,7 @@
             0});
             this.numMRecitation.Name = "numMRecitation";
             this.numMRecitation.Size = new System.Drawing.Size(135, 24);
-            this.numMRecitation.TabIndex = 3;
+            this.numMRecitation.TabIndex = 9;
             this.numMRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMRecitation.Value = new decimal(new int[] {
             1,
@@ -374,7 +377,8 @@
             this.chkMRecitation.Location = new System.Drawing.Point(72, 386);
             this.chkMRecitation.Name = "chkMRecitation";
             this.chkMRecitation.Size = new System.Drawing.Size(96, 22);
-            this.chkMRecitation.TabIndex = 12;
+            this.chkMRecitation.TabIndex = 1;
+            this.chkMRecitation.TabStop = false;
             this.chkMRecitation.Text = "Recitation";
             this.chkMRecitation.UseVisualStyleBackColor = true;
             this.chkMRecitation.CheckedChanged += new System.EventHandler(this.chkMRecitation_CheckedChanged);
@@ -405,7 +409,7 @@
             this.txtMActivity.Location = new System.Drawing.Point(231, 17);
             this.txtMActivity.Name = "txtMActivity";
             this.txtMActivity.Size = new System.Drawing.Size(98, 24);
-            this.txtMActivity.TabIndex = 4;
+            this.txtMActivity.TabIndex = 2;
             this.txtMActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMActivity
@@ -423,7 +427,7 @@
             0});
             this.numMActivity.Name = "numMActivity";
             this.numMActivity.Size = new System.Drawing.Size(135, 24);
-            this.numMActivity.TabIndex = 3;
+            this.numMActivity.TabIndex = 1;
             this.numMActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMActivity.Value = new decimal(new int[] {
             1,
@@ -437,7 +441,8 @@
             this.chkMActivity.Location = new System.Drawing.Point(72, 133);
             this.chkMActivity.Name = "chkMActivity";
             this.chkMActivity.Size = new System.Drawing.Size(75, 22);
-            this.chkMActivity.TabIndex = 14;
+            this.chkMActivity.TabIndex = 1;
+            this.chkMActivity.TabStop = false;
             this.chkMActivity.Text = "Activity";
             this.chkMActivity.UseVisualStyleBackColor = true;
             this.chkMActivity.CheckedChanged += new System.EventHandler(this.chkMActivity_CheckedChanged);
@@ -460,7 +465,7 @@
             this.groupBox1.Location = new System.Drawing.Point(63, 459);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(531, 148);
-            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "30%";
             // 
@@ -470,8 +475,7 @@
             this.rdoMProject.Location = new System.Drawing.Point(15, 89);
             this.rdoMProject.Name = "rdoMProject";
             this.rdoMProject.Size = new System.Drawing.Size(134, 22);
-            this.rdoMProject.TabIndex = 1;
-            this.rdoMProject.TabStop = true;
+            this.rdoMProject.TabIndex = 11;
             this.rdoMProject.Text = "Midterm Project";
             this.rdoMProject.UseVisualStyleBackColor = true;
             // 
@@ -481,7 +485,7 @@
             this.rdoMExam.Location = new System.Drawing.Point(16, 48);
             this.rdoMExam.Name = "rdoMExam";
             this.rdoMExam.Size = new System.Drawing.Size(168, 22);
-            this.rdoMExam.TabIndex = 0;
+            this.rdoMExam.TabIndex = 11;
             this.rdoMExam.TabStop = true;
             this.rdoMExam.Text = "Midterm Examination";
             this.rdoMExam.UseVisualStyleBackColor = true;
@@ -494,7 +498,7 @@
             this.groupBox2.Location = new System.Drawing.Point(662, 459);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(531, 148);
-            this.groupBox2.TabIndex = 33;
+            this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "30%";
             // 
@@ -504,8 +508,7 @@
             this.rdoFProject.Location = new System.Drawing.Point(15, 89);
             this.rdoFProject.Name = "rdoFProject";
             this.rdoFProject.Size = new System.Drawing.Size(111, 22);
-            this.rdoFProject.TabIndex = 1;
-            this.rdoFProject.TabStop = true;
+            this.rdoFProject.TabIndex = 23;
             this.rdoFProject.Text = "Final Project";
             this.rdoFProject.UseVisualStyleBackColor = true;
             // 
@@ -515,8 +518,7 @@
             this.rdoFExam.Location = new System.Drawing.Point(16, 48);
             this.rdoFExam.Name = "rdoFExam";
             this.rdoFExam.Size = new System.Drawing.Size(145, 22);
-            this.rdoFExam.TabIndex = 0;
-            this.rdoFExam.TabStop = true;
+            this.rdoFExam.TabIndex = 22;
             this.rdoFExam.Text = "Final Examination";
             this.rdoFExam.UseVisualStyleBackColor = true;
             // 
@@ -556,7 +558,7 @@
             this.txtFActivity.Location = new System.Drawing.Point(231, 17);
             this.txtFActivity.Name = "txtFActivity";
             this.txtFActivity.Size = new System.Drawing.Size(98, 24);
-            this.txtFActivity.TabIndex = 4;
+            this.txtFActivity.TabIndex = 13;
             this.txtFActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFActivity
@@ -574,7 +576,7 @@
             0});
             this.numFActivity.Name = "numFActivity";
             this.numFActivity.Size = new System.Drawing.Size(135, 24);
-            this.numFActivity.TabIndex = 3;
+            this.numFActivity.TabIndex = 12;
             this.numFActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFActivity.Value = new decimal(new int[] {
             1,
@@ -589,6 +591,7 @@
             this.chkFActivity.Name = "chkFActivity";
             this.chkFActivity.Size = new System.Drawing.Size(75, 22);
             this.chkFActivity.TabIndex = 30;
+            this.chkFActivity.TabStop = false;
             this.chkFActivity.Text = "Activity";
             this.chkFActivity.UseVisualStyleBackColor = true;
             this.chkFActivity.CheckedChanged += new System.EventHandler(this.chkFActivity_CheckedChanged);
@@ -619,7 +622,7 @@
             this.txtFRecitation.Location = new System.Drawing.Point(230, 12);
             this.txtFRecitation.Name = "txtFRecitation";
             this.txtFRecitation.Size = new System.Drawing.Size(98, 24);
-            this.txtFRecitation.TabIndex = 4;
+            this.txtFRecitation.TabIndex = 21;
             this.txtFRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFRecitation
@@ -637,7 +640,7 @@
             0});
             this.numFRecitation.Name = "numFRecitation";
             this.numFRecitation.Size = new System.Drawing.Size(135, 24);
-            this.numFRecitation.TabIndex = 3;
+            this.numFRecitation.TabIndex = 20;
             this.numFRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFRecitation.Value = new decimal(new int[] {
             1,
@@ -652,6 +655,7 @@
             this.chkFRecitation.Name = "chkFRecitation";
             this.chkFRecitation.Size = new System.Drawing.Size(96, 22);
             this.chkFRecitation.TabIndex = 28;
+            this.chkFRecitation.TabStop = false;
             this.chkFRecitation.Text = "Recitation";
             this.chkFRecitation.UseVisualStyleBackColor = true;
             this.chkFRecitation.CheckedChanged += new System.EventHandler(this.chkFRecitation_CheckedChanged);
@@ -682,7 +686,7 @@
             this.txtFQuiz.Location = new System.Drawing.Point(230, 12);
             this.txtFQuiz.Name = "txtFQuiz";
             this.txtFQuiz.Size = new System.Drawing.Size(98, 24);
-            this.txtFQuiz.TabIndex = 4;
+            this.txtFQuiz.TabIndex = 19;
             this.txtFQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFQuiz
@@ -700,7 +704,7 @@
             0});
             this.numFQuiz.Name = "numFQuiz";
             this.numFQuiz.Size = new System.Drawing.Size(135, 24);
-            this.numFQuiz.TabIndex = 3;
+            this.numFQuiz.TabIndex = 18;
             this.numFQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFQuiz.Value = new decimal(new int[] {
             1,
@@ -715,6 +719,7 @@
             this.chkFQuiz.Name = "chkFQuiz";
             this.chkFQuiz.Size = new System.Drawing.Size(61, 22);
             this.chkFQuiz.TabIndex = 26;
+            this.chkFQuiz.TabStop = false;
             this.chkFQuiz.Text = "Quiz";
             this.chkFQuiz.UseVisualStyleBackColor = true;
             this.chkFQuiz.CheckedChanged += new System.EventHandler(this.chkFQuiz_CheckedChanged);
@@ -745,7 +750,7 @@
             this.txtFLongQuiz.Location = new System.Drawing.Point(230, 12);
             this.txtFLongQuiz.Name = "txtFLongQuiz";
             this.txtFLongQuiz.Size = new System.Drawing.Size(98, 24);
-            this.txtFLongQuiz.TabIndex = 4;
+            this.txtFLongQuiz.TabIndex = 17;
             this.txtFLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFLongQuiz
@@ -763,7 +768,7 @@
             0});
             this.numFLongQuiz.Name = "numFLongQuiz";
             this.numFLongQuiz.Size = new System.Drawing.Size(135, 24);
-            this.numFLongQuiz.TabIndex = 3;
+            this.numFLongQuiz.TabIndex = 16;
             this.numFLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFLongQuiz.Value = new decimal(new int[] {
             1,
@@ -778,6 +783,7 @@
             this.chkFLongQuiz.Name = "chkFLongQuiz";
             this.chkFLongQuiz.Size = new System.Drawing.Size(98, 22);
             this.chkFLongQuiz.TabIndex = 24;
+            this.chkFLongQuiz.TabStop = false;
             this.chkFLongQuiz.Text = "Long Quiz";
             this.chkFLongQuiz.UseVisualStyleBackColor = true;
             this.chkFLongQuiz.CheckedChanged += new System.EventHandler(this.chkFLongQuiz_CheckedChanged);
@@ -808,7 +814,7 @@
             this.txtFAssignment.Location = new System.Drawing.Point(230, 12);
             this.txtFAssignment.Name = "txtFAssignment";
             this.txtFAssignment.Size = new System.Drawing.Size(98, 24);
-            this.txtFAssignment.TabIndex = 4;
+            this.txtFAssignment.TabIndex = 15;
             this.txtFAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFAssignment
@@ -826,7 +832,7 @@
             0});
             this.numFAssignment.Name = "numFAssignment";
             this.numFAssignment.Size = new System.Drawing.Size(135, 24);
-            this.numFAssignment.TabIndex = 3;
+            this.numFAssignment.TabIndex = 14;
             this.numFAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFAssignment.Value = new decimal(new int[] {
             1,
@@ -841,6 +847,7 @@
             this.chkFAssignment.Name = "chkFAssignment";
             this.chkFAssignment.Size = new System.Drawing.Size(107, 22);
             this.chkFAssignment.TabIndex = 22;
+            this.chkFAssignment.TabStop = false;
             this.chkFAssignment.Text = "Assignment";
             this.chkFAssignment.UseVisualStyleBackColor = true;
             this.chkFAssignment.CheckedChanged += new System.EventHandler(this.chkFAssignment_CheckedChanged);
@@ -867,7 +874,7 @@
             this.rbtnOK.Location = new System.Drawing.Point(1023, 643);
             this.rbtnOK.Name = "rbtnOK";
             this.rbtnOK.Size = new System.Drawing.Size(169, 45);
-            this.rbtnOK.TabIndex = 0;
+            this.rbtnOK.TabIndex = 24;
             this.rbtnOK.Text = "OK";
             this.rbtnOK.UseVisualStyleBackColor = false;
             this.rbtnOK.Click += new System.EventHandler(this.rbtnOK_Click);

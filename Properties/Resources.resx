@@ -148,6 +148,9 @@
   <data name="BG Color #545454 (7)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (7)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BULACAN (5) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BULACAN (5) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SHARP (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SHARP (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +165,9 @@
   </data>
   <data name="SignIn_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images&amp;Icons\SignIn_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled design (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled design (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,6 +205,9 @@
   <data name="BULACAN TECHNOLOGICAL UNIVERSITY (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN TECHNOLOGICAL UNIVERSITY (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="neww" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\neww.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BG Color #545454 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,14 +241,17 @@
   <data name="BULACAN (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BG Color #545454 (5)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (5)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BULACAN (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BULACAN (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BG Color #545454 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG Color #545454 (1)3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG Color #545454 (1)3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BG Color #5454541" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #5454541.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BG Color #545454 (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -261,6 +273,9 @@
   </data>
   <data name="BG Color #545454 (12)4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (12)4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG Color #545454" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BG 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -288,6 +303,9 @@
   </data>
   <data name="BG Color #545454 (12)3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (12)3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG Color #545454 (12)6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (12)6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="k (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\k (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,6 +340,9 @@
   <data name="LandingPageFacade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LandingPageFacade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BG Color #545454 (1)3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #545454 (1)3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BG Color #545454 (6)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (6)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -334,10 +355,13 @@
   <data name="BG Color #545454 (12)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (12)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="neww1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\neww1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BG Color #545454 (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG Color #545454 (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG Color #545454 (12)6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG Color #545454 (12)6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BG Color #5454542" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG Color #5454542.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

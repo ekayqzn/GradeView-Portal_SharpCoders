@@ -55,7 +55,7 @@ namespace gradesBookApp
                 {
                     if ((v.isValidID(txtTeacherNum.Text)) && (v.isString(fName)) && (v.isString(lName)) && (v.isStringMName(mName)))
                     {
-                        isAdded = a.AddTeacher(teacherNum, fName, lName, mName);
+                        isAdded = a.AddTeacher(teacherNum, fName, mName, lName);
                     }
                 }
 
@@ -94,7 +94,7 @@ namespace gradesBookApp
             {
                 if ((v.isValidID(txtTeacherNum.Text)) && (v.isString(fName)) && (v.isString(lName)) && (v.isStringMName(mName)))
                 {
-                    isAdded = a.AddTeacher(teacherNum, fName, lName, mName);
+                    isAdded = a.AddTeacher(teacherNum, fName, mName, lName);
                 }
             }
             

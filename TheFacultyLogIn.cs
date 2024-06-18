@@ -80,5 +80,18 @@ namespace gradesBookApp
             btnShowPass.Visible = false; // Hide ShowPass button
             btnUnshowPass.Visible = true; // Show UnshowPass button
         }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkTermsPrivacy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            TheTermsOfUseAndPrivacyStatement l = new TheTermsOfUseAndPrivacyStatement();
+            l.ShowDialog();
+            this.Close();
+        }
     }
 }

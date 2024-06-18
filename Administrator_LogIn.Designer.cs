@@ -47,10 +47,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(161, 159);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(149, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 29);
+            this.label1.Size = new System.Drawing.Size(118, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Administrator:";
             // 
@@ -59,10 +58,9 @@
             this.txtAdminID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtAdminID.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtAdminID.ForeColor = System.Drawing.Color.Black;
-            this.txtAdminID.Location = new System.Drawing.Point(196, 191);
-            this.txtAdminID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdminID.Location = new System.Drawing.Point(147, 155);
             this.txtAdminID.Name = "txtAdminID";
-            this.txtAdminID.Size = new System.Drawing.Size(451, 34);
+            this.txtAdminID.Size = new System.Drawing.Size(339, 29);
             this.txtAdminID.TabIndex = 1;
             // 
             // label2
@@ -70,23 +68,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(161, 250);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(149, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 29);
+            this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtAdminPass
             // 
             this.txtAdminPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtAdminPass.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtAdminPass.ForeColor = System.Drawing.Color.Black;
-            this.txtAdminPass.Location = new System.Drawing.Point(196, 281);
-            this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdminPass.Location = new System.Drawing.Point(147, 228);
             this.txtAdminPass.Name = "txtAdminPass";
             this.txtAdminPass.PasswordChar = '*';
-            this.txtAdminPass.Size = new System.Drawing.Size(451, 34);
+            this.txtAdminPass.Size = new System.Drawing.Size(339, 29);
             this.txtAdminPass.TabIndex = 3;
             // 
             // rbtnLogIn
@@ -98,10 +95,9 @@
             this.rbtnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnLogIn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLogIn.ForeColor = System.Drawing.Color.White;
-            this.rbtnLogIn.Location = new System.Drawing.Point(498, 351);
-            this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnLogIn.Location = new System.Drawing.Point(374, 285);
             this.rbtnLogIn.Name = "rbtnLogIn";
-            this.rbtnLogIn.Size = new System.Drawing.Size(149, 39);
+            this.rbtnLogIn.Size = new System.Drawing.Size(112, 32);
             this.rbtnLogIn.TabIndex = 4;
             this.rbtnLogIn.Text = "Log In";
             this.rbtnLogIn.UseVisualStyleBackColor = false;
@@ -114,9 +110,10 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(301, 23);
+            this.label4.Location = new System.Drawing.Point(226, 19);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 35);
+            this.label4.Size = new System.Drawing.Size(175, 29);
             this.label4.TabIndex = 56;
             this.label4.Text = "ADMINISTRATOR";
             // 
@@ -126,12 +123,11 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(-421, -1);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(-316, -1);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(1797, 82);
+            this.textBox2.Size = new System.Drawing.Size(1348, 67);
             this.textBox2.TabIndex = 55;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -142,10 +138,10 @@
             this.btnOpen.FlatAppearance.BorderSize = 0;
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpen.Image = global::gradesBookApp.Properties.Resources.red_eye;
-            this.btnOpen.Location = new System.Drawing.Point(614, 287);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOpen.Location = new System.Drawing.Point(460, 233);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(30, 27);
+            this.btnOpen.Size = new System.Drawing.Size(22, 22);
             this.btnOpen.TabIndex = 69;
             this.btnOpen.UseVisualStyleBackColor = false;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
@@ -157,10 +153,10 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::gradesBookApp.Properties.Resources.hide;
-            this.btnClose.Location = new System.Drawing.Point(612, 285);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Location = new System.Drawing.Point(459, 232);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(33, 27);
+            this.btnClose.Size = new System.Drawing.Size(25, 22);
             this.btnClose.TabIndex = 70;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -171,10 +167,10 @@
             this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.picHome.Location = new System.Drawing.Point(12, 11);
-            this.picHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picHome.Location = new System.Drawing.Point(9, 9);
+            this.picHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(55, 50);
+            this.picHome.Size = new System.Drawing.Size(41, 41);
             this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHome.TabIndex = 72;
             this.picHome.TabStop = false;
@@ -182,10 +178,10 @@
             // 
             // Administrator_LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(861, 497);
+            this.ClientSize = new System.Drawing.Size(646, 404);
             this.Controls.Add(this.picHome);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnOpen);
@@ -197,7 +193,6 @@
             this.Controls.Add(this.txtAdminID);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Administrator_LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

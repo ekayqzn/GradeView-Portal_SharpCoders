@@ -120,7 +120,7 @@ namespace gradesBookApp
                     }
                     columnValueLabel.Location = new Point(Student_Module.xLocation + 200, Student_Module.yLocation);
                     columnValueLabel.AutoSize = true; // Adjust label size based on text
-                    columnValueLabel.Font = new Font("Arial", 11, FontStyle.Italic);
+                    columnValueLabel.Font = new Font("Arial", 11, FontStyle.Regular);
 
                     // Add the labels to the panel
                     current.Controls.Add(columnNameLabel);

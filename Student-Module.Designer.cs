@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_Module));
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.LinkLBLback = new System.Windows.Forms.LinkLabel();
             this.picBack = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,31 +66,13 @@
             this.textBox2.TabIndex = 55;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // LinkLBLback
-            // 
-            this.LinkLBLback.ActiveLinkColor = System.Drawing.Color.Yellow;
-            this.LinkLBLback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LinkLBLback.AutoSize = true;
-            this.LinkLBLback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.LinkLBLback.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LinkLBLback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLBLback.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLback.Location = new System.Drawing.Point(870, 30);
-            this.LinkLBLback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LinkLBLback.Name = "LinkLBLback";
-            this.LinkLBLback.Size = new System.Drawing.Size(60, 25);
-            this.LinkLBLback.TabIndex = 63;
-            this.LinkLBLback.TabStop = true;
-            this.LinkLBLback.Text = "Back";
-            this.LinkLBLback.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLBLback_LinkClicked);
-            // 
             // picBack
             // 
             this.picBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBack.Image = global::gradesBookApp.Properties.Resources.k__1_;
-            this.picBack.Location = new System.Drawing.Point(818, 18);
+            this.picBack.Location = new System.Drawing.Point(19, 16);
             this.picBack.Name = "picBack";
             this.picBack.Size = new System.Drawing.Size(55, 50);
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,7 +121,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picBack);
-            this.Controls.Add(this.LinkLBLback);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -158,7 +138,6 @@
         #endregion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.LinkLabel LinkLBLback;
         private System.Windows.Forms.PictureBox picBack;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

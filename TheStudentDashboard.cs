@@ -225,7 +225,16 @@ namespace gradesBookApp
             }
         }
 
-        private void logoutButton_Click_1(object sender, EventArgs e)
+
+        private void rbtnAddClass_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_Class addClass = new Add_Class();
+            addClass.ShowDialog();
+            this.Close();
+        }
+
+        private void menuLogOut_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to Log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -235,7 +244,6 @@ namespace gradesBookApp
                 this.Close();
             }
         }
-
 
         private void rbtnAddClass_Click_2(object sender, EventArgs e)
         {
@@ -370,6 +378,13 @@ namespace gradesBookApp
             {
                 db.Disconnect();
             }
+            
+        private void menuPassword_Click(object sender, EventArgs e)
+        {
+            TheFacultyDashboard.type = "student";
+            Manage_Password m = new Manage_Password();
+            m.ShowDialog();
+
         }
     }
 }

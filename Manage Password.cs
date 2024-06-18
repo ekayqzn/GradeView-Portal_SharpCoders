@@ -29,9 +29,22 @@ namespace gradesBookApp
 
         private void btnValidate_Click (object sender, EventArgs e)
         {
-            if(TheFacultyDashboard.type != "")
+            if(TheFacultyDashboard.type == "teacher")
             {
                 if (v.passwordValid("teacher", textBox.Text, LogInTeacher.userID))
+                {
+                    panelPassword.Visible = true;
+                    panelButton.Visible = true;
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Password");
+                }
+            }
+            if(TheFacultyDashboard.type == "student")
+            {
+                if (v.passwordValid("student", textBox.Text, LogInStudent.userID))
                 {
                     panelPassword.Visible = true;
                     panelButton.Visible = true;
@@ -70,11 +83,13 @@ namespace gradesBookApp
             button.Location = new Point(350, 311);
             button.Text = "Validate";
             button.Click += new EventHandler(btnValidate_Click);
+            button.Cursor = Cursors.Hand;
 
             RoundedButton button2 = new RoundedButton();
             button2.Location = new Point(180, 311);
             button2.Text = "Cancel";
             button2.Click += new EventHandler(btnCancel_Click);
+            button2.Cursor = Cursors.Hand;
 
             // Add controls to the form
             this.Controls.Add(label);
@@ -99,6 +114,17 @@ namespace gradesBookApp
                 else if(TheFacultyDashboard.type == "teacher")
                 {
                     if(u.UpdatePassword("teacher", txtConfirmPass.Text, LogInTeacher.userID) != 0)
+                    {
+                        if (MessageBox.Show("Password updated!", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                        {
+                            txtConfirmPass.Text = "";
+                            txtNewPass.Text = "";
+                        }
+                    }
+                }
+                else if (TheFacultyDashboard.type == "student")
+                {
+                    if (u.UpdatePassword("student", txtConfirmPass.Text, LogInStudent.userID) != 0)
                     {
                         if (MessageBox.Show("Password updated!", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                         {

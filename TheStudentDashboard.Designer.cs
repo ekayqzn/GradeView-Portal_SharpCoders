@@ -28,20 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheStudentDashboard));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+
+            this.contextUnenroll = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolUnenroll = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolView = new System.Windows.Forms.ToolStripMenuItem();
+            this.rbtnAddClass = new gradesBookApp.RoundedButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPassword = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuLogOut = new System.Windows.Forms.ToolStripMenuItem();
+
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+
+            this.contextUnenroll.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,6 +79,50 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 858);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1043, 76);
+            this.flowLayoutPanel1.TabIndex = 72;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::gradesBookApp.Properties.Resources.BULACAN;
+            this.pictureBox2.Image = global::gradesBookApp.Properties.Resources.BULACAN3;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(76, 74);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 73;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(88, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(583, 82);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "BULACAN TECHNOLOGICAL UNIVERSITY";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -86,24 +141,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1171, 65);
             this.tableLayoutPanel2.TabIndex = 75;
-            // 
-            // rbtnAddClass
-            // 
-            this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnAddClass.FlatAppearance.BorderSize = 0;
-            this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(926, 8);
-            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbtnAddClass.Name = "rbtnAddClass";
-            this.rbtnAddClass.Size = new System.Drawing.Size(242, 48);
-            this.rbtnAddClass.TabIndex = 6;
-            this.rbtnAddClass.Text = "Enter a class code";
-            this.rbtnAddClass.UseVisualStyleBackColor = false;
-            this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click_2);
             // 
             // label2
             // 
@@ -132,6 +169,54 @@
             this.panel2.Size = new System.Drawing.Size(1173, 616);
             this.panel2.TabIndex = 76;
             // 
+
+            // contextUnenroll
+            // 
+            this.contextUnenroll.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextUnenroll.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolUnenroll,
+            this.toolStripSeparator1,
+            this.toolView});
+            this.contextUnenroll.Name = "contextUnenroll";
+            this.contextUnenroll.Size = new System.Drawing.Size(135, 58);
+            // 
+            // toolUnenroll
+            // 
+            this.toolUnenroll.Name = "toolUnenroll";
+            this.toolUnenroll.Size = new System.Drawing.Size(134, 24);
+            this.toolUnenroll.Text = "Unenroll";
+            this.toolUnenroll.Click += new System.EventHandler(this.toolUnenroll_Click);
+            // 
+            // toolView
+            // 
+            this.toolView.Name = "toolView";
+            this.toolView.Size = new System.Drawing.Size(134, 24);
+            this.toolView.Text = "View";
+            this.toolView.Click += new System.EventHandler(this.toolView_Click);
+            // 
+            // rbtnAddClass
+            // 
+            this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnAddClass.FlatAppearance.BorderSize = 0;
+            this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
+            this.rbtnAddClass.Location = new System.Drawing.Point(953, 8);
+            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnAddClass.Name = "rbtnAddClass";
+            this.rbtnAddClass.Size = new System.Drawing.Size(242, 48);
+            this.rbtnAddClass.TabIndex = 6;
+            this.rbtnAddClass.Text = "Enter a class code";
+            this.rbtnAddClass.UseVisualStyleBackColor = false;
+            this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click_2);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
+
             // menuStrip1
             // 
             this.menuStrip1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -191,6 +276,7 @@
             this.menuLogOut.Size = new System.Drawing.Size(241, 26);
             this.menuLogOut.Text = "Log Out";
             this.menuLogOut.Click += new System.EventHandler(this.menuLogOut_Click);
+
             // 
             // TheStudentDashboard
             // 
@@ -208,8 +294,12 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+
+            this.contextUnenroll.ResumeLayout(false);
+          
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+
             this.ResumeLayout(false);
 
         }
@@ -220,10 +310,17 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private RoundedButton rbtnAddClass;
         private System.Windows.Forms.Panel panel2;
+
+        private System.Windows.Forms.ContextMenuStrip contextUnenroll;
+        private System.Windows.Forms.ToolStripMenuItem toolUnenroll;
+        private System.Windows.Forms.ToolStripMenuItem toolView;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolMenu;
         private System.Windows.Forms.ToolStripMenuItem menuPassword;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem menuLogOut;
+
     }
 }

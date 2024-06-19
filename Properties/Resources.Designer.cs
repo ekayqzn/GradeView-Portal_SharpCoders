@@ -473,6 +473,16 @@ namespace gradesBookApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BG_Color__5454543 {
+            get {
+                object obj = ResourceManager.GetObject("BG Color #5454543", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BULACAN {
             get {
                 object obj = ResourceManager.GetObject("BULACAN", resourceCulture);

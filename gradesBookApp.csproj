@@ -232,6 +232,12 @@
     <Compile Include="TheStudent-Login.Designer.cs">
       <DependentUpon>TheStudent-Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheStudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheStudentDashboard.Designer.cs">
+      <DependentUpon>TheStudentDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="TheTermsOfUseAndPrivacyStatement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TheStudent-Login.resx">
       <DependentUpon>TheStudent-Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheStudentDashboard.resx">
+      <DependentUpon>TheStudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TheTermsOfUseAndPrivacyStatement.resx">
       <DependentUpon>TheTermsOfUseAndPrivacyStatement.cs</DependentUpon>
@@ -582,6 +591,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BULACAN %285%29 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Color #5454543.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

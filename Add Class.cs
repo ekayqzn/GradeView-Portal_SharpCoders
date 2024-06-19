@@ -66,7 +66,7 @@ namespace gradesBookApp
 
                     if (dataTable.Rows.Count == 0) //code not exist
                     {
-                        MessageBox.Show("Invalid Code", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Try Again! The provided subject code is invalid.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtClassCode.Focus();
                         txtClassCode.SelectAll();
                     }
@@ -167,7 +167,7 @@ namespace gradesBookApp
 
                                 if(isEnrolled)
                                 {
-                                    MessageBox.Show("You are already enrolled in this subject in different teacher", "Already Enrolled", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("You are already enrolled in this subject with a different instructor.", "Enrolment Notice", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 }
                                 else
                                 {
@@ -305,7 +305,7 @@ namespace gradesBookApp
 
                                         if (isValid)
                                         {
-                                            if (MessageBox.Show("Subject Added to Dashboard", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                                            if (MessageBox.Show("Subject successfully added to your Dashboard", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                                             {
                                                 this.Hide();
                                                 TheStudentDashboard studentDB = new TheStudentDashboard();
@@ -327,7 +327,7 @@ namespace gradesBookApp
                             else
                             {
                                 //Student is already enrolled in specific subject in the same teacher
-                                MessageBox.Show("You are already enrolled in that subject", "Already Enrolled", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("You are already enrolled in the subject.", "Enrolment Notice", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
                         catch (Exception ex)
@@ -351,7 +351,7 @@ namespace gradesBookApp
             }
             else
             {
-                MessageBox.Show("Empty field is not accepted", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Try Again! No fields should be empty.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtClassCode.Focus();
             }
         }

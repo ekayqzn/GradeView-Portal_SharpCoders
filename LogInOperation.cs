@@ -62,7 +62,7 @@ namespace gradesBookApp
             else // One or both fields are empty
             {
                 // Inform user about empty fields
-                MessageBox.Show("Try Again! Field cannot be empty.", "Missing Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 // Set focus to the empty field
                 if (string.IsNullOrEmpty(userID))

@@ -128,7 +128,7 @@ namespace gradesBookApp
 
                         db.cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Successfully added the program to your subject", "Program Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Section successfully added to your dashboard.", "Program Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TheCourseDashboard courseDB = new TheCourseDashboard();
                         this.Hide();
                         courseDB.ShowDialog();
@@ -136,7 +136,7 @@ namespace gradesBookApp
                     }
                     else
                     {
-                        MessageBox.Show("You already have record of the same program, year, and section in this subject", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Try Again! A record of the same program, year, and section already exist.", "Duplication Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         cboProgram.Focus();
                     }
 

@@ -174,7 +174,7 @@ namespace gradesBookApp
                                 db.Disconnect();
                             }
 
-                            if (MessageBox.Show("Subject successfully added to your dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                            if (MessageBox.Show("The subject is successfully added to your dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                             {
                                 //!ADD TO MESSAGE BOX THE CODE
 
@@ -188,7 +188,7 @@ namespace gradesBookApp
                     }
                     else //If the subject the user want to add is already in the database and in her dashboard
                     {
-                        if (MessageBox.Show("Subject is already added to your Dashboard. Duplicated subject is not allowed.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                        if (MessageBox.Show("The subject is already added to your Dashboard. Duplicated subject is not allowed.", "Duplication Error", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
                         {
                             this.Hide();
                             TheFacultyDashboard teacherDashboard = new TheFacultyDashboard();
@@ -210,19 +210,19 @@ namespace gradesBookApp
             {
                 if(String.IsNullOrEmpty(subCode) && String.IsNullOrEmpty(subName))
                 {
-                    MessageBox.Show("Try Again! Field cannot be empty", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Try Again! No fields should be empty.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtSubCode.Focus();
                     return;
                 }
                 else if(String.IsNullOrEmpty(subCode))
                 {
-                    MessageBox.Show("Invalid Subject Code", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Try Again! No fields should be empty.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtSubCode.Focus();
                     return;
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Subject Name", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Try Again! No fields should be empty.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtSubName.Focus();
                     return;
                 }
@@ -420,13 +420,13 @@ namespace gradesBookApp
                     }
                     else if (String.IsNullOrEmpty(subCode))
                     {
-                        MessageBox.Show("Invalid Subject Code", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Try Again! No fields should be empty.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtSubCode.Focus();
                         return;
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Subject Name", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Try Again! No fields should be empty.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtSubName.Focus();
                         return;
                     }

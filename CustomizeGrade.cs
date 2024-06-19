@@ -367,7 +367,7 @@ namespace gradesBookApp
 
             if (isMChecked == false)
             {
-                MessageBox.Show("Please select for the 30% for Midterm", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select the 30% component for Midterm", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 isValid = false;
                 return;
             }
@@ -386,7 +386,7 @@ namespace gradesBookApp
             }
             if (isFChecked == false)
             {
-                MessageBox.Show("Please select for the 30% for Final", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select the 30% component for Final", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 isValid = false;
                 return;
             }

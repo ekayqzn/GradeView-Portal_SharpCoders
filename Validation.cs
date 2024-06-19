@@ -55,7 +55,7 @@ namespace gradesBookApp
             bool isValid = false;
             if(String.IsNullOrEmpty(textvalue))
             {
-                MessageBox.Show("Try Again! Field cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -80,7 +80,7 @@ namespace gradesBookApp
             {
 
                 //is empty
-                MessageBox.Show("Try Again! Field cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
             else
@@ -115,7 +115,7 @@ namespace gradesBookApp
                 if (txtValue == "")
                 {
                     // Empty field
-                    MessageBox.Show("Try Again! Field cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     isValid = false;
                 }
                 else
@@ -145,7 +145,7 @@ namespace gradesBookApp
             if(String.IsNullOrEmpty(txtValue))
             {
                 // Empty field
-                MessageBox.Show("Try Again! Field cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 isValid= false;
             }
             else

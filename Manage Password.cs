@@ -39,7 +39,7 @@ namespace gradesBookApp
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Password");
+                    MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             if(TheFacultyDashboard.type == "student")
@@ -52,7 +52,7 @@ namespace gradesBookApp
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Password");
+                    MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             
@@ -68,7 +68,7 @@ namespace gradesBookApp
             panelButton.Visible = false;
 
             Label label = new Label();
-            label.Text = "To continue, first verify it’s you";
+            label.Text = "To continue, first verify it’s you.(Enter default password.)";
             label.Location = new Point(50, 100);
             label.Font = new Font("Arial", 11, FontStyle.Bold);
             label.AutoSize = true;
@@ -109,13 +109,16 @@ namespace gradesBookApp
             {
                 if(String.IsNullOrWhiteSpace(txtNewPass.Text))
                 {
-                    MessageBox.Show("Please don't leave password blank or use blank space.");
+                  
+                    MessageBox.Show("Try Again! Do not leave the password fields blank or with spaces.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNewPass.Focus();
                 }
+            
                 else if(TheFacultyDashboard.type == "teacher")
                 {
                     if(u.UpdatePassword("teacher", txtConfirmPass.Text, LogInTeacher.userID) != 0)
                     {
-                        if (MessageBox.Show("Password updated!", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                        if (MessageBox.Show("Password successfully updated!", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                         {
                             txtConfirmPass.Text = "";
                             txtNewPass.Text = "";
@@ -126,7 +129,7 @@ namespace gradesBookApp
                 {
                     if (u.UpdatePassword("student", txtConfirmPass.Text, LogInStudent.userID) != 0)
                     {
-                        if (MessageBox.Show("Password updated!", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                        if (MessageBox.Show("Password successfully updated!", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                         {
                             txtConfirmPass.Text = "";
                             txtNewPass.Text = "";
@@ -136,9 +139,10 @@ namespace gradesBookApp
             }
             else
             {
-                MessageBox.Show("Passwords don't match");
+                MessageBox.Show("Try Again! Password input did not match.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtConfirmPass.Focus();
             }
         }
     }
 }
+

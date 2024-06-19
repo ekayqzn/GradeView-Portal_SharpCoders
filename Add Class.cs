@@ -308,8 +308,8 @@ namespace gradesBookApp
                                             if (MessageBox.Show("Subject Added to Dashboard", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                                             {
                                                 this.Hide();
-                                                TheStudentDashboard studentDB = new TheStudentDashboard();
-                                                studentDB.ShowDialog();
+                                                //TheStudentDashboard studentDB = new TheStudentDashboard();
+                                                //studentDB.ShowDialog();
                                                 this.Close();
                                             }
                                         }
@@ -359,8 +359,8 @@ namespace gradesBookApp
         private void rbtnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-           TheStudentDashboard SDB = new TheStudentDashboard();
-            SDB.ShowDialog();
+            //TheStudentDashboard SDB = new TheStudentDashboard();
+            //SDB.ShowDialog();
             this.Close();
         }
     }

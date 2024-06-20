@@ -76,7 +76,7 @@ namespace gradesBookApp
                 {
                     int labelSizeX = 210;
                     int labelSizeY = 178;
-                    int labelLocationX = 52; // Increment by 200
+                    int labelLocationX = 22; // Increment by 200
                     int labelLocationY = 40; // Increment by 212
                     int tileCount = 0;
 
@@ -107,7 +107,7 @@ namespace gradesBookApp
                         if (tileCount == 5)
                         {
                             tileCount = 0;
-                            labelLocationX = 52;
+                            labelLocationX = 22;
                             labelLocationY += 212;
                         }
 

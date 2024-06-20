@@ -299,9 +299,12 @@ namespace gradesBookApp
             m.ShowDialog();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void picBackButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            TheFacultyDashboard f = new TheFacultyDashboard();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }

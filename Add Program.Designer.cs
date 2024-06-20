@@ -52,9 +52,10 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(292, 25);
+            this.label7.Location = new System.Drawing.Point(219, 20);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(246, 35);
+            this.label7.Size = new System.Drawing.Size(195, 26);
             this.label7.TabIndex = 58;
             this.label7.Text = "ADD PROGRAM";
             // 
@@ -65,11 +66,10 @@
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(861, 82);
+            this.textBox2.Size = new System.Drawing.Size(646, 67);
             this.textBox2.TabIndex = 57;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -79,9 +79,10 @@
             this.label4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label4.Location = new System.Drawing.Point(41, 244);
+            this.label4.Location = new System.Drawing.Point(31, 198);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(301, 25);
+            this.label4.Size = new System.Drawing.Size(249, 20);
             this.label4.TabIndex = 61;
             this.label4.Text = "No. of Section per Year Level:";
             // 
@@ -91,9 +92,10 @@
             this.label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label5.Location = new System.Drawing.Point(41, 199);
+            this.label5.Location = new System.Drawing.Point(31, 162);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(271, 25);
+            this.label5.Size = new System.Drawing.Size(224, 20);
             this.label5.TabIndex = 60;
             this.label5.Text = "Program Duration (Years): ";
             // 
@@ -103,24 +105,27 @@
             this.label6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label6.Location = new System.Drawing.Point(41, 149);
+            this.label6.Location = new System.Drawing.Point(31, 121);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 25);
+            this.label6.Size = new System.Drawing.Size(132, 20);
             this.label6.TabIndex = 59;
             this.label6.Text = "Program Name:";
             // 
             // txtProgramName
             // 
             this.txtProgramName.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProgramName.Location = new System.Drawing.Point(220, 149);
+            this.txtProgramName.Location = new System.Drawing.Point(165, 121);
+            this.txtProgramName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtProgramName.Name = "txtProgramName";
-            this.txtProgramName.Size = new System.Drawing.Size(585, 34);
+            this.txtProgramName.Size = new System.Drawing.Size(440, 29);
             this.txtProgramName.TabIndex = 62;
             // 
             // numYear
             // 
             this.numYear.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numYear.Location = new System.Drawing.Point(333, 199);
+            this.numYear.Location = new System.Drawing.Point(250, 162);
+            this.numYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numYear.Maximum = new decimal(new int[] {
             8,
             0,
@@ -133,7 +138,7 @@
             0});
             this.numYear.Name = "numYear";
             this.numYear.ReadOnly = true;
-            this.numYear.Size = new System.Drawing.Size(472, 34);
+            this.numYear.Size = new System.Drawing.Size(354, 29);
             this.numYear.TabIndex = 63;
             this.numYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numYear.Value = new decimal(new int[] {
@@ -145,7 +150,8 @@
             // numSection
             // 
             this.numSection.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSection.Location = new System.Drawing.Point(371, 241);
+            this.numSection.Location = new System.Drawing.Point(278, 196);
+            this.numSection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numSection.Maximum = new decimal(new int[] {
             5,
             0,
@@ -158,7 +164,7 @@
             0});
             this.numSection.Name = "numSection";
             this.numSection.ReadOnly = true;
-            this.numSection.Size = new System.Drawing.Size(434, 34);
+            this.numSection.Size = new System.Drawing.Size(326, 29);
             this.numSection.TabIndex = 64;
             this.numSection.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numSection.Value = new decimal(new int[] {
@@ -169,16 +175,16 @@
             // 
             // rbtnBack
             // 
-            this.rbtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnBack.BackColor = System.Drawing.Color.Maroon;
             this.rbtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnBack.FlatAppearance.BorderSize = 0;
             this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnBack.ForeColor = System.Drawing.Color.White;
-            this.rbtnBack.Location = new System.Drawing.Point(349, 379);
-            this.rbtnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnBack.Location = new System.Drawing.Point(262, 308);
+            this.rbtnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnBack.Name = "rbtnBack";
-            this.rbtnBack.Size = new System.Drawing.Size(199, 46);
+            this.rbtnBack.Size = new System.Drawing.Size(149, 37);
             this.rbtnBack.TabIndex = 66;
             this.rbtnBack.Text = "Cancel";
             this.rbtnBack.UseVisualStyleBackColor = false;
@@ -192,10 +198,10 @@
             this.rbtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAdd.ForeColor = System.Drawing.Color.White;
-            this.rbtnAdd.Location = new System.Drawing.Point(571, 379);
-            this.rbtnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnAdd.Location = new System.Drawing.Point(428, 308);
+            this.rbtnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnAdd.Name = "rbtnAdd";
-            this.rbtnAdd.Size = new System.Drawing.Size(191, 46);
+            this.rbtnAdd.Size = new System.Drawing.Size(143, 37);
             this.rbtnAdd.TabIndex = 65;
             this.rbtnAdd.Text = "Add";
             this.rbtnAdd.UseVisualStyleBackColor = false;
@@ -206,9 +212,10 @@
             this.picBackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBackButton.Image = global::gradesBookApp.Properties.Resources.k__1_;
-            this.picBackButton.Location = new System.Drawing.Point(16, 12);
+            this.picBackButton.Location = new System.Drawing.Point(12, 10);
+            this.picBackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBackButton.Name = "picBackButton";
-            this.picBackButton.Size = new System.Drawing.Size(55, 50);
+            this.picBackButton.Size = new System.Drawing.Size(41, 41);
             this.picBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBackButton.TabIndex = 67;
             this.picBackButton.TabStop = false;
@@ -216,10 +223,10 @@
             // 
             // Add_Program
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(861, 497);
+            this.ClientSize = new System.Drawing.Size(646, 404);
             this.Controls.Add(this.picBackButton);
             this.Controls.Add(this.rbtnBack);
             this.Controls.Add(this.rbtnAdd);
@@ -232,6 +239,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Add_Program";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -52,7 +52,7 @@
             this.cboProgram.Location = new System.Drawing.Point(220, 159);
             this.cboProgram.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProgram.Name = "cboProgram";
-            this.cboProgram.Size = new System.Drawing.Size(438, 33);
+            this.cboProgram.Size = new System.Drawing.Size(438, 28);
             this.cboProgram.TabIndex = 0;
             this.cboProgram.SelectedIndexChanged += new System.EventHandler(this.cboProgram_SelectedIndexChanged);
             // 
@@ -65,7 +65,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label1.Location = new System.Drawing.Point(128, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Program:";
             // 
@@ -78,7 +78,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label2.Location = new System.Drawing.Point(128, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Year:";
             // 
@@ -99,7 +99,8 @@
             0,
             0});
             this.numYear.Name = "numYear";
-            this.numYear.Size = new System.Drawing.Size(438, 30);
+            this.numYear.ReadOnly = true;
+            this.numYear.Size = new System.Drawing.Size(438, 26);
             this.numYear.TabIndex = 3;
             this.numYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numYear.Value = new decimal(new int[] {
@@ -117,7 +118,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label3.Location = new System.Drawing.Point(128, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Section:";
             // 
@@ -139,7 +140,7 @@
             0});
             this.numSection.Name = "numSection";
             this.numSection.ReadOnly = true;
-            this.numSection.Size = new System.Drawing.Size(438, 30);
+            this.numSection.Size = new System.Drawing.Size(438, 26);
             this.numSection.TabIndex = 5;
             this.numSection.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numSection.Value = new decimal(new int[] {
@@ -159,7 +160,7 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(800, 83);
+            this.textBox2.Size = new System.Drawing.Size(802, 83);
             this.textBox2.TabIndex = 51;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -172,14 +173,14 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(293, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 35);
+            this.label4.Size = new System.Drawing.Size(175, 26);
             this.label4.TabIndex = 52;
             this.label4.Text = "ADD SECTION";
             // 
             // rbtnCancel
             // 
             this.rbtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnCancel.BackColor = System.Drawing.Color.Maroon;
             this.rbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -212,10 +213,10 @@
             // 
             // Add_Section
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(802, 458);
             this.Controls.Add(this.rbtnCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);

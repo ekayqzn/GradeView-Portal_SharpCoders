@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Collections.Specialized.BitVector32;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gradesBookApp
 {
@@ -31,6 +32,10 @@ namespace gradesBookApp
         public static int? fRecitationID = null;
         public static int? fExamID = null;
         public static int? fProjectID = null;
+
+        public static string status;
+
+        LogInStudent l = new LogInStudent();
         public TheStudentDashboard()
         {
             InitializeComponent();
@@ -59,8 +64,11 @@ namespace gradesBookApp
             LoadDashboard();
         }
 
+        
+
         private void LoadDashboard()
         {
+
             // Clear existing controls
             panel2.Controls.Clear();
 
@@ -284,6 +292,7 @@ namespace gradesBookApp
                         fProjectID = dtIDs.Rows[i]["f_project_id"] != DBNull.Value ? Convert.ToInt32(dtIDs.Rows[i]["f_project_id"]) : (int?)null;
                     }
 
+                
                     this.Hide();
                     Student_Module studentModule = new Student_Module();
                     studentModule.ShowDialog();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace gradesBookApp
 {
     public class LogInStudent : LogInOperation
     {
+        databaseConnection db = new databaseConnection();
         public override string GetCommand()
         {
             return "SELECT * FROM modern_gradesbook.student_info WHERE BINARY student_id = @Id AND BINARY password = @Password";
@@ -21,5 +23,6 @@ namespace gradesBookApp
             s.ShowDialog();
             currentForm.Close();
         }
+
     }
 }

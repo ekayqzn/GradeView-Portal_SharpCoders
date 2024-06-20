@@ -13,6 +13,110 @@ namespace gradesBookApp
     {
         databaseConnection db = new databaseConnection();
 
+        public bool AddStudent (string studentNum, string fName, string mName, string lName, string status, string program, int year, int section)
+        {
+            int programID = 0;
+            bool isSuccessful = false;
+            try
+            {
+                // Check for duplicate student ID
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = "SELECT COUNT(*) FROM modern_gradesbook.student_info WHERE student_id = @studentID";
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@studentID", studentNum);
+
+                int studentCount = Convert.ToInt32(db.cmd.ExecuteScalar());
+
+                if (studentCount > 0)
+                {
+                    MessageBox.Show("A Student with the provided Student Number already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    // Add Info to student_info table
+                    db.cmd.CommandText = "INSERT INTO modern_gradesbook.student_info (student_id, first_name, last_name, middle_name) VALUES(@studentID, @firstName, @lastName, @middleName)";
+                    db.cmd.Parameters.Clear();
+                    db.cmd.Parameters.AddWithValue("@studentID", studentNum);
+                    db.cmd.Parameters.AddWithValue("@firstName", fName);
+                    db.cmd.Parameters.AddWithValue("@lastName", lName);
+                    db.cmd.Parameters.AddWithValue("@middleName", mName);
+
+                    db.cmd.ExecuteNonQuery();
+
+                    // Get program id
+                    try
+                    {
+                        db.Connect();
+                        db.cmd.Connection = db.conn;
+                        db.cmd.CommandText = "SELECT program_id FROM modern_gradesbook.program WHERE program_name = @programName AND year_level = @year AND section = @section";
+                        db.cmd.Parameters.Clear();
+                        db.cmd.Parameters.AddWithValue("@programName", program);
+                        db.cmd.Parameters.AddWithValue("@year", year);
+                        db.cmd.Parameters.AddWithValue("@section", section);
+
+                        // SelectCommand property select the sql command
+                        db.dta.SelectCommand = db.cmd;
+
+                        // DataTable
+                        DataTable dataTable = new DataTable();
+                        db.dta.Fill(dataTable); // populate dataTable
+
+                        if (dataTable != null && dataTable.Rows.Count > 0)
+                        {
+                            programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Program not found. Please check the program details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+                    }
+                    finally
+                    {
+                        db.Disconnect();
+                    }
+
+                    // Add info to section table
+                    try
+                    {
+                        db.Connect();
+                        db.cmd.Connection = db.conn;
+                        db.cmd.CommandText = "INSERT INTO modern_gradesbook.section(student_id, program_id, enrollment_status) VALUES(@studentNumber, @programID, @status)";
+                        db.cmd.Parameters.Clear();
+                        db.cmd.Parameters.AddWithValue("@studentNumber", studentNum);
+                        db.cmd.Parameters.AddWithValue("@programID", programID);
+                        db.cmd.Parameters.AddWithValue("@status", status);
+
+                        db.cmd.ExecuteNonQuery();
+
+                        isSuccessful = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+                    }
+                    finally
+                    {
+                        db.Disconnect();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+            return isSuccessful;
+            
+        }
         public bool AddTeacher(string teacherNum, string fName, string mName, string lName)
         {
             bool isAdded = true;

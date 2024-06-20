@@ -111,12 +111,20 @@ namespace gradesBookApp
                 {
                     subjectName = dataTable.Rows[0]["subject_name"].ToString();
                     Label label = new Label();
-                    label.Text = TheFacultyDashboard.subjectTile + Environment.NewLine + subjectName + Environment.NewLine + TheCourseDashboard.programName + Environment.NewLine + TheCourseDashboard.yearLevel + " - " + TheCourseDashboard.section + Environment.NewLine + "Code: " + TheCourseDashboard.courseCode;
-                    label.Location = new Point(20, 80);
+                    label.Text = TheFacultyDashboard.subjectTile + Environment.NewLine + subjectName + Environment.NewLine + "Code: " + TheCourseDashboard.courseCode;
+                    label.Location = new Point(20, 20);
                     label.AutoSize = true;
                     label.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
                     label.ForeColor = Color.FromArgb(0, 4, 93);
-                    this.Controls.Add(label);
+                    panel1.Controls.Add(label);
+
+                    Label label1 = new Label();
+                    label1.Text = TheCourseDashboard.programName + Environment.NewLine + TheCourseDashboard.yearLevel + " - " + TheCourseDashboard.section;
+                    label1.Location = new Point(190, 30);
+                    label1.AutoSize = true;
+                    label1.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+                    label1.ForeColor = Color.FromArgb(0, 4, 93);
+                    panel1.Controls.Add(label1);
                 }
             }
             catch (Exception ex)

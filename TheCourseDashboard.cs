@@ -97,36 +97,68 @@ namespace gradesBookApp
                 {
                     int labelSizeX = 500;
                     int labelSizeY = 85;
-                    int labelLocationX = 60; //constant
+                    int labelLocationX = 100; //constant
                     int labelLocationY = 60; //increment by 86
                     // Generates a random integer between 128 and 255 for light colors
                     Random random = new Random();
 
                     for (int i = 0; i < dataTable.Rows.Count; i++)
                     {
-                        Label label = new Label();
-                        label.Name = "lblSection" + (i + 1).ToString();
-                        label.TextAlign = ContentAlignment.MiddleLeft;
-                        label.AutoSize = false;
-                        label.Size = new Size(labelSizeX, labelSizeY);
-                        label.BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256));
-                        label.Location = new Point(labelLocationX, labelLocationY);
-                        label.Text = subjectName[i] + Environment.NewLine + programName[i] + Environment.NewLine + yearLevel[i].ToString() + " - " + section[i].ToString() + Environment.NewLine + "Code: " + courseCode[i];
-                        label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
-                        label.ForeColor = Color.White;
-                        labelLocationY += 120;
-                        label.Cursor = Cursors.Hand;
-                        label.ContextMenuStrip = cMenuDeleteProgram;
+                        if (i % 2 == 0)
+                        {
+                            Label label = new Label();
+                            label.Name = "lblSection" + (i + 1).ToString();
+                            label.TextAlign = ContentAlignment.MiddleLeft;
+                            label.AutoSize = false;
+                            label.Size = new Size(labelSizeX, labelSizeY);
+                            label.BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256));
+                            label.Location = new Point(labelLocationX, labelLocationY);
+                            label.Text = subjectName[i] + Environment.NewLine + programName[i] + Environment.NewLine + yearLevel[i].ToString() + " - " + section[i].ToString() + Environment.NewLine + "Code: " + courseCode[i];
+                            label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
+                            label.ForeColor = Color.White;
+                            labelLocationX += 600;
+                            label.Cursor = Cursors.Hand;
+                            label.ContextMenuStrip = cMenuDeleteProgram;
 
-                        // Store related data in the Tag property
-                        //Tag - user defined data associated with the object
-                        label.Tag = new { ProgramName = programName[i], YearLevel = yearLevel[i], Section = section[i], CourseCode = courseCode[i] };
+                            // Store related data in the Tag property
+                            //Tag - user defined data associated with the object
+                            label.Tag = new { ProgramName = programName[i], YearLevel = yearLevel[i], Section = section[i], CourseCode = courseCode[i] };
 
-                        //Add Event Handler
-                        label.Click += lblSection_Click;
+                            //Add Event Handler
+                            label.Click += lblSection_Click;
 
-                        //Add to panel
-                        panel2.Controls.Add(label);
+                            //Add to panel
+                            panel2.Controls.Add(label);
+                        }
+                        else
+                        {
+                            Label label = new Label();
+                            label.Name = "lblSection" + (i + 1).ToString();
+                            label.TextAlign = ContentAlignment.MiddleLeft;
+                            label.AutoSize = false;
+                            label.Size = new Size(labelSizeX, labelSizeY);
+                            label.BackColor = Color.FromArgb(random.Next(0, 100), random.Next(100, 200), random.Next(200, 256));
+                            label.Location = new Point(labelLocationX, labelLocationY);
+                            label.Text = subjectName[i] + Environment.NewLine + programName[i] + Environment.NewLine + yearLevel[i].ToString() + " - " + section[i].ToString() + Environment.NewLine + "Code: " + courseCode[i];
+                            label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
+                            label.ForeColor = Color.White;
+                            label.Cursor = Cursors.Hand;
+                            label.ContextMenuStrip = cMenuDeleteProgram;
+
+                            // Store related data in the Tag property
+                            //Tag - user defined data associated with the object
+                            label.Tag = new { ProgramName = programName[i], YearLevel = yearLevel[i], Section = section[i], CourseCode = courseCode[i] };
+
+                            //Add Event Handler
+                            label.Click += lblSection_Click;
+
+                            //Add to panel
+                            panel2.Controls.Add(label);
+
+                            labelLocationX = 100;
+                            labelLocationY += 120;
+                        }
+                        
                     }
                 }
             }

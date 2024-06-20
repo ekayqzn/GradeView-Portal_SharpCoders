@@ -185,10 +185,10 @@
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rbtnCancel.Location = new System.Drawing.Point(359, 341);
+            this.rbtnCancel.Location = new System.Drawing.Point(366, 314);
             this.rbtnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnCancel.Name = "rbtnCancel";
-            this.rbtnCancel.Size = new System.Drawing.Size(168, 39);
+            this.rbtnCancel.Size = new System.Drawing.Size(143, 37);
             this.rbtnCancel.TabIndex = 53;
             this.rbtnCancel.Text = "Cancel";
             this.rbtnCancel.UseVisualStyleBackColor = false;
@@ -202,10 +202,10 @@
             this.rbtnOK.FlatAppearance.BorderSize = 0;
             this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rbtnOK.Location = new System.Drawing.Point(533, 341);
+            this.rbtnOK.Location = new System.Drawing.Point(515, 314);
             this.rbtnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnOK.Name = "rbtnOK";
-            this.rbtnOK.Size = new System.Drawing.Size(168, 39);
+            this.rbtnOK.Size = new System.Drawing.Size(143, 37);
             this.rbtnOK.TabIndex = 6;
             this.rbtnOK.Text = "OK";
             this.rbtnOK.UseVisualStyleBackColor = false;

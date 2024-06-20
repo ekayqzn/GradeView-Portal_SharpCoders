@@ -53,7 +53,7 @@
             this.picBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBackButton.Image = global::gradesBookApp.Properties.Resources.k__1_;
             this.picBackButton.Location = new System.Drawing.Point(16, 11);
-            this.picBackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBackButton.Margin = new System.Windows.Forms.Padding(2);
             this.picBackButton.Name = "picBackButton";
             this.picBackButton.Size = new System.Drawing.Size(41, 41);
             this.picBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -65,7 +65,7 @@
             // 
             this.txtTeacherNum.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
             this.txtTeacherNum.Location = new System.Drawing.Point(75, 130);
-            this.txtTeacherNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTeacherNum.Margin = new System.Windows.Forms.Padding(2);
             this.txtTeacherNum.Name = "txtTeacherNum";
             this.txtTeacherNum.Size = new System.Drawing.Size(548, 29);
             this.txtTeacherNum.TabIndex = 70;
@@ -113,7 +113,7 @@
             // 
             this.txtLName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtLName.Location = new System.Drawing.Point(428, 221);
-            this.txtLName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(195, 29);
             this.txtLName.TabIndex = 76;
@@ -135,7 +135,7 @@
             // 
             this.txtMName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtMName.Location = new System.Drawing.Point(230, 221);
-            this.txtMName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMName.Margin = new System.Windows.Forms.Padding(2);
             this.txtMName.Name = "txtMName";
             this.txtMName.Size = new System.Drawing.Size(195, 29);
             this.txtMName.TabIndex = 74;
@@ -157,7 +157,7 @@
             // 
             this.txtFName.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtFName.Location = new System.Drawing.Point(31, 221);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(195, 29);
             this.txtFName.TabIndex = 72;
@@ -196,10 +196,10 @@
             this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnBack.ForeColor = System.Drawing.Color.White;
-            this.rbtnBack.Location = new System.Drawing.Point(313, 340);
-            this.rbtnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnBack.Location = new System.Drawing.Point(333, 289);
+            this.rbtnBack.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnBack.Name = "rbtnBack";
-            this.rbtnBack.Size = new System.Drawing.Size(149, 37);
+            this.rbtnBack.Size = new System.Drawing.Size(143, 37);
             this.rbtnBack.TabIndex = 84;
             this.rbtnBack.Text = "Cancel";
             this.rbtnBack.UseVisualStyleBackColor = false;
@@ -213,8 +213,8 @@
             this.rbtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAdd.ForeColor = System.Drawing.Color.White;
-            this.rbtnAdd.Location = new System.Drawing.Point(479, 340);
-            this.rbtnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnAdd.Location = new System.Drawing.Point(480, 289);
+            this.rbtnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnAdd.Name = "rbtnAdd";
             this.rbtnAdd.Size = new System.Drawing.Size(143, 37);
             this.rbtnAdd.TabIndex = 83;
@@ -241,7 +241,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(646, 404);
+            this.ClientSize = new System.Drawing.Size(646, 362);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.picBackButton);
             this.Controls.Add(this.txtTeacherNum);
@@ -258,7 +258,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Add_Teacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

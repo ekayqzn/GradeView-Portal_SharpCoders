@@ -60,7 +60,7 @@
             this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
             this.picHome.Location = new System.Drawing.Point(2, 2);
-            this.picHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picHome.Margin = new System.Windows.Forms.Padding(2);
             this.picHome.Name = "picHome";
             this.picHome.Size = new System.Drawing.Size(41, 41);
             this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

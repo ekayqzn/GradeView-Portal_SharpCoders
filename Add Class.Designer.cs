@@ -133,6 +133,7 @@
             this.Name = "Add_Class";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
+            this.Load += new System.EventHandler(this.Add_Class_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -77,7 +77,7 @@
             this.rbtnAddTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddTeacher.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddTeacher.Location = new System.Drawing.Point(241, 376);
+            this.rbtnAddTeacher.Location = new System.Drawing.Point(271, 374);
             this.rbtnAddTeacher.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnAddTeacher.Name = "rbtnAddTeacher";
             this.rbtnAddTeacher.Size = new System.Drawing.Size(305, 74);
@@ -95,7 +95,7 @@
             this.rbtnAddProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddProgram.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddProgram.Location = new System.Drawing.Point(241, 257);
+            this.rbtnAddProgram.Location = new System.Drawing.Point(271, 255);
             this.rbtnAddProgram.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnAddProgram.Name = "rbtnAddProgram";
             this.rbtnAddProgram.Size = new System.Drawing.Size(305, 74);
@@ -113,7 +113,7 @@
             this.rbtnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddStudent.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddStudent.Location = new System.Drawing.Point(241, 144);
+            this.rbtnAddStudent.Location = new System.Drawing.Point(271, 142);
             this.rbtnAddStudent.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnAddStudent.Name = "rbtnAddStudent";
             this.rbtnAddStudent.Size = new System.Drawing.Size(305, 74);
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(861, 497);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.picLogOut);

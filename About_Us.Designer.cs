@@ -50,10 +50,9 @@
             this.LinkLBLHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LinkLBLHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLBLHome.LinkColor = System.Drawing.Color.White;
-            this.LinkLBLHome.Location = new System.Drawing.Point(1769, 30);
-            this.LinkLBLHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LinkLBLHome.Location = new System.Drawing.Point(1327, 24);
             this.LinkLBLHome.Name = "LinkLBLHome";
-            this.LinkLBLHome.Size = new System.Drawing.Size(68, 25);
+            this.LinkLBLHome.Size = new System.Drawing.Size(56, 20);
             this.LinkLBLHome.TabIndex = 50;
             this.LinkLBLHome.TabStop = true;
             this.LinkLBLHome.Text = "Home";
@@ -82,15 +81,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.621302F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.79586F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.508876F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.picHome, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.770116F));
@@ -98,7 +96,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.738881F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.20516F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.011494F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1352, 750);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1014, 609);
             this.tableLayoutPanel1.TabIndex = 52;
             // 
             // label2
@@ -107,9 +105,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(20)))));
-            this.label2.Location = new System.Drawing.Point(79, 124);
+            this.label2.Location = new System.Drawing.Point(59, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1181, 609);
+            this.label2.Size = new System.Drawing.Size(886, 495);
             this.label2.TabIndex = 81;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -120,10 +119,10 @@
             this.picHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHome.Dock = System.Windows.Forms.DockStyle.Right;
             this.picHome.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.picHome.Location = new System.Drawing.Point(12, 2);
-            this.picHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picHome.Location = new System.Drawing.Point(9, 2);
+            this.picHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(61, 69);
+            this.picHome.Size = new System.Drawing.Size(46, 55);
             this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHome.TabIndex = 80;
             this.picHome.TabStop = false;
@@ -138,10 +137,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(80, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(60, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1179, 73);
+            this.label3.Size = new System.Drawing.Size(884, 59);
             this.label3.TabIndex = 79;
             this.label3.Text = "ABOUT US";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,10 +150,10 @@
             this.picAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picAboutUs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAboutUs.Image = global::gradesBookApp.Properties.Resources.SHARP__2_;
-            this.picAboutUs.Location = new System.Drawing.Point(1712, 17);
-            this.picAboutUs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picAboutUs.Location = new System.Drawing.Point(1284, 14);
+            this.picAboutUs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picAboutUs.Name = "picAboutUs";
-            this.picAboutUs.Size = new System.Drawing.Size(55, 50);
+            this.picAboutUs.Size = new System.Drawing.Size(41, 41);
             this.picAboutUs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAboutUs.TabIndex = 51;
             this.picAboutUs.TabStop = false;
@@ -163,17 +161,17 @@
             // 
             // About_Us
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1352, 750);
+            this.ClientSize = new System.Drawing.Size(1014, 609);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.picAboutUs);
             this.Controls.Add(this.LinkLBLHome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "About_Us";
-            this.Text = "About Us";
+            this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.About_Us_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

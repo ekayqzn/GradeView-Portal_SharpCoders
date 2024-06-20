@@ -11,6 +11,8 @@ namespace gradesBookApp
     public class Validation
     {
         databaseConnection db = new databaseConnection();
+
+        
         public bool passwordValid (string tableName, string password, string userID)
         {
             bool result = false;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradeBook));
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,34 +55,36 @@
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(946, 74);
+            this.textBox2.Size = new System.Drawing.Size(1368, 91);
             this.textBox2.TabIndex = 50;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(16, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 51;
             this.label1.Text = "Search";
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.txtSearch.Location = new System.Drawing.Point(98, 17);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Location = new System.Drawing.Point(99, 121);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(527, 28);
+            this.txtSearch.Size = new System.Drawing.Size(701, 34);
             this.txtSearch.TabIndex = 52;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -93,9 +95,10 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(729, 27);
+            this.label4.Location = new System.Drawing.Point(689, 28);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(474, 25);
+            this.label4.Size = new System.Drawing.Size(598, 32);
             this.label4.TabIndex = 56;
             this.label4.Tag = "";
             this.label4.Text = " BULACAN TECHNOLOGICAL UNIVERSITY";
@@ -104,28 +107,30 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.GridColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 144);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 271);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(946, 736);
+            this.dataGridView1.Size = new System.Drawing.Size(1368, 587);
             this.dataGridView1.TabIndex = 64;
             // 
             // picDeleteSearch
@@ -134,10 +139,10 @@
             this.picDeleteSearch.BackColor = System.Drawing.Color.Transparent;
             this.picDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDeleteSearch.Image = global::gradesBookApp.Properties.Resources.close__1_;
-            this.picDeleteSearch.Location = new System.Drawing.Point(67, 21);
-            this.picDeleteSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picDeleteSearch.Location = new System.Drawing.Point(767, 122);
+            this.picDeleteSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picDeleteSearch.Name = "picDeleteSearch";
-            this.picDeleteSearch.Size = new System.Drawing.Size(15, 16);
+            this.picDeleteSearch.Size = new System.Drawing.Size(20, 23);
             this.picDeleteSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteSearch.TabIndex = 65;
             this.picDeleteSearch.TabStop = false;
@@ -149,10 +154,10 @@
             this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBack.Image = ((System.Drawing.Image)(resources.GetObject("picBack.Image")));
-            this.picBack.Location = new System.Drawing.Point(28, 16);
-            this.picBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBack.Location = new System.Drawing.Point(37, 20);
+            this.picBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBack.Name = "picBack";
-            this.picBack.Size = new System.Drawing.Size(41, 41);
+            this.picBack.Size = new System.Drawing.Size(55, 50);
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBack.TabIndex = 63;
             this.picBack.TabStop = false;
@@ -165,26 +170,25 @@
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.rbtnEdit);
             this.panel1.Controls.Add(this.rbtnDelete);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 74);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 91);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(946, 70);
+            this.panel1.Size = new System.Drawing.Size(1368, 176);
             this.panel1.TabIndex = 66;
             // 
             // rbtnEdit
             // 
-            this.rbtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.rbtnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnEdit.FlatAppearance.BorderSize = 0;
             this.rbtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnEdit.ForeColor = System.Drawing.Color.White;
-            this.rbtnEdit.Location = new System.Drawing.Point(175, 17);
-            this.rbtnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnEdit.Location = new System.Drawing.Point(901, 119);
+            this.rbtnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnEdit.Name = "rbtnEdit";
-            this.rbtnEdit.Size = new System.Drawing.Size(143, 32);
+            this.rbtnEdit.Size = new System.Drawing.Size(191, 39);
             this.rbtnEdit.TabIndex = 54;
             this.rbtnEdit.Text = "Edit";
             this.rbtnEdit.UseVisualStyleBackColor = false;
@@ -192,17 +196,17 @@
             // 
             // rbtnDelete
             // 
-            this.rbtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.rbtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnDelete.FlatAppearance.BorderSize = 0;
             this.rbtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnDelete.ForeColor = System.Drawing.Color.White;
-            this.rbtnDelete.Location = new System.Drawing.Point(342, 15);
-            this.rbtnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnDelete.Location = new System.Drawing.Point(1131, 119);
+            this.rbtnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnDelete.Name = "rbtnDelete";
-            this.rbtnDelete.Size = new System.Drawing.Size(143, 32);
+            this.rbtnDelete.Size = new System.Drawing.Size(191, 39);
             this.rbtnDelete.TabIndex = 55;
             this.rbtnDelete.Text = "Delete";
             this.rbtnDelete.UseVisualStyleBackColor = false;
@@ -210,10 +214,10 @@
             // 
             // GradeBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(963, 765);
+            this.ClientSize = new System.Drawing.Size(1368, 858);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.picBack);
@@ -221,7 +225,7 @@
             this.Controls.Add(this.textBox2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "GradeBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

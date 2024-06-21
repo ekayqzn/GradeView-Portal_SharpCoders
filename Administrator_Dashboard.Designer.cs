@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrator_Dashboard));
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.picLogOut = new System.Windows.Forms.PictureBox();
@@ -35,6 +36,7 @@
             this.rbtnAddProgram = new gradesBookApp.RoundedButton();
             this.rbtnAddStudent = new gradesBookApp.RoundedButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.toolTipHome = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picLogOut)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +68,7 @@
             this.picLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogOut.TabIndex = 66;
             this.picLogOut.TabStop = false;
+            this.toolTipHome.SetToolTip(this.picLogOut, "Log Out");
             this.picLogOut.Click += new System.EventHandler(this.picLogOut_Click);
             // 
             // rbtnAddTeacher
@@ -168,5 +171,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox picLogOut;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolTip toolTipHome;
     }
 }

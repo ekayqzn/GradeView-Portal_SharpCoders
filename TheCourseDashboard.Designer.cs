@@ -232,6 +232,7 @@
             this.picBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBackButton.TabIndex = 91;
             this.picBackButton.TabStop = false;
+            this.toolTipHome.SetToolTip(this.picBackButton, "Home");
             this.picBackButton.Click += new System.EventHandler(this.picBackButton_Click);
             // 
             // TheCourseDashboard

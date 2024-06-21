@@ -196,7 +196,8 @@ namespace gradesBookApp
 
                     if (db.cmd.ExecuteNonQuery() > 0)
                     {
-                        MessageBox.Show("Successfully unenrolled from this class");
+                        MessageBox.Show("You have successfully unenrolled from the class.", "Unenrollment Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         LoadDashboard();
                     }
                 }
@@ -268,7 +269,8 @@ namespace gradesBookApp
                 // Debugging: Check if data is retrieved
                 if (dtIDs.Rows.Count == 0)
                 {
-                    MessageBox.Show("No student records found for this class.");
+                    MessageBox.Show("No student records were found for this class.", "No Records Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     return;
                 }
                 else
@@ -351,7 +353,8 @@ namespace gradesBookApp
                 // Debugging: Check if data is retrieved
                 if (dtIDs.Rows.Count == 0)
                 {
-                    MessageBox.Show("No student records found for this class.");
+                    MessageBox.Show("No student records were found for this class.", "No Records Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     return;
                 }
                 else
@@ -393,19 +396,5 @@ namespace gradesBookApp
             }
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void toolMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

@@ -42,39 +42,45 @@ namespace gradesBookApp
         public decimal GradePoints (decimal percentage)
         {
             decimal result = 0;
-            if(percentage >= 97 && percentage <= 100)
+
+            if (percentage < 0 || percentage > 100)
+            {
+                return 0.00m;
+            }
+
+            if (percentage >= 97)
             {
                 result = 1.0m;
             }
-            else if(percentage >= 94 && percentage <= 96)
+            else if (percentage >= 94)
             {
                 result = 1.25m;
             }
-            else if (percentage >= 91 && percentage <= 93)
+            else if (percentage >= 91)
             {
                 result = 1.5m;
             }
-            else if (percentage >= 88 && percentage <= 90)
+            else if (percentage >= 88)
             {
                 result = 1.75m;
             }
-            else if (percentage >= 85 && percentage <= 87)
+            else if (percentage >= 85)
             {
                 result = 2.0m;
             }
-            else if (percentage >= 82 && percentage <= 84)
+            else if (percentage >= 82)
             {
                 result = 2.25m;
             }
-            else if (percentage >= 79 && percentage <= 81)
+            else if (percentage >= 79)
             {
                 result = 2.5m;
             }
-            else if (percentage >= 76 && percentage <= 78)
+            else if (percentage >= 76)
             {
                 result = 2.75m;
             }
-            else if (percentage == 75)
+            else if (percentage >= 75)
             {
                 result = 3.0m;
             }
@@ -86,4 +92,5 @@ namespace gradesBookApp
             return result;
         }
     }
+    
 }

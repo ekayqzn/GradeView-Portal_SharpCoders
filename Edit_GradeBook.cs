@@ -43,7 +43,7 @@ namespace gradesBookApp
                 if ((i % 2 == 0) && (i != 0))
                 {
                     y += 30;
-                    x = 20;// Move to the next line for the next pair of controls
+                    x = 20;
                     // Create and configure label
                     Label label = new Label();
                     label.Name = "label" + (i + 1);
@@ -53,7 +53,7 @@ namespace gradesBookApp
                     label.Font = new Font("Arial", 11, FontStyle.Italic);
                     panel1.Controls.Add(label);
 
-                    x += 148;
+                    x += 155;
                     // Create and configure textbox
                     System.Windows.Forms.TextBox textBox = new System.Windows.Forms.TextBox();
                     textBox.Name = "textBox" + (i + 1);
@@ -68,11 +68,10 @@ namespace gradesBookApp
                     textBox.Enabled = (i > 1); // Disable editing for the first two cells
                     panel1.Controls.Add(textBox);
 
-
                     // Calculate the maximum width needed for the TextBox
                     int maxWidth = CalculateMaximumWidth(row.DataGridView.Columns[i]);
                     textBox.Width = maxWidth;
-                    x += 148;
+                    x += 155;
                 }
                 else
                 {
@@ -85,7 +84,7 @@ namespace gradesBookApp
                     label.Font = new Font("Arial", 11, FontStyle.Italic);
                     panel1.Controls.Add(label);
 
-                    x += 148;
+                    x += 155;
                     // Create and configure textbox
                     System.Windows.Forms.TextBox textBox = new System.Windows.Forms.TextBox();
                     textBox.Name = "textBox" + (i + 1);
@@ -100,7 +99,7 @@ namespace gradesBookApp
                     textBox.Enabled = (i > 1); // Disable editing for the first two cells
                     panel1.Controls.Add(textBox);
 
-                    x += 148;
+                    x += 155;
 
 
                     // Calculate the maximum width needed for the TextBox

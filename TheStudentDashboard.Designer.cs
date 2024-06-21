@@ -75,7 +75,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.36946F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(963, 662);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label7
             // 
@@ -145,7 +144,6 @@
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 91;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // toolMenu
             // 
@@ -160,7 +158,6 @@
             this.toolMenu.Name = "toolMenu";
             this.toolMenu.Size = new System.Drawing.Size(42, 34);
             this.toolMenu.ToolTipText = "Menu";
-            this.toolMenu.Click += new System.EventHandler(this.toolMenu_Click);
             // 
             // menuPassword
             // 

@@ -38,9 +38,10 @@ namespace gradesBookApp
             LoadDashboard();
 
         }
-
         private void LoadDashboard()
         {
+            this.SuspendLayout();
+
             // Clear existing controls
             panel2.Controls.Clear();
 
@@ -71,6 +72,9 @@ namespace gradesBookApp
                     subjectCode[i] = dataTable.Rows[i]["subject_code"].ToString();
                     subjectName[i] = dataTable.Rows[i]["subject_name"].ToString();
                 }
+
+                // Suspend layout logic before making changes
+                panel2.SuspendLayout();
 
                 if (dataTable.Rows.Count > 0)
                 {
@@ -116,11 +120,11 @@ namespace gradesBookApp
 
                         // Add to panel
                         panel2.Controls.Add(label);
-
-                        // Debugging log
-                        //MessageBox.Show($"Label {label.Name} created at location {label.Location} with color {label.BackColor}.");
                     }
                 }
+
+                // Resume layout logic after all changes are made
+                panel2.ResumeLayout(true);
             }
             catch (Exception ex)
             {
@@ -130,6 +134,8 @@ namespace gradesBookApp
             {
                 db.Disconnect();
             }
+
+            this.ResumeLayout(true);
         }
 
         private void lblSubject_Click(object sender, EventArgs e)
@@ -178,10 +184,6 @@ namespace gradesBookApp
             this.Close();
         }
 
-        private void logoutButton_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         //REFERENCE: https://stackoverflow.com/questions/9588540/how-can-i-stop-a-double-click-of-the-window-title-bar-from-maximizing-a-window-o
         protected override void WndProc(ref Message m)
@@ -210,6 +212,7 @@ namespace gradesBookApp
 
         private void menuDeleteClass_Click(object sender, EventArgs e)
         {
+
             //Context Menu Strip
             //Right-click label
 
@@ -234,7 +237,8 @@ namespace gradesBookApp
 
                     if (db.cmd.ExecuteNonQuery() > 0)
                     {
-                        MessageBox.Show("Successfully deleted the class");
+                        MessageBox.Show("The class has been successfully deleted.", "Deletion Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         LoadDashboard();
                     }
                 }
@@ -247,7 +251,7 @@ namespace gradesBookApp
                     db.Disconnect();
                 }
             }
-            
+
         }
 
         private void menuLogOut_Click(object sender, EventArgs e)

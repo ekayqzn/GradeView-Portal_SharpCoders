@@ -121,5 +121,20 @@ namespace gradesBookApp
             a.ShowDialog();
             this.Close();
         }
+
+        private void txtTeacherNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Allow control keys like backspace
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            // Check if the length is already 5 or more
+            if (txtTeacherNum.Text.Length >= 5)
+            {
+                e.Handled = true; // Ignore the input if the length is 5 or more
+            }
+        }
     }
 }

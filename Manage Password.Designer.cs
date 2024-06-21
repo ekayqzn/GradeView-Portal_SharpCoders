@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manage_Password));
             this.picBackButton = new System.Windows.Forms.PictureBox();
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.panelPassword = new System.Windows.Forms.Panel();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.toolTipBack = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).BeginInit();
             this.panelPassword.SuspendLayout();
             this.panelButton.SuspendLayout();
@@ -56,6 +58,7 @@
             this.picBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBackButton.TabIndex = 103;
             this.picBackButton.TabStop = false;
+            this.toolTipBack.SetToolTip(this.picBackButton, "Back");
             this.picBackButton.Click += new System.EventHandler(this.picBackButton_Click);
             // 
             // txtConfirmPass
@@ -65,6 +68,7 @@
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(730, 34);
             this.txtConfirmPass.TabIndex = 91;
+            this.txtConfirmPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewPass_KeyDown);
             // 
             // label7
             // 
@@ -159,6 +163,7 @@
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.Size = new System.Drawing.Size(730, 34);
             this.txtNewPass.TabIndex = 105;
+            this.txtNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewPass_KeyDown);
             // 
             // panelPassword
             // 
@@ -221,5 +226,6 @@
         private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Panel panelPassword;
         private System.Windows.Forms.Panel panelButton;
+        private System.Windows.Forms.ToolTip toolTipBack;
     }
 }

@@ -120,7 +120,7 @@ namespace gradesBookApp
 
                     Label label1 = new Label();
                     label1.Text = TheCourseDashboard.programName + Environment.NewLine + TheCourseDashboard.yearLevel + " - " + TheCourseDashboard.section;
-                    label1.Location = new Point(190, 30);
+                    label1.Location = new Point(500, 30);
                     label1.AutoSize = true;
                     label1.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
                     label1.ForeColor = Color.FromArgb(0, 4, 93);
@@ -209,7 +209,8 @@ namespace gradesBookApp
                 // Debugging: Check if data is retrieved
                 if (dtIDs.Rows.Count == 0)
                 {
-                    MessageBox.Show("No student records found for this class.");
+                    MessageBox.Show("No student records found for this class.", "No Records Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     return;
                 }
                 else
@@ -342,8 +343,9 @@ namespace gradesBookApp
                     {
                         dtDisplay.Columns.Add("Equivalent Grade");
                     }
-                    
-                    newRow["Equivalent Grade"] = c.GradePoints(gwa).ToString("0.00");
+
+                    decimal equivalent = c.GradePoints(gwa);
+                    newRow["Equivalent Grade"] = equivalent.ToString("0.00");
 
                     dtDisplay.Rows.Add(newRow);
                     dataGridView1.DataSource = dtDisplay;
@@ -522,5 +524,6 @@ namespace gradesBookApp
 
             base.WndProc(ref m);
         }
+
     }
 }

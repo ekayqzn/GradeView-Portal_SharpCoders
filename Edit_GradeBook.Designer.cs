@@ -74,7 +74,7 @@
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rbtnCancel.Location = new System.Drawing.Point(874, 3);
+            this.rbtnCancel.Location = new System.Drawing.Point(697, 3);
             this.rbtnCancel.Name = "rbtnCancel";
             this.rbtnCancel.Size = new System.Drawing.Size(150, 40);
             this.rbtnCancel.TabIndex = 9;
@@ -90,7 +90,7 @@
             this.rbtnSave.FlatAppearance.BorderSize = 0;
             this.rbtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnSave.ForeColor = System.Drawing.Color.White;
-            this.rbtnSave.Location = new System.Drawing.Point(698, 3);
+            this.rbtnSave.Location = new System.Drawing.Point(874, 3);
             this.rbtnSave.Name = "rbtnSave";
             this.rbtnSave.Size = new System.Drawing.Size(150, 40);
             this.rbtnSave.TabIndex = 59;
@@ -103,9 +103,9 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.32217F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.67783F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
-            this.tableLayoutPanel1.Controls.Add(this.rbtnSave, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rbtnCancel, 2, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
+            this.tableLayoutPanel1.Controls.Add(this.rbtnSave, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rbtnCancel, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 395);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";

@@ -86,6 +86,7 @@ namespace gradesBookApp
             textBox.Location = new Point(50, 180);
             textBox.Name = "txtPassword";
             textBox.Font = new Font("Arial", 12, FontStyle.Regular);
+            textBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
 
             RoundedButton button = new RoundedButton();
             button.Location = new Point(420, 311);
@@ -107,6 +108,38 @@ namespace gradesBookApp
             this.Controls.Add(button2);
         }
 
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (TheFacultyDashboard.type == "teacher")
+                {
+                    if (v.passwordValid("teacher", textBox.Text, LogInTeacher.userID))
+                    {
+                        panelPassword.Visible = true;
+                        panelButton.Visible = true;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                if (TheFacultyDashboard.type == "student")
+                {
+                    if (v.passwordValid("student", textBox.Text, LogInStudent.userID))
+                    {
+                        panelPassword.Visible = true;
+                        panelButton.Visible = true;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
         private void rbtnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -155,6 +188,55 @@ namespace gradesBookApp
             {
                 MessageBox.Show("Try Again! Password input did not match.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtConfirmPass.Focus();
+            }
+        }
+
+        private void txtNewPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtNewPass.Text.Equals(txtConfirmPass.Text))
+                {
+                    if (String.IsNullOrWhiteSpace(txtNewPass.Text))
+                    {
+
+                        MessageBox.Show("Try Again! Do not leave the password fields blank or with spaces.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtNewPass.Focus();
+                    }
+                    else if (v.passwordValid(TheFacultyDashboard.type, txtNewPass.Text, LogInOperation.userID))
+                    {
+                        MessageBox.Show("Please provide a new password. Do not reuse the old one.", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (TheFacultyDashboard.type == "teacher")
+                    {
+                        if (u.UpdatePassword("teacher", txtConfirmPass.Text, LogInTeacher.userID) != 0)
+                        {
+                            if (MessageBox.Show("Password successfully updated!", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                            {
+                                txtConfirmPass.Text = "";
+                                txtNewPass.Text = "";
+                                this.Close();
+                            }
+                        }
+                    }
+                    else if (TheFacultyDashboard.type == "student")
+                    {
+                        if (u.UpdatePassword("student", txtConfirmPass.Text, LogInStudent.userID) != 0)
+                        {
+                            if (MessageBox.Show("Password successfully updated!", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                            {
+                                txtConfirmPass.Text = "";
+                                txtNewPass.Text = "";
+                                this.Close();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Try Again! Password input did not match.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtConfirmPass.Focus();
+                }
             }
         }
     }

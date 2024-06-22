@@ -65,7 +65,7 @@ namespace gradesBookApp
 
                     // Create a label for the column value
                     Label columnValueLabel = new Label();
-                    if (row[column] != DBNull.Value && Convert.ToInt32(row[column]) == -1)
+                    if (row[column] == DBNull.Value || Convert.ToInt32(row[column]) == -1)
                     {
                         columnValueLabel.Text = "-";
                         columnValueLabel.BackColor = Color.White;
@@ -77,6 +77,7 @@ namespace gradesBookApp
                         columnValueLabel.Text = $"{row[column]}";
                         columnValueLabel.BackColor = Color.White;
                         columnValueLabel.ForeColor = Color.Black;
+                        Student_Module.isComplete = true;
                     }
                     columnValueLabel.Location = new Point(Student_Module.xLocation + 200, Student_Module.yLocation);
                     columnValueLabel.AutoSize = true; // Adjust label size based on text
@@ -105,7 +106,7 @@ namespace gradesBookApp
 
                     // Create a label for the column value
                     Label columnValueLabel = new Label();
-                    if (row[column] != DBNull.Value && Convert.ToInt32(row[column]) == -1)
+                    if (row[column] == DBNull.Value || Convert.ToInt32(row[column]) == -1)
                     {
                         columnValueLabel.Text = "-";
                         columnValueLabel.BackColor = Color.White;
@@ -117,6 +118,7 @@ namespace gradesBookApp
                         columnValueLabel.Text = $"{row[column]}";
                         columnValueLabel.BackColor = Color.White;
                         columnValueLabel.ForeColor = Color.Black;
+                        Student_Module.isComplete = true;
                     }
                     columnValueLabel.Location = new Point(Student_Module.xLocation + 200, Student_Module.yLocation);
                     columnValueLabel.AutoSize = true; // Adjust label size based on text

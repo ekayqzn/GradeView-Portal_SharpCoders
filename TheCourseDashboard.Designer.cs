@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheCourseDashboard));
             this.toolTipHome = new System.Windows.Forms.ToolTip(this.components);
+            this.picBackButton = new System.Windows.Forms.PictureBox();
             this.cMenuDeleteProgram = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,13 +45,30 @@
             this.menuLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.picBackButton = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).BeginInit();
             this.cMenuDeleteProgram.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // picBackButton
+            // 
+            this.picBackButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.picBackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.picBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBackButton.Image = global::gradesBookApp.Properties.Resources.k__1_;
+            this.picBackButton.Location = new System.Drawing.Point(27, 8);
+            this.picBackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBackButton.Name = "picBackButton";
+            this.picBackButton.Size = new System.Drawing.Size(55, 50);
+            this.picBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBackButton.TabIndex = 91;
+            this.picBackButton.TabStop = false;
+            this.toolTipHome.SetToolTip(this.picBackButton, "Home");
+            this.picBackButton.Click += new System.EventHandler(this.picBackButton_Click);
             // 
             // cMenuDeleteProgram
             // 
@@ -81,7 +99,7 @@
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.picBackButton, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -219,21 +237,15 @@
             this.panel3.Size = new System.Drawing.Size(1065, 69);
             this.panel3.TabIndex = 90;
             // 
-            // picBackButton
+            // panel4
             // 
-            this.picBackButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.picBackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.picBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBackButton.Image = global::gradesBookApp.Properties.Resources.k__1_;
-            this.picBackButton.Location = new System.Drawing.Point(45, 9);
-            this.picBackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picBackButton.Name = "picBackButton";
-            this.picBackButton.Size = new System.Drawing.Size(55, 50);
-            this.picBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBackButton.TabIndex = 91;
-            this.picBackButton.TabStop = false;
-            this.toolTipHome.SetToolTip(this.picBackButton, "Home");
-            this.picBackButton.Click += new System.EventHandler(this.picBackButton_Click);
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.picBackButton);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(82, 63);
+            this.panel4.TabIndex = 92;
             // 
             // TheCourseDashboard
             // 
@@ -250,13 +262,14 @@
             this.Text = "Bulacan Technological University";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TheCourseDashboard_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).EndInit();
             this.cMenuDeleteProgram.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -278,5 +291,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuLogOut;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox picBackButton;
+        private System.Windows.Forms.Panel panel4;
     }
 }

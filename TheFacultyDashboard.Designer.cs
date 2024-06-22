@@ -34,7 +34,6 @@
             this.cMenuDelete = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuDeleteClass = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +43,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.cMenuDelete.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -92,20 +92,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 750);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(427, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(425, 74);
-            this.label7.TabIndex = 88;
-            this.label7.Text = "TEACHER\'S DASHBOARD";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
@@ -136,7 +122,7 @@
             // toolMenu
             // 
             this.toolMenu.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
+            this.toolMenu.BackColor = System.Drawing.Color.Transparent;
             this.toolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuPassword,
             this.toolStripSeparator1,
@@ -215,6 +201,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1042, 61);
             this.panel3.TabIndex = 90;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(427, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(425, 74);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "TEACHER\'S DASHBOARD";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TheFacultyDashboard
             // 

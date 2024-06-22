@@ -45,7 +45,7 @@
             this.label1.Location = new System.Drawing.Point(96, 130);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Class Code:";
             // 
@@ -55,8 +55,9 @@
             this.txtClassCode.Location = new System.Drawing.Point(92, 153);
             this.txtClassCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtClassCode.Name = "txtClassCode";
-            this.txtClassCode.Size = new System.Drawing.Size(405, 26);
+            this.txtClassCode.Size = new System.Drawing.Size(405, 30);
             this.txtClassCode.TabIndex = 1;
+            this.txtClassCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClassCode_KeyDown);
             // 
             // rbtnAddClass
             // 
@@ -85,7 +86,7 @@
             this.label4.Location = new System.Drawing.Point(208, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 26);
+            this.label4.Size = new System.Drawing.Size(185, 35);
             this.label4.TabIndex = 54;
             this.label4.Text = "ADD CLASS";
             // 
@@ -123,7 +124,7 @@
             // 
             // Add_Class
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(583, 304);

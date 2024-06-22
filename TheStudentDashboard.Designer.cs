@@ -33,7 +33,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +43,7 @@
             this.toolUnenroll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolView = new System.Windows.Forms.ToolStripMenuItem();
+            this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -56,24 +56,24 @@
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9635974F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.929577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.13145F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.629441F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.43993F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.718969F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.881773F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.224959F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.36946F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(963, 662);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 815);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label7
@@ -83,10 +83,9 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
             this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(275, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(401, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(346, 64);
+            this.label7.Size = new System.Drawing.Size(418, 79);
             this.label7.TabIndex = 89;
             this.label7.Text = "STUDENT\'S DASHBOARD";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,37 +95,21 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.rbtnAddClass);
-            this.panel1.Location = new System.Drawing.Point(51, 119);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(109, 147);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(794, 40);
+            this.panel1.Size = new System.Drawing.Size(1002, 49);
             this.panel1.TabIndex = 91;
-            // 
-            // rbtnAddClass
-            // 
-            this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnAddClass.FlatAppearance.BorderSize = 0;
-            this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(654, 0);
-            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(2);
-            this.rbtnAddClass.Name = "rbtnAddClass";
-            this.rbtnAddClass.Size = new System.Drawing.Size(140, 39);
-            this.rbtnAddClass.TabIndex = 90;
-            this.rbtnAddClass.Text = "Add Class Code";
-            this.rbtnAddClass.UseVisualStyleBackColor = false;
-            this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click);
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(51, 165);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(109, 203);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(794, 495);
+            this.panel2.Size = new System.Drawing.Size(1002, 610);
             this.panel2.TabIndex = 77;
             // 
             // menuStrip1
@@ -137,10 +120,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolMenu});
-            this.menuStrip1.Location = new System.Drawing.Point(897, 13);
+            this.menuStrip1.Location = new System.Drawing.Point(1192, 20);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(48, 38);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(51, 38);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 91;
             this.menuStrip1.Text = "menuStrip1";
@@ -156,7 +139,7 @@
             this.toolMenu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolMenu.Image = global::gradesBookApp.Properties.Resources.BULACAN__5___1_1;
             this.toolMenu.Name = "toolMenu";
-            this.toolMenu.Size = new System.Drawing.Size(42, 34);
+            this.toolMenu.Size = new System.Drawing.Size(44, 34);
             this.toolMenu.ToolTipText = "Menu";
             // 
             // menuPassword
@@ -166,7 +149,7 @@
             this.menuPassword.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.menuPassword.Name = "menuPassword";
-            this.menuPassword.Size = new System.Drawing.Size(194, 22);
+            this.menuPassword.Size = new System.Drawing.Size(241, 26);
             this.menuPassword.Text = "Manage Password";
             this.menuPassword.Click += new System.EventHandler(this.menuPassword_Click);
             // 
@@ -174,7 +157,7 @@
             // 
             this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(191, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
             // 
             // menuLogOut
             // 
@@ -186,7 +169,7 @@
             this.menuLogOut.ShortcutKeyDisplayString = "Ctrl+Shift+L";
             this.menuLogOut.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.L)));
-            this.menuLogOut.Size = new System.Drawing.Size(194, 22);
+            this.menuLogOut.Size = new System.Drawing.Size(241, 26);
             this.menuLogOut.Text = "Log Out";
             this.menuLogOut.Click += new System.EventHandler(this.menuLogOut_Click);
             // 
@@ -198,38 +181,56 @@
             this.toolStripSeparator2,
             this.toolView});
             this.contextMenu.Name = "contextMenuStrip1";
-            this.contextMenu.Size = new System.Drawing.Size(140, 54);
+            this.contextMenu.Size = new System.Drawing.Size(160, 58);
             // 
             // toolUnenroll
             // 
             this.toolUnenroll.Name = "toolUnenroll";
-            this.toolUnenroll.Size = new System.Drawing.Size(139, 22);
+            this.toolUnenroll.Size = new System.Drawing.Size(159, 24);
             this.toolUnenroll.Text = "Unenroll";
             this.toolUnenroll.Click += new System.EventHandler(this.toolUnenroll_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(136, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(156, 6);
             // 
             // toolView
             // 
             this.toolView.Name = "toolView";
-            this.toolView.Size = new System.Drawing.Size(139, 22);
+            this.toolView.Size = new System.Drawing.Size(159, 24);
             this.toolView.Text = "View Course";
             this.toolView.Click += new System.EventHandler(this.toolView_Click);
             // 
+            // rbtnAddClass
+            // 
+            this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtnAddClass.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rbtnAddClass.FlatAppearance.BorderSize = 0;
+            this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
+            this.rbtnAddClass.Location = new System.Drawing.Point(815, 0);
+            this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnAddClass.Name = "rbtnAddClass";
+            this.rbtnAddClass.Size = new System.Drawing.Size(187, 49);
+            this.rbtnAddClass.TabIndex = 90;
+            this.rbtnAddClass.Text = "Add Class Code";
+            this.rbtnAddClass.UseVisualStyleBackColor = false;
+            this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click);
+            // 
             // TheStudentDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(963, 662);
+            this.ClientSize = new System.Drawing.Size(1284, 815);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TheStudentDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";

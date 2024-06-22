@@ -244,6 +244,7 @@
     <Compile Include="TheTermsOfUseAndPrivacyStatement.Designer.cs">
       <DependentUpon>TheTermsOfUseAndPrivacyStatement.cs</DependentUpon>
     </Compile>
+    <Compile Include="TryClass.cs" />
     <Compile Include="Update Query.cs" />
     <Compile Include="UpdateScores.cs" />
     <Compile Include="Validation.cs" />

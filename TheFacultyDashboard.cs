@@ -223,7 +223,7 @@ namespace gradesBookApp
             string subjectTile = labelParts[0].Trim(); // Only get the subject code part
             string teacherId = LogInOperation.userID.Trim();
 
-            if (MessageBox.Show("Deleting this class will also delete the programs and student enrolled in this class. Are you sure you want to continue?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show("Deleting this class will also delete the programs and student enrolled in this class. Are you sure you want to continue?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {

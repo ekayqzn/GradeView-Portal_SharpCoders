@@ -106,5 +106,33 @@ namespace gradesBookApp
                 db.Disconnect();
             }
         }
+
+        //public void UpdateGradebook(string tableName, string columnName, int newValue, DataGridViewRow row)
+        //{
+        //    string studentID = row.Cells["student_id"].Value.ToString();
+
+        //    string commandText = $"UPDATE {tableName} SET {columnName} = @newValue WHERE class_id = @classID AND student_id = @studentID";
+
+        //    try
+        //    {
+        //        db.Connect();
+        //        db.cmd.Connection = db.conn;
+        //        db.cmd.CommandText = commandText;
+
+        //        db.cmd.Parameters.Clear();
+        //        db.cmd.Parameters.AddWithValue("@classID", TheFacultyDashboard.classID);
+        //        db.cmd.Parameters.AddWithValue("@studentID", studentID);
+        //        db.cmd.Parameters.AddWithValue("@newValue", newValue);
+        //        db.cmd.ExecuteNonQuery();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+        //    }
+        //    finally
+        //    {
+        //        db.Disconnect();
+        //    }
+        //}
     }
 }

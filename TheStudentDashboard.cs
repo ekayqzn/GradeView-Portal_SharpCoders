@@ -35,6 +35,7 @@ namespace gradesBookApp
 
         public static string status;
 
+
         LogInStudent l = new LogInStudent();
         public TheStudentDashboard()
         {
@@ -64,17 +65,16 @@ namespace gradesBookApp
             LoadDashboard();
         }
 
-        
+
 
         private void LoadDashboard()
         {
-
             // Clear existing controls
             panel2.Controls.Clear();
 
             try
             {
-                //get class_id and subject code that the teacher teaches
+                // Get class_id and subject code that the teacher teaches
                 db.Connect();
                 db.cmd.Connection = db.conn;
                 db.cmd.CommandText = "SELECT c.class_id, s.subject_code, s.subject_name, CONCAT(t.teacher_fname, ' ', t.teacher_lname) AS teacher_name " +
@@ -85,19 +85,18 @@ namespace gradesBookApp
 
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@studentID", LogInOperation.userID.Trim());
-                //SelectCommand property select the sql command
+                // SelectCommand property select the sql command
                 db.dta.SelectCommand = db.cmd;
 
-                //DataTable
+                // DataTable
                 DataTable dataTable = new DataTable();
-                db.dta.Fill(dataTable); //populate dataTable
+                db.dta.Fill(dataTable); // Populate dataTable
 
-                //get class id and subject code. store to a string array
+                // Get class id and subject code. store to a string array
                 string[] subjectCode = new string[dataTable.Rows.Count];
                 string[] subjectName = new string[dataTable.Rows.Count];
                 string[] teacherName = new string[dataTable.Rows.Count];
                 int[] classID = new int[dataTable.Rows.Count];
-
 
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
@@ -107,21 +106,18 @@ namespace gradesBookApp
                     classID[i] = Convert.ToInt32(dataTable.Rows[i]["class_id"]);
                 }
 
-                //if the database return the details, will dynamically create a tile/button for that specific subject
+                // If the database returns the details, dynamically create a tile/button for that specific subject
                 if (dataTable.Rows.Count > 0)
                 {
                     int labelSizeX = 210;
                     int labelSizeY = 178;
-                    int labelLocationX = 52; // Increment by 200
-                    int labelLocationY = 40; // Increment by 212
+                    int labelLocationX = 22; // Initial X position
+                    int labelLocationY = 40; // Initial Y position
+                    int tileCount = 0; // Initialize tileCount
 
-                    // Generates a random integer between 128 and 255 for light colors
-                    int tileCount = 0;
                     Random random = new Random();
-                    int red = random.Next(200, 256);
-                    int green = random.Next(150, 200);
-                    int blue = random.Next(150, 200);
-                    for (int i = 0; i < dataTable.Rows.Count; i++) //will iterate as to the number of subject the teacher holds
+
+                    for (int i = 0; i < dataTable.Rows.Count; i++) // Iterate as to the number of subjects the teacher holds
                     {
                         Label label = new Label();
                         label.Name = "lblSub" + (i + 1).ToString();
@@ -135,29 +131,29 @@ namespace gradesBookApp
                         label.Cursor = Cursors.Hand;
                         label.ContextMenuStrip = contextMenu;
 
+                        // Place the label
+                        label.Location = new Point(labelLocationX, labelLocationY);
+                        panel2.Controls.Add(label);
 
-                        //tile is 3 per row
-                        if (tileCount < 3)
+                        // Update the position for the next label
+                        
+                        if (tileCount < 4)
                         {
-                            label.Location = new Point(labelLocationX, labelLocationY);
                             labelLocationX += 250;
                             tileCount++;
                         }
-                        if (tileCount == 3) //New Line when reaches 3
+                        else // When tileCount reaches 5, reset for the next row
                         {
                             tileCount = 0;
-                            labelLocationX = 52;
+                            labelLocationX = 22;
                             labelLocationY += 212;
                         }
 
                         // Store class_id in the Tag property
                         label.Tag = classID[i];
 
-                        //Add Event Handler
+                        // Add Event Handler
                         label.Click += lblSubject_Click;
-
-                        //Add to panel
-                        panel2.Controls.Add(label);
                     }
                 }
             }
@@ -171,6 +167,7 @@ namespace gradesBookApp
             }
         }
 
+
         private void toolUnenroll_Click(object sender, EventArgs e)
         { 
 
@@ -182,7 +179,7 @@ namespace gradesBookApp
 
             classId = (int)label.Tag;
 
-            if (MessageBox.Show("Removing this class will also remove you from the class record. Are you sure you want to continue?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show("Removing this class will also remove you from the class record. Are you sure you want to continue?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {

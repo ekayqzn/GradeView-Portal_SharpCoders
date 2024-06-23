@@ -187,7 +187,7 @@
             // rbtnDelete
             // 
             this.rbtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.rbtnDelete.BackColor = System.Drawing.Color.Maroon;
             this.rbtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnDelete.FlatAppearance.BorderSize = 0;
             this.rbtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

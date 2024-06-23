@@ -67,7 +67,7 @@
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -126,7 +126,7 @@
             this.numYear.Location = new System.Drawing.Point(333, 199);
             this.numYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numYear.Maximum = new decimal(new int[] {
-            8,
+            5,
             0,
             0,
             0});
@@ -243,7 +243,7 @@
             this.MaximizeBox = false;
             this.Name = "Add_Program";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add_Program";
+            this.Text = "Bulacan Technological University";
             this.Load += new System.EventHandler(this.Add_Program_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSection)).EndInit();

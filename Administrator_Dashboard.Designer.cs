@@ -130,11 +130,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(198, 21);
+            this.label4.Location = new System.Drawing.Point(155, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(391, 35);
+            this.label4.Size = new System.Drawing.Size(536, 38);
             this.label4.TabIndex = 67;
             this.label4.Text = "ADMINISTRATOR DASHBOARD";
             // 

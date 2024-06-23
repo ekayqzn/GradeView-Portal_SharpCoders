@@ -62,7 +62,7 @@
             this.txtAdminID.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtAdminID.ForeColor = System.Drawing.Color.Black;
             this.txtAdminID.Location = new System.Drawing.Point(196, 191);
-            this.txtAdminID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdminID.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdminID.Name = "txtAdminID";
             this.txtAdminID.Size = new System.Drawing.Size(451, 34);
             this.txtAdminID.TabIndex = 1;
@@ -86,7 +86,7 @@
             this.txtAdminPass.Font = new System.Drawing.Font("Arial", 13.8F);
             this.txtAdminPass.ForeColor = System.Drawing.Color.Black;
             this.txtAdminPass.Location = new System.Drawing.Point(196, 281);
-            this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdminPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdminPass.Name = "txtAdminPass";
             this.txtAdminPass.PasswordChar = '*';
             this.txtAdminPass.Size = new System.Drawing.Size(451, 34);
@@ -102,7 +102,7 @@
             this.rbtnLogIn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLogIn.ForeColor = System.Drawing.Color.White;
             this.rbtnLogIn.Location = new System.Drawing.Point(499, 351);
-            this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnLogIn.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnLogIn.Name = "rbtnLogIn";
             this.rbtnLogIn.Size = new System.Drawing.Size(149, 39);
             this.rbtnLogIn.TabIndex = 4;
@@ -115,11 +115,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(301, 23);
+            this.label4.Location = new System.Drawing.Point(273, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 35);
+            this.label4.Size = new System.Drawing.Size(310, 38);
             this.label4.TabIndex = 56;
             this.label4.Text = "ADMINISTRATOR";
             // 
@@ -130,7 +130,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(-421, -1);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -201,7 +201,7 @@
             this.Controls.Add(this.txtAdminID);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Administrator_LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

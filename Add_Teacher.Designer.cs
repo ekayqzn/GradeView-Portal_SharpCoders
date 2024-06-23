@@ -104,7 +104,7 @@
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -259,7 +259,7 @@
             this.MaximizeBox = false;
             this.Name = "Add_Teacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add_Teacher";
+            this.Text = "Bulacan Technological University";
             this.Load += new System.EventHandler(this.Add_Teacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).EndInit();
             this.ResumeLayout(false);

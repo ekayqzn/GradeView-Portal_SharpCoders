@@ -57,7 +57,7 @@ namespace gradesBookApp
             bool isValid = false;
             if(String.IsNullOrEmpty(textvalue))
             {
-                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please try again. All fields must be filled out.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -65,7 +65,7 @@ namespace gradesBookApp
                 //is a string
                 if (int.TryParse(textvalue, out int ignore) == (false))
                 {
-                    MessageBox.Show("Inputs must only be numeric.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Inputs must only be numeric.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -82,7 +82,7 @@ namespace gradesBookApp
             {
 
                 //is empty
-                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
             }
             else
@@ -91,7 +91,7 @@ namespace gradesBookApp
                 //is a string
                 if (int.TryParse(txtValue, out int ignore) == (false))
                 {
-                    MessageBox.Show("Inputs must only be numeric.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Inputs must only be numeric.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     return 0;
 
@@ -117,7 +117,7 @@ namespace gradesBookApp
                 if (txtValue == "")
                 {
                     // Empty field
-                    MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     isValid = false;
                 }
                 else
@@ -126,13 +126,13 @@ namespace gradesBookApp
                     if (!int.TryParse(txtValue, out int intValue) && !double.TryParse(txtValue, out doubleValue))
                     {
                         // Not a valid integer or double
-                        MessageBox.Show("Inputs must only be numeric!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Inputs must only be numeric!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         isValid = false;
                     }
                     else if (doubleValue % 1 != Math.Floor(doubleValue)) //round down to nearest integer so that 10.00 will be consider as double. if it is != 0, it will be considered as integer
                     {
                         // It's a double, but with decimal places
-                        MessageBox.Show("Decimal inputs are not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Decimal inputs are not accepted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         isValid = false;
                     }
                 }
@@ -147,7 +147,7 @@ namespace gradesBookApp
             if(String.IsNullOrEmpty(txtValue))
             {
                 // Empty field
-                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Try Again! No fields should be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 isValid= false;
             }
             else
@@ -155,13 +155,13 @@ namespace gradesBookApp
                 if(int.TryParse(txtValue, out int ignore))
                 {
                     // Integer
-                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     isValid = false;
                 }
                 else if(double.TryParse(txtValue, out double dIgnore))
                 {
                     // Integer
-                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     isValid = false;
                 }
             }
@@ -182,13 +182,13 @@ namespace gradesBookApp
                 if (int.TryParse(txtValue, out int ignore))
                 {
                     // Integer
-                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     isValid = false;
                 }
                 else if (double.TryParse(txtValue, out double dIgnore))
                 {
                     // Integer
-                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Integer values are not allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     isValid = false;
                 }
             }

@@ -105,7 +105,7 @@ namespace gradesBookApp
             // Add Validation
             if (string.IsNullOrEmpty(txtStudentNum.Text) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || status == "")
             {
-                MessageBox.Show("Please fill in all required fields." + status , "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 if (string.IsNullOrEmpty(txtStudentNum.Text))
                 {
                     txtStudentNum.Focus();
@@ -134,7 +134,8 @@ namespace gradesBookApp
                 {
                     txtStudentNum.Focus();
                     txtStudentNum.SelectAll();
-                    MessageBox.Show("String value is not accepted");
+                    MessageBox.Show("String values are not accepted. Please enter a valid input.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                     return;
                 }
                 // Check if a program is selected
@@ -265,7 +266,7 @@ namespace gradesBookApp
                 // Add Validation
                 if (string.IsNullOrEmpty(txtStudentNum.Text) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || status == "")
                 {
-                    MessageBox.Show("Please fill in all required fields." + status, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     if (string.IsNullOrEmpty(txtStudentNum.Text))
                     {
                         txtStudentNum.Focus();
@@ -294,7 +295,7 @@ namespace gradesBookApp
                     {
                         txtStudentNum.Focus();
                         txtStudentNum.SelectAll();
-                        MessageBox.Show("String value is not accepted");
+                        MessageBox.Show("String values are not accepted. Please enter a valid input.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     // Check if a program is selected

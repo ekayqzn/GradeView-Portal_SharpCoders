@@ -153,6 +153,7 @@
             0,
             0});
             this.numSection.Name = "numSection";
+            this.numSection.ReadOnly = true;
             this.numSection.Size = new System.Drawing.Size(691, 34);
             this.numSection.TabIndex = 14;
             this.numSection.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -190,6 +191,7 @@
             0,
             0});
             this.numYear.Name = "numYear";
+            this.numYear.ReadOnly = true;
             this.numYear.Size = new System.Drawing.Size(691, 34);
             this.numYear.TabIndex = 12;
             this.numYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

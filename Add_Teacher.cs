@@ -46,19 +46,32 @@ namespace gradesBookApp
                 string mName = txtMName.Text.Trim();
                 bool isAdded = false;
 
-                if (string.IsNullOrEmpty(txtTeacherNum.Text) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName))
+                if (!v.isValidID(txtTeacherNum.Text))
                 {
-                    MessageBox.Show("Please complete all required fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    txtTeacherNum.Focus();
+                    txtTeacherNum.SelectAll();
+                    return;
                 }
-                else
+                if (!v.isString(fName))
                 {
-                    if ((v.isValidID(txtTeacherNum.Text)) && (v.isString(fName)) && (v.isString(lName)) && (v.isStringMName(mName)))
-                    {
-                        isAdded = a.AddTeacher(teacherNum, fName, mName, lName);
-                    }
+                    txtFName.Focus();
+                    txtFName.SelectAll();
+                    return;
+                }
+                if (!v.isString(lName))
+                {
+                    txtLName.Focus();
+                    txtLName.SelectAll();
+                    return;
+                }
+                if (!v.isStringMName(mName))
+                {
+                    txtMName.Focus();
+                    txtMName.SelectAll();
+                    return;
                 }
 
+                isAdded = a.AddTeacher(teacherNum, fName, mName, lName);
 
                 if (isAdded)
                 {
@@ -85,19 +98,32 @@ namespace gradesBookApp
             string mName = txtMName.Text.Trim();
             bool isAdded = false;
 
-            if(string.IsNullOrEmpty(teacherNum) || string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName))
+            if (!v.isValidID(txtTeacherNum.Text))
             {
-                MessageBox.Show("Please complete all required fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTeacherNum.Focus();
+                txtTeacherNum.SelectAll();
+                return;
+            }
+            if(!v.isString(fName))
+            {
+                txtFName.Focus();
+                txtFName.SelectAll();
+                return;
+            }
+            if(!v.isString(lName))
+            {
+                txtLName.Focus();
+                txtLName.SelectAll();
+                return;
+            }
+            if (!v.isStringMName(mName))
+            {
+                txtMName.Focus();
+                txtMName.SelectAll();
+                return;
+            }
 
-            }
-            else
-            {
-                if ((v.isValidID(txtTeacherNum.Text)) && (v.isString(fName)) && (v.isString(lName)) && (v.isStringMName(mName)))
-                {
-                    isAdded = a.AddTeacher(teacherNum, fName, mName, lName);
-                }
-            }
-            
+            isAdded = a.AddTeacher(teacherNum, fName, mName, lName);
 
             if (isAdded)
             {

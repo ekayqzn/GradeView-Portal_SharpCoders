@@ -46,6 +46,7 @@
             this.rbtnAdd = new gradesBookApp.RoundedButton();
             this.label8 = new System.Windows.Forms.Label();
             this.toolTipBack = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBackButton)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +55,10 @@
             this.picBackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBackButton.Image = global::gradesBookApp.Properties.Resources.k__1_;
-            this.picBackButton.Location = new System.Drawing.Point(21, 14);
-            this.picBackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBackButton.Location = new System.Drawing.Point(16, 12);
+            this.picBackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBackButton.Name = "picBackButton";
-            this.picBackButton.Size = new System.Drawing.Size(55, 50);
+            this.picBackButton.Size = new System.Drawing.Size(41, 41);
             this.picBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBackButton.TabIndex = 88;
             this.picBackButton.TabStop = false;
@@ -67,10 +68,10 @@
             // txtTeacherNum
             // 
             this.txtTeacherNum.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
-            this.txtTeacherNum.Location = new System.Drawing.Point(100, 160);
-            this.txtTeacherNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTeacherNum.Location = new System.Drawing.Point(79, 130);
+            this.txtTeacherNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTeacherNum.Name = "txtTeacherNum";
-            this.txtTeacherNum.Size = new System.Drawing.Size(729, 34);
+            this.txtTeacherNum.Size = new System.Drawing.Size(544, 29);
             this.txtTeacherNum.TabIndex = 70;
             this.txtTeacherNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTeacherNum_KeyPress);
             // 
@@ -78,9 +79,10 @@
             // 
             this.lblSBTU.AutoSize = true;
             this.lblSBTU.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblSBTU.Location = new System.Drawing.Point(35, 162);
+            this.lblSBTU.Location = new System.Drawing.Point(26, 132);
+            this.lblSBTU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSBTU.Name = "lblSBTU";
-            this.lblSBTU.Size = new System.Drawing.Size(70, 27);
+            this.lblSBTU.Size = new System.Drawing.Size(57, 23);
             this.lblSBTU.TabIndex = 87;
             this.lblSBTU.Text = "TBTU-";
             // 
@@ -91,9 +93,10 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(325, 26);
+            this.label7.Location = new System.Drawing.Point(244, 21);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(235, 35);
+            this.label7.Size = new System.Drawing.Size(186, 26);
             this.label7.TabIndex = 86;
             this.label7.Text = "ADD TEACHER";
             // 
@@ -104,74 +107,76 @@
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(861, 82);
+            this.textBox2.Size = new System.Drawing.Size(646, 67);
             this.textBox2.TabIndex = 85;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLName
             // 
             this.txtLName.Font = new System.Drawing.Font("Arial", 13.8F);
-            this.txtLName.Location = new System.Drawing.Point(571, 272);
-            this.txtLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLName.Location = new System.Drawing.Point(428, 221);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(259, 34);
+            this.txtLName.Size = new System.Drawing.Size(195, 29);
             this.txtLName.TabIndex = 76;
             // 
             // label
             // 
             this.label.AutoSize = true;
             this.label.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label.Location = new System.Drawing.Point(575, 244);
+            this.label.Location = new System.Drawing.Point(427, 196);
+            this.label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(122, 25);
+            this.label.Size = new System.Drawing.Size(95, 23);
             this.label.TabIndex = 75;
             this.label.Text = "Last Name:";
             // 
             // txtMName
             // 
             this.txtMName.Font = new System.Drawing.Font("Arial", 13.8F);
-            this.txtMName.Location = new System.Drawing.Point(307, 272);
-            this.txtMName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMName.Location = new System.Drawing.Point(230, 221);
+            this.txtMName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMName.Name = "txtMName";
-            this.txtMName.Size = new System.Drawing.Size(259, 34);
+            this.txtMName.Size = new System.Drawing.Size(195, 29);
             this.txtMName.TabIndex = 74;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label3.Location = new System.Drawing.Point(307, 244);
+            this.label3.Location = new System.Drawing.Point(229, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 25);
+            this.label3.Size = new System.Drawing.Size(112, 23);
             this.label3.TabIndex = 73;
             this.label3.Text = "Middle Name:";
             // 
             // txtFName
             // 
             this.txtFName.Font = new System.Drawing.Font("Arial", 13.8F);
-            this.txtFName.Location = new System.Drawing.Point(41, 272);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFName.Location = new System.Drawing.Point(31, 221);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(259, 34);
+            this.txtFName.Size = new System.Drawing.Size(195, 29);
             this.txtFName.TabIndex = 72;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(45, 244);
+            this.label2.Location = new System.Drawing.Point(30, 196);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 25);
+            this.label2.Size = new System.Drawing.Size(96, 23);
             this.label2.TabIndex = 71;
             this.label2.Text = "First Name:";
             // 
@@ -179,11 +184,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(36, 130);
+            this.label1.Location = new System.Drawing.Point(26, 103);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 25);
+            this.label1.Size = new System.Drawing.Size(141, 23);
             this.label1.TabIndex = 69;
             this.label1.Text = "Teacher Number:";
             // 
@@ -193,12 +199,12 @@
             this.rbtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnBack.FlatAppearance.BorderSize = 0;
             this.rbtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnBack.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnBack.ForeColor = System.Drawing.Color.White;
-            this.rbtnBack.Location = new System.Drawing.Point(444, 356);
-            this.rbtnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnBack.Location = new System.Drawing.Point(326, 289);
+            this.rbtnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnBack.Name = "rbtnBack";
-            this.rbtnBack.Size = new System.Drawing.Size(191, 46);
+            this.rbtnBack.Size = new System.Drawing.Size(143, 37);
             this.rbtnBack.TabIndex = 84;
             this.rbtnBack.Text = "Cancel";
             this.rbtnBack.UseVisualStyleBackColor = false;
@@ -210,12 +216,12 @@
             this.rbtnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnAdd.FlatAppearance.BorderSize = 0;
             this.rbtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAdd.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAdd.ForeColor = System.Drawing.Color.White;
-            this.rbtnAdd.Location = new System.Drawing.Point(640, 356);
-            this.rbtnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnAdd.Location = new System.Drawing.Point(480, 289);
+            this.rbtnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnAdd.Name = "rbtnAdd";
-            this.rbtnAdd.Size = new System.Drawing.Size(191, 46);
+            this.rbtnAdd.Size = new System.Drawing.Size(143, 37);
             this.rbtnAdd.TabIndex = 83;
             this.rbtnAdd.Text = "Add";
             this.rbtnAdd.UseVisualStyleBackColor = false;
@@ -227,18 +233,34 @@
             this.label8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Firebrick;
-            this.label8.Location = new System.Drawing.Point(101, 198);
+            this.label8.Location = new System.Drawing.Point(76, 161);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(276, 17);
+            this.label8.Size = new System.Drawing.Size(231, 15);
             this.label8.TabIndex = 89;
             this.label8.Text = "Number must be five (5) characters long.";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(0, 67);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(646, 11);
+            this.textBox1.TabIndex = 90;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Add_Teacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(861, 446);
+            this.ClientSize = new System.Drawing.Size(646, 362);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.picBackButton);
             this.Controls.Add(this.txtTeacherNum);
@@ -255,7 +277,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Add_Teacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -285,5 +307,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ToolTip toolTipBack;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

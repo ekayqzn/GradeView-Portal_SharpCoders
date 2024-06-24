@@ -35,27 +35,28 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.rbtnCancel = new gradesBookApp.RoundedButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(96, 130);
+            this.label1.Location = new System.Drawing.Point(89, 126);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(145, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Class Code:";
+            this.label1.Text = "Enter Class Code:";
             // 
             // txtClassCode
             // 
-            this.txtClassCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClassCode.Location = new System.Drawing.Point(92, 153);
+            this.txtClassCode.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClassCode.Location = new System.Drawing.Point(88, 153);
             this.txtClassCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtClassCode.Name = "txtClassCode";
-            this.txtClassCode.Size = new System.Drawing.Size(405, 30);
+            this.txtClassCode.Size = new System.Drawing.Size(405, 26);
             this.txtClassCode.TabIndex = 1;
             this.txtClassCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClassCode_KeyDown);
             // 
@@ -66,8 +67,9 @@
             this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnAddClass.FlatAppearance.BorderSize = 0;
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(354, 193);
+            this.rbtnAddClass.Location = new System.Drawing.Point(352, 195);
             this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnAddClass.Name = "rbtnAddClass";
             this.rbtnAddClass.Size = new System.Drawing.Size(143, 37);
@@ -83,10 +85,10 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(208, 20);
+            this.label4.Location = new System.Drawing.Point(216, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(185, 35);
+            this.label4.Size = new System.Drawing.Size(145, 26);
             this.label4.TabIndex = 54;
             this.label4.Text = "ADD CLASS";
             // 
@@ -112,8 +114,9 @@
             this.rbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rbtnCancel.Location = new System.Drawing.Point(207, 193);
+            this.rbtnCancel.Location = new System.Drawing.Point(200, 196);
             this.rbtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnCancel.Name = "rbtnCancel";
             this.rbtnCancel.Size = new System.Drawing.Size(143, 37);
@@ -122,12 +125,28 @@
             this.rbtnCancel.UseVisualStyleBackColor = false;
             this.rbtnCancel.Click += new System.EventHandler(this.rbtnCancel_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(-233, 67);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(1108, 10);
+            this.textBox1.TabIndex = 56;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Add_Class
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(583, 304);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.rbtnCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
@@ -155,5 +174,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private RoundedButton rbtnCancel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

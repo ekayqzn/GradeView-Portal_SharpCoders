@@ -45,9 +45,10 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(384, 23);
+            this.label4.Location = new System.Drawing.Point(288, 19);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 35);
+            this.label4.Size = new System.Drawing.Size(170, 26);
             this.label4.TabIndex = 56;
             this.label4.Text = "GRADEBOOK";
             // 
@@ -57,12 +58,11 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(-337, -1);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(-253, -1);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(1797, 83);
+            this.textBox2.Size = new System.Drawing.Size(1348, 67);
             this.textBox2.TabIndex = 55;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -73,10 +73,12 @@
             this.rbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rbtnCancel.Location = new System.Drawing.Point(695, 3);
+            this.rbtnCancel.Location = new System.Drawing.Point(521, 2);
+            this.rbtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnCancel.Name = "rbtnCancel";
-            this.rbtnCancel.Size = new System.Drawing.Size(150, 40);
+            this.rbtnCancel.Size = new System.Drawing.Size(112, 32);
             this.rbtnCancel.TabIndex = 60;
             this.rbtnCancel.Text = "Cancel";
             this.rbtnCancel.UseVisualStyleBackColor = false;
@@ -89,10 +91,12 @@
             this.rbtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnSave.FlatAppearance.BorderSize = 0;
             this.rbtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnSave.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnSave.ForeColor = System.Drawing.Color.White;
-            this.rbtnSave.Location = new System.Drawing.Point(874, 3);
+            this.rbtnSave.Location = new System.Drawing.Point(656, 2);
+            this.rbtnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnSave.Name = "rbtnSave";
-            this.rbtnSave.Size = new System.Drawing.Size(150, 40);
+            this.rbtnSave.Size = new System.Drawing.Size(112, 32);
             this.rbtnSave.TabIndex = 59;
             this.rbtnSave.Text = "Save";
             this.rbtnSave.UseVisualStyleBackColor = false;
@@ -103,40 +107,43 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.32217F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.67783F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
             this.tableLayoutPanel1.Controls.Add(this.rbtnSave, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.rbtnCancel, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 395);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 321);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1027, 55);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(770, 45);
             this.tableLayoutPanel1.TabIndex = 60;
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 89);
+            this.panel1.Location = new System.Drawing.Point(0, 72);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1027, 306);
+            this.panel1.Size = new System.Drawing.Size(770, 249);
             this.panel1.TabIndex = 62;
             // 
             // Edit_GradeBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1027, 450);
+            this.ClientSize = new System.Drawing.Size(770, 366);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Edit_GradeBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";

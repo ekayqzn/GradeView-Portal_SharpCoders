@@ -98,6 +98,7 @@ namespace gradesBookApp
             button2.Location = new Point(240, 311);
             button2.Text = "Cancel";
             button2.Click += new EventHandler(btnCancel_Click);
+            button2.BackColor = Color.DarkRed;
             button2.Cursor = Cursors.Hand;
 
             // Add controls to the form

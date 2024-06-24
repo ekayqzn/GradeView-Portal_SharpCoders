@@ -114,15 +114,15 @@ namespace gradesBookApp
                     label.Text = TheFacultyDashboard.subjectTile + Environment.NewLine + subjectName + Environment.NewLine + "Code: " + TheCourseDashboard.courseCode;
                     label.Location = new Point(20, 20);
                     label.AutoSize = true;
-                    label.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+                    label.Font = new Font("Arial Narrow", 15, FontStyle.Bold);
                     label.ForeColor = Color.FromArgb(0, 4, 93);
                     panel1.Controls.Add(label);
 
                     Label label1 = new Label();
                     label1.Text = TheCourseDashboard.programName + Environment.NewLine + TheCourseDashboard.yearLevel + " - " + TheCourseDashboard.section;
-                    label1.Location = new Point(500, 30);
+                    label1.Location = new Point(880, 20);
                     label1.AutoSize = true;
-                    label1.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+                    label1.Font = new Font("Arial Narrow", 15, FontStyle.Bold);
                     label1.ForeColor = Color.FromArgb(0, 4, 93);
                     panel1.Controls.Add(label1);
                 }
@@ -530,5 +530,9 @@ namespace gradesBookApp
             base.WndProc(ref m);
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

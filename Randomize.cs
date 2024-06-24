@@ -11,7 +11,7 @@ namespace gradesBookApp
         public string GenerateRandomCode(int length = 8) //default 8 length code when length is not provided
         {
             string result = "";
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            const string chars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789";
             Random random = new Random(); //using random class
 
             for (int i = 0; i < length; i++)

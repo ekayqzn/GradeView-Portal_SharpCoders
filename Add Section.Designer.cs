@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.rbtnCancel = new gradesBookApp.RoundedButton();
             this.rbtnOK = new gradesBookApp.RoundedButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSection)).BeginInit();
             this.SuspendLayout();
@@ -47,12 +48,12 @@
             // 
             this.cboProgram.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboProgram.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProgram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProgram.FormattingEnabled = true;
             this.cboProgram.Location = new System.Drawing.Point(220, 159);
             this.cboProgram.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProgram.Name = "cboProgram";
-            this.cboProgram.Size = new System.Drawing.Size(438, 28);
+            this.cboProgram.Size = new System.Drawing.Size(438, 26);
             this.cboProgram.TabIndex = 0;
             this.cboProgram.SelectedIndexChanged += new System.EventHandler(this.cboProgram_SelectedIndexChanged);
             // 
@@ -61,11 +62,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(128, 166);
+            this.label1.Location = new System.Drawing.Point(124, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 17);
+            this.label1.Size = new System.Drawing.Size(80, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Program:";
             // 
@@ -74,18 +75,18 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(128, 203);
+            this.label2.Location = new System.Drawing.Point(154, 199);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(49, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Year:";
             // 
             // numYear
             // 
             this.numYear.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.numYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numYear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numYear.Location = new System.Drawing.Point(220, 197);
             this.numYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numYear.Maximum = new decimal(new int[] {
@@ -114,18 +115,18 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.label3.Location = new System.Drawing.Point(128, 238);
+            this.label3.Location = new System.Drawing.Point(131, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.Size = new System.Drawing.Size(72, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Section:";
             // 
             // numSection
             // 
             this.numSection.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.numSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSection.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSection.Location = new System.Drawing.Point(220, 232);
             this.numSection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numSection.Maximum = new decimal(new int[] {
@@ -171,7 +172,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(293, 25);
+            this.label4.Location = new System.Drawing.Point(319, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(175, 26);
             this.label4.TabIndex = 52;
@@ -184,8 +185,9 @@
             this.rbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnCancel.FlatAppearance.BorderSize = 0;
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rbtnCancel.Location = new System.Drawing.Point(366, 314);
+            this.rbtnCancel.Location = new System.Drawing.Point(358, 314);
             this.rbtnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnCancel.Name = "rbtnCancel";
             this.rbtnCancel.Size = new System.Drawing.Size(143, 37);
@@ -201,6 +203,7 @@
             this.rbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnOK.FlatAppearance.BorderSize = 0;
             this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnOK.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnOK.ForeColor = System.Drawing.Color.White;
             this.rbtnOK.Location = new System.Drawing.Point(515, 314);
             this.rbtnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -211,12 +214,28 @@
             this.rbtnOK.UseVisualStyleBackColor = false;
             this.rbtnOK.Click += new System.EventHandler(this.rbtnOK_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(0, 83);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(802, 15);
+            this.textBox1.TabIndex = 54;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Add_Section
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(802, 458);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.rbtnCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
@@ -258,5 +277,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private RoundedButton rbtnCancel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

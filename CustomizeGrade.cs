@@ -560,5 +560,10 @@ namespace gradesBookApp
             //txtMRecitation.KeyDown += new KeyEventHandler(rbtnOK_Click);
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

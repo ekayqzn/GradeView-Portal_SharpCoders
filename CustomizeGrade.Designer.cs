@@ -121,9 +121,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(68, 25);
+            this.label1.Location = new System.Drawing.Point(78, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 25);
+            this.label1.Size = new System.Drawing.Size(107, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "MIDTERM";
             // 
@@ -134,31 +134,31 @@
             this.panel_mAssignment.Controls.Add(this.txtMAssignment);
             this.panel_mAssignment.Controls.Add(this.numMAssignment);
             this.panel_mAssignment.Enabled = false;
-            this.panel_mAssignment.Location = new System.Drawing.Point(213, 181);
+            this.panel_mAssignment.Location = new System.Drawing.Point(243, 205);
             this.panel_mAssignment.Name = "panel_mAssignment";
-            this.panel_mAssignment.Size = new System.Drawing.Size(381, 57);
+            this.panel_mAssignment.Size = new System.Drawing.Size(435, 65);
             this.panel_mAssignment.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(336, 17);
+            this.label3.Location = new System.Drawing.Point(384, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 18);
+            this.label3.Size = new System.Drawing.Size(21, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "%";
             // 
             // txtMAssignment
             // 
-            this.txtMAssignment.Location = new System.Drawing.Point(230, 12);
+            this.txtMAssignment.Location = new System.Drawing.Point(263, 14);
             this.txtMAssignment.Name = "txtMAssignment";
-            this.txtMAssignment.Size = new System.Drawing.Size(98, 24);
+            this.txtMAssignment.Size = new System.Drawing.Size(111, 25);
             this.txtMAssignment.TabIndex = 4;
             this.txtMAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMAssignment
             // 
-            this.numMAssignment.Location = new System.Drawing.Point(22, 14);
+            this.numMAssignment.Location = new System.Drawing.Point(25, 16);
             this.numMAssignment.Maximum = new decimal(new int[] {
             9,
             0,
@@ -171,7 +171,7 @@
             0});
             this.numMAssignment.Name = "numMAssignment";
             this.numMAssignment.ReadOnly = true;
-            this.numMAssignment.Size = new System.Drawing.Size(135, 24);
+            this.numMAssignment.Size = new System.Drawing.Size(154, 25);
             this.numMAssignment.TabIndex = 3;
             this.numMAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMAssignment.Value = new decimal(new int[] {
@@ -183,9 +183,10 @@
             // chkMAssignment
             // 
             this.chkMAssignment.AutoSize = true;
-            this.chkMAssignment.Location = new System.Drawing.Point(72, 194);
+            this.chkMAssignment.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMAssignment.Location = new System.Drawing.Point(82, 220);
             this.chkMAssignment.Name = "chkMAssignment";
-            this.chkMAssignment.Size = new System.Drawing.Size(107, 22);
+            this.chkMAssignment.Size = new System.Drawing.Size(104, 21);
             this.chkMAssignment.TabIndex = 1;
             this.chkMAssignment.TabStop = false;
             this.chkMAssignment.Text = "Assignment";
@@ -199,31 +200,31 @@
             this.panel_mLongQuiz.Controls.Add(this.txtMLongQuiz);
             this.panel_mLongQuiz.Controls.Add(this.numMLongQuiz);
             this.panel_mLongQuiz.Enabled = false;
-            this.panel_mLongQuiz.Location = new System.Drawing.Point(213, 245);
+            this.panel_mLongQuiz.Location = new System.Drawing.Point(243, 278);
             this.panel_mLongQuiz.Name = "panel_mLongQuiz";
-            this.panel_mLongQuiz.Size = new System.Drawing.Size(381, 57);
+            this.panel_mLongQuiz.Size = new System.Drawing.Size(435, 65);
             this.panel_mLongQuiz.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(336, 17);
+            this.label4.Location = new System.Drawing.Point(384, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 18);
+            this.label4.Size = new System.Drawing.Size(21, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "%";
             // 
             // txtMLongQuiz
             // 
-            this.txtMLongQuiz.Location = new System.Drawing.Point(230, 12);
+            this.txtMLongQuiz.Location = new System.Drawing.Point(263, 14);
             this.txtMLongQuiz.Name = "txtMLongQuiz";
-            this.txtMLongQuiz.Size = new System.Drawing.Size(98, 24);
+            this.txtMLongQuiz.Size = new System.Drawing.Size(111, 25);
             this.txtMLongQuiz.TabIndex = 6;
             this.txtMLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMLongQuiz
             // 
-            this.numMLongQuiz.Location = new System.Drawing.Point(22, 14);
+            this.numMLongQuiz.Location = new System.Drawing.Point(25, 16);
             this.numMLongQuiz.Maximum = new decimal(new int[] {
             9,
             0,
@@ -236,7 +237,7 @@
             0});
             this.numMLongQuiz.Name = "numMLongQuiz";
             this.numMLongQuiz.ReadOnly = true;
-            this.numMLongQuiz.Size = new System.Drawing.Size(135, 24);
+            this.numMLongQuiz.Size = new System.Drawing.Size(154, 25);
             this.numMLongQuiz.TabIndex = 5;
             this.numMLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMLongQuiz.Value = new decimal(new int[] {
@@ -248,9 +249,10 @@
             // chkMLongQuiz
             // 
             this.chkMLongQuiz.AutoSize = true;
-            this.chkMLongQuiz.Location = new System.Drawing.Point(72, 258);
+            this.chkMLongQuiz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMLongQuiz.Location = new System.Drawing.Point(82, 292);
             this.chkMLongQuiz.Name = "chkMLongQuiz";
-            this.chkMLongQuiz.Size = new System.Drawing.Size(98, 22);
+            this.chkMLongQuiz.Size = new System.Drawing.Size(94, 21);
             this.chkMLongQuiz.TabIndex = 1;
             this.chkMLongQuiz.TabStop = false;
             this.chkMLongQuiz.Text = "Long Quiz";
@@ -264,31 +266,31 @@
             this.panel_mQuiz.Controls.Add(this.txtMQuiz);
             this.panel_mQuiz.Controls.Add(this.numMQuiz);
             this.panel_mQuiz.Enabled = false;
-            this.panel_mQuiz.Location = new System.Drawing.Point(213, 309);
+            this.panel_mQuiz.Location = new System.Drawing.Point(243, 350);
             this.panel_mQuiz.Name = "panel_mQuiz";
-            this.panel_mQuiz.Size = new System.Drawing.Size(381, 57);
+            this.panel_mQuiz.Size = new System.Drawing.Size(435, 65);
             this.panel_mQuiz.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(336, 17);
+            this.label5.Location = new System.Drawing.Point(384, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 18);
+            this.label5.Size = new System.Drawing.Size(21, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "%";
             // 
             // txtMQuiz
             // 
-            this.txtMQuiz.Location = new System.Drawing.Point(230, 12);
+            this.txtMQuiz.Location = new System.Drawing.Point(263, 14);
             this.txtMQuiz.Name = "txtMQuiz";
-            this.txtMQuiz.Size = new System.Drawing.Size(98, 24);
+            this.txtMQuiz.Size = new System.Drawing.Size(111, 25);
             this.txtMQuiz.TabIndex = 8;
             this.txtMQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMQuiz
             // 
-            this.numMQuiz.Location = new System.Drawing.Point(22, 14);
+            this.numMQuiz.Location = new System.Drawing.Point(25, 16);
             this.numMQuiz.Maximum = new decimal(new int[] {
             9,
             0,
@@ -301,7 +303,7 @@
             0});
             this.numMQuiz.Name = "numMQuiz";
             this.numMQuiz.ReadOnly = true;
-            this.numMQuiz.Size = new System.Drawing.Size(135, 24);
+            this.numMQuiz.Size = new System.Drawing.Size(154, 25);
             this.numMQuiz.TabIndex = 7;
             this.numMQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMQuiz.Value = new decimal(new int[] {
@@ -313,9 +315,10 @@
             // chkMQuiz
             // 
             this.chkMQuiz.AutoSize = true;
-            this.chkMQuiz.Location = new System.Drawing.Point(72, 322);
+            this.chkMQuiz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMQuiz.Location = new System.Drawing.Point(82, 365);
             this.chkMQuiz.Name = "chkMQuiz";
-            this.chkMQuiz.Size = new System.Drawing.Size(61, 22);
+            this.chkMQuiz.Size = new System.Drawing.Size(58, 21);
             this.chkMQuiz.TabIndex = 1;
             this.chkMQuiz.TabStop = false;
             this.chkMQuiz.Text = "Quiz";
@@ -329,31 +332,31 @@
             this.panel_mRecitation.Controls.Add(this.txtMRecitation);
             this.panel_mRecitation.Controls.Add(this.numMRecitation);
             this.panel_mRecitation.Enabled = false;
-            this.panel_mRecitation.Location = new System.Drawing.Point(213, 373);
+            this.panel_mRecitation.Location = new System.Drawing.Point(243, 423);
             this.panel_mRecitation.Name = "panel_mRecitation";
-            this.panel_mRecitation.Size = new System.Drawing.Size(381, 57);
+            this.panel_mRecitation.Size = new System.Drawing.Size(435, 65);
             this.panel_mRecitation.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(336, 17);
+            this.label6.Location = new System.Drawing.Point(384, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 18);
+            this.label6.Size = new System.Drawing.Size(21, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "%";
             // 
             // txtMRecitation
             // 
-            this.txtMRecitation.Location = new System.Drawing.Point(230, 12);
+            this.txtMRecitation.Location = new System.Drawing.Point(263, 14);
             this.txtMRecitation.Name = "txtMRecitation";
-            this.txtMRecitation.Size = new System.Drawing.Size(98, 24);
+            this.txtMRecitation.Size = new System.Drawing.Size(111, 25);
             this.txtMRecitation.TabIndex = 10;
             this.txtMRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMRecitation
             // 
-            this.numMRecitation.Location = new System.Drawing.Point(22, 14);
+            this.numMRecitation.Location = new System.Drawing.Point(25, 16);
             this.numMRecitation.Maximum = new decimal(new int[] {
             9,
             0,
@@ -366,7 +369,7 @@
             0});
             this.numMRecitation.Name = "numMRecitation";
             this.numMRecitation.ReadOnly = true;
-            this.numMRecitation.Size = new System.Drawing.Size(135, 24);
+            this.numMRecitation.Size = new System.Drawing.Size(154, 25);
             this.numMRecitation.TabIndex = 9;
             this.numMRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMRecitation.Value = new decimal(new int[] {
@@ -378,9 +381,10 @@
             // chkMRecitation
             // 
             this.chkMRecitation.AutoSize = true;
-            this.chkMRecitation.Location = new System.Drawing.Point(72, 386);
+            this.chkMRecitation.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMRecitation.Location = new System.Drawing.Point(82, 437);
             this.chkMRecitation.Name = "chkMRecitation";
-            this.chkMRecitation.Size = new System.Drawing.Size(96, 22);
+            this.chkMRecitation.Size = new System.Drawing.Size(92, 21);
             this.chkMRecitation.TabIndex = 1;
             this.chkMRecitation.TabStop = false;
             this.chkMRecitation.Text = "Recitation";
@@ -394,31 +398,31 @@
             this.panel_mActivity.Controls.Add(this.txtMActivity);
             this.panel_mActivity.Controls.Add(this.numMActivity);
             this.panel_mActivity.Enabled = false;
-            this.panel_mActivity.Location = new System.Drawing.Point(213, 119);
+            this.panel_mActivity.Location = new System.Drawing.Point(243, 135);
             this.panel_mActivity.Name = "panel_mActivity";
-            this.panel_mActivity.Size = new System.Drawing.Size(381, 57);
+            this.panel_mActivity.Size = new System.Drawing.Size(435, 65);
             this.panel_mActivity.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(336, 17);
+            this.label7.Location = new System.Drawing.Point(384, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 18);
+            this.label7.Size = new System.Drawing.Size(21, 17);
             this.label7.TabIndex = 5;
             this.label7.Text = "%";
             // 
             // txtMActivity
             // 
-            this.txtMActivity.Location = new System.Drawing.Point(231, 17);
+            this.txtMActivity.Location = new System.Drawing.Point(264, 19);
             this.txtMActivity.Name = "txtMActivity";
-            this.txtMActivity.Size = new System.Drawing.Size(98, 24);
+            this.txtMActivity.Size = new System.Drawing.Size(111, 25);
             this.txtMActivity.TabIndex = 2;
             this.txtMActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numMActivity
             // 
-            this.numMActivity.Location = new System.Drawing.Point(22, 14);
+            this.numMActivity.Location = new System.Drawing.Point(25, 16);
             this.numMActivity.Maximum = new decimal(new int[] {
             9,
             0,
@@ -431,7 +435,7 @@
             0});
             this.numMActivity.Name = "numMActivity";
             this.numMActivity.ReadOnly = true;
-            this.numMActivity.Size = new System.Drawing.Size(135, 24);
+            this.numMActivity.Size = new System.Drawing.Size(154, 25);
             this.numMActivity.TabIndex = 1;
             this.numMActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMActivity.Value = new decimal(new int[] {
@@ -443,9 +447,10 @@
             // chkMActivity
             // 
             this.chkMActivity.AutoSize = true;
-            this.chkMActivity.Location = new System.Drawing.Point(72, 133);
+            this.chkMActivity.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMActivity.Location = new System.Drawing.Point(82, 151);
             this.chkMActivity.Name = "chkMActivity";
-            this.chkMActivity.Size = new System.Drawing.Size(75, 22);
+            this.chkMActivity.Size = new System.Drawing.Size(72, 21);
             this.chkMActivity.TabIndex = 1;
             this.chkMActivity.TabStop = false;
             this.chkMActivity.Text = "Activity";
@@ -455,10 +460,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(69, 96);
+            this.label8.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(79, 109);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 20);
+            this.label8.Size = new System.Drawing.Size(34, 20);
             this.label8.TabIndex = 16;
             this.label8.Text = "70%";
             // 
@@ -467,19 +472,22 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.rdoMProject);
             this.groupBox1.Controls.Add(this.rdoMExam);
-            this.groupBox1.Location = new System.Drawing.Point(63, 459);
+            this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox1.Location = new System.Drawing.Point(72, 520);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(531, 148);
+            this.groupBox1.Size = new System.Drawing.Size(607, 168);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "30%";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rdoMProject
             // 
             this.rdoMProject.AutoSize = true;
-            this.rdoMProject.Location = new System.Drawing.Point(15, 89);
+            this.rdoMProject.Location = new System.Drawing.Point(17, 101);
             this.rdoMProject.Name = "rdoMProject";
-            this.rdoMProject.Size = new System.Drawing.Size(134, 22);
+            this.rdoMProject.Size = new System.Drawing.Size(126, 24);
             this.rdoMProject.TabIndex = 11;
             this.rdoMProject.Text = "Midterm Project";
             this.rdoMProject.UseVisualStyleBackColor = true;
@@ -487,9 +495,10 @@
             // rdoMExam
             // 
             this.rdoMExam.AutoSize = true;
-            this.rdoMExam.Location = new System.Drawing.Point(16, 48);
+            this.rdoMExam.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoMExam.Location = new System.Drawing.Point(18, 54);
             this.rdoMExam.Name = "rdoMExam";
-            this.rdoMExam.Size = new System.Drawing.Size(168, 22);
+            this.rdoMExam.Size = new System.Drawing.Size(159, 24);
             this.rdoMExam.TabIndex = 11;
             this.rdoMExam.TabStop = true;
             this.rdoMExam.Text = "Midterm Examination";
@@ -500,9 +509,11 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox2.Controls.Add(this.rdoFProject);
             this.groupBox2.Controls.Add(this.rdoFExam);
-            this.groupBox2.Location = new System.Drawing.Point(662, 459);
+            this.groupBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox2.Location = new System.Drawing.Point(757, 520);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(531, 148);
+            this.groupBox2.Size = new System.Drawing.Size(607, 168);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "30%";
@@ -510,9 +521,9 @@
             // rdoFProject
             // 
             this.rdoFProject.AutoSize = true;
-            this.rdoFProject.Location = new System.Drawing.Point(15, 89);
+            this.rdoFProject.Location = new System.Drawing.Point(17, 101);
             this.rdoFProject.Name = "rdoFProject";
-            this.rdoFProject.Size = new System.Drawing.Size(111, 22);
+            this.rdoFProject.Size = new System.Drawing.Size(106, 24);
             this.rdoFProject.TabIndex = 23;
             this.rdoFProject.Text = "Final Project";
             this.rdoFProject.UseVisualStyleBackColor = true;
@@ -520,9 +531,9 @@
             // rdoFExam
             // 
             this.rdoFExam.AutoSize = true;
-            this.rdoFExam.Location = new System.Drawing.Point(16, 48);
+            this.rdoFExam.Location = new System.Drawing.Point(18, 54);
             this.rdoFExam.Name = "rdoFExam";
-            this.rdoFExam.Size = new System.Drawing.Size(145, 22);
+            this.rdoFExam.Size = new System.Drawing.Size(139, 24);
             this.rdoFExam.TabIndex = 22;
             this.rdoFExam.Text = "Final Examination";
             this.rdoFExam.UseVisualStyleBackColor = true;
@@ -530,10 +541,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(667, 96);
+            this.label9.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(762, 109);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 20);
+            this.label9.Size = new System.Drawing.Size(34, 20);
             this.label9.TabIndex = 32;
             this.label9.Text = "70%";
             // 
@@ -544,31 +555,31 @@
             this.panel_fActivity.Controls.Add(this.txtFActivity);
             this.panel_fActivity.Controls.Add(this.numFActivity);
             this.panel_fActivity.Enabled = false;
-            this.panel_fActivity.Location = new System.Drawing.Point(811, 119);
+            this.panel_fActivity.Location = new System.Drawing.Point(927, 135);
             this.panel_fActivity.Name = "panel_fActivity";
-            this.panel_fActivity.Size = new System.Drawing.Size(381, 57);
+            this.panel_fActivity.Size = new System.Drawing.Size(435, 65);
             this.panel_fActivity.TabIndex = 31;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(336, 17);
+            this.label10.Location = new System.Drawing.Point(384, 19);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 18);
+            this.label10.Size = new System.Drawing.Size(21, 17);
             this.label10.TabIndex = 5;
             this.label10.Text = "%";
             // 
             // txtFActivity
             // 
-            this.txtFActivity.Location = new System.Drawing.Point(231, 17);
+            this.txtFActivity.Location = new System.Drawing.Point(264, 19);
             this.txtFActivity.Name = "txtFActivity";
-            this.txtFActivity.Size = new System.Drawing.Size(98, 24);
+            this.txtFActivity.Size = new System.Drawing.Size(111, 25);
             this.txtFActivity.TabIndex = 13;
             this.txtFActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFActivity
             // 
-            this.numFActivity.Location = new System.Drawing.Point(22, 14);
+            this.numFActivity.Location = new System.Drawing.Point(25, 16);
             this.numFActivity.Maximum = new decimal(new int[] {
             9,
             0,
@@ -581,7 +592,7 @@
             0});
             this.numFActivity.Name = "numFActivity";
             this.numFActivity.ReadOnly = true;
-            this.numFActivity.Size = new System.Drawing.Size(135, 24);
+            this.numFActivity.Size = new System.Drawing.Size(154, 25);
             this.numFActivity.TabIndex = 12;
             this.numFActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFActivity.Value = new decimal(new int[] {
@@ -593,9 +604,10 @@
             // chkFActivity
             // 
             this.chkFActivity.AutoSize = true;
-            this.chkFActivity.Location = new System.Drawing.Point(670, 133);
+            this.chkFActivity.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFActivity.Location = new System.Drawing.Point(766, 151);
             this.chkFActivity.Name = "chkFActivity";
-            this.chkFActivity.Size = new System.Drawing.Size(75, 22);
+            this.chkFActivity.Size = new System.Drawing.Size(72, 21);
             this.chkFActivity.TabIndex = 30;
             this.chkFActivity.TabStop = false;
             this.chkFActivity.Text = "Activity";
@@ -609,31 +621,31 @@
             this.panel_fRecitation.Controls.Add(this.txtFRecitation);
             this.panel_fRecitation.Controls.Add(this.numFRecitation);
             this.panel_fRecitation.Enabled = false;
-            this.panel_fRecitation.Location = new System.Drawing.Point(811, 373);
+            this.panel_fRecitation.Location = new System.Drawing.Point(927, 423);
             this.panel_fRecitation.Name = "panel_fRecitation";
-            this.panel_fRecitation.Size = new System.Drawing.Size(381, 57);
+            this.panel_fRecitation.Size = new System.Drawing.Size(435, 65);
             this.panel_fRecitation.TabIndex = 29;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(336, 17);
+            this.label11.Location = new System.Drawing.Point(384, 19);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(21, 18);
+            this.label11.Size = new System.Drawing.Size(21, 17);
             this.label11.TabIndex = 5;
             this.label11.Text = "%";
             // 
             // txtFRecitation
             // 
-            this.txtFRecitation.Location = new System.Drawing.Point(230, 12);
+            this.txtFRecitation.Location = new System.Drawing.Point(263, 14);
             this.txtFRecitation.Name = "txtFRecitation";
-            this.txtFRecitation.Size = new System.Drawing.Size(98, 24);
+            this.txtFRecitation.Size = new System.Drawing.Size(111, 25);
             this.txtFRecitation.TabIndex = 21;
             this.txtFRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFRecitation
             // 
-            this.numFRecitation.Location = new System.Drawing.Point(22, 14);
+            this.numFRecitation.Location = new System.Drawing.Point(25, 16);
             this.numFRecitation.Maximum = new decimal(new int[] {
             9,
             0,
@@ -646,7 +658,7 @@
             0});
             this.numFRecitation.Name = "numFRecitation";
             this.numFRecitation.ReadOnly = true;
-            this.numFRecitation.Size = new System.Drawing.Size(135, 24);
+            this.numFRecitation.Size = new System.Drawing.Size(154, 25);
             this.numFRecitation.TabIndex = 20;
             this.numFRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFRecitation.Value = new decimal(new int[] {
@@ -658,9 +670,10 @@
             // chkFRecitation
             // 
             this.chkFRecitation.AutoSize = true;
-            this.chkFRecitation.Location = new System.Drawing.Point(670, 386);
+            this.chkFRecitation.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFRecitation.Location = new System.Drawing.Point(766, 437);
             this.chkFRecitation.Name = "chkFRecitation";
-            this.chkFRecitation.Size = new System.Drawing.Size(96, 22);
+            this.chkFRecitation.Size = new System.Drawing.Size(92, 21);
             this.chkFRecitation.TabIndex = 28;
             this.chkFRecitation.TabStop = false;
             this.chkFRecitation.Text = "Recitation";
@@ -674,31 +687,31 @@
             this.panel_fQuiz.Controls.Add(this.txtFQuiz);
             this.panel_fQuiz.Controls.Add(this.numFQuiz);
             this.panel_fQuiz.Enabled = false;
-            this.panel_fQuiz.Location = new System.Drawing.Point(811, 309);
+            this.panel_fQuiz.Location = new System.Drawing.Point(927, 350);
             this.panel_fQuiz.Name = "panel_fQuiz";
-            this.panel_fQuiz.Size = new System.Drawing.Size(381, 57);
+            this.panel_fQuiz.Size = new System.Drawing.Size(435, 65);
             this.panel_fQuiz.TabIndex = 27;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(336, 17);
+            this.label12.Location = new System.Drawing.Point(384, 19);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(21, 18);
+            this.label12.Size = new System.Drawing.Size(21, 17);
             this.label12.TabIndex = 5;
             this.label12.Text = "%";
             // 
             // txtFQuiz
             // 
-            this.txtFQuiz.Location = new System.Drawing.Point(230, 12);
+            this.txtFQuiz.Location = new System.Drawing.Point(263, 14);
             this.txtFQuiz.Name = "txtFQuiz";
-            this.txtFQuiz.Size = new System.Drawing.Size(98, 24);
+            this.txtFQuiz.Size = new System.Drawing.Size(111, 25);
             this.txtFQuiz.TabIndex = 19;
             this.txtFQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFQuiz
             // 
-            this.numFQuiz.Location = new System.Drawing.Point(22, 14);
+            this.numFQuiz.Location = new System.Drawing.Point(25, 16);
             this.numFQuiz.Maximum = new decimal(new int[] {
             9,
             0,
@@ -711,7 +724,7 @@
             0});
             this.numFQuiz.Name = "numFQuiz";
             this.numFQuiz.ReadOnly = true;
-            this.numFQuiz.Size = new System.Drawing.Size(135, 24);
+            this.numFQuiz.Size = new System.Drawing.Size(154, 25);
             this.numFQuiz.TabIndex = 18;
             this.numFQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFQuiz.Value = new decimal(new int[] {
@@ -723,9 +736,10 @@
             // chkFQuiz
             // 
             this.chkFQuiz.AutoSize = true;
-            this.chkFQuiz.Location = new System.Drawing.Point(670, 322);
+            this.chkFQuiz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFQuiz.Location = new System.Drawing.Point(766, 365);
             this.chkFQuiz.Name = "chkFQuiz";
-            this.chkFQuiz.Size = new System.Drawing.Size(61, 22);
+            this.chkFQuiz.Size = new System.Drawing.Size(58, 21);
             this.chkFQuiz.TabIndex = 26;
             this.chkFQuiz.TabStop = false;
             this.chkFQuiz.Text = "Quiz";
@@ -739,31 +753,31 @@
             this.panel_fLongQuiz.Controls.Add(this.txtFLongQuiz);
             this.panel_fLongQuiz.Controls.Add(this.numFLongQuiz);
             this.panel_fLongQuiz.Enabled = false;
-            this.panel_fLongQuiz.Location = new System.Drawing.Point(811, 245);
+            this.panel_fLongQuiz.Location = new System.Drawing.Point(927, 278);
             this.panel_fLongQuiz.Name = "panel_fLongQuiz";
-            this.panel_fLongQuiz.Size = new System.Drawing.Size(381, 57);
+            this.panel_fLongQuiz.Size = new System.Drawing.Size(435, 65);
             this.panel_fLongQuiz.TabIndex = 25;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(336, 17);
+            this.label13.Location = new System.Drawing.Point(384, 19);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 18);
+            this.label13.Size = new System.Drawing.Size(21, 17);
             this.label13.TabIndex = 5;
             this.label13.Text = "%";
             // 
             // txtFLongQuiz
             // 
-            this.txtFLongQuiz.Location = new System.Drawing.Point(230, 12);
+            this.txtFLongQuiz.Location = new System.Drawing.Point(263, 14);
             this.txtFLongQuiz.Name = "txtFLongQuiz";
-            this.txtFLongQuiz.Size = new System.Drawing.Size(98, 24);
+            this.txtFLongQuiz.Size = new System.Drawing.Size(111, 25);
             this.txtFLongQuiz.TabIndex = 17;
             this.txtFLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFLongQuiz
             // 
-            this.numFLongQuiz.Location = new System.Drawing.Point(22, 14);
+            this.numFLongQuiz.Location = new System.Drawing.Point(25, 16);
             this.numFLongQuiz.Maximum = new decimal(new int[] {
             9,
             0,
@@ -776,7 +790,7 @@
             0});
             this.numFLongQuiz.Name = "numFLongQuiz";
             this.numFLongQuiz.ReadOnly = true;
-            this.numFLongQuiz.Size = new System.Drawing.Size(135, 24);
+            this.numFLongQuiz.Size = new System.Drawing.Size(154, 25);
             this.numFLongQuiz.TabIndex = 16;
             this.numFLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFLongQuiz.Value = new decimal(new int[] {
@@ -788,9 +802,10 @@
             // chkFLongQuiz
             // 
             this.chkFLongQuiz.AutoSize = true;
-            this.chkFLongQuiz.Location = new System.Drawing.Point(670, 258);
+            this.chkFLongQuiz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFLongQuiz.Location = new System.Drawing.Point(766, 292);
             this.chkFLongQuiz.Name = "chkFLongQuiz";
-            this.chkFLongQuiz.Size = new System.Drawing.Size(98, 22);
+            this.chkFLongQuiz.Size = new System.Drawing.Size(94, 21);
             this.chkFLongQuiz.TabIndex = 24;
             this.chkFLongQuiz.TabStop = false;
             this.chkFLongQuiz.Text = "Long Quiz";
@@ -804,31 +819,31 @@
             this.panel_fAssignment.Controls.Add(this.txtFAssignment);
             this.panel_fAssignment.Controls.Add(this.numFAssignment);
             this.panel_fAssignment.Enabled = false;
-            this.panel_fAssignment.Location = new System.Drawing.Point(811, 181);
+            this.panel_fAssignment.Location = new System.Drawing.Point(927, 205);
             this.panel_fAssignment.Name = "panel_fAssignment";
-            this.panel_fAssignment.Size = new System.Drawing.Size(381, 57);
+            this.panel_fAssignment.Size = new System.Drawing.Size(435, 65);
             this.panel_fAssignment.TabIndex = 23;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(336, 17);
+            this.label14.Location = new System.Drawing.Point(384, 19);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(21, 18);
+            this.label14.Size = new System.Drawing.Size(21, 17);
             this.label14.TabIndex = 5;
             this.label14.Text = "%";
             // 
             // txtFAssignment
             // 
-            this.txtFAssignment.Location = new System.Drawing.Point(230, 12);
+            this.txtFAssignment.Location = new System.Drawing.Point(263, 14);
             this.txtFAssignment.Name = "txtFAssignment";
-            this.txtFAssignment.Size = new System.Drawing.Size(98, 24);
+            this.txtFAssignment.Size = new System.Drawing.Size(111, 25);
             this.txtFAssignment.TabIndex = 15;
             this.txtFAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numFAssignment
             // 
-            this.numFAssignment.Location = new System.Drawing.Point(22, 14);
+            this.numFAssignment.Location = new System.Drawing.Point(25, 16);
             this.numFAssignment.Maximum = new decimal(new int[] {
             9,
             0,
@@ -841,7 +856,7 @@
             0});
             this.numFAssignment.Name = "numFAssignment";
             this.numFAssignment.ReadOnly = true;
-            this.numFAssignment.Size = new System.Drawing.Size(135, 24);
+            this.numFAssignment.Size = new System.Drawing.Size(154, 25);
             this.numFAssignment.TabIndex = 14;
             this.numFAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFAssignment.Value = new decimal(new int[] {
@@ -853,9 +868,10 @@
             // chkFAssignment
             // 
             this.chkFAssignment.AutoSize = true;
-            this.chkFAssignment.Location = new System.Drawing.Point(670, 194);
+            this.chkFAssignment.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFAssignment.Location = new System.Drawing.Point(766, 220);
             this.chkFAssignment.Name = "chkFAssignment";
-            this.chkFAssignment.Size = new System.Drawing.Size(107, 22);
+            this.chkFAssignment.Size = new System.Drawing.Size(104, 21);
             this.chkFAssignment.TabIndex = 22;
             this.chkFAssignment.TabStop = false;
             this.chkFAssignment.Text = "Assignment";
@@ -868,9 +884,9 @@
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label16.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(667, 25);
+            this.label16.Location = new System.Drawing.Point(762, 28);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 25);
+            this.label16.Size = new System.Drawing.Size(68, 22);
             this.label16.TabIndex = 19;
             this.label16.Text = "FINAL";
             // 
@@ -880,10 +896,11 @@
             this.rbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnOK.FlatAppearance.BorderSize = 0;
             this.rbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnOK.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rbtnOK.Location = new System.Drawing.Point(1023, 643);
+            this.rbtnOK.Location = new System.Drawing.Point(1169, 729);
             this.rbtnOK.Name = "rbtnOK";
-            this.rbtnOK.Size = new System.Drawing.Size(169, 45);
+            this.rbtnOK.Size = new System.Drawing.Size(193, 51);
             this.rbtnOK.TabIndex = 24;
             this.rbtnOK.Text = "OK";
             this.rbtnOK.UseVisualStyleBackColor = false;
@@ -896,21 +913,21 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(-189, -18);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(-216, -20);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(1818, 91);
+            this.textBox2.Size = new System.Drawing.Size(2158, 103);
             this.textBox2.TabIndex = 50;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CustomizeGrade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1274, 713);
+            this.ClientSize = new System.Drawing.Size(1284, 817);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -940,13 +957,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rbtnOK);
             this.Controls.Add(this.textBox2);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1292, 760);
+            this.MaximumSize = new System.Drawing.Size(1474, 856);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1292, 760);
+            this.MinimumSize = new System.Drawing.Size(1278, 856);
             this.Name = "CustomizeGrade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";

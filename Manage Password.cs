@@ -75,7 +75,7 @@ namespace gradesBookApp
             label.ForeColor = Color.FromArgb(0, 4, 93);
 
             Label label1 = new Label();
-            label1.Text = "Enter default password: ";
+            label1.Text = "Enter current password: ";
             label1.Location = new Point(50, 150);
             label1.Font = new Font("Arial", 11, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(0, 4, 93);

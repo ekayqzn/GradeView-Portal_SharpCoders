@@ -170,6 +170,7 @@
             0,
             0});
             this.numMAssignment.Name = "numMAssignment";
+            this.numMAssignment.ReadOnly = true;
             this.numMAssignment.Size = new System.Drawing.Size(135, 24);
             this.numMAssignment.TabIndex = 3;
             this.numMAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -234,6 +235,7 @@
             0,
             0});
             this.numMLongQuiz.Name = "numMLongQuiz";
+            this.numMLongQuiz.ReadOnly = true;
             this.numMLongQuiz.Size = new System.Drawing.Size(135, 24);
             this.numMLongQuiz.TabIndex = 5;
             this.numMLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -298,6 +300,7 @@
             0,
             0});
             this.numMQuiz.Name = "numMQuiz";
+            this.numMQuiz.ReadOnly = true;
             this.numMQuiz.Size = new System.Drawing.Size(135, 24);
             this.numMQuiz.TabIndex = 7;
             this.numMQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -362,6 +365,7 @@
             0,
             0});
             this.numMRecitation.Name = "numMRecitation";
+            this.numMRecitation.ReadOnly = true;
             this.numMRecitation.Size = new System.Drawing.Size(135, 24);
             this.numMRecitation.TabIndex = 9;
             this.numMRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -426,6 +430,7 @@
             0,
             0});
             this.numMActivity.Name = "numMActivity";
+            this.numMActivity.ReadOnly = true;
             this.numMActivity.Size = new System.Drawing.Size(135, 24);
             this.numMActivity.TabIndex = 1;
             this.numMActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -575,6 +580,7 @@
             0,
             0});
             this.numFActivity.Name = "numFActivity";
+            this.numFActivity.ReadOnly = true;
             this.numFActivity.Size = new System.Drawing.Size(135, 24);
             this.numFActivity.TabIndex = 12;
             this.numFActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -639,6 +645,7 @@
             0,
             0});
             this.numFRecitation.Name = "numFRecitation";
+            this.numFRecitation.ReadOnly = true;
             this.numFRecitation.Size = new System.Drawing.Size(135, 24);
             this.numFRecitation.TabIndex = 20;
             this.numFRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -703,6 +710,7 @@
             0,
             0});
             this.numFQuiz.Name = "numFQuiz";
+            this.numFQuiz.ReadOnly = true;
             this.numFQuiz.Size = new System.Drawing.Size(135, 24);
             this.numFQuiz.TabIndex = 18;
             this.numFQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -767,6 +775,7 @@
             0,
             0});
             this.numFLongQuiz.Name = "numFLongQuiz";
+            this.numFLongQuiz.ReadOnly = true;
             this.numFLongQuiz.Size = new System.Drawing.Size(135, 24);
             this.numFLongQuiz.TabIndex = 16;
             this.numFLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -831,6 +840,7 @@
             0,
             0});
             this.numFAssignment.Name = "numFAssignment";
+            this.numFAssignment.ReadOnly = true;
             this.numFAssignment.Size = new System.Drawing.Size(135, 24);
             this.numFAssignment.TabIndex = 14;
             this.numFAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

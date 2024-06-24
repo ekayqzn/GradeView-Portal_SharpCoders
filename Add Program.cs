@@ -42,6 +42,8 @@ namespace gradesBookApp
             {
                 txtProgramName.Focus();
                 txtProgramName.Text = "";
+                numYear.Value = 1;
+                numSection.Value = 1;
             }
             else
             {
@@ -83,6 +85,8 @@ namespace gradesBookApp
                 {
                     txtProgramName.Focus();
                     txtProgramName.Text = "";
+                    numYear.Value = 1;
+                    numSection.Value = 1;
                 }
                 else
                 {

@@ -534,5 +534,13 @@ namespace gradesBookApp
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TheCourseDashboard f = new TheCourseDashboard();
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }

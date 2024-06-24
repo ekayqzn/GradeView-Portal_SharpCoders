@@ -478,16 +478,21 @@ namespace gradesBookApp
                 }
                 else
                 {
-                    MessageBox.Show("Please select a row first.");
+                    MessageBox.Show("Please select a row first.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                     return;
                 }
 
-                string studentID = selectedRow.Cells["student_id"].Value.ToString().Trim();
-                g.RemoveStudentToCourse(TheFacultyDashboard.classID, studentID);
-                dataGridView1.Rows.Remove(selectedRow);
-                selectedRow = null;
+                if(MessageBox.Show("Do you want to remove this student from the class?", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string studentID = selectedRow.Cells["student_id"].Value.ToString().Trim();
+                    g.RemoveStudentToCourse(TheFacultyDashboard.classID, studentID);
+                    dataGridView1.Rows.Remove(selectedRow);
+                    selectedRow = null;
 
-                MessageBox.Show($"Student with {studentID} student number has been removed from this course", "Student Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Student with {studentID} student number has been removed from this course", "Student Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
             catch (Exception ex)
             {

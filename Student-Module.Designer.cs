@@ -74,7 +74,7 @@
             this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBack.Image = global::gradesBookApp.Properties.Resources.k__1_;
-            this.picBack.Location = new System.Drawing.Point(19, 16);
+            this.picBack.Location = new System.Drawing.Point(58, 16);
             this.picBack.Name = "picBack";
             this.picBack.Size = new System.Drawing.Size(55, 50);
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

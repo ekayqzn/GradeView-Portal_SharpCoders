@@ -63,11 +63,11 @@
             // 
             // txtConfirmPass
             // 
-            this.txtConfirmPass.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txtConfirmPass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPass.Location = new System.Drawing.Point(37, 183);
             this.txtConfirmPass.Name = "txtConfirmPass";
-            this.txtConfirmPass.Size = new System.Drawing.Size(730, 34);
-            this.txtConfirmPass.TabIndex = 91;
+            this.txtConfirmPass.Size = new System.Drawing.Size(730, 30);
+            this.txtConfirmPass.TabIndex = 106;
             this.txtConfirmPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewPass_KeyDown);
             // 
             // label7
@@ -127,8 +127,8 @@
             this.rbtnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnAdd.Name = "rbtnAdd";
             this.rbtnAdd.Size = new System.Drawing.Size(191, 46);
-            this.rbtnAdd.TabIndex = 98;
-            this.rbtnAdd.Text = "Add";
+            this.rbtnAdd.TabIndex = 107;
+            this.rbtnAdd.Text = "Change Password";
             this.rbtnAdd.UseVisualStyleBackColor = false;
             this.rbtnAdd.Click += new System.EventHandler(this.rbtnAdd_Click);
             // 
@@ -158,10 +158,10 @@
             // 
             // txtNewPass
             // 
-            this.txtNewPass.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txtNewPass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass.Location = new System.Drawing.Point(37, 87);
             this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.Size = new System.Drawing.Size(730, 34);
+            this.txtNewPass.Size = new System.Drawing.Size(730, 30);
             this.txtNewPass.TabIndex = 105;
             this.txtNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewPass_KeyDown);
             // 

@@ -66,6 +66,7 @@ namespace gradesBookApp
                     textBox.AutoSize = true;
                     textBox.Font = new Font("Arial", 12, FontStyle.Regular);
                     textBox.Enabled = (i > 1); // Disable editing for the first two cells
+                    textBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
                     panel1.Controls.Add(textBox);
 
                     // Calculate the maximum width needed for the TextBox
@@ -130,6 +131,117 @@ namespace gradesBookApp
             return maxWidth;
         }
 
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                bool isValid = true; // Initialize isValid to true
+                string tableName = "";
+                string columnName = "";
+                int newValue = -1;
+
+                try
+                {
+                    // Loop through all controls in the panel
+                    for (int i = 0; i < panel1.Controls.Count; i++)
+                    {
+                        // Check if the current control is a TextBox
+                        if (panel1.Controls[i] is System.Windows.Forms.TextBox txt)
+                        {
+                            // Skip validation for specific textboxes
+                            if (txt.Name == "textBox1" || txt.Name == "textBox2")
+                            {
+                                continue;
+                            }
+
+                            // Check if the text is a valid number
+                            if (!v.isNumberforDB(txt.Text))
+                            {
+                                isValid = false; // Set isValid to false if validation fails
+                                txt.Focus();
+                                txt.SelectAll();
+                                //MessageBox.Show("Invalid number in the textbox.");
+                                break; // Exit the loop as validation failed
+                            }
+                            else
+                            {
+                                int j = i + 2;
+                                // Check if j is within the valid range of panel1.Controls
+                                if (j < panel1.Controls.Count && panel1.Controls[j] is System.Windows.Forms.TextBox nextTxt && !string.IsNullOrEmpty(nextTxt.Text))
+                                {
+                                    // Compare the values of the current and next textboxes
+                                    if (Convert.ToInt32(txt.Text) > Convert.ToInt32(nextTxt.Text))
+                                    {
+                                        isValid = false; // Set isValid to false if the current score is greater than the total score
+                                        txt.Focus();
+                                        txt.SelectAll();
+                                        MessageBox.Show("The score entered exceeds the total possible score.", "Invalid Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                        break;
+                                    }
+                                }
+                            }
+                            i += 2;
+                        }
+                    }
+
+                    if (isValid)
+                    {
+                        foreach (Control control in panel1.Controls)
+                        {
+                            if (control is System.Windows.Forms.TextBox textBox)
+                            {
+                                if ((textBox.Name == "textBox1") || (textBox.Name == "textBox2"))
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    newValue = Convert.ToInt32(textBox.Text.Trim());
+                                }
+                            }
+
+                            if (control is Label label)
+                            {
+                                if ((label.Name == "label1") || (label.Name == "label2"))
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    columnName = label.Text;
+                                    tableName = u.GetTableName(label.Text);
+                                }
+                            }
+
+                            u.UpdateGradebook(tableName, columnName, newValue);
+                        }
+                        //Add update to database
+                        if (MessageBox.Show("All fields are valid. Scores have been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                        {
+                            //GradeBook gradeBookForm = Application.OpenForms["GradeBook"] as GradeBook;
+                            //if (gradeBookForm != null)
+                            //{
+                            //    gradeBookForm.GradeBook_Load(this, EventArgs.Empty);
+                            //}
+                            //this.Close(); OPT 1: Gradebook is behind
+
+                            //OPT 2 Gradebook close
+                            this.Hide();
+                            GradeBook g = new GradeBook();
+                            g.ShowDialog();
+                            this.Close();
+                        }
+
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+                }
+            }
+        }
         private void rbtnSave_Click(object sender, EventArgs e)
         {
             

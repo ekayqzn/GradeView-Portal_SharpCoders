@@ -15,6 +15,7 @@ namespace gradesBookApp
     public partial class TheStudentDashboard : Form
     {
         databaseConnection db = new databaseConnection();
+        GetRecordQuery getRecord = new GetRecordQuery();
         public int classId = 0;
 
         public static int? mActivityID = null;
@@ -69,6 +70,9 @@ namespace gradesBookApp
 
         private void LoadDashboard()
         {
+            string name = getRecord.GetName("student", "first_name", LogInOperation.userID);
+            lblGreet.Text = "Hi " + name + ", Welcome!";
+
             // Clear existing controls
             panel2.Controls.Clear();
 

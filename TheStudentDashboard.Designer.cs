@@ -44,6 +44,7 @@
             this.toolUnenroll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolView = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblGreet = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -59,7 +60,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.629441F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.43993F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 3);
@@ -83,7 +84,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
             this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(422, 0);
+            this.label7.Location = new System.Drawing.Point(421, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(418, 79);
             this.label7.TabIndex = 89;
@@ -94,11 +95,12 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.lblGreet);
             this.panel1.Controls.Add(this.rbtnAddClass);
             this.panel1.Location = new System.Drawing.Point(113, 147);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1036, 49);
+            this.panel1.Size = new System.Drawing.Size(1035, 49);
             this.panel1.TabIndex = 91;
             // 
             // rbtnAddClass
@@ -110,7 +112,7 @@
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(849, 0);
+            this.rbtnAddClass.Location = new System.Drawing.Point(848, 0);
             this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnAddClass.Name = "rbtnAddClass";
             this.rbtnAddClass.Size = new System.Drawing.Size(187, 49);
@@ -127,7 +129,7 @@
             this.panel2.Location = new System.Drawing.Point(113, 203);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1036, 610);
+            this.panel2.Size = new System.Drawing.Size(1035, 610);
             this.panel2.TabIndex = 77;
             // 
             // menuStrip1
@@ -138,7 +140,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolMenu});
-            this.menuStrip1.Location = new System.Drawing.Point(1191, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(1190, 20);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(51, 38);
@@ -220,6 +222,17 @@
             this.toolView.Text = "View Course";
             this.toolView.Click += new System.EventHandler(this.toolView_Click);
             // 
+            // lblGreet
+            // 
+            this.lblGreet.AutoSize = true;
+            this.lblGreet.Font = new System.Drawing.Font("Arial Narrow", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.lblGreet.Location = new System.Drawing.Point(16, 7);
+            this.lblGreet.Name = "lblGreet";
+            this.lblGreet.Size = new System.Drawing.Size(171, 35);
+            this.lblGreet.TabIndex = 91;
+            this.lblGreet.Text = "Hi, Welcome!";
+            // 
             // TheStudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,6 +252,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.contextMenu.ResumeLayout(false);
@@ -262,5 +276,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem menuLogOut;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblGreet;
     }
 }

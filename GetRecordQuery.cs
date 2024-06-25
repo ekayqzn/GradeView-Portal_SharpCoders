@@ -19,10 +19,46 @@ namespace gradesBookApp
         {
             g = gradeBook;
         }
+
         public GetRecordQuery()
         {
-           
+
         }
+        public string GetName(string tableName, string columnName, string userID)
+        {
+            string command = $"SELECT {columnName} FROM {tableName}_info WHERE {tableName}_id = @userID";
+
+            string name = "";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = command;
+
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@userID", userID);
+
+                db.dta.SelectCommand = db.cmd;
+                DataTable dt = new DataTable();
+                db.dta.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    name = dt.Rows[0][$"{columnName}"].ToString();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + "\n" + e.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+            return name;
+        }
+
         //Get records per student and add to datatable
 
         //Project and Exam

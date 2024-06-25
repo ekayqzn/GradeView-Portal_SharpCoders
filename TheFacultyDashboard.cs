@@ -20,6 +20,8 @@ namespace gradesBookApp
         public static int classID;
 
         public static string type = "";
+
+        GetRecordQuery getRecord = new GetRecordQuery();
         public TheFacultyDashboard()
         {
             InitializeComponent();
@@ -41,6 +43,9 @@ namespace gradesBookApp
         private void LoadDashboard()
         {
             this.SuspendLayout();
+            string name = getRecord.GetName("teacher", "teacher_fname", LogInOperation.userID.Trim());
+
+            lblGreet.Text = "Hi " + name + ", Welcome!";
 
             // Clear existing controls
             panel2.Controls.Clear();

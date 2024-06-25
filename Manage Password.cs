@@ -150,7 +150,13 @@ namespace gradesBookApp
         {
             if(txtNewPass.Text.Equals(txtConfirmPass.Text))
             {
-                if(String.IsNullOrWhiteSpace(txtNewPass.Text))
+                if (txtConfirmPass.Text.Length < 8)
+                {
+                    MessageBox.Show("Password must be at least 8 characters long.", "Invalid Password Length", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNewPass.Focus();
+                    return;
+                }
+                if (String.IsNullOrWhiteSpace(txtNewPass.Text))
                 {
                   
                     MessageBox.Show("Try Again! Do not leave the password fields blank or with spaces.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -198,6 +204,12 @@ namespace gradesBookApp
             {
                 if (txtNewPass.Text.Equals(txtConfirmPass.Text))
                 {
+                    if (txtConfirmPass.Text.Length < 8)
+                    {
+                        MessageBox.Show("Password must be at least 8 characters long.", "Invalid Password Length", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtNewPass.Focus();
+                        return;
+                    }
                     if (String.IsNullOrWhiteSpace(txtNewPass.Text))
                     {
 

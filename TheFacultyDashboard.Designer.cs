@@ -41,10 +41,10 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.lblGreet = new System.Windows.Forms.Label();
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.cMenuDelete.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.726981F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.8679F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.405124F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 2);
@@ -101,7 +101,7 @@
             this.panel2.Location = new System.Drawing.Point(111, 202);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1049, 479);
+            this.panel2.Size = new System.Drawing.Size(1048, 479);
             this.panel2.TabIndex = 76;
             // 
             // menuStrip1
@@ -112,7 +112,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolMenu});
-            this.menuStrip1.Location = new System.Drawing.Point(1163, 18);
+            this.menuStrip1.Location = new System.Drawing.Point(1162, 18);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(79, 38);
@@ -174,31 +174,8 @@
             this.panel1.Location = new System.Drawing.Point(111, 133);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1049, 65);
+            this.panel1.Size = new System.Drawing.Size(1048, 65);
             this.panel1.TabIndex = 89;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(111, 686);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1049, 61);
-            this.panel3.TabIndex = 90;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(423, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(425, 74);
-            this.label7.TabIndex = 88;
-            this.label7.Text = "TEACHER\'S DASHBOARD";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGreet
             // 
@@ -220,7 +197,7 @@
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(896, 10);
+            this.rbtnAddClass.Location = new System.Drawing.Point(895, 10);
             this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnAddClass.Name = "rbtnAddClass";
             this.rbtnAddClass.Size = new System.Drawing.Size(151, 48);
@@ -228,6 +205,29 @@
             this.rbtnAddClass.Text = "Add Subject";
             this.rbtnAddClass.UseVisualStyleBackColor = false;
             this.rbtnAddClass.Click += new System.EventHandler(this.rbtnAddClass_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(111, 686);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1048, 61);
+            this.panel3.TabIndex = 90;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(422, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(425, 74);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "TEACHER\'S DASHBOARD";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TheFacultyDashboard
             // 

@@ -93,6 +93,16 @@ namespace gradesBookApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BG_11 {
+            get {
+                object obj = ResourceManager.GetObject("BG 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BG_2 {
             get {
                 object obj = ResourceManager.GetObject("BG 2", resourceCulture);
@@ -103,9 +113,29 @@ namespace gradesBookApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BG_3 {
+            get {
+                object obj = ResourceManager.GetObject("BG 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BG_4 {
             get {
                 object obj = ResourceManager.GetObject("BG 4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG_41 {
+            get {
+                object obj = ResourceManager.GetObject("BG 41", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

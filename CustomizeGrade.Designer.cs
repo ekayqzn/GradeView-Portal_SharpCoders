@@ -123,7 +123,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(78, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 22);
+            this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "MIDTERM";
             // 
@@ -144,7 +144,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(384, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 17);
+            this.label3.Size = new System.Drawing.Size(27, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "%";
             // 
@@ -152,7 +152,7 @@
             // 
             this.txtMAssignment.Location = new System.Drawing.Point(263, 14);
             this.txtMAssignment.Name = "txtMAssignment";
-            this.txtMAssignment.Size = new System.Drawing.Size(111, 25);
+            this.txtMAssignment.Size = new System.Drawing.Size(111, 29);
             this.txtMAssignment.TabIndex = 4;
             this.txtMAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -171,7 +171,7 @@
             0});
             this.numMAssignment.Name = "numMAssignment";
             this.numMAssignment.ReadOnly = true;
-            this.numMAssignment.Size = new System.Drawing.Size(154, 25);
+            this.numMAssignment.Size = new System.Drawing.Size(154, 29);
             this.numMAssignment.TabIndex = 3;
             this.numMAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMAssignment.Value = new decimal(new int[] {
@@ -186,7 +186,7 @@
             this.chkMAssignment.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMAssignment.Location = new System.Drawing.Point(82, 220);
             this.chkMAssignment.Name = "chkMAssignment";
-            this.chkMAssignment.Size = new System.Drawing.Size(104, 21);
+            this.chkMAssignment.Size = new System.Drawing.Size(132, 26);
             this.chkMAssignment.TabIndex = 1;
             this.chkMAssignment.TabStop = false;
             this.chkMAssignment.Text = "Assignment";
@@ -210,7 +210,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(384, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 17);
+            this.label4.Size = new System.Drawing.Size(27, 22);
             this.label4.TabIndex = 5;
             this.label4.Text = "%";
             // 
@@ -218,7 +218,7 @@
             // 
             this.txtMLongQuiz.Location = new System.Drawing.Point(263, 14);
             this.txtMLongQuiz.Name = "txtMLongQuiz";
-            this.txtMLongQuiz.Size = new System.Drawing.Size(111, 25);
+            this.txtMLongQuiz.Size = new System.Drawing.Size(111, 29);
             this.txtMLongQuiz.TabIndex = 6;
             this.txtMLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -237,7 +237,7 @@
             0});
             this.numMLongQuiz.Name = "numMLongQuiz";
             this.numMLongQuiz.ReadOnly = true;
-            this.numMLongQuiz.Size = new System.Drawing.Size(154, 25);
+            this.numMLongQuiz.Size = new System.Drawing.Size(154, 29);
             this.numMLongQuiz.TabIndex = 5;
             this.numMLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMLongQuiz.Value = new decimal(new int[] {
@@ -252,7 +252,7 @@
             this.chkMLongQuiz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMLongQuiz.Location = new System.Drawing.Point(82, 292);
             this.chkMLongQuiz.Name = "chkMLongQuiz";
-            this.chkMLongQuiz.Size = new System.Drawing.Size(94, 21);
+            this.chkMLongQuiz.Size = new System.Drawing.Size(118, 26);
             this.chkMLongQuiz.TabIndex = 1;
             this.chkMLongQuiz.TabStop = false;
             this.chkMLongQuiz.Text = "Long Quiz";
@@ -276,7 +276,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(384, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 17);
+            this.label5.Size = new System.Drawing.Size(27, 22);
             this.label5.TabIndex = 5;
             this.label5.Text = "%";
             // 
@@ -284,7 +284,7 @@
             // 
             this.txtMQuiz.Location = new System.Drawing.Point(263, 14);
             this.txtMQuiz.Name = "txtMQuiz";
-            this.txtMQuiz.Size = new System.Drawing.Size(111, 25);
+            this.txtMQuiz.Size = new System.Drawing.Size(111, 29);
             this.txtMQuiz.TabIndex = 8;
             this.txtMQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -303,7 +303,7 @@
             0});
             this.numMQuiz.Name = "numMQuiz";
             this.numMQuiz.ReadOnly = true;
-            this.numMQuiz.Size = new System.Drawing.Size(154, 25);
+            this.numMQuiz.Size = new System.Drawing.Size(154, 29);
             this.numMQuiz.TabIndex = 7;
             this.numMQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMQuiz.Value = new decimal(new int[] {
@@ -318,7 +318,7 @@
             this.chkMQuiz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMQuiz.Location = new System.Drawing.Point(82, 365);
             this.chkMQuiz.Name = "chkMQuiz";
-            this.chkMQuiz.Size = new System.Drawing.Size(58, 21);
+            this.chkMQuiz.Size = new System.Drawing.Size(70, 26);
             this.chkMQuiz.TabIndex = 1;
             this.chkMQuiz.TabStop = false;
             this.chkMQuiz.Text = "Quiz";
@@ -342,7 +342,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(384, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 17);
+            this.label6.Size = new System.Drawing.Size(27, 22);
             this.label6.TabIndex = 5;
             this.label6.Text = "%";
             // 
@@ -350,7 +350,7 @@
             // 
             this.txtMRecitation.Location = new System.Drawing.Point(263, 14);
             this.txtMRecitation.Name = "txtMRecitation";
-            this.txtMRecitation.Size = new System.Drawing.Size(111, 25);
+            this.txtMRecitation.Size = new System.Drawing.Size(111, 29);
             this.txtMRecitation.TabIndex = 10;
             this.txtMRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -369,7 +369,7 @@
             0});
             this.numMRecitation.Name = "numMRecitation";
             this.numMRecitation.ReadOnly = true;
-            this.numMRecitation.Size = new System.Drawing.Size(154, 25);
+            this.numMRecitation.Size = new System.Drawing.Size(154, 29);
             this.numMRecitation.TabIndex = 9;
             this.numMRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMRecitation.Value = new decimal(new int[] {
@@ -384,7 +384,7 @@
             this.chkMRecitation.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMRecitation.Location = new System.Drawing.Point(82, 437);
             this.chkMRecitation.Name = "chkMRecitation";
-            this.chkMRecitation.Size = new System.Drawing.Size(92, 21);
+            this.chkMRecitation.Size = new System.Drawing.Size(116, 26);
             this.chkMRecitation.TabIndex = 1;
             this.chkMRecitation.TabStop = false;
             this.chkMRecitation.Text = "Recitation";
@@ -408,7 +408,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(384, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 17);
+            this.label7.Size = new System.Drawing.Size(27, 22);
             this.label7.TabIndex = 5;
             this.label7.Text = "%";
             // 
@@ -416,7 +416,7 @@
             // 
             this.txtMActivity.Location = new System.Drawing.Point(264, 19);
             this.txtMActivity.Name = "txtMActivity";
-            this.txtMActivity.Size = new System.Drawing.Size(111, 25);
+            this.txtMActivity.Size = new System.Drawing.Size(111, 29);
             this.txtMActivity.TabIndex = 2;
             this.txtMActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -435,7 +435,7 @@
             0});
             this.numMActivity.Name = "numMActivity";
             this.numMActivity.ReadOnly = true;
-            this.numMActivity.Size = new System.Drawing.Size(154, 25);
+            this.numMActivity.Size = new System.Drawing.Size(154, 29);
             this.numMActivity.TabIndex = 1;
             this.numMActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMActivity.Value = new decimal(new int[] {
@@ -450,7 +450,7 @@
             this.chkMActivity.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMActivity.Location = new System.Drawing.Point(82, 151);
             this.chkMActivity.Name = "chkMActivity";
-            this.chkMActivity.Size = new System.Drawing.Size(72, 21);
+            this.chkMActivity.Size = new System.Drawing.Size(91, 26);
             this.chkMActivity.TabIndex = 1;
             this.chkMActivity.TabStop = false;
             this.chkMActivity.Text = "Activity";
@@ -463,7 +463,7 @@
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(79, 109);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 20);
+            this.label8.Size = new System.Drawing.Size(42, 23);
             this.label8.TabIndex = 16;
             this.label8.Text = "70%";
             // 
@@ -487,7 +487,7 @@
             this.rdoMProject.AutoSize = true;
             this.rdoMProject.Location = new System.Drawing.Point(17, 101);
             this.rdoMProject.Name = "rdoMProject";
-            this.rdoMProject.Size = new System.Drawing.Size(126, 24);
+            this.rdoMProject.Size = new System.Drawing.Size(152, 28);
             this.rdoMProject.TabIndex = 11;
             this.rdoMProject.Text = "Midterm Project";
             this.rdoMProject.UseVisualStyleBackColor = true;
@@ -498,7 +498,7 @@
             this.rdoMExam.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoMExam.Location = new System.Drawing.Point(18, 54);
             this.rdoMExam.Name = "rdoMExam";
-            this.rdoMExam.Size = new System.Drawing.Size(159, 24);
+            this.rdoMExam.Size = new System.Drawing.Size(193, 28);
             this.rdoMExam.TabIndex = 11;
             this.rdoMExam.TabStop = true;
             this.rdoMExam.Text = "Midterm Examination";
@@ -523,7 +523,7 @@
             this.rdoFProject.AutoSize = true;
             this.rdoFProject.Location = new System.Drawing.Point(17, 101);
             this.rdoFProject.Name = "rdoFProject";
-            this.rdoFProject.Size = new System.Drawing.Size(106, 24);
+            this.rdoFProject.Size = new System.Drawing.Size(127, 28);
             this.rdoFProject.TabIndex = 23;
             this.rdoFProject.Text = "Final Project";
             this.rdoFProject.UseVisualStyleBackColor = true;
@@ -533,7 +533,7 @@
             this.rdoFExam.AutoSize = true;
             this.rdoFExam.Location = new System.Drawing.Point(18, 54);
             this.rdoFExam.Name = "rdoFExam";
-            this.rdoFExam.Size = new System.Drawing.Size(139, 24);
+            this.rdoFExam.Size = new System.Drawing.Size(168, 28);
             this.rdoFExam.TabIndex = 22;
             this.rdoFExam.Text = "Final Examination";
             this.rdoFExam.UseVisualStyleBackColor = true;
@@ -544,7 +544,7 @@
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(762, 109);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 20);
+            this.label9.Size = new System.Drawing.Size(42, 23);
             this.label9.TabIndex = 32;
             this.label9.Text = "70%";
             // 
@@ -565,7 +565,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(384, 19);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 17);
+            this.label10.Size = new System.Drawing.Size(27, 22);
             this.label10.TabIndex = 5;
             this.label10.Text = "%";
             // 
@@ -573,7 +573,7 @@
             // 
             this.txtFActivity.Location = new System.Drawing.Point(264, 19);
             this.txtFActivity.Name = "txtFActivity";
-            this.txtFActivity.Size = new System.Drawing.Size(111, 25);
+            this.txtFActivity.Size = new System.Drawing.Size(111, 29);
             this.txtFActivity.TabIndex = 13;
             this.txtFActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -592,7 +592,7 @@
             0});
             this.numFActivity.Name = "numFActivity";
             this.numFActivity.ReadOnly = true;
-            this.numFActivity.Size = new System.Drawing.Size(154, 25);
+            this.numFActivity.Size = new System.Drawing.Size(154, 29);
             this.numFActivity.TabIndex = 12;
             this.numFActivity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFActivity.Value = new decimal(new int[] {
@@ -607,7 +607,7 @@
             this.chkFActivity.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFActivity.Location = new System.Drawing.Point(766, 151);
             this.chkFActivity.Name = "chkFActivity";
-            this.chkFActivity.Size = new System.Drawing.Size(72, 21);
+            this.chkFActivity.Size = new System.Drawing.Size(91, 26);
             this.chkFActivity.TabIndex = 30;
             this.chkFActivity.TabStop = false;
             this.chkFActivity.Text = "Activity";
@@ -631,7 +631,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(384, 19);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(21, 17);
+            this.label11.Size = new System.Drawing.Size(27, 22);
             this.label11.TabIndex = 5;
             this.label11.Text = "%";
             // 
@@ -639,7 +639,7 @@
             // 
             this.txtFRecitation.Location = new System.Drawing.Point(263, 14);
             this.txtFRecitation.Name = "txtFRecitation";
-            this.txtFRecitation.Size = new System.Drawing.Size(111, 25);
+            this.txtFRecitation.Size = new System.Drawing.Size(111, 29);
             this.txtFRecitation.TabIndex = 21;
             this.txtFRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -658,7 +658,7 @@
             0});
             this.numFRecitation.Name = "numFRecitation";
             this.numFRecitation.ReadOnly = true;
-            this.numFRecitation.Size = new System.Drawing.Size(154, 25);
+            this.numFRecitation.Size = new System.Drawing.Size(154, 29);
             this.numFRecitation.TabIndex = 20;
             this.numFRecitation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFRecitation.Value = new decimal(new int[] {
@@ -673,7 +673,7 @@
             this.chkFRecitation.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFRecitation.Location = new System.Drawing.Point(766, 437);
             this.chkFRecitation.Name = "chkFRecitation";
-            this.chkFRecitation.Size = new System.Drawing.Size(92, 21);
+            this.chkFRecitation.Size = new System.Drawing.Size(116, 26);
             this.chkFRecitation.TabIndex = 28;
             this.chkFRecitation.TabStop = false;
             this.chkFRecitation.Text = "Recitation";
@@ -697,7 +697,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(384, 19);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(21, 17);
+            this.label12.Size = new System.Drawing.Size(27, 22);
             this.label12.TabIndex = 5;
             this.label12.Text = "%";
             // 
@@ -705,7 +705,7 @@
             // 
             this.txtFQuiz.Location = new System.Drawing.Point(263, 14);
             this.txtFQuiz.Name = "txtFQuiz";
-            this.txtFQuiz.Size = new System.Drawing.Size(111, 25);
+            this.txtFQuiz.Size = new System.Drawing.Size(111, 29);
             this.txtFQuiz.TabIndex = 19;
             this.txtFQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -724,7 +724,7 @@
             0});
             this.numFQuiz.Name = "numFQuiz";
             this.numFQuiz.ReadOnly = true;
-            this.numFQuiz.Size = new System.Drawing.Size(154, 25);
+            this.numFQuiz.Size = new System.Drawing.Size(154, 29);
             this.numFQuiz.TabIndex = 18;
             this.numFQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFQuiz.Value = new decimal(new int[] {
@@ -739,7 +739,7 @@
             this.chkFQuiz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFQuiz.Location = new System.Drawing.Point(766, 365);
             this.chkFQuiz.Name = "chkFQuiz";
-            this.chkFQuiz.Size = new System.Drawing.Size(58, 21);
+            this.chkFQuiz.Size = new System.Drawing.Size(70, 26);
             this.chkFQuiz.TabIndex = 26;
             this.chkFQuiz.TabStop = false;
             this.chkFQuiz.Text = "Quiz";
@@ -763,7 +763,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(384, 19);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 17);
+            this.label13.Size = new System.Drawing.Size(27, 22);
             this.label13.TabIndex = 5;
             this.label13.Text = "%";
             // 
@@ -771,7 +771,7 @@
             // 
             this.txtFLongQuiz.Location = new System.Drawing.Point(263, 14);
             this.txtFLongQuiz.Name = "txtFLongQuiz";
-            this.txtFLongQuiz.Size = new System.Drawing.Size(111, 25);
+            this.txtFLongQuiz.Size = new System.Drawing.Size(111, 29);
             this.txtFLongQuiz.TabIndex = 17;
             this.txtFLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -790,7 +790,7 @@
             0});
             this.numFLongQuiz.Name = "numFLongQuiz";
             this.numFLongQuiz.ReadOnly = true;
-            this.numFLongQuiz.Size = new System.Drawing.Size(154, 25);
+            this.numFLongQuiz.Size = new System.Drawing.Size(154, 29);
             this.numFLongQuiz.TabIndex = 16;
             this.numFLongQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFLongQuiz.Value = new decimal(new int[] {
@@ -805,7 +805,7 @@
             this.chkFLongQuiz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFLongQuiz.Location = new System.Drawing.Point(766, 292);
             this.chkFLongQuiz.Name = "chkFLongQuiz";
-            this.chkFLongQuiz.Size = new System.Drawing.Size(94, 21);
+            this.chkFLongQuiz.Size = new System.Drawing.Size(118, 26);
             this.chkFLongQuiz.TabIndex = 24;
             this.chkFLongQuiz.TabStop = false;
             this.chkFLongQuiz.Text = "Long Quiz";
@@ -829,7 +829,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(384, 19);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(21, 17);
+            this.label14.Size = new System.Drawing.Size(27, 22);
             this.label14.TabIndex = 5;
             this.label14.Text = "%";
             // 
@@ -837,7 +837,7 @@
             // 
             this.txtFAssignment.Location = new System.Drawing.Point(263, 14);
             this.txtFAssignment.Name = "txtFAssignment";
-            this.txtFAssignment.Size = new System.Drawing.Size(111, 25);
+            this.txtFAssignment.Size = new System.Drawing.Size(111, 29);
             this.txtFAssignment.TabIndex = 15;
             this.txtFAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -856,7 +856,7 @@
             0});
             this.numFAssignment.Name = "numFAssignment";
             this.numFAssignment.ReadOnly = true;
-            this.numFAssignment.Size = new System.Drawing.Size(154, 25);
+            this.numFAssignment.Size = new System.Drawing.Size(154, 29);
             this.numFAssignment.TabIndex = 14;
             this.numFAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numFAssignment.Value = new decimal(new int[] {
@@ -871,7 +871,7 @@
             this.chkFAssignment.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFAssignment.Location = new System.Drawing.Point(766, 220);
             this.chkFAssignment.Name = "chkFAssignment";
-            this.chkFAssignment.Size = new System.Drawing.Size(104, 21);
+            this.chkFAssignment.Size = new System.Drawing.Size(132, 26);
             this.chkFAssignment.TabIndex = 22;
             this.chkFAssignment.TabStop = false;
             this.chkFAssignment.Text = "Assignment";
@@ -886,7 +886,7 @@
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(762, 28);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 22);
+            this.label16.Size = new System.Drawing.Size(84, 25);
             this.label16.TabIndex = 19;
             this.label16.Text = "FINAL";
             // 
@@ -914,21 +914,20 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(-216, -20);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(2158, 103);
+            this.textBox2.Size = new System.Drawing.Size(2330, 103);
             this.textBox2.TabIndex = 50;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CustomizeGrade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1284, 817);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(1456, 809);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
@@ -960,13 +959,10 @@
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1474, 856);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1278, 856);
             this.Name = "CustomizeGrade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bulacan Technological University";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CustomizeGrade_Load);
             this.panel_mAssignment.ResumeLayout(false);
             this.panel_mAssignment.PerformLayout();

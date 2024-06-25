@@ -37,6 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,10 +96,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 22);
+            this.label1.Size = new System.Drawing.Size(64, 24);
             this.label1.TabIndex = 67;
             this.label1.Text = "Status:";
             // 
@@ -113,6 +115,28 @@
             this.lblStatus.TabIndex = 68;
             this.lblStatus.Text = "Incomplete";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.label2.Location = new System.Drawing.Point(427, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(221, 27);
+            this.label2.TabIndex = 70;
+            this.label2.Text = "Highest Possible Score";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.label3.Location = new System.Drawing.Point(96, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 27);
+            this.label3.TabIndex = 69;
+            this.label3.Text = "Raw Score";
+            // 
             // Student_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -120,6 +144,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(958, 831);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -146,5 +172,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

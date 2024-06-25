@@ -51,7 +51,7 @@ namespace gradesBookApp
 
         private void Student_Module_Load(object sender, EventArgs e)
         {
-            yLocation = 130;
+            yLocation = 150;
             xLocation = 20;
             try
             {

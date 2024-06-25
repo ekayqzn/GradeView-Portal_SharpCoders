@@ -226,7 +226,7 @@
             this.picDeleteSearch.BackColor = System.Drawing.Color.Transparent;
             this.picDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDeleteSearch.Image = global::gradesBookApp.Properties.Resources.close__1_;
-            this.picDeleteSearch.Location = new System.Drawing.Point(717, 137);
+            this.picDeleteSearch.Location = new System.Drawing.Point(727, 133);
             this.picDeleteSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picDeleteSearch.Name = "picDeleteSearch";
             this.picDeleteSearch.Size = new System.Drawing.Size(20, 23);
@@ -234,13 +234,14 @@
             this.picDeleteSearch.TabIndex = 65;
             this.picDeleteSearch.TabStop = false;
             this.picDeleteSearch.Visible = false;
+            this.picDeleteSearch.Click += new System.EventHandler(this.picDeleteSearch_Click);
             // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.txtSearch.Location = new System.Drawing.Point(121, 133);
+            this.txtSearch.Location = new System.Drawing.Point(136, 133);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";

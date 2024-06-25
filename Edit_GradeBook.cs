@@ -33,7 +33,7 @@ namespace gradesBookApp
 
         private void DisplayRowData(DataGridViewRow row)
         {
-            int y = 10; // Starting Y position for controls
+            int y = 40; // Starting Y position for controls
             int x = 20;
             int columnCount = row.Cells.Count - 2; // Exclude the last column
             for (int i = 0; i < columnCount; i++)

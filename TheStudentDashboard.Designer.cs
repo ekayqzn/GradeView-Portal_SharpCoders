@@ -33,6 +33,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblGreet = new System.Windows.Forms.Label();
             this.rbtnAddClass = new gradesBookApp.RoundedButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -44,7 +45,6 @@
             this.toolUnenroll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolView = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblGreet = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -59,8 +59,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9635974F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.629441F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.43993F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 3);
@@ -71,9 +71,9 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.718969F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.881773F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.224959F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.36946F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.871166F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.97546F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.58282F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 815);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -84,7 +84,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
             this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(421, 0);
+            this.label7.Location = new System.Drawing.Point(429, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(418, 79);
             this.label7.TabIndex = 89;
@@ -93,29 +93,41 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lblGreet);
             this.panel1.Controls.Add(this.rbtnAddClass);
-            this.panel1.Location = new System.Drawing.Point(113, 147);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(114, 136);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 49);
+            this.panel1.Size = new System.Drawing.Size(1049, 60);
             this.panel1.TabIndex = 91;
+            // 
+            // lblGreet
+            // 
+            this.lblGreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblGreet.AutoSize = true;
+            this.lblGreet.Font = new System.Drawing.Font("Arial Narrow", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
+            this.lblGreet.Location = new System.Drawing.Point(16, 15);
+            this.lblGreet.Name = "lblGreet";
+            this.lblGreet.Size = new System.Drawing.Size(171, 35);
+            this.lblGreet.TabIndex = 91;
+            this.lblGreet.Text = "Hi, Welcome!";
             // 
             // rbtnAddClass
             // 
+            this.rbtnAddClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rbtnAddClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.rbtnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtnAddClass.Dock = System.Windows.Forms.DockStyle.Right;
             this.rbtnAddClass.FlatAppearance.BorderSize = 0;
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(848, 0);
+            this.rbtnAddClass.Location = new System.Drawing.Point(806, 2);
             this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnAddClass.Name = "rbtnAddClass";
-            this.rbtnAddClass.Size = new System.Drawing.Size(187, 49);
+            this.rbtnAddClass.Size = new System.Drawing.Size(192, 48);
             this.rbtnAddClass.TabIndex = 90;
             this.rbtnAddClass.Text = "Add Class Code";
             this.rbtnAddClass.UseVisualStyleBackColor = false;
@@ -126,10 +138,10 @@
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(113, 203);
+            this.panel2.Location = new System.Drawing.Point(114, 200);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1035, 610);
+            this.panel2.Size = new System.Drawing.Size(1049, 613);
             this.panel2.TabIndex = 77;
             // 
             // menuStrip1
@@ -140,7 +152,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolMenu});
-            this.menuStrip1.Location = new System.Drawing.Point(1190, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(1186, 20);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(51, 38);
@@ -221,17 +233,6 @@
             this.toolView.Size = new System.Drawing.Size(159, 24);
             this.toolView.Text = "View Course";
             this.toolView.Click += new System.EventHandler(this.toolView_Click);
-            // 
-            // lblGreet
-            // 
-            this.lblGreet.AutoSize = true;
-            this.lblGreet.Font = new System.Drawing.Font("Arial Narrow", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGreet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
-            this.lblGreet.Location = new System.Drawing.Point(16, 7);
-            this.lblGreet.Name = "lblGreet";
-            this.lblGreet.Size = new System.Drawing.Size(171, 35);
-            this.lblGreet.TabIndex = 91;
-            this.lblGreet.Text = "Hi, Welcome!";
             // 
             // TheStudentDashboard
             // 

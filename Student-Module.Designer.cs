@@ -49,7 +49,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(348, 23);
+            this.label5.Location = new System.Drawing.Point(323, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(300, 35);
             this.label5.TabIndex = 56;
@@ -72,11 +72,10 @@
             // 
             // picBack
             // 
-            this.picBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBack.Image = global::gradesBookApp.Properties.Resources.k__1_;
-            this.picBack.Location = new System.Drawing.Point(58, 16);
+            this.picBack.Location = new System.Drawing.Point(24, 15);
             this.picBack.Name = "picBack";
             this.picBack.Size = new System.Drawing.Size(55, 50);
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

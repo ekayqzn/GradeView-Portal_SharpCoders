@@ -30,7 +30,6 @@ namespace gradesBookApp
             LogInStudent l = new LogInStudent();
             l.PerformLogIn(this, txtStudentID, txtStudentPass);
             userID = LogInOperation.userID.Trim();
-            MessageBox.Show(userID);
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)

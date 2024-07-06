@@ -103,7 +103,7 @@ namespace gradesBookApp
                     programID = Convert.ToInt32(dataTable.Rows[0]["program_id"]);
 
 
-                    //! Check for duplicates in database and course dashboard
+                    // Check for duplicates in database and course dashboard
                     db.cmd.Connection = db.conn;
                     db.cmd.CommandText = "SELECT course_id FROM modern_gradesbook.course " +
                         "WHERE program_id = @programId AND class_id = @classID";

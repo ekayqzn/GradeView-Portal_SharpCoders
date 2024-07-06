@@ -25,6 +25,7 @@ namespace gradesBookApp
         public string studentId = LogInOperation.userID.Trim();
         bool isValid = false;
 
+        //For task table IDs
         bool mQuiz = false;
         bool mRecitation = false;
         bool mActivity = false;

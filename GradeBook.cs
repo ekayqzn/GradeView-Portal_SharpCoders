@@ -50,18 +50,6 @@ namespace gradesBookApp
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // Check if the cell value is -1
-            //if (e.Value != null && e.Value is int && (int)e.Value == -1)
-            //{
-            //    // Set the display value to empty string
-            //    e.Value = "-";
-            //    e.FormattingApplied = true; // Indicate that the formatting was applied
-            //}
-            //else if (e.Value != null && e.Value is string && int.TryParse((string)e.Value, out int result) && result == -1)
-            //{
-            //    e.Value = "-";
-            //    e.FormattingApplied = true;
-            //}
 
             if (e.Value != null && (e.Value is int || e.Value is string))
             {
@@ -528,11 +516,6 @@ namespace gradesBookApp
             }
 
             base.WndProc(ref m);
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

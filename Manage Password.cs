@@ -34,6 +34,7 @@ namespace gradesBookApp
                 if (v.passwordValid("teacher", textBox.Text, LogInTeacher.userID))
                 {
                     panelPassword.Visible = true;
+                    txtNewPass.Focus();
                     panelButton.Visible = true;
 
                 }
@@ -47,6 +48,7 @@ namespace gradesBookApp
                 if (v.passwordValid("student", textBox.Text, LogInStudent.userID))
                 {
                     panelPassword.Visible = true;
+                    txtNewPass.Focus();
                     panelButton.Visible = true;
 
                 }
@@ -55,7 +57,6 @@ namespace gradesBookApp
                     MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            
         }
 
         private void btnCancel_Click (object sender, EventArgs e)
@@ -93,6 +94,7 @@ namespace gradesBookApp
             button.Text = "Validate";
             button.Click += new EventHandler(btnValidate_Click);
             button.Cursor = Cursors.Hand;
+            button.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
 
             RoundedButton button2 = new RoundedButton();
             button2.Location = new Point(240, 311);
@@ -100,6 +102,7 @@ namespace gradesBookApp
             button2.Click += new EventHandler(btnCancel_Click);
             button2.BackColor = Color.DarkRed;
             button2.Cursor = Cursors.Hand;
+            button2.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
 
             // Add controls to the form
             this.Controls.Add(label);
@@ -118,12 +121,13 @@ namespace gradesBookApp
                     if (v.passwordValid("teacher", textBox.Text, LogInTeacher.userID))
                     {
                         panelPassword.Visible = true;
+                        txtNewPass.Focus();
                         panelButton.Visible = true;
 
                     }
                     else
                     {
-                        MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 if (TheFacultyDashboard.type == "student")
@@ -131,12 +135,13 @@ namespace gradesBookApp
                     if (v.passwordValid("student", textBox.Text, LogInStudent.userID))
                     {
                         panelPassword.Visible = true;
+                        txtNewPass.Focus();
                         panelButton.Visible = true;
 
                     }
                     else
                     {
-                        MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Try Again! Invalid Password input.", "Invalid Passsword", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }

@@ -10,6 +10,7 @@ namespace gradesBookApp
 {
     public class databaseConnection
     {
+        // Variables to store information needed to connect to the database
         private string strserver = Properties.Settings.Default.server;
         private string strport = Properties.Settings.Default.port;
         private string strusername = Properties.Settings.Default.username;

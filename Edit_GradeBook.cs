@@ -15,7 +15,7 @@ namespace gradesBookApp
     {
         public static string editStudentID = "";
         Validation v = new Validation();
-        UpdateScores u = new UpdateScores();
+        Update_Query u = new Update_Query();
         public Edit_GradeBook(DataGridViewRow row)
         {
             InitializeComponent();

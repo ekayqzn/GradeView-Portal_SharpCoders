@@ -56,11 +56,6 @@
             this.numMActivity = new System.Windows.Forms.NumericUpDown();
             this.chkMActivity = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdoMProject = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdoFProject = new System.Windows.Forms.RadioButton();
-            this.rdoFExam = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.panel_fActivity = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -89,7 +84,22 @@
             this.chkFAssignment = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.rdoMExam = new System.Windows.Forms.RadioButton();
+            this.panel_fExam = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFExam = new System.Windows.Forms.TextBox();
+            this.chkFExam = new System.Windows.Forms.CheckBox();
+            this.panel_mExam = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtMExam = new System.Windows.Forms.TextBox();
+            this.chkMExam = new System.Windows.Forms.CheckBox();
+            this.panel_fProject = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtFProject = new System.Windows.Forms.TextBox();
+            this.chkFProject = new System.Windows.Forms.CheckBox();
+            this.panel_mProject = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtMProject = new System.Windows.Forms.TextBox();
+            this.chkMProject = new System.Windows.Forms.CheckBox();
             this.rbtnOK = new gradesBookApp.RoundedButton();
             this.panel_mAssignment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMAssignment)).BeginInit();
@@ -101,8 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numMRecitation)).BeginInit();
             this.panel_mActivity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMActivity)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel_fActivity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFActivity)).BeginInit();
             this.panel_fRecitation.SuspendLayout();
@@ -113,6 +121,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFLongQuiz)).BeginInit();
             this.panel_fAssignment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAssignment)).BeginInit();
+            this.panel_fExam.SuspendLayout();
+            this.panel_mExam.SuspendLayout();
+            this.panel_fProject.SuspendLayout();
+            this.panel_mProject.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -463,67 +475,9 @@
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(50, 109);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 23);
+            this.label8.Size = new System.Drawing.Size(51, 23);
             this.label8.TabIndex = 16;
-            this.label8.Text = "70%";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.rdoMExam);
-            this.groupBox1.Controls.Add(this.rdoMProject);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox1.Location = new System.Drawing.Point(43, 520);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(607, 168);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "30%";
-            // 
-            // rdoMProject
-            // 
-            this.rdoMProject.AutoSize = true;
-            this.rdoMProject.Location = new System.Drawing.Point(17, 101);
-            this.rdoMProject.Name = "rdoMProject";
-            this.rdoMProject.Size = new System.Drawing.Size(152, 28);
-            this.rdoMProject.TabIndex = 11;
-            this.rdoMProject.Text = "Midterm Project";
-            this.rdoMProject.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox2.Controls.Add(this.rdoFProject);
-            this.groupBox2.Controls.Add(this.rdoFExam);
-            this.groupBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox2.Location = new System.Drawing.Point(728, 520);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(607, 168);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "30%";
-            // 
-            // rdoFProject
-            // 
-            this.rdoFProject.AutoSize = true;
-            this.rdoFProject.Location = new System.Drawing.Point(17, 101);
-            this.rdoFProject.Name = "rdoFProject";
-            this.rdoFProject.Size = new System.Drawing.Size(127, 28);
-            this.rdoFProject.TabIndex = 23;
-            this.rdoFProject.Text = "Final Project";
-            this.rdoFProject.UseVisualStyleBackColor = true;
-            // 
-            // rdoFExam
-            // 
-            this.rdoFExam.AutoSize = true;
-            this.rdoFExam.Location = new System.Drawing.Point(18, 54);
-            this.rdoFExam.Name = "rdoFExam";
-            this.rdoFExam.Size = new System.Drawing.Size(168, 28);
-            this.rdoFExam.TabIndex = 22;
-            this.rdoFExam.Text = "Final Examination";
-            this.rdoFExam.UseVisualStyleBackColor = true;
+            this.label8.Text = "100%";
             // 
             // label9
             // 
@@ -531,9 +485,9 @@
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(733, 109);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 23);
+            this.label9.Size = new System.Drawing.Size(51, 23);
             this.label9.TabIndex = 32;
-            this.label9.Text = "70%";
+            this.label9.Text = "100%";
             // 
             // panel_fActivity
             // 
@@ -893,16 +847,169 @@
             this.textBox2.TabIndex = 50;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // rdoMExam
+            // panel_fExam
             // 
-            this.rdoMExam.AutoSize = true;
-            this.rdoMExam.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoMExam.Location = new System.Drawing.Point(17, 54);
-            this.rdoMExam.Name = "rdoMExam";
-            this.rdoMExam.Size = new System.Drawing.Size(193, 28);
-            this.rdoMExam.TabIndex = 12;
-            this.rdoMExam.Text = "Midterm Examination";
-            this.rdoMExam.UseVisualStyleBackColor = true;
+            this.panel_fExam.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel_fExam.Controls.Add(this.label2);
+            this.panel_fExam.Controls.Add(this.txtFExam);
+            this.panel_fExam.Enabled = false;
+            this.panel_fExam.Location = new System.Drawing.Point(898, 494);
+            this.panel_fExam.Name = "panel_fExam";
+            this.panel_fExam.Size = new System.Drawing.Size(435, 65);
+            this.panel_fExam.TabIndex = 54;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(384, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 22);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "%";
+            // 
+            // txtFExam
+            // 
+            this.txtFExam.Location = new System.Drawing.Point(263, 14);
+            this.txtFExam.Name = "txtFExam";
+            this.txtFExam.Size = new System.Drawing.Size(111, 29);
+            this.txtFExam.TabIndex = 21;
+            this.txtFExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chkFExam
+            // 
+            this.chkFExam.AutoSize = true;
+            this.chkFExam.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFExam.Location = new System.Drawing.Point(737, 508);
+            this.chkFExam.Name = "chkFExam";
+            this.chkFExam.Size = new System.Drawing.Size(80, 26);
+            this.chkFExam.TabIndex = 53;
+            this.chkFExam.TabStop = false;
+            this.chkFExam.Text = "Exam";
+            this.chkFExam.UseVisualStyleBackColor = true;
+            this.chkFExam.CheckedChanged += new System.EventHandler(this.chkFExam_CheckedChanged);
+            // 
+            // panel_mExam
+            // 
+            this.panel_mExam.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel_mExam.Controls.Add(this.label15);
+            this.panel_mExam.Controls.Add(this.txtMExam);
+            this.panel_mExam.Enabled = false;
+            this.panel_mExam.Location = new System.Drawing.Point(214, 494);
+            this.panel_mExam.Name = "panel_mExam";
+            this.panel_mExam.Size = new System.Drawing.Size(435, 65);
+            this.panel_mExam.TabIndex = 52;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(384, 19);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(27, 22);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "%";
+            // 
+            // txtMExam
+            // 
+            this.txtMExam.Location = new System.Drawing.Point(263, 14);
+            this.txtMExam.Name = "txtMExam";
+            this.txtMExam.Size = new System.Drawing.Size(111, 29);
+            this.txtMExam.TabIndex = 10;
+            this.txtMExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chkMExam
+            // 
+            this.chkMExam.AutoSize = true;
+            this.chkMExam.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMExam.Location = new System.Drawing.Point(53, 508);
+            this.chkMExam.Name = "chkMExam";
+            this.chkMExam.Size = new System.Drawing.Size(80, 26);
+            this.chkMExam.TabIndex = 51;
+            this.chkMExam.TabStop = false;
+            this.chkMExam.Text = "Exam";
+            this.chkMExam.UseVisualStyleBackColor = true;
+            this.chkMExam.CheckedChanged += new System.EventHandler(this.chkMExam_CheckedChanged);
+            // 
+            // panel_fProject
+            // 
+            this.panel_fProject.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel_fProject.Controls.Add(this.label17);
+            this.panel_fProject.Controls.Add(this.txtFProject);
+            this.panel_fProject.Enabled = false;
+            this.panel_fProject.Location = new System.Drawing.Point(898, 565);
+            this.panel_fProject.Name = "panel_fProject";
+            this.panel_fProject.Size = new System.Drawing.Size(435, 65);
+            this.panel_fProject.TabIndex = 58;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(384, 19);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(27, 22);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "%";
+            // 
+            // txtFProject
+            // 
+            this.txtFProject.Location = new System.Drawing.Point(263, 14);
+            this.txtFProject.Name = "txtFProject";
+            this.txtFProject.Size = new System.Drawing.Size(111, 29);
+            this.txtFProject.TabIndex = 21;
+            this.txtFProject.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chkFProject
+            // 
+            this.chkFProject.AutoSize = true;
+            this.chkFProject.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFProject.Location = new System.Drawing.Point(737, 579);
+            this.chkFProject.Name = "chkFProject";
+            this.chkFProject.Size = new System.Drawing.Size(92, 26);
+            this.chkFProject.TabIndex = 57;
+            this.chkFProject.TabStop = false;
+            this.chkFProject.Text = "Project";
+            this.chkFProject.UseVisualStyleBackColor = true;
+            this.chkFProject.CheckedChanged += new System.EventHandler(this.chkFProject_CheckedChanged);
+            // 
+            // panel_mProject
+            // 
+            this.panel_mProject.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel_mProject.Controls.Add(this.label18);
+            this.panel_mProject.Controls.Add(this.txtMProject);
+            this.panel_mProject.Enabled = false;
+            this.panel_mProject.Location = new System.Drawing.Point(214, 565);
+            this.panel_mProject.Name = "panel_mProject";
+            this.panel_mProject.Size = new System.Drawing.Size(435, 65);
+            this.panel_mProject.TabIndex = 56;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(384, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(27, 22);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "%";
+            // 
+            // txtMProject
+            // 
+            this.txtMProject.Location = new System.Drawing.Point(263, 14);
+            this.txtMProject.Name = "txtMProject";
+            this.txtMProject.Size = new System.Drawing.Size(111, 29);
+            this.txtMProject.TabIndex = 10;
+            this.txtMProject.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chkMProject
+            // 
+            this.chkMProject.AutoSize = true;
+            this.chkMProject.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMProject.Location = new System.Drawing.Point(53, 579);
+            this.chkMProject.Name = "chkMProject";
+            this.chkMProject.Size = new System.Drawing.Size(92, 26);
+            this.chkMProject.TabIndex = 55;
+            this.chkMProject.TabStop = false;
+            this.chkMProject.Text = "Project";
+            this.chkMProject.UseVisualStyleBackColor = true;
+            this.chkMProject.CheckedChanged += new System.EventHandler(this.chkMProject_CheckedChanged);
             // 
             // rbtnOK
             // 
@@ -927,8 +1034,14 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1456, 809);
             this.ControlBox = false;
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel_fProject);
+            this.Controls.Add(this.chkFProject);
+            this.Controls.Add(this.panel_mProject);
+            this.Controls.Add(this.chkMProject);
+            this.Controls.Add(this.panel_fExam);
+            this.Controls.Add(this.chkFExam);
+            this.Controls.Add(this.panel_mExam);
+            this.Controls.Add(this.chkMExam);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel_fActivity);
@@ -978,10 +1091,6 @@
             this.panel_mActivity.ResumeLayout(false);
             this.panel_mActivity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMActivity)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel_fActivity.ResumeLayout(false);
             this.panel_fActivity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFActivity)).EndInit();
@@ -997,6 +1106,14 @@
             this.panel_fAssignment.ResumeLayout(false);
             this.panel_fAssignment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAssignment)).EndInit();
+            this.panel_fExam.ResumeLayout(false);
+            this.panel_fExam.PerformLayout();
+            this.panel_mExam.ResumeLayout(false);
+            this.panel_mExam.PerformLayout();
+            this.panel_fProject.ResumeLayout(false);
+            this.panel_fProject.PerformLayout();
+            this.panel_mProject.ResumeLayout(false);
+            this.panel_mProject.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1032,11 +1149,6 @@
         private System.Windows.Forms.NumericUpDown numMActivity;
         private System.Windows.Forms.CheckBox chkMActivity;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdoMProject;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton rdoFProject;
-        private System.Windows.Forms.RadioButton rdoFExam;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel_fActivity;
         private System.Windows.Forms.Label label10;
@@ -1065,6 +1177,21 @@
         private System.Windows.Forms.CheckBox chkFAssignment;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton rdoMExam;
+        private System.Windows.Forms.Panel panel_fExam;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFExam;
+        private System.Windows.Forms.CheckBox chkFExam;
+        private System.Windows.Forms.Panel panel_mExam;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtMExam;
+        private System.Windows.Forms.CheckBox chkMExam;
+        private System.Windows.Forms.Panel panel_fProject;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtFProject;
+        private System.Windows.Forms.CheckBox chkFProject;
+        private System.Windows.Forms.Panel panel_mProject;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtMProject;
+        private System.Windows.Forms.CheckBox chkMProject;
     }
 }

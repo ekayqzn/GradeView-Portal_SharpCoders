@@ -78,7 +78,7 @@
             this.rbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rbtnCancel.Location = new System.Drawing.Point(692, 2);
+            this.rbtnCancel.Location = new System.Drawing.Point(691, 2);
             this.rbtnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnCancel.Name = "rbtnCancel";
             this.rbtnCancel.Size = new System.Drawing.Size(149, 39);
@@ -89,14 +89,14 @@
             // 
             // rbtnSave
             // 
-            this.rbtnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rbtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.rbtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnSave.FlatAppearance.BorderSize = 0;
             this.rbtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnSave.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnSave.ForeColor = System.Drawing.Color.White;
-            this.rbtnSave.Location = new System.Drawing.Point(875, 2);
+            this.rbtnSave.Location = new System.Drawing.Point(860, 2);
             this.rbtnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnSave.Name = "rbtnSave";
             this.rbtnSave.Size = new System.Drawing.Size(149, 39);
@@ -110,9 +110,9 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.32217F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.67783F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
-            this.tableLayoutPanel1.Controls.Add(this.rbtnSave, 2, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
             this.tableLayoutPanel1.Controls.Add(this.rbtnCancel, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rbtnSave, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 395);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

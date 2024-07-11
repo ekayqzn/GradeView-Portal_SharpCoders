@@ -253,29 +253,6 @@ namespace gradesBookApp
             }
         }
 
-        //Midterm Project and Exam
-        public void mRdoCopy(string tableName, int classID, string studentID)
-        {
-            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}, m_{tableName}_score, class_id, student_id) SELECT m_{tableName}, m_{tableName}_score, class_id, COALESCE(student_id, @studentID) FROM m_{tableName} WHERE class_id = @classID AND student_id IS NULL";
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = commandText;
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@classID", classID);
-                db.cmd.Parameters.AddWithValue("@studentID", studentID);
-                db.cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(5 + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
-        }
 
         //Midterm Other Tasks
         public void fOthersCopy(string tableName, int classID, string studentID)
@@ -302,10 +279,10 @@ namespace gradesBookApp
             }
         }
 
-        //Final Project and Exam
-        public void fRdoCopy(string tableName, int classID, string studentID)
+        //rdos
+        public void rdoCopy(string prefix, string tableName, int classID, string studentID)
         {
-            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}, f_{tableName}_score, class_id, student_id) SELECT f_{tableName}, f_{tableName}_score, class_id, COALESCE(student_id, @studentID) FROM f_{tableName} WHERE class_id = @classID AND student_id IS NULL";
+            string commandText = $"INSERT INTO modern_gradesbook.{prefix}_{tableName} ({prefix}_{tableName}, {prefix}_{tableName}_score, class_id, student_id, percentage) SELECT {prefix}_{tableName}, {prefix}_{tableName}_score, class_id, COALESCE(student_id, @studentID), percentage FROM {prefix}_{tableName} WHERE class_id = @classID AND student_id IS NULL";
             try
             {
                 db.Connect();
@@ -367,10 +344,10 @@ namespace gradesBookApp
             }
         }
 
-        //midterm radiobutton options
-        public void mRdo(string tableName)
+        //for exam and project
+        public void rdos(string prefix, string tableName, int percentage)
         {
-            string commandText = $"INSERT INTO modern_gradesbook.m_{tableName} (m_{tableName}, m_{tableName}_score, class_id) VALUES (-1, -1, @class_id)";
+            string commandText = $"INSERT INTO modern_gradesbook.{prefix}_{tableName} ({prefix}_{tableName}, {prefix}_{tableName}_score, class_id, percentage) VALUES (-1, -1, @class_id, @percentage)";
             try
             {
                 db.Connect();
@@ -378,6 +355,7 @@ namespace gradesBookApp
                 db.cmd.CommandText = commandText;
                 db.cmd.Parameters.Clear();
                 db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
+                db.cmd.Parameters.AddWithValue("@percentage", percentage);
                 db.cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -419,29 +397,6 @@ namespace gradesBookApp
                 db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
                 db.cmd.Parameters.AddWithValue("@percentage", percentage);
                 db.cmd.Parameters.AddWithValue("@count", count);
-                db.cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                db.Disconnect();
-            }
-        }
-
-        //final radiobutton options
-        public void fRdo(string tableName)
-        {
-            string commandText = $"INSERT INTO modern_gradesbook.f_{tableName} (f_{tableName}, f_{tableName}_score, class_id) VALUES (-1, -1, @class_id)";
-            try
-            {
-                db.Connect();
-                db.cmd.Connection = db.conn;
-                db.cmd.CommandText = commandText;
-                db.cmd.Parameters.Clear();
-                db.cmd.Parameters.AddWithValue("@class_id", Add_Subject.classID);
                 db.cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

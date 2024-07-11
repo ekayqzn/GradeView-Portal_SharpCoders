@@ -86,7 +86,7 @@ namespace gradesBookApp
                     // Add the labels to the panel
                     current.Controls.Add(columnNameLabel);
                     current.Controls.Add(columnValueLabel);
-                    Student_Module.xLocation += 250;
+                    Student_Module.xLocation += 300;
                     Student_Module.countLabel++;
                 }
                 else
@@ -127,7 +127,7 @@ namespace gradesBookApp
                     // Add the labels to the panel
                     current.Controls.Add(columnNameLabel);
                     current.Controls.Add(columnValueLabel);
-                    Student_Module.xLocation += 250;
+                    Student_Module.xLocation += 300;
                     Student_Module.countLabel++;
                 }
             }

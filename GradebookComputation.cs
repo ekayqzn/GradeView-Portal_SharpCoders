@@ -30,13 +30,13 @@ namespace gradesBookApp
             return result;
         }
 
-        public decimal PercentileRdo (int score, int totalScore)
+        public decimal PercentileRdo(int score, int totalScore, int percentage)
         {
             // Standardize the score first
             decimal standardize = ScoreStandardization(score, totalScore);
 
             // Calculate 30% of the standardized score
-            return standardize * 0.30m;
+            return standardize * (percentage / 100m);
         }
 
         public decimal GradePoints (decimal percentage)

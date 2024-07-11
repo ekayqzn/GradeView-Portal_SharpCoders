@@ -26,11 +26,6 @@ namespace gradesBookApp
         public DataTable dtDisplay { get; private set; }
         public DataRow newRow { get; private set; }
 
-        public static decimal mWritten = 0;
-        public static decimal mFinalReq = 0;
-        public static decimal fWritten = 0;
-        public static decimal fFinalReq = 0;
-
         public static decimal midtermGrade = 0;
         public static decimal finalGrade = 0;
         public static decimal gwa = 0;
@@ -66,10 +61,7 @@ namespace gradesBookApp
 
             //Refresh value
             finalGrade = 0;
-            mWritten = 0;
-            mFinalReq = 0;
-            fFinalReq = 0;
-            fWritten = 0;
+            midtermGrade = 0;
 
             picDeleteSearch.Parent = txtSearch;
             picDeleteSearch.Location = new Point(txtSearch.ClientSize.Width - ((picDeleteSearch.Image.Width) + 5), 5);
@@ -233,10 +225,7 @@ namespace gradesBookApp
                 for (int i = 0; i < studentIDs.Count; i++)
                 {
                     finalGrade = 0;
-                    mWritten = 0;
-                    mFinalReq = 0;
-                    fWritten = 0;
-                    fFinalReq = 0;
+                    midtermGrade = 0;
 
                     DataRow newRow = dtDisplay.NewRow();
                     newRow["student_id"] = studentIDs[i];
@@ -245,77 +234,74 @@ namespace gradesBookApp
                     if (mActivityID[i] != null)
                     {
                         int count = q.GetCount("m", "activity", (int)mActivityID[i]);
-                        mWritten += q.GetRecordsOther("m", "activity", (int)mActivityID[i], count, newRow);
+                        midtermGrade += q.GetRecordsOther("m", "activity", (int)mActivityID[i], count, newRow);
                     }
                     if(mAssignmentID[i] != null)
                     {
                         int count = q.GetCount("m", "assignment", (int)mAssignmentID[i]);
-                        mWritten += q.GetRecordsOther("m", "assignment", (int)mAssignmentID[i], count, newRow);
+                        midtermGrade += q.GetRecordsOther("m", "assignment", (int)mAssignmentID[i], count, newRow);
                     }
                     if (mLongQuizID[i] != null)
                     {
                         int count = q.GetCount("m", "longquiz", (int)mLongQuizID[i]);
-                        mWritten += q.GetRecordsOther("m", "longquiz", (int)mLongQuizID[i], count, newRow);
+                        midtermGrade += q.GetRecordsOther("m", "longquiz", (int)mLongQuizID[i], count, newRow);
                     }
                     if (mQuizID[i] != null)
                     {
                         int count = q.GetCount("m", "quiz", (int)mQuizID[i]);
-                        mWritten += q.GetRecordsOther("m", "quiz", (int)mQuizID[i], count, newRow);
+                        midtermGrade += q.GetRecordsOther("m", "quiz", (int)mQuizID[i], count, newRow);
                     }
                     if (mRecitationID[i] != null)
                     {
                         int count = q.GetCount("m", "recitation", (int)mRecitationID[i]);
-                        mWritten += q.GetRecordsOther("m", "recitation", (int)mRecitationID[i], count, newRow);
+                        midtermGrade += q.GetRecordsOther("m", "recitation", (int)mRecitationID[i], count, newRow);
                     }
                     if (mExamID[i] != null)
                     {
-                        mFinalReq = q.GetRecordRdo("m", "exam", (int)mExamID[i], newRow);
+                        midtermGrade += q.GetRecordRdo("m", "exam", (int)mExamID[i], newRow);
                     }
                     if (mProjectID[i] != null)
                     {
-                       
-                        mFinalReq = q.GetRecordRdo("m", "project", (int)mProjectID[i], newRow);
+
+                        midtermGrade += q.GetRecordRdo("m", "project", (int)mProjectID[i], newRow);
                     }
 
-                    midtermGrade = mWritten + mFinalReq;
                     //MessageBox.Show(midtermGrade.ToString());
 
                     if (fActivityID[i] != null)
                     {
                         int count = q.GetCount("f", "activity", (int)fActivityID[i]);
-                        fWritten += q.GetRecordsOther("f", "activity", (int)fActivityID[i], count, newRow);
+                        finalGrade += q.GetRecordsOther("f", "activity", (int)fActivityID[i], count, newRow);
                     }
                     if (fAssignmentID[i] != null)
                     {
                         int count = q.GetCount("f", "assignment", (int)fAssignmentID[i]);
-                        fWritten += q.GetRecordsOther("f", "assignment", (int)fAssignmentID[i], count, newRow);
+                        finalGrade += q.GetRecordsOther("f", "assignment", (int)fAssignmentID[i], count, newRow);
                     }
                     if (fLongQuizID[i] != null)
                     {
                         int count = q.GetCount("f", "longquiz", (int)fLongQuizID[i]);
-                        fWritten += q.GetRecordsOther("f", "longquiz", (int)fLongQuizID[i], count, newRow);
+                        finalGrade += q.GetRecordsOther("f", "longquiz", (int)fLongQuizID[i], count, newRow);
                     }
                     if (fQuizID[i] != null)
                     {
                         int count = q.GetCount("f", "quiz", (int)fQuizID[i]);
-                        fWritten += q.GetRecordsOther("f", "quiz", (int)fQuizID[i], count, newRow);
+                        finalGrade += q.GetRecordsOther("f", "quiz", (int)fQuizID[i], count, newRow);
                     }
                     if (fRecitationID[i] != null)
                     {
                         int count = q.GetCount("f", "recitation", (int)fRecitationID[i]);
-                        fWritten += q.GetRecordsOther("f", "recitation", (int)fRecitationID[i], count, newRow);
+                        finalGrade += q.GetRecordsOther("f", "recitation", (int)fRecitationID[i], count, newRow);
                     }
                     if (fExamID[i] != null)
                     {
-                        fFinalReq = q.GetRecordRdo("f", "exam", (int)fExamID[i], newRow);
+                        finalGrade += q.GetRecordRdo("f", "exam", (int)fExamID[i], newRow);
                         
                     }
                     if (fProjectID[i] != null)
                     {
-                        fFinalReq = q.GetRecordRdo("f", "project", (int)fProjectID[i], newRow);
+                        finalGrade += q.GetRecordRdo("f", "project", (int)fProjectID[i], newRow);
                     }
-
-                    finalGrade = fWritten + fFinalReq;
 
                     if ((!dtDisplay.Columns.Contains("Final Grade")))
                     {
@@ -323,8 +309,8 @@ namespace gradesBookApp
                     }
 
 
-
                     gwa = (midtermGrade + finalGrade) / 2;
+                    //MessageBox.Show(gwa.ToString());
                     newRow["Final Grade"] = gwa.ToString("0.00");
 
                     if ((!dtDisplay.Columns.Contains("Equivalent Grade")))

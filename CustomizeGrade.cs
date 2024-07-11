@@ -31,6 +31,12 @@ namespace gradesBookApp
         public int mRecitationCount;
         public int mRecitationPercent;
 
+        public int mExamCount;
+        public int mExamPercent;
+
+        public int mProjectCount;
+        public int mProjectPercent;
+
         public int fQuizCount;
         public int fQuizPercent;
 
@@ -46,19 +52,27 @@ namespace gradesBookApp
         public int fRecitationCount;
         public int fRecitationPercent;
 
+        public int fExamCount;
+        public int fExamPercent;
+
+        public int fProjectCount;
+        public int fProjectPercent;
+
         bool mQuiz = false;
         bool mRecitation = false;
         bool mActivity = false;
         bool mAssignment = false;
         bool mLongQuiz = false;
-        bool isMChecked = false;
+        bool mExam = false;
+        bool mProject = false;
 
         bool fQuiz = false;
         bool fRecitation = false;
         bool fActivity = false;
         bool fAssignment = false;
         bool fLongQuiz = false;
-        bool isFChecked = false;
+        bool fExam = false;
+        bool fProject = false;
 
         GradebookQuery g = new GradebookQuery();
         public CustomizeGrade()
@@ -180,15 +194,41 @@ namespace gradesBookApp
             }
 
             //Midterm Exam
-            if(rdoMExam.Checked)
+            if (chkMExam.Checked)
             {
-                isMChecked = true;
+                mExamPercent = validate.isNumber(txtMExam.Text);
+                if (mExamPercent == 0)
+                {
+                    txtMExam.Focus();
+                    txtMExam.SelectAll();
+                    return;
+                }
+                else
+                {
+                    mExamPercent = Convert.ToInt32(txtMExam.Text.Trim());
+                    midtermTotalPercent += mExamPercent;
+
+                    mExam = true;
+                }
             }
 
             //Midterm Project
-            if(rdoMProject.Checked)
+            if (chkMProject.Checked)
             {
-                isMChecked = true;
+                mProjectPercent = validate.isNumber(txtMProject.Text);
+                if (mProjectPercent == 0)
+                {
+                    txtMProject.Focus();
+                    txtMProject.SelectAll();
+                    return;
+                }
+                else
+                {
+                    mProjectPercent = Convert.ToInt32(txtMProject.Text.Trim());
+                    midtermTotalPercent += mProjectPercent;
+
+                    mProject = true;
+                }
             }
 
             //Final
@@ -290,25 +330,62 @@ namespace gradesBookApp
                     fRecitation = true;
                 }
             }
-            
-            //Final exam
-            if(rdoFExam.Checked)
+
+            //Final Exam
+            if (chkFExam.Checked)
             {
-                isFChecked = true;
+                fExamPercent = validate.isNumber(txtFExam.Text);
+                if (fExamPercent == 0)
+                {
+                    txtFExam.Focus();
+                    txtFExam.SelectAll();
+                    return;
+                }
+                else
+                {
+                    fExamPercent = Convert.ToInt32(txtFExam.Text.Trim());
+                    finalTotalPercent += fExamPercent;
+
+                    fExam = true;
+                }
             }
 
             //Final Project
-            if (rdoFProject.Checked)
-            {           
-                isFChecked = true;
+            if (chkFProject.Checked)
+            {
+                fProjectPercent = validate.isNumber(txtFProject.Text);
+                if (fProjectPercent == 0)
+                {
+                    txtFProject.Focus();
+                    txtFProject.SelectAll();
+                    return;
+                }
+                else
+                {
+                    fProjectPercent = Convert.ToInt32(txtFProject.Text.Trim());
+                    finalTotalPercent += fProjectPercent;
+
+                    fProject = true;
+                }
             }
 
             // Validation to ensure the total percentage is 70%
-            if (midtermTotalPercent != 70 || finalTotalPercent != 70)
+            if (midtermTotalPercent != 100 || finalTotalPercent != 100)
             {
-                MessageBox.Show("The total percentage for both midterm and final must be exactly 70%.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isValid = false;
-                return;
+                if(midtermTotalPercent != 100)
+                {
+                    MessageBox.Show("The total percentage for midterm must be exactly 100%.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtMActivity.Focus();
+                    isValid = false;
+                    return;
+                }
+                else if (finalTotalPercent != 100)
+                {
+                    MessageBox.Show("The total percentage for final must be exactly 100%.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtFActivity.Focus();
+                    isValid = false;
+                    return;
+                }
             }
             else
             {    
@@ -336,7 +413,17 @@ namespace gradesBookApp
                 {
                     g.mOthers("recitation", mRecitationCount, mRecitationPercent);
                     isValid = true;
-                }                     
+                }
+                if (mExam)
+                {
+                    g.rdos("m", "exam", mExamPercent);
+                    isValid = true;
+                }
+                if (mProject)
+                {
+                    g.rdos("m", "project", mProjectPercent);
+                    isValid = true;
+                }
 
                 if (fActivity)
                 {
@@ -363,45 +450,18 @@ namespace gradesBookApp
                     g.fOthers("recitation", fRecitationCount, fRecitationPercent);
                     isValid = true;
                 }
+                if (fExam)
+                {
+                    g.rdos("f", "exam", fExamPercent);
+                    isValid = true;
+                }
+                if (fProject)
+                {
+                    g.rdos("f", "project", fProjectPercent);
+                    isValid = true;
+                }
             }
 
-            if (isMChecked == false)
-            {
-                MessageBox.Show("Please select the 30% component for Midterm", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isValid = false;
-                return;
-            }
-            else
-            {
-                if (rdoMExam.Checked)
-                {
-                    g.mRdo("exam");
-                    isValid = true;
-                }
-                else
-                {
-                    g.mRdo("project");
-                    isValid = true;
-                }
-            }
-            if (isFChecked == false)
-            {
-                MessageBox.Show("Please select the 30% component for Final", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isValid = false;
-                return;
-            }
-            else
-            {
-                if (rdoFExam.Checked)
-                {
-                    g.fRdo("exam");
-                }
-                else
-                {
-                    g.fRdo("project");
-                }
-            }
-            
             // Proceed if valid
             if (isValid)
             {
@@ -537,56 +597,106 @@ namespace gradesBookApp
 
         private void CustomizeGrade_Load(object sender, EventArgs e)
         {
-            rdoMExam.Checked = false;
-            rdoMProject.Checked = false;
-            rdoFExam.Checked = false;
-            rdoFProject.Checked = false;
-
 
             chkMActivity.KeyDown += new KeyEventHandler(Common_KeyDown);
             chkMAssignment.KeyDown += new KeyEventHandler(Common_KeyDown);
             chkMLongQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             chkMQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             chkMRecitation.KeyDown += new KeyEventHandler(Common_KeyDown);
+            chkMExam.KeyDown += new KeyEventHandler(Common_KeyDown);
+            chkMProject.KeyDown += new KeyEventHandler(Common_KeyDown);
+
             chkFActivity.KeyDown += new KeyEventHandler(Common_KeyDown);
             chkFAssignment.KeyDown += new KeyEventHandler(Common_KeyDown);
             chkFLongQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             chkFQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             chkFRecitation.KeyDown += new KeyEventHandler(Common_KeyDown);
+            chkFExam.KeyDown += new KeyEventHandler(Common_KeyDown);
+            chkFProject.KeyDown += new KeyEventHandler(Common_KeyDown);
 
             txtFActivity.KeyDown += new KeyEventHandler(Common_KeyDown);
             txtFAssignment.KeyDown += new KeyEventHandler(Common_KeyDown);
             txtFLongQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             txtFQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             txtFRecitation.KeyDown += new KeyEventHandler(Common_KeyDown);
+            txtFExam.KeyDown += new KeyEventHandler(Common_KeyDown);
+            txtFProject.KeyDown += new KeyEventHandler(Common_KeyDown);
+
             txtMActivity.KeyDown += new KeyEventHandler(Common_KeyDown);
             txtMAssignment.KeyDown += new KeyEventHandler(Common_KeyDown);
             txtMLongQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             txtMQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             txtMRecitation.KeyDown += new KeyEventHandler(Common_KeyDown);
+            txtMExam.KeyDown += new KeyEventHandler(Common_KeyDown);
+            txtMProject.KeyDown += new KeyEventHandler(Common_KeyDown);
 
             numFActivity.KeyDown += new KeyEventHandler(Common_KeyDown);
             numFAssignment.KeyDown += new KeyEventHandler(Common_KeyDown);
             numFLongQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             numFQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             numFRecitation.KeyDown += new KeyEventHandler(Common_KeyDown);
+
             numMActivity.KeyDown += new KeyEventHandler(Common_KeyDown);
             numMAssignment.KeyDown += new KeyEventHandler(Common_KeyDown);
             numMLongQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             numMQuiz.KeyDown += new KeyEventHandler(Common_KeyDown);
             numMRecitation.KeyDown += new KeyEventHandler(Common_KeyDown);
 
-            rdoMExam.KeyDown += new KeyEventHandler(Common_KeyDown);
-            rdoMProject.KeyDown += new KeyEventHandler(Common_KeyDown);
-            rdoFExam.KeyDown += new KeyEventHandler(Common_KeyDown);
-            rdoFProject.KeyDown += new KeyEventHandler(Common_KeyDown);
         }
 
         private void Common_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                rbtnOK_Click(sender, e);
+                rbtnOK_Click(sender, e); //call the click event for ok button
+            }
+        }
+
+        private void chkMExam_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMExam.Checked)
+            {
+                panel_mExam.Enabled = true;
+            }
+            else
+            {
+                panel_mExam.Enabled = false;
+            }
+        }
+
+        private void chkMProject_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMProject.Checked)
+            {
+                panel_mProject.Enabled = true;
+            }
+            else
+            {
+                panel_mProject.Enabled = false;
+            }
+        }
+
+        private void chkFExam_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkFExam.Checked)
+            {
+                panel_fExam.Enabled = true;
+            }
+            else
+            {
+                panel_fExam.Enabled = false;
+            }
+        }
+
+        private void chkFProject_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkFProject.Checked)
+            {
+                panel_fProject.Enabled = true;
+            }
+            else
+            {
+                panel_fProject.Enabled = false;
             }
         }
 

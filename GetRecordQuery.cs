@@ -100,7 +100,7 @@ namespace gradesBookApp
 
                     if (score != -1 && totalScore != -1)
                     {
-                        percentile = c.PercentileRdo(score, totalScore);
+                        percentile = c.PercentileRdo(score, totalScore, GetPercentageRDO(prefix, tableName, ID));
                     }
                 }
             }
@@ -1159,6 +1159,40 @@ namespace gradesBookApp
                 db.dta.Fill(dataTable1);
 
                 percentage = Convert.ToInt32(dataTable1.Rows[0][$"{prefix}_{tableName}_percentage"]);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                db.Disconnect();
+            }
+
+            return percentage;
+        }
+
+        //Percentage for RDO
+        public int GetPercentageRDO(string prefix, string tableName, int id)
+        {
+            int percentage = 0;
+            string commandText = $"SELECT percentage FROM modern_gradesbook.{prefix}_{tableName} WHERE {prefix}_{tableName}_id = @id";
+
+            try
+            {
+                db.Connect();
+                db.cmd.Connection = db.conn;
+                db.cmd.CommandText = commandText;
+                db.cmd.Parameters.Clear();
+                db.cmd.Parameters.AddWithValue("@id", id);
+                db.dta.SelectCommand = db.cmd;
+
+                db.dta.SelectCommand = db.cmd;
+                DataTable dataTable1 = new DataTable();
+                db.dta.Fill(dataTable1);
+
+                percentage = Convert.ToInt32(dataTable1.Rows[0]["percentage"]);
 
             }
             catch (Exception ex)

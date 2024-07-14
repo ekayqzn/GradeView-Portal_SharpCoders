@@ -135,7 +135,7 @@ namespace gradesBookApp
         {
             if(e.KeyCode == Keys.Enter)
             {
-                rbtnBack_Click(sender, e);
+                rbtnSave_Click(sender, e);
             }
         }
         private void rbtnSave_Click(object sender, EventArgs e)

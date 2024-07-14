@@ -11,8 +11,6 @@ namespace gradesBookApp
     public class Validation
     {
         databaseConnection db = new databaseConnection();
-
-        
         public bool passwordValid (string tableName, string password, string userID)
         {
             bool result = false;
@@ -102,11 +100,8 @@ namespace gradesBookApp
                     int.TryParse(txtValue, out int countValue) ;
                     return countValue;
                 }
-            }
-
-               
+            }    
         }
-
         public bool isNumberforDB(string txtValue)
         {
             bool isValid = true;
@@ -165,7 +160,6 @@ namespace gradesBookApp
                     isValid = false;
                 }
             }
-
             return isValid;
         }
 
@@ -192,7 +186,6 @@ namespace gradesBookApp
                     isValid = false;
                 }
             }
-
             return isValid;
         }
 

@@ -81,11 +81,6 @@ namespace gradesBookApp
             btnUnshowPass.Visible = true; // Show UnshowPass button
         }
 
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void linkTermsPrivacy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();

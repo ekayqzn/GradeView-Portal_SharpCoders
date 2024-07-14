@@ -171,7 +171,6 @@ namespace gradesBookApp
             }
         }
 
-
         private void toolUnenroll_Click(object sender, EventArgs e)
         { 
 

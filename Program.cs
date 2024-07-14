@@ -6,9 +6,6 @@ using System.Windows.Forms;
 
 namespace gradesBookApp
 {
-
-     
-
     internal static class Program
     {
         /// <summary>

@@ -380,8 +380,6 @@ namespace gradesBookApp
 
                                 if (MessageBox.Show("Subject successfully added to your dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                                 {
-                                    //!ADD TO MESSAGE BOX THE CODE
-
                                     //Once performed all operation, Message Box will show to notify the user. When clicked the OK button, this form will close and appears the CustomizeGrade form
                                     this.Hide();
                                     CustomizeGrade customizeGrade = new CustomizeGrade();

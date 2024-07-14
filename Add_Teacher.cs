@@ -40,52 +40,7 @@ namespace gradesBookApp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                string teacherNum = "TBTU-" + txtTeacherNum.Text.Trim();
-                string fName = txtFName.Text.Trim();
-                string lName = txtLName.Text.Trim();
-                string mName = txtMName.Text.Trim();
-                bool isAdded = false;
-
-                if (!v.isValidID(txtTeacherNum.Text))
-                {
-                    txtTeacherNum.Focus();
-                    txtTeacherNum.SelectAll();
-                    return;
-                }
-                if (!v.isString(fName))
-                {
-                    txtFName.Focus();
-                    txtFName.SelectAll();
-                    return;
-                }
-                if (!v.isString(lName))
-                {
-                    txtLName.Focus();
-                    txtLName.SelectAll();
-                    return;
-                }
-                if (!v.isStringMName(mName))
-                {
-                    txtMName.Focus();
-                    txtMName.SelectAll();
-                    return;
-                }
-
-                isAdded = a.AddTeacher(teacherNum, fName, mName, lName);
-
-                if (isAdded)
-                {
-                    txtTeacherNum.Focus();
-                    txtTeacherNum.Text = "";
-                    txtLName.Text = "";
-                    txtMName.Text = "";
-                    txtFName.Text = "";
-                }
-                else
-                {
-                    txtTeacherNum.Focus();
-                    txtTeacherNum.SelectAll();
-                }
+                rbtnAdd_Click(sender, e);
 
             }
         }

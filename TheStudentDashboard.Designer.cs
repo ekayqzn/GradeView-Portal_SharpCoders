@@ -39,12 +39,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPassword = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolUnenroll = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolView = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -60,7 +58,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.629441F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.43993F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 3);
@@ -100,7 +98,7 @@
             this.panel1.Location = new System.Drawing.Point(114, 136);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1049, 60);
+            this.panel1.Size = new System.Drawing.Size(1048, 60);
             this.panel1.TabIndex = 91;
             // 
             // lblGreet
@@ -124,7 +122,7 @@
             this.rbtnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnAddClass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAddClass.ForeColor = System.Drawing.Color.White;
-            this.rbtnAddClass.Location = new System.Drawing.Point(806, 2);
+            this.rbtnAddClass.Location = new System.Drawing.Point(805, 2);
             this.rbtnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnAddClass.Name = "rbtnAddClass";
             this.rbtnAddClass.Size = new System.Drawing.Size(192, 48);
@@ -141,7 +139,7 @@
             this.panel2.Location = new System.Drawing.Point(114, 200);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1049, 613);
+            this.panel2.Size = new System.Drawing.Size(1048, 613);
             this.panel2.TabIndex = 77;
             // 
             // menuStrip1
@@ -152,7 +150,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolMenu});
-            this.menuStrip1.Location = new System.Drawing.Point(1186, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(1185, 20);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(51, 38);
@@ -185,12 +183,6 @@
             this.menuPassword.Text = "Manage Password";
             this.menuPassword.Click += new System.EventHandler(this.menuPassword_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
-            // 
             // menuLogOut
             // 
             this.menuLogOut.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -209,30 +201,22 @@
             // 
             this.contextMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolUnenroll,
-            this.toolStripSeparator2,
-            this.toolView});
+            this.toolUnenroll});
             this.contextMenu.Name = "contextMenuStrip1";
-            this.contextMenu.Size = new System.Drawing.Size(160, 58);
+            this.contextMenu.Size = new System.Drawing.Size(211, 56);
             // 
             // toolUnenroll
             // 
             this.toolUnenroll.Name = "toolUnenroll";
-            this.toolUnenroll.Size = new System.Drawing.Size(159, 24);
+            this.toolUnenroll.Size = new System.Drawing.Size(210, 24);
             this.toolUnenroll.Text = "Unenroll";
             this.toolUnenroll.Click += new System.EventHandler(this.toolUnenroll_Click);
             // 
-            // toolStripSeparator2
+            // toolStripSeparator1
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(156, 6);
-            // 
-            // toolView
-            // 
-            this.toolView.Name = "toolView";
-            this.toolView.Size = new System.Drawing.Size(159, 24);
-            this.toolView.Text = "View Course";
-            this.toolView.Click += new System.EventHandler(this.toolView_Click);
+            this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
             // 
             // TheStudentDashboard
             // 
@@ -269,14 +253,12 @@
         private RoundedButton rbtnAddClass;
         private System.Windows.Forms.ContextMenuStrip contextMenu;
         private System.Windows.Forms.ToolStripMenuItem toolUnenroll;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem toolView;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolMenu;
         private System.Windows.Forms.ToolStripMenuItem menuPassword;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem menuLogOut;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblGreet;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

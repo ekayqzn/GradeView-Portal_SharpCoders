@@ -42,7 +42,7 @@ namespace gradesBookApp
         }
         private void LoadDashboard()
         {
-            this.SuspendLayout();
+            //this.SuspendLayout();
             string name = getRecord.GetName("teacher", "teacher_fname", LogInOperation.userID.Trim());
 
             lblGreet.Text = "Hi " + name + ", Welcome!";
@@ -79,7 +79,7 @@ namespace gradesBookApp
                 }
 
                 // Suspend layout logic before making changes
-                panel2.SuspendLayout();
+                //panel2.SuspendLayout();
 
                 if (dataTable.Rows.Count > 0)
                 {
@@ -129,7 +129,7 @@ namespace gradesBookApp
                 }
 
                 // Resume layout logic after all changes are made
-                panel2.ResumeLayout(true);
+                //panel2.ResumeLayout(true);
             }
             catch (Exception ex)
             {

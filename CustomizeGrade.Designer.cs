@@ -85,26 +85,27 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel_fExam = new System.Windows.Forms.Panel();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFExam = new System.Windows.Forms.TextBox();
             this.chkFExam = new System.Windows.Forms.CheckBox();
             this.panel_mExam = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.txtMExam = new System.Windows.Forms.TextBox();
             this.chkMExam = new System.Windows.Forms.CheckBox();
             this.panel_fProject = new System.Windows.Forms.Panel();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.txtFProject = new System.Windows.Forms.TextBox();
             this.chkFProject = new System.Windows.Forms.CheckBox();
             this.panel_mProject = new System.Windows.Forms.Panel();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label18 = new System.Windows.Forms.Label();
             this.txtMProject = new System.Windows.Forms.TextBox();
             this.chkMProject = new System.Windows.Forms.CheckBox();
             this.rbtnOK = new gradesBookApp.RoundedButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel_mAssignment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMAssignment)).BeginInit();
             this.panel_mLongQuiz.SuspendLayout();
@@ -126,13 +127,13 @@
             this.panel_fAssignment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAssignment)).BeginInit();
             this.panel_fExam.SuspendLayout();
-            this.panel_mExam.SuspendLayout();
-            this.panel_fProject.SuspendLayout();
-            this.panel_mProject.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.panel_mExam.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel_fProject.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.panel_mProject.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -867,6 +868,30 @@
             this.panel_fExam.Size = new System.Drawing.Size(435, 65);
             this.panel_fExam.TabIndex = 54;
             // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(25, 19);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.ReadOnly = true;
+            this.numericUpDown3.Size = new System.Drawing.Size(154, 29);
+            this.numericUpDown3.TabIndex = 13;
+            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -908,6 +933,30 @@
             this.panel_mExam.Name = "panel_mExam";
             this.panel_mExam.Size = new System.Drawing.Size(435, 65);
             this.panel_mExam.TabIndex = 52;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(25, 19);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
+            this.numericUpDown1.Size = new System.Drawing.Size(154, 29);
+            this.numericUpDown1.TabIndex = 11;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label15
             // 
@@ -951,6 +1000,30 @@
             this.panel_fProject.Size = new System.Drawing.Size(435, 65);
             this.panel_fProject.TabIndex = 58;
             // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(25, 19);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.ReadOnly = true;
+            this.numericUpDown4.Size = new System.Drawing.Size(154, 29);
+            this.numericUpDown4.TabIndex = 22;
+            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown4.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -992,6 +1065,30 @@
             this.panel_mProject.Name = "panel_mProject";
             this.panel_mProject.Size = new System.Drawing.Size(435, 65);
             this.panel_mProject.TabIndex = 56;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(25, 19);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.ReadOnly = true;
+            this.numericUpDown2.Size = new System.Drawing.Size(154, 29);
+            this.numericUpDown2.TabIndex = 12;
+            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label18
             // 
@@ -1039,101 +1136,20 @@
             this.rbtnOK.UseVisualStyleBackColor = false;
             this.rbtnOK.Click += new System.EventHandler(this.rbtnOK_Click);
             // 
-            // numericUpDown1
+            // textBox1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(25, 19);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(154, 29);
-            this.numericUpDown1.TabIndex = 11;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(25, 19);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.ReadOnly = true;
-            this.numericUpDown2.Size = new System.Drawing.Size(154, 29);
-            this.numericUpDown2.TabIndex = 12;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(25, 19);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.ReadOnly = true;
-            this.numericUpDown3.Size = new System.Drawing.Size(154, 29);
-            this.numericUpDown3.TabIndex = 13;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(25, 19);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.ReadOnly = true;
-            this.numericUpDown4.Size = new System.Drawing.Size(154, 29);
-            this.numericUpDown4.TabIndex = 22;
-            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(-120, 75);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(1797, 18);
+            this.textBox1.TabIndex = 74;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CustomizeGrade
             // 
@@ -1142,6 +1158,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1456, 809);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel_fProject);
             this.Controls.Add(this.chkFProject);
             this.Controls.Add(this.panel_mProject);
@@ -1216,16 +1233,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFAssignment)).EndInit();
             this.panel_fExam.ResumeLayout(false);
             this.panel_fExam.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.panel_mExam.ResumeLayout(false);
             this.panel_mExam.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel_fProject.ResumeLayout(false);
             this.panel_fProject.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.panel_mProject.ResumeLayout(false);
             this.panel_mProject.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1309,5 +1326,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

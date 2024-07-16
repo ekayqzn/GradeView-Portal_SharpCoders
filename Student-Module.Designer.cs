@@ -39,6 +39,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(323, 22);
+            this.label5.Location = new System.Drawing.Point(323, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(300, 35);
             this.label5.TabIndex = 56;
@@ -75,7 +76,7 @@
             this.picBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(93)))));
             this.picBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBack.Image = global::gradesBookApp.Properties.Resources.k__1_;
-            this.picBack.Location = new System.Drawing.Point(24, 15);
+            this.picBack.Location = new System.Drawing.Point(24, 11);
             this.picBack.Name = "picBack";
             this.picBack.Size = new System.Drawing.Size(55, 50);
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,6 +137,21 @@
             this.label3.TabIndex = 69;
             this.label3.Text = "Raw Score";
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(-399, 68);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(1797, 18);
+            this.textBox1.TabIndex = 74;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Student_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -143,6 +159,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(958, 831);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblStatus);
@@ -173,5 +190,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
